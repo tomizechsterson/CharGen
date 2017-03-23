@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <Description>Small service to return dice rolls</Description>
   </PropertyGroup>
 
   <ItemGroup>
