@@ -13,9 +13,14 @@ namespace DiceService.App
             _sides = sides;
         }
 
-        public IEnumerable<int> DoRoll()
+        public List<int> DoRoll()
         {
-            throw new System.NotImplementedException();
+            var results = new List<int>(_times);
+
+            for (int i = 0; i < _times; i++)
+                results.Add(1);
+
+            return results;
         }
     }
 }
