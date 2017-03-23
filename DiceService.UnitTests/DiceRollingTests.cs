@@ -1,5 +1,5 @@
 using System.Linq;
-using DiceService.Model;
+using DiceService.App;
 using Xunit;
 
 namespace DiceService.UnitTests

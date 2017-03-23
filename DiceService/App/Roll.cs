@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DiceService.Model
+namespace DiceService.App
 {
     public class Roll
     {
