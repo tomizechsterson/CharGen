@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace DiceService.UnitTests
+namespace PersistenceService.UnitTests
 {
     public class UnitTest1
     {
