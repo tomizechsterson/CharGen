@@ -21,5 +21,14 @@ namespace DiceService.UnitTests
 
             Assert.Equal(2, rolls.Count);
         }
+
+        [Fact]
+        public void RollThree_SixSides_ThreeOneThruSixReturned()
+        {
+            var rolls = new Roll(10, 6).DoRoll();
+
+            Assert.Equal(10, rolls.Count);
+            Assert.True(rolls.TrueForAll(r => r > 0 && r < 7));
+        }
     }
 }
