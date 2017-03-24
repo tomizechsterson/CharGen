@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using DiceService.App;
 
 namespace DiceService.Controllers
 {
@@ -7,15 +8,15 @@ namespace DiceService.Controllers
     public class DiceController : Controller
     {
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<int> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new Roll(1, 6).DoRoll();
         }
 
         [HttpGet("{times}/{sides}")]
-        public string Get(int times, int sides)
+        public IEnumerable<int> Get(int times, int sides)
         {
-            return "times: " + times + "; sides: " + sides;
+            return new Roll(times, sides).DoRoll();
         }
     }
 }
