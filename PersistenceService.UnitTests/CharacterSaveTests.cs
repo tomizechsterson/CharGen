@@ -4,7 +4,7 @@ namespace PersistenceService.UnitTests
 {
     public class CharacterSaveTests
     {
-        // Character object
+        // SqlLiteCharacter object
         // Data store object
     }
 }
