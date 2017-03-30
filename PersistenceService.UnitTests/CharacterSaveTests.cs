@@ -1,32 +1,29 @@
-﻿using PersistenceService.UnitTests.TestDoubles;
-using Xunit;
+﻿using Xunit;
 
 namespace PersistenceService.UnitTests
 {
     public class CharacterSaveTests
     {
-        // CharacterSave object
+        // Character object
         // Data store object
         [Fact]
         public void Save_NewCharacter_SaveDataStoreMethodNotCalled()
         {
-            var dataStore = new DataStoreMock();
-            var characterSave = new CharacterSave(dataStore, null);
+            var character = new Character();
 
-            characterSave.Save();
+            character.Save();
 
-            Assert.False(dataStore.SaveCalled());
+//            Assert.False(dataStore.SaveCalled());
         }
 
         [Fact]
         public void Save_CharacterWithName_SaveDataStoreMethodCalled()
         {
-            var dataStore = new DataStoreMock();
-            var characterSave = new CharacterSave(dataStore, "testname");
+            var character = new Character("testname");
 
-            characterSave.Save();
+            character.Save();
 
-            Assert.True(dataStore.SaveCalled());
+//            Assert.True(dataStore.SaveCalled());
         }
     }
 }
