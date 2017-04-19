@@ -1,11 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace CharGen.Controllers
+namespace PersistenceService.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class PersistenceController : Controller
     {
+        // Passing requests into application
+        // Returning web responses
+        // Each method should handle one and only one type of request
+
+        // Web controller methods must not contain any selection logic
+        // Web methods must not perform any logging
+        // custom serialization must be centralized -- do not handle it in the controller
+
+        // Only a single line of code allowed!
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -14,6 +24,7 @@ namespace CharGen.Controllers
         }
 
         // GET api/values/5
+        // api/{name}/Get ?
         [HttpGet("{id}")]
         public string Get(int id)
         {
