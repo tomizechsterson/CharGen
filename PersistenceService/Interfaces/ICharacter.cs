@@ -4,6 +4,5 @@
     {
         int Id();
         string Name();
-        int Strength();
     }
 }
