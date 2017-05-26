@@ -6,7 +6,7 @@ namespace ADD2CharacterService.UnitTests
     public class ADD2CharacterTests
     {
         [Fact]
-        public void FirstTest()
+        public void DefaultConstructor()
         {
             var character = new ADD2Character();
 
