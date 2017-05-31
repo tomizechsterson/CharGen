@@ -39,7 +39,7 @@ namespace ADD2CharacterService
             using (var connection = new SqliteConnection("Data Source=characters"))
             {
                 var command = connection.CreateCommand();
-                command.CommandText = "CREATE TABLE ADD2 (Id INT, Name VARCHAR(32), PlayedBy VARCHAR(32))";
+                command.CommandText = "CREATE TABLE IF NOT EXISTS ADD2 (Id INT, Name VARCHAR(32), PlayedBy VARCHAR(32))";
                 connection.Open();
                 command.ExecuteNonQuery();
             }
