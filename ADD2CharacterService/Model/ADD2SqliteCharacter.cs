@@ -13,12 +13,12 @@ namespace ADD2CharacterService.Model
             _id = id;
         }
 
-        public int id()
+        public int Id()
         {
             return _id;
         }
 
-        public string name()
+        public string Name()
         {
             using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
             {
@@ -29,6 +29,21 @@ namespace ADD2CharacterService.Model
                 using (var reader = command.ExecuteReader())
                 {
                     return reader["name"].ToString();
+                }
+            }
+        }
+
+        public string PlayedBy()
+        {
+            using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
+            {
+                var command = conn.CreateCommand();
+                command.CommandText = "SELECT playedby FROM ADD2 WHERE Id = $id";
+                command.Parameters.AddWithValue("$id", _id);
+                conn.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    return reader["playedby"].ToString();
                 }
             }
         }

@@ -12,7 +12,7 @@ namespace ADD2CharacterService.Model
             _connectionString = connectionString;
         }
 
-        public IEnumerable<ADD2Character> iterate()
+        public IEnumerable<ADD2Character> Iterate()
         {
             var characters = new List<ADD2Character>();
 
@@ -33,7 +33,7 @@ namespace ADD2CharacterService.Model
             return characters;
         }
 
-        public ADD2Character add(string name)
+        public ADD2Character Add(string name, string playedby)
         {
             throw new System.NotImplementedException();
         }

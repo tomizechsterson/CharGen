@@ -2,7 +2,8 @@
 {
     public interface ADD2Character
     {
-        int id();
-        string name();
+        int Id();
+        string Name();
+        string PlayedBy();
     }
 }
