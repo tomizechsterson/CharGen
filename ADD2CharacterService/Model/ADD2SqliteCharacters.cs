@@ -25,7 +25,7 @@ namespace ADD2CharacterService.Model
                 {
                     while (reader.Read())
                     {
-                        
+                        characters.Add(new ADD2SqliteCharacter(_connectionString, reader.GetInt32(0)));
                     }
                 }
             }
@@ -35,7 +35,23 @@ namespace ADD2CharacterService.Model
 
         public ADD2Character Add(string name, string playedby)
         {
-            throw new System.NotImplementedException();
+            ADD2SqliteCharacter character;
+            using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
+            {
+                var command = conn.CreateCommand();
+                command.CommandText = "INSERT INTO ADD2 (name, playedby) VALUES ($name, $playedby)";
+                command.Parameters.AddWithValue("$name", name);
+                command.Parameters.AddWithValue("$playedby", playedby);
+                conn.Open();
+                command.ExecuteNonQuery();
+
+                command = conn.CreateCommand();
+                command.CommandText = "select last_insert_rowid()";
+                int lastId = (int)command.ExecuteScalar();
+                character = new ADD2SqliteCharacter(_connectionString, lastId);
+            }
+
+            return character;
         }
     }
 }
