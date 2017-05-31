@@ -23,12 +23,12 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "SELECT name FROM ADD2 WHERE Id = $id";
+                command.CommandText = "SELECT Name FROM ADD2 WHERE Id = $id";
                 command.Parameters.AddWithValue("$id", _id);
                 conn.Open();
                 using (var reader = command.ExecuteReader())
                 {
-                    return reader["name"].ToString();
+                    return reader["Name"].ToString();
                 }
             }
         }
@@ -38,12 +38,12 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "SELECT playedby FROM ADD2 WHERE Id = $id";
+                command.CommandText = "SELECT PlayedBy FROM ADD2 WHERE Id = $id";
                 command.Parameters.AddWithValue("$id", _id);
                 conn.Open();
                 using (var reader = command.ExecuteReader())
                 {
-                    return reader["playedby"].ToString();
+                    return reader["PlayedBy"].ToString();
                 }
             }
         }

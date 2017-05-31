@@ -39,7 +39,7 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "INSERT INTO ADD2 (name, playedby) VALUES ($name, $playedby)";
+                command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy) VALUES ($name, $playedby)";
                 command.Parameters.AddWithValue("$name", name);
                 command.Parameters.AddWithValue("$playedby", playedby);
                 conn.Open();
