@@ -36,16 +36,13 @@ namespace ADD2CharacterService
 
             app.UseMvc();
 
-
-
-            using (var connection = new SqliteConnection(new SqliteConnectionStringBuilder {DataSource = "DB/test.db"}.ToString()))
+            using (var connection = new SqliteConnection("Data Source=characters"))
             {
                 var command = connection.CreateCommand();
-                command.CommandText = "CREATE TABLE testTable (Id INT, Name VARCHAR(32))";
+                command.CommandText = "CREATE TABLE ADD2 (Id INT, Name VARCHAR(32), PlayedBy VARCHAR(32))";
                 connection.Open();
                 command.ExecuteNonQuery();
             }
-
         }
     }
 }

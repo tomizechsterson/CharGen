@@ -20,7 +20,7 @@ namespace ADD2CharacterService.Model
 
         public string Name()
         {
-            using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
+            using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
                 command.CommandText = "SELECT Name FROM ADD2 WHERE Id = $id";
@@ -35,7 +35,7 @@ namespace ADD2CharacterService.Model
 
         public string PlayedBy()
         {
-            using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
+            using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
                 command.CommandText = "SELECT PlayedBy FROM ADD2 WHERE Id = $id";

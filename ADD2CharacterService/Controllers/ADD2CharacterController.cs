@@ -7,7 +7,7 @@ namespace ADD2CharacterService.Controllers
     [Route("api/[controller]")]
     public class ADD2CharacterController : Controller
     {
-        private string _db = "DB/characters";
+        private string _db = "Data Source=characters";
 
         // GET api/ADD2Character
 //        public IEnumerable<string> Get()

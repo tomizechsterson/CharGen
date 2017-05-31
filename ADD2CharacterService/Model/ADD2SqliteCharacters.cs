@@ -16,7 +16,7 @@ namespace ADD2CharacterService.Model
         {
             var characters = new List<ADD2Character>();
 
-            using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
+            using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
                 command.CommandText = "SELECT * FROM ADD2";
@@ -36,7 +36,7 @@ namespace ADD2CharacterService.Model
         public ADD2Character Add(string name, string playedby)
         {
             ADD2SqliteCharacter character;
-            using (var conn = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = _connectionString }.ToString()))
+            using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
                 command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy) VALUES ($name, $playedby)";
