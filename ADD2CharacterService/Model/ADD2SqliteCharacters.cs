@@ -33,9 +33,8 @@ namespace ADD2CharacterService.Model
             return characters;
         }
 
-        public ADD2Character Add(string name, string playedby)
+        public void Add(string name, string playedby)
         {
-            ADD2SqliteCharacter character;
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
@@ -44,14 +43,7 @@ namespace ADD2CharacterService.Model
                 command.Parameters.AddWithValue("$playedby", playedby);
                 conn.Open();
                 command.ExecuteNonQuery();
-
-                command = conn.CreateCommand();
-                command.CommandText = "select last_insert_rowid()";
-                int lastId = (int)command.ExecuteScalar();
-                character = new ADD2SqliteCharacter(_connectionString, lastId);
             }
-
-            return character;
         }
     }
 }
