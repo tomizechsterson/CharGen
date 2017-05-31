@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ADD2CharacterService.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADD2CharacterService.Controllers
@@ -6,33 +7,38 @@ namespace ADD2CharacterService.Controllers
     [Route("api/[controller]")]
     public class ADD2CharacterController : Controller
     {
-        // GET api/values
+        private string _db = "DB/characters";
+
+        // GET api/ADD2Character
+//        public IEnumerable<string> Get()
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<ADD2Character> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new ADD2SqliteCharacters(_db).Iterate();
+//            return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
+        // GET api/ADD2Character/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        // POST api/ADD2Character
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]string name, string playedby)
         {
+            new ADD2SqliteCharacters(_db).Add(name, playedby);
         }
 
-        // PUT api/values/5
+        // PUT api/ADD2Character/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/ADD2Character/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
