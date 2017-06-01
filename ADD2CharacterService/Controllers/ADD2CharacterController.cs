@@ -26,8 +26,9 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AllowEverything")]
+        [Route("new")]
         [HttpPost]
-        public void Post([FromBody]HttpCharacterModel characterModel)
+        public void Post(HttpCharacterModel characterModel)
         {
             new ADD2SqliteCharacters(_db).Add(characterModel.Name, characterModel.PlayedBy);
         }
