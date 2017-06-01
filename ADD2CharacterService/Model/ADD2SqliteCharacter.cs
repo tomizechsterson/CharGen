@@ -28,7 +28,7 @@ namespace ADD2CharacterService.Model
                 conn.Open();
                 using (var reader = command.ExecuteReader())
                 {
-                    return reader["Name"].ToString();
+                    return reader.Read() ? reader.GetString(0) : "";
                 }
             }
         }
@@ -43,7 +43,7 @@ namespace ADD2CharacterService.Model
                 conn.Open();
                 using (var reader = command.ExecuteReader())
                 {
-                    return reader["PlayedBy"].ToString();
+                    return reader.Read() ? reader["PlayedBy"].ToString() : "";
                 }
             }
         }
