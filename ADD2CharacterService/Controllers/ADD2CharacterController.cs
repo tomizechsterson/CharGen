@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using ADD2CharacterService.Model;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADD2CharacterService.Controllers
@@ -7,15 +8,12 @@ namespace ADD2CharacterService.Controllers
     [Route("api/[controller]")]
     public class ADD2CharacterController : Controller
     {
-        private string _db = "Data Source=characters";
+        private const string _db = "Data Source=characters";
 
-        // GET api/ADD2Character
-//        public IEnumerable<string> Get()
         [HttpGet]
         public IEnumerable<ADD2Character> Get()
         {
             return new ADD2SqliteCharacters(_db).Iterate();
-//            return new string[] { "value1", "value2" };
         }
 
         // GET api/ADD2Character/5
@@ -27,14 +25,15 @@ namespace ADD2CharacterService.Controllers
 
         // POST api/ADD2Character
         [HttpPost]
-        public void Post([FromBody]string name, string playedby)
+//        [EnableCors("AllowEverything")]
+        public void Post([FromBody]HttpCharacterModel characterModel)
         {
-            new ADD2SqliteCharacters(_db).Add(name, playedby);
+            new ADD2SqliteCharacters(_db).Add(characterModel.Name, characterModel.PlayedBy);
         }
 
         // PUT api/ADD2Character/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]HttpCharacterModel characterModel)
         {
         }
 
