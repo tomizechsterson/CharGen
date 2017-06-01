@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -25,13 +24,6 @@ namespace ADD2CharacterService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            /*services.AddCors(o =>
-            {
-                o.AddPolicy("AllowEverything", builder =>
-                {
-                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-                });
-            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,13 +34,7 @@ namespace ADD2CharacterService
 
             app.UseMvc();
 
-            using (var connection = new SqliteConnection("Data Source=characters"))
-            {
-                var command = connection.CreateCommand();
-                command.CommandText = "CREATE TABLE IF NOT EXISTS ADD2 (Id INTEGER PRIMARY KEY NOT NULL, Name VARCHAR(32) NOT NULL, PlayedBy VARCHAR(32) NOT NULL)";
-                connection.Open();
-                command.ExecuteNonQuery();
-            }
+            new DatabaseSetup("characters").Setup();
         }
     }
 }

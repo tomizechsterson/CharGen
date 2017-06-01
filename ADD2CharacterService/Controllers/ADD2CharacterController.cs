@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using ADD2CharacterService.Model;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADD2CharacterService.Controllers
@@ -25,7 +24,6 @@ namespace ADD2CharacterService.Controllers
 
         // POST api/ADD2Character
         [HttpPost]
-//        [EnableCors("AllowEverything")]
         public void Post([FromBody]HttpCharacterModel characterModel)
         {
             new ADD2SqliteCharacters(_db).Add(characterModel.Name, characterModel.PlayedBy);
