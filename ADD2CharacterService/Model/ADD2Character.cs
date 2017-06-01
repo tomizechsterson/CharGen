@@ -5,5 +5,6 @@
         int Id();
         string Name();
         string PlayedBy();
+        HttpCharacterModel ToModel();
     }
 }

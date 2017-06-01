@@ -47,5 +47,15 @@ namespace ADD2CharacterService.Model
                 }
             }
         }
+
+        public HttpCharacterModel ToModel()
+        {
+            return new HttpCharacterModel
+            {
+                Id = _id,
+                Name = Name(),
+                PlayedBy = PlayedBy()
+            };
+        }
     }
 }
