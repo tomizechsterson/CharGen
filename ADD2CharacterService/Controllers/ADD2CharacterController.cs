@@ -15,30 +15,28 @@ namespace ADD2CharacterService.Controllers
             return new ADD2SqliteCharacters(_db).Iterate();
         }
 
-        // GET api/ADD2Character/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ADD2Character Get(int id)
         {
-            return "value";
+            return new ADD2SqliteCharacters(_db).Get(id);
         }
 
-        // POST api/ADD2Character
         [HttpPost]
         public void Post([FromBody]HttpCharacterModel characterModel)
         {
             new ADD2SqliteCharacters(_db).Add(characterModel.Name, characterModel.PlayedBy);
         }
 
-        // PUT api/ADD2Character/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]HttpCharacterModel characterModel)
         {
+            new ADD2SqliteCharacters(_db).Update(id, characterModel.Name, characterModel.PlayedBy);
         }
 
-        // DELETE api/ADD2Character/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            new ADD2SqliteCharacters(_db).Delete(id);
         }
     }
 }
