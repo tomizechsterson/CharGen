@@ -35,7 +35,7 @@ namespace ADD2CharacterService.Controllers
 
         [EnableCors("AllowEverything")]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]HttpCharacterModel characterModel)
+        public void Put(int id, HttpCharacterModel characterModel)
         {
             new ADD2SqliteCharacters(_db).Update(id, characterModel.Name, characterModel.PlayedBy);
         }
