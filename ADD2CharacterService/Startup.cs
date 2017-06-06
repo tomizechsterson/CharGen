@@ -26,9 +26,9 @@ namespace ADD2CharacterService
             services.AddMvc();
             services.AddCors(o =>
             {
-                o.AddPolicy("AllowEverything", builder =>
+                o.AddPolicy("SpecificOrigin", builder =>
                 {
-                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                    builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
                 });
             });
         }

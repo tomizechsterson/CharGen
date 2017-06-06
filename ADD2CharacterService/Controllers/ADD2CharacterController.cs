@@ -11,21 +11,21 @@ namespace ADD2CharacterService.Controllers
     {
         private const string _db = "Data Source=characters";
 
-        [EnableCors("AllowEverything")]
+        [EnableCors("SpecificOrigin")]
         [HttpGet]
         public IEnumerable<HttpCharacterModel> Get()
         {
             return new ADD2SqliteCharacters(_db).Iterate().Select(a => a.ToModel());
         }
 
-        [EnableCors("AllowEverything")]
+        [EnableCors("SpecificOrigin")]
         [HttpGet("{id}")]
         public ADD2Character Get(int id)
         {
             return new ADD2SqliteCharacters(_db).Get(id);
         }
 
-        [EnableCors("AllowEverything")]
+        [EnableCors("SpecificOrigin")]
         [Route("new")]
         [HttpPost]
         public void Post(HttpCharacterModel characterModel)
@@ -33,14 +33,14 @@ namespace ADD2CharacterService.Controllers
             new ADD2SqliteCharacters(_db).Add(characterModel.Name, characterModel.PlayedBy);
         }
 
-        [EnableCors("AllowEverything")]
+        [EnableCors("SpecificOrigin")]
         [HttpPut("{id}")]
         public void Put(int id, HttpCharacterModel characterModel)
         {
             new ADD2SqliteCharacters(_db).Update(id, characterModel.Name, characterModel.PlayedBy);
         }
 
-        [EnableCors("AllowEverything")]
+        [EnableCors("SpecificOrigin")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
