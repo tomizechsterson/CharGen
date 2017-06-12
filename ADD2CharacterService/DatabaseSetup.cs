@@ -28,7 +28,8 @@ namespace ADD2CharacterService
                     "Con INTEGER DEFAULT 0, " +
                     "Int INTEGER DEFAULT 0, " +
                     "Wis INTEGER DEFAULT 0, " +
-                    "Chr INTEGER DEFAULT 0)";
+                    "Chr INTEGER DEFAULT 0," +
+                    "IsCompleted BOOLEAN DEFAULT 0 CHECK(IsCompleted IN (0, 1)) )";
                 connection.Open();
                 command.ExecuteNonQuery();
             }

@@ -12,5 +12,7 @@ namespace ADD2CharacterService.Model
         public int Int { get; set; }
         public int Wis { get; set; }
         public int Chr { get; set; }
+
+        public bool IsCompleted { get; set; }
     }
 }

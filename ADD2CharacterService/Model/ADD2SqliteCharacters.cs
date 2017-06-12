@@ -43,8 +43,8 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr) " + 
-                    "VALUES ($name, $playedby, $str, $dex, $con, $int, $wis, $chr)";
+                command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, IsCompleted) " + 
+                    "VALUES ($name, $playedby, $str, $dex, $con, $int, $wis, $chr, $iscompleted)";
                 command.Parameters.AddWithValue("$name", model.Name);
                 command.Parameters.AddWithValue("$playedby", model.PlayedBy);
                 command.Parameters.AddWithValue("$str", model.Str);
@@ -53,6 +53,7 @@ namespace ADD2CharacterService.Model
                 command.Parameters.AddWithValue("$int", model.Int);
                 command.Parameters.AddWithValue("$wis", model.Wis);
                 command.Parameters.AddWithValue("$chr", model.Chr);
+                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted);
                 conn.Open();
                 command.ExecuteNonQuery();
             }
@@ -70,7 +71,8 @@ namespace ADD2CharacterService.Model
                     "Con = $con, " +
                     "Int = $int, " +
                     "Wix = $wis, " +
-                    "Chr = $chr " +
+                    "Chr = $chr, " +
+                    "IsCompleted = $iscompleted " +
                     "WHERE Id = $id";
                 command.Parameters.AddWithValue("$id", id);
                 command.Parameters.AddWithValue("$name", model.Name);
@@ -81,6 +83,7 @@ namespace ADD2CharacterService.Model
                 command.Parameters.AddWithValue("$int", model.Int);
                 command.Parameters.AddWithValue("$wis", model.Wis);
                 command.Parameters.AddWithValue("$chr", model.Chr);
+                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted);
                 conn.Open();
                 command.ExecuteNonQuery();
             }

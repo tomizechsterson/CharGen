@@ -58,6 +58,11 @@ namespace ADD2CharacterService.Model
             return GetColumnInt("Chr");
         }
 
+        public int IsCompleted()
+        {
+            return GetColumnInt("IsCompleted");
+        }
+
         public HttpCharacterModel ToModel()
         {
             return new HttpCharacterModel
@@ -70,7 +75,8 @@ namespace ADD2CharacterService.Model
                 Con = Con(),
                 Int = Int(),
                 Wis = Wis(),
-                Chr = Chr()
+                Chr = Chr(),
+                IsCompleted = IsCompleted() == 1
             };
         }
 
