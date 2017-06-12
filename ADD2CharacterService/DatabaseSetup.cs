@@ -19,7 +19,16 @@ namespace ADD2CharacterService
             {
                 var command = connection.CreateCommand();
                 command.CommandText =
-                    "CREATE TABLE IF NOT EXISTS ADD2 (Id INTEGER PRIMARY KEY NOT NULL, Name VARCHAR(32) NOT NULL, PlayedBy VARCHAR(32) NOT NULL)";
+                    "CREATE TABLE IF NOT EXISTS ADD2 (" + 
+                    "Id INTEGER PRIMARY KEY NOT NULL, " + 
+                    "Name VARCHAR(32) NOT NULL, " + 
+                    "PlayedBy VARCHAR(32) NOT NULL, " +
+                    "Str INTEGER DEFAULT 0, " + 
+                    "Dex INTEGER DEFAULT 0, " +
+                    "Con INTEGER DEFAULT 0, " +
+                    "Int INTEGER DEFAULT 0, " +
+                    "Wis INTEGER DEFAULT 0, " +
+                    "Chr INTEGER DEFAULT 0)";
                 connection.Open();
                 command.ExecuteNonQuery();
             }

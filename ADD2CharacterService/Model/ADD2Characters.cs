@@ -6,8 +6,8 @@ namespace ADD2CharacterService.Model
     {
         IEnumerable<ADD2Character> Iterate();
         ADD2Character Get(int id);
-        void Add(string name, string playedby);
-        void Update(int id, string name, string playedby);
+        void Add(HttpCharacterModel model);
+        void Update(int id, HttpCharacterModel model);
         void Delete(int id);
     }
 }

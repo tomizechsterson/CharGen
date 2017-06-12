@@ -38,28 +38,49 @@ namespace ADD2CharacterService.Model
             return new ADD2SqliteCharacter(_connectionString, id);
         }
 
-        public void Add(string name, string playedby)
+        public void Add(HttpCharacterModel model)
         {
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy) VALUES ($name, $playedby)";
-                command.Parameters.AddWithValue("$name", name);
-                command.Parameters.AddWithValue("$playedby", playedby);
+                command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr) " + 
+                    "VALUES ($name, $playedby, $str, $dex, $con, $int, $wis, $chr)";
+                command.Parameters.AddWithValue("$name", model.Name);
+                command.Parameters.AddWithValue("$playedby", model.PlayedBy);
+                command.Parameters.AddWithValue("$str", model.Str);
+                command.Parameters.AddWithValue("$dex", model.Dex);
+                command.Parameters.AddWithValue("$con", model.Con);
+                command.Parameters.AddWithValue("$int", model.Int);
+                command.Parameters.AddWithValue("$wis", model.Wis);
+                command.Parameters.AddWithValue("$chr", model.Chr);
                 conn.Open();
                 command.ExecuteNonQuery();
             }
         }
 
-        public void Update(int id, string name, string playedby)
+        public void Update(int id, HttpCharacterModel model)
         {
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "UPDATE ADD2 SET Name = $name, PlayedBy = $playedby WHERE Id = $id";
+                command.CommandText = "UPDATE ADD2 SET Name = $name, " +
+                    "PlayedBy = $playedby, " +
+                    "Str = $str, " +
+                    "Dex = $dex, " +
+                    "Con = $con, " +
+                    "Int = $int, " +
+                    "Wix = $wis, " +
+                    "Chr = $chr " +
+                    "WHERE Id = $id";
                 command.Parameters.AddWithValue("$id", id);
-                command.Parameters.AddWithValue("$name", name);
-                command.Parameters.AddWithValue("$playedby", playedby);
+                command.Parameters.AddWithValue("$name", model.Name);
+                command.Parameters.AddWithValue("$playedby", model.PlayedBy);
+                command.Parameters.AddWithValue("$str", model.Str);
+                command.Parameters.AddWithValue("$dex", model.Dex);
+                command.Parameters.AddWithValue("$con", model.Con);
+                command.Parameters.AddWithValue("$int", model.Int);
+                command.Parameters.AddWithValue("$wis", model.Wis);
+                command.Parameters.AddWithValue("$chr", model.Chr);
                 conn.Open();
                 command.ExecuteNonQuery();
             }

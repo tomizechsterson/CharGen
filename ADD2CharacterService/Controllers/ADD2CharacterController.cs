@@ -30,14 +30,14 @@ namespace ADD2CharacterService.Controllers
         [HttpPost]
         public void Post(HttpCharacterModel characterModel)
         {
-            new ADD2SqliteCharacters(_db).Add(characterModel.Name, characterModel.PlayedBy);
+            new ADD2SqliteCharacters(_db).Add(characterModel);
         }
 
         [EnableCors("SpecificOrigin")]
         [HttpPut("{id}")]
         public void Put(int id, HttpCharacterModel characterModel)
         {
-            new ADD2SqliteCharacters(_db).Update(id, characterModel.Name, characterModel.PlayedBy);
+            new ADD2SqliteCharacters(_db).Update(id, characterModel);
         }
 
         [EnableCors("SpecificOrigin")]
