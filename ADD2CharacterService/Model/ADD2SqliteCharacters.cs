@@ -53,7 +53,7 @@ namespace ADD2CharacterService.Model
                 command.Parameters.AddWithValue("$int", model.Int);
                 command.Parameters.AddWithValue("$wis", model.Wis);
                 command.Parameters.AddWithValue("$chr", model.Chr);
-                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted);
+                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted ? 1 : 0);
                 conn.Open();
                 command.ExecuteNonQuery();
             }
@@ -70,7 +70,7 @@ namespace ADD2CharacterService.Model
                     "Dex = $dex, " +
                     "Con = $con, " +
                     "Int = $int, " +
-                    "Wix = $wis, " +
+                    "Wis = $wis, " +
                     "Chr = $chr, " +
                     "IsCompleted = $iscompleted " +
                     "WHERE Id = $id";
@@ -83,7 +83,7 @@ namespace ADD2CharacterService.Model
                 command.Parameters.AddWithValue("$int", model.Int);
                 command.Parameters.AddWithValue("$wis", model.Wis);
                 command.Parameters.AddWithValue("$chr", model.Chr);
-                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted);
+                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted ? 1 : 0);
                 conn.Open();
                 command.ExecuteNonQuery();
             }
