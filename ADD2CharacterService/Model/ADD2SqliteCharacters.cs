@@ -43,7 +43,7 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, IsCompleted) " + 
+                command.CommandText = "INSERT INTO add2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, IsCompleted) " + 
                     "VALUES ($name, $playedby, $str, $dex, $con, $int, $wis, $chr, $iscompleted)";
                 command.Parameters.AddWithValue("$name", model.Name);
                 command.Parameters.AddWithValue("$playedby", model.PlayedBy);
@@ -64,7 +64,7 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "UPDATE ADD2 SET Name = $name, " +
+                command.CommandText = "UPDATE add2 SET Name = $name, " +
                     "PlayedBy = $playedby, " +
                     "Str = $str, " +
                     "Dex = $dex, " +
@@ -94,7 +94,7 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "DELETE FROM ADD2 WHERE Id = $id";
+                command.CommandText = "DELETE FROM add2 WHERE Id = $id";
                 command.Parameters.AddWithValue("$id", id);
                 conn.Open();
                 command.ExecuteNonQuery();
