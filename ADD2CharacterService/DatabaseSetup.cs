@@ -35,7 +35,7 @@ namespace ADD2CharacterService
 
                 command = connection.CreateCommand();
                 command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
-                                      + "SELECT 'Test1', 'Test1', 10, 10, 10, 10, 10, 10, 1 "
+                                      + "SELECT 'Test1', 'Test1', 0, 0, 0, 0, 0, 0, 1 "
                                       + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Test1'); "
                                       + "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
                                       + "SELECT 'Someone', 'Somebody', 12, 12, 12, 12, 12, 12, 2 "
