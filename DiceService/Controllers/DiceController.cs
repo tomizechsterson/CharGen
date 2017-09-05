@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using DiceService.App;
+using Microsoft.AspNetCore.Cors;
 
 namespace DiceService.Controllers
 {
@@ -13,6 +14,7 @@ namespace DiceService.Controllers
             return new Roll(1, 6).DoRoll();
         }
 
+        [EnableCors("SpecificOrigin")]
         [HttpGet("{times}/{sides}")]
         public IEnumerable<int> Get(int times, int sides)
         {
