@@ -43,8 +43,8 @@ namespace ADD2CharacterService.Model
             using (var conn = new SqliteConnection(_connectionString))
             {
                 var command = conn.CreateCommand();
-                command.CommandText = "INSERT INTO add2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, IsCompleted) " + 
-                    "VALUES ($name, $playedby, $str, $dex, $con, $int, $wis, $chr, $iscompleted)";
+                command.CommandText = "INSERT INTO add2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) " +
+                    "VALUES ($name, $playedby, $str, $dex, $con, $int, $wis, $chr, $completionStep)";
                 command.Parameters.AddWithValue("$name", model.Name);
                 command.Parameters.AddWithValue("$playedby", model.PlayedBy);
                 command.Parameters.AddWithValue("$str", model.Str);
@@ -53,7 +53,7 @@ namespace ADD2CharacterService.Model
                 command.Parameters.AddWithValue("$int", model.Int);
                 command.Parameters.AddWithValue("$wis", model.Wis);
                 command.Parameters.AddWithValue("$chr", model.Chr);
-                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted ? 1 : 0);
+                command.Parameters.AddWithValue("$completionStep", model.CompletionStep);
                 conn.Open();
                 command.ExecuteNonQuery();
             }
@@ -72,7 +72,7 @@ namespace ADD2CharacterService.Model
                     "Int = $int, " +
                     "Wis = $wis, " +
                     "Chr = $chr, " +
-                    "IsCompleted = $iscompleted " +
+                    "CompletionStep = $completionStep " +
                     "WHERE Id = $id";
                 command.Parameters.AddWithValue("$id", id);
                 command.Parameters.AddWithValue("$name", model.Name);
@@ -83,7 +83,7 @@ namespace ADD2CharacterService.Model
                 command.Parameters.AddWithValue("$int", model.Int);
                 command.Parameters.AddWithValue("$wis", model.Wis);
                 command.Parameters.AddWithValue("$chr", model.Chr);
-                command.Parameters.AddWithValue("$iscompleted", model.IsCompleted ? 1 : 0);
+                command.Parameters.AddWithValue("$completionStep", model.CompletionStep);
                 conn.Open();
                 command.ExecuteNonQuery();
             }

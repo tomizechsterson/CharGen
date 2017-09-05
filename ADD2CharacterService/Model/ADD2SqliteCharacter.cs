@@ -58,7 +58,7 @@ namespace ADD2CharacterService.Model
             return GetColumnInt("Chr");
         }
 
-        public int IsCompleted()
+        public int CompletionStep()
         {
             return GetColumnInt("CompletionStep");
         }
@@ -76,7 +76,7 @@ namespace ADD2CharacterService.Model
                 Int = Int(),
                 Wis = Wis(),
                 Chr = Chr(),
-                IsCompleted = IsCompleted() == 1
+                CompletionStep = CompletionStep()
             };
         }
 

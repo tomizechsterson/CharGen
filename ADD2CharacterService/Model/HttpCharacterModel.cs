@@ -13,6 +13,6 @@ namespace ADD2CharacterService.Model
         public int Wis { get; set; }
         public int Chr { get; set; }
 
-        public bool IsCompleted { get; set; }
+        public int CompletionStep { get; set; }
     }
 }
