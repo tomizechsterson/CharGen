@@ -6,7 +6,7 @@ namespace ADD2CharacterService
     {
         private readonly string _dbName;
 
-        public DatabaseSetup() : this("default") {}
+        public DatabaseSetup() : this("default") { }
 
         public DatabaseSetup(string dbName)
         {
@@ -19,18 +19,30 @@ namespace ADD2CharacterService
             {
                 var command = connection.CreateCommand();
                 command.CommandText =
-                    "CREATE TABLE IF NOT EXISTS ADD2 (" + 
-                    "Id INTEGER PRIMARY KEY NOT NULL, " + 
-                    "Name VARCHAR(32) NOT NULL, " + 
+                    "CREATE TABLE IF NOT EXISTS ADD2 (" +
+                    "Id INTEGER PRIMARY KEY NOT NULL, " +
+                    "Name VARCHAR(32) NOT NULL, " +
                     "PlayedBy VARCHAR(32) NOT NULL, " +
-                    "Str INTEGER DEFAULT 0, " + 
+                    "Str INTEGER DEFAULT 0, " +
                     "Dex INTEGER DEFAULT 0, " +
                     "Con INTEGER DEFAULT 0, " +
                     "Int INTEGER DEFAULT 0, " +
                     "Wis INTEGER DEFAULT 0, " +
                     "Chr INTEGER DEFAULT 0," +
-                    "IsCompleted BOOLEAN DEFAULT 0 CHECK(IsCompleted IN (0, 1)) )";
+                    "CompletionStep INTEGER DEFAULT 1 )";
                 connection.Open();
+                command.ExecuteNonQuery();
+
+                command = connection.CreateCommand();
+                command.CommandText = "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
+                                      + "SELECT 'Test1', 'Test1', 10, 10, 10, 10, 10, 10, 1 "
+                                      + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Test1'); "
+                                      + "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
+                                      + "SELECT 'Someone', 'Somebody', 12, 12, 12, 12, 12, 12, 2 "
+                                      + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Someone'); "
+                                      + "INSERT INTO ADD2 (Name, PlayedBy) "
+                                      + "SELECT 'Person', 'A Person' "
+                                      + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Person');";
                 command.ExecuteNonQuery();
             }
         }

@@ -60,7 +60,7 @@ namespace ADD2CharacterService.Model
 
         public int IsCompleted()
         {
-            return GetColumnInt("IsCompleted");
+            return GetColumnInt("CompletionStep");
         }
 
         public HttpCharacterModel ToModel()
