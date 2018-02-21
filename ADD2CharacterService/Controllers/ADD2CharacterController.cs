@@ -46,5 +46,12 @@ namespace ADD2CharacterService.Controllers
         {
             new ADD2SqliteCharacters(_db).Delete(id);
         }
+
+        public void Delete()
+        {
+            var characters = new ADD2SqliteCharacters(_db).Iterate();
+            foreach (var c in characters)
+                new ADD2SqliteCharacters(_db).Delete(c.Id());
+        }
     }
 }
