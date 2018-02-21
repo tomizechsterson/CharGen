@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Acceptance
 -> max-retries = 0
--> last-updated = 2018-02-21T03:53:44.7063670Z
+-> last-updated = 2018-02-21T03:57:11.7350593Z
 -> tags = 
 
 [ADD2Character]
@@ -14,6 +14,7 @@
 |> GetWithId id=4, returnValue=EMPTY
 |> AddCharacter name=Someone
 |> GetWithId id=4, returnValue=Someone
+|> GetWithId id=3, returnValue=Person
 |> UpdateCharacter id=3, name=NewPerson
 |> GetWithId id=3, returnValue=NewPerson
 |> DeleteCharacter id=3
