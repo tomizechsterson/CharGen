@@ -1,9 +1,9 @@
-# AD&D 2nd Ed Character Service
+# AD&D 2nd Edition
 
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Acceptance
 -> max-retries = 0
--> last-updated = 2018-02-21T03:57:11.7350593Z
+-> last-updated = 2018-02-21T04:02:30.7610436Z
 -> tags = 
 
 [ADD2Character]
