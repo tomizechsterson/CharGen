@@ -6,11 +6,14 @@
 ## GetAll
 ### Get with no parameters should have a count of {returnValue}
 
-## GetWithId
-### Get with id {id} should return {returnValue}
+## GetNameWithId
+### Get name of character with id {id} should return {returnValue}
+
+## GetPlayedByWithId
+### Get the person who plays the character with id {id} returns {returnValue}
 
 ## AddCharacter
-### Adding a new character with name {name}
+### Adding a new character with name {name} and is played by {playedBy}
 
 ## UpdateCharacter
 ### Update a character with id {id} to name {name}

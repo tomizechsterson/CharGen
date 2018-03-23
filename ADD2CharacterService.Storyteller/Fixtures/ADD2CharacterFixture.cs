@@ -24,9 +24,19 @@ namespace ADD2CharacterService.Storyteller.Fixtures
             return _controller.Get(id).Name();
         }
 
-        public void AddCharacter(string name)
+        public string GetNameWithId(int id)
         {
-            _controller.Post(new HttpCharacterModel {Name = name, PlayedBy = "test4"});
+            return _controller.Get(id).Name();
+        }
+
+        public string GetPlayedByWithId(int id)
+        {
+            return _controller.Get(id).PlayedBy();
+        }
+
+        public void AddCharacter(string name, string playedBy)
+        {
+            _controller.Post(new HttpCharacterModel {Name = name, PlayedBy = playedBy});
         }
 
         public void UpdateCharacter(int id, string name)
