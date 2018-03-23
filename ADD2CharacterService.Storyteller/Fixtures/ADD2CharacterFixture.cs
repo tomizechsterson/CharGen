@@ -19,11 +19,6 @@ namespace ADD2CharacterService.Storyteller.Fixtures
             return _controller.Get().Count();
         }
 
-        public string GetWithId(int id)
-        {
-            return _controller.Get(id).Name();
-        }
-
         public string GetNameWithId(int id)
         {
             return _controller.Get(id).Name();
@@ -39,9 +34,9 @@ namespace ADD2CharacterService.Storyteller.Fixtures
             _controller.Post(new HttpCharacterModel {Name = name, PlayedBy = playedBy});
         }
 
-        public void UpdateCharacter(int id, string name)
+        public void UpdateCharacter(int id, string name, string playedBy)
         {
-            _controller.Put(id, new HttpCharacterModel {Name = name, PlayedBy = "blah"});
+            _controller.Put(id, new HttpCharacterModel {Name = name, PlayedBy = playedBy});
         }
 
         public void DeleteCharacter(int id)

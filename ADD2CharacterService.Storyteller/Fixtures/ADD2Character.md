@@ -7,16 +7,16 @@
 ### Get with no parameters should have a count of {returnValue}
 
 ## GetNameWithId
-### Get name of character with id {id} should return {returnValue}
+### The name of the character with id {id} should be {returnValue}
 
 ## GetPlayedByWithId
-### Get the person who plays the character with id {id} returns {returnValue}
+### The person who plays the character with id {id} should be {returnValue}
 
 ## AddCharacter
-### Adding a new character with name {name} and is played by {playedBy}
+### Add a new character with name {name} and is played by {playedBy}
 
 ## UpdateCharacter
-### Update a character with id {id} to name {name}
+### Update a character with id {id} to name {name} and played by {playedBy}
 
 ## DeleteCharacter
 ### Delete a character with id {id}
