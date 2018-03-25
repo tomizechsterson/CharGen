@@ -1,9 +1,9 @@
-# AD&D 2nd Edition
+# AD&D 2nd Edition Smoke Test
 
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Acceptance
 -> max-retries = 0
--> last-updated = 2018-03-23T05:59:55.0672077Z
+-> last-updated = 2018-03-25T02:46:10.1442792Z
 -> tags = 
 
 [ADD2Character]
