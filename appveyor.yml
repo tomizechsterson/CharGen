@@ -23,3 +23,5 @@ test:
     only:
       - ADD2CharacterService.UnitTests.dll
       - DiceService.UnitTests.dll
+      
+deploy: off
