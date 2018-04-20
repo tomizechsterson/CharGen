@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceService.UnitTests", "Di
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADD2CharacterService", "ADD2CharacterService\ADD2CharacterService.csproj", "{82518231-37D5-47BD-A6F3-CBC73D273BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADD2CharacterService.UnitTests", "ADD2CharacterService.UnitTests\ADD2CharacterService.UnitTests.csproj", "{54C074E0-A979-400D-B188-5570DE6FD58C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADD2CharacterService.Storyteller", "ADD2CharacterService.Storyteller\ADD2CharacterService.Storyteller.csproj", "{C2FD83FB-3096-44C0-B07D-75E18581C052}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{82518231-37D5-47BD-A6F3-CBC73D273BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82518231-37D5-47BD-A6F3-CBC73D273BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82518231-37D5-47BD-A6F3-CBC73D273BC6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54C074E0-A979-400D-B188-5570DE6FD58C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54C074E0-A979-400D-B188-5570DE6FD58C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54C074E0-A979-400D-B188-5570DE6FD58C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54C074E0-A979-400D-B188-5570DE6FD58C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2FD83FB-3096-44C0-B07D-75E18581C052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2FD83FB-3096-44C0-B07D-75E18581C052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2FD83FB-3096-44C0-B07D-75E18581C052}.Release|Any CPU.ActiveCfg = Release|Any CPU
