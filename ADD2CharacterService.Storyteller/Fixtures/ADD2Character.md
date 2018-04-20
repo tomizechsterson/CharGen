@@ -4,7 +4,7 @@
 ### Initialize the datastore
 
 ## GetAll
-### Get with no parameters should have a count of {returnValue}
+### The datastore should have {returnValue} characters
 
 ## GetNameWithId
 ### The name of the character with id {id} should be {returnValue}

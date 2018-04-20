@@ -1,0 +1,27 @@
+version: 0.1.{build}
+
+branches:
+  only:
+    - master
+    
+image: Visual Studio 2017
+
+clone_folder: c:\projects\CharGen
+
+matrix:
+  fast_finish: true
+  
+cache:
+  - packages -> **\packages.config
+  
+build:
+  project: CharGen.sln
+
+before_build:
+  - dotnet restore
+  
+test:
+  assemblies:
+    only:
+      - ADD2CharacterService.UnitTests.dll
+      - DiceService.UnitTests.dll
