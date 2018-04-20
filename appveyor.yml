@@ -11,9 +11,6 @@ clone_folder: c:\projects\CharGen
 matrix:
   fast_finish: true
   
-cache:
-  - packages -> **\packages.config
-  
 build:
   project: CharGen.sln
 
