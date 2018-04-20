@@ -1,9 +1,9 @@
 # Delete
 
 -> id = e57789ce-016e-432d-b741-adce53c741f0
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-20T02:52:56.8235943Z
+-> last-updated = 2018-04-20T04:58:54.4916662Z
 -> tags = 
 
 [ADD2Character]

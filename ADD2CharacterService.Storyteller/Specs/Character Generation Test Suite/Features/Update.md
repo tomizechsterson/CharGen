@@ -1,9 +1,9 @@
 # Update
 
 -> id = 7168a2c6-8cc5-4587-9163-7e428f24c8b1
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-20T02:52:27.0798930Z
+-> last-updated = 2018-04-20T04:58:57.6834306Z
 -> tags = 
 
 [ADD2Character]
