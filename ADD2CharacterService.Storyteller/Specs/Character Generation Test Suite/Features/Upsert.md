@@ -1,9 +1,9 @@
 # Upsert
 
 -> id = 6411b8c5-98ed-40cf-a2e5-42830d6b32d9
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-20T04:58:24.1532924Z
+-> last-updated = 2018-04-20T05:14:42.8415488Z
 -> tags = 
 
 [ADD2Character]
