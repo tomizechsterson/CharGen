@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-20T04:59:50.1637445Z
+-> last-updated = 2018-04-20T05:13:54.0096792Z
 -> tags = 
 
 [ADD2Character]
@@ -21,5 +21,8 @@
 |> GetPlayedByWithId id=3, returnValue=Random Person
 |> DeleteCharacter id=3
 |> GetNameWithId id=3, returnValue=EMPTY
+|> GetNameWithId id=5, returnValue=EMPTY
+|> UpdateCharacter id=5, name=Upserted, playedBy=Generic McRando
+|> GetNameWithId id=5, returnValue=Upserted
 |> EmptyDatabase
 ~~~
