@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Controllers;
 using ADD2CharacterService.Stats;
@@ -13,15 +14,13 @@ namespace CharGen.UnitTests
         {
             _controller = new ADD2CharacterController();
         }
-        
+
         [Fact]
         public void RollOnceRule_Returns6Rolls()
         {
             var results = _controller.RollStats(StatRollingRule.RollOnce);
 
-            Assert.Equal(6, results.Count);
-            Assert.True(results.All(x => x.Length == 3));
-            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
+            AssertRolls(results, 6, 3, 2, 19);
         }
 
         [Fact]
@@ -29,9 +28,7 @@ namespace CharGen.UnitTests
         {
             var results = _controller.RollStats(StatRollingRule.RollTwice);
 
-            Assert.Equal(12, results.Count);
-            Assert.True(results.All(x => x.Length == 3));
-            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
+            AssertRolls(results, 12, 3, 2, 19);
         }
 
         [Fact]
@@ -39,9 +36,7 @@ namespace CharGen.UnitTests
         {
             var results = _controller.RollStats(StatRollingRule.Assignment);
 
-            Assert.Equal(6, results.Count);
-            Assert.True(results.All(x => x.Length == 3));
-            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
+            AssertRolls(results, 6, 3, 2, 19);
         }
 
         [Fact]
@@ -49,9 +44,7 @@ namespace CharGen.UnitTests
         {
             var results = _controller.RollStats(StatRollingRule.AssignmentDouble);
 
-            Assert.Equal(12, results.Count);
-            Assert.True(results.All(x => x.Length == 3));
-            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
+            AssertRolls(results, 12, 3, 2, 19);
         }
 
         [Fact]
@@ -59,19 +52,22 @@ namespace CharGen.UnitTests
         {
             var results = _controller.RollStats(StatRollingRule.RollFour);
 
-            Assert.Equal(6, results.Count);
-            Assert.True(results.All(x => x.Length == 4));
-            Assert.True(results.All(roll => roll.Sum() > 3 && roll.Sum() < 25));
+            AssertRolls(results, 6, 4, 3, 25);
         }
-        
+
         [Fact]
         public void AddSevenDiceRule_Returns7RollsOfOneDie()
         {
             var results = _controller.RollStats(StatRollingRule.AddSevenDice);
 
-            Assert.Equal(7, results.Count);
-            Assert.True(results.All(x => x.Length == 1));
-            Assert.True(results.All(roll => roll.Sum() > 0 && roll.Sum() < 7));
+            AssertRolls(results, 7, 1, 0, 7);
+        }
+
+        private static void AssertRolls(List<int[]> results, int numRolls, int numDice, int lowerBound, int upperBound)
+        {
+            Assert.Equal(numRolls, results.Count);
+            Assert.True(results.All(x => x.Length == numDice));
+            Assert.True(results.All(roll => roll.Sum() > lowerBound && roll.Sum() < upperBound));
         }
     }
 }
