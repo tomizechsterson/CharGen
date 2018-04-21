@@ -1,9 +1,9 @@
-# ADandD2SmokeTest
+# ADD2SmokeTests
 
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-20T05:13:54.0096792Z
+-> last-updated = 2018-04-21T06:23:58.2276408Z
 -> tags = 
 
 [ADD2Datastore]
@@ -12,9 +12,9 @@
 |> GetAll returnValue=3
 |> GetNameWithId id=1, returnValue=Test1
 |> GetNameWithId id=4, returnValue=EMPTY
-|> AddCharacter name=Someone, playedBy=A Person
-|> GetNameWithId id=4, returnValue=Someone
-|> GetPlayedByWithId id=4, returnValue=A Person
+|> AddCharacter name=Character, playedBy=Human
+|> GetNameWithId id=4, returnValue=Character
+|> GetPlayedByWithId id=4, returnValue=Human
 |> GetNameWithId id=3, returnValue=Person
 |> UpdateCharacter id=3, name=NewPerson, playedBy=Random Person
 |> GetNameWithId id=3, returnValue=NewPerson
@@ -24,5 +24,6 @@
 |> GetNameWithId id=5, returnValue=EMPTY
 |> UpdateCharacter id=5, name=Upserted, playedBy=Generic McRando
 |> GetNameWithId id=5, returnValue=Upserted
+|> GetPlayedByWithId id=5, returnValue=Generic McRando
 |> EmptyDatabase
 ~~~
