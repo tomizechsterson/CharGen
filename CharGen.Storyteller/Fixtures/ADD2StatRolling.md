@@ -1,4 +1,4 @@
-# Stat Rolling
+# AD&D 2nd Edition Stat Rolling Fixture
 
 ## RollOnce
 ### Rolling ability scores once per stat

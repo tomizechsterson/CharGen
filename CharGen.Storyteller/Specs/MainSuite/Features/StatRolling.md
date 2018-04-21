@@ -6,7 +6,7 @@
 -> last-updated = 2018-04-21T02:05:23.5387759Z
 -> tags = 
 
-[StatRolling]
+[ADD2StatRolling]
 |> RollOnce
 |> CheckNumberOfRolls returnValue=6
 |> RollTwice
