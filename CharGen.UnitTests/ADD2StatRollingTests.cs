@@ -20,6 +20,7 @@ namespace CharGen.UnitTests
             var results = _controller.RollStats(StatRollingRule.RollOnce);
 
             Assert.Equal(6, results.Count);
+            Assert.True(results.All(x => x.Length == 3));
         }
 
         [Fact]
@@ -28,6 +29,7 @@ namespace CharGen.UnitTests
             var results = _controller.RollStats(StatRollingRule.RollTwice);
 
             Assert.Equal(12, results.Count);
+            Assert.True(results.All(x => x.Length == 3));
         }
 
         [Fact]
@@ -36,6 +38,7 @@ namespace CharGen.UnitTests
             var results = _controller.RollStats(StatRollingRule.Assignment);
 
             Assert.Equal(6, results.Count);
+            Assert.True(results.All(x => x.Length == 3));
         }
 
         [Fact]
@@ -44,6 +47,7 @@ namespace CharGen.UnitTests
             var results = _controller.RollStats(StatRollingRule.AssignmentDouble);
 
             Assert.Equal(12, results.Count);
+            Assert.True(results.All(x => x.Length == 3));
         }
 
         [Fact]
@@ -52,6 +56,7 @@ namespace CharGen.UnitTests
             var results = _controller.RollStats(StatRollingRule.RollFour);
 
             Assert.Equal(6, results.Count);
+            Assert.True(results.All(x => x.Length == 4));
         }
         
         [Fact]
@@ -60,7 +65,7 @@ namespace CharGen.UnitTests
             var results = _controller.RollStats(StatRollingRule.AddSevenDice);
 
             Assert.Equal(7, results.Count);
-            Assert.True(results.All(x => x.Length == 3));
+            Assert.True(results.All(x => x.Length == 1));
         }
     }
 }
