@@ -6,7 +6,7 @@
 -> last-updated = 2018-04-20T05:08:18.7703535Z
 -> tags = 
 
-[ADD2Character]
+[ADD2Datastore]
 |> Initialize
 |> GetAll returnValue=3
 |> AddCharacter name=NewCharacter, playedBy=A Person

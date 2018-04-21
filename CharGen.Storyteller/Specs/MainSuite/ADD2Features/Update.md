@@ -6,7 +6,7 @@
 -> last-updated = 2018-04-20T04:58:57.6834306Z
 -> tags = 
 
-[ADD2Character]
+[ADD2Datastore]
 |> Initialize
 |> GetAll returnValue=3
 |> GetNameWithId id=3, returnValue=Person

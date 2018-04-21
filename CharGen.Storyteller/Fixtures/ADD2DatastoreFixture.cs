@@ -6,7 +6,7 @@ using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
-    public class ADD2CharacterFixture : Fixture
+    public class ADD2DatastoreFixture : Fixture
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
 

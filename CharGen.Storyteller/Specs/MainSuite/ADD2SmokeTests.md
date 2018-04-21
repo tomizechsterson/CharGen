@@ -6,7 +6,7 @@
 -> last-updated = 2018-04-20T05:13:54.0096792Z
 -> tags = 
 
-[ADD2Character]
+[ADD2Datastore]
 |> GetAll returnValue=0
 |> Initialize
 |> GetAll returnValue=3
