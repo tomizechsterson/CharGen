@@ -20,3 +20,6 @@
 
 ## CheckNumberOfRolls
 ### There should have been {returnValue} rolls
+
+## CheckNumberOfDiceRolled
+### Number of dice used for each roll should have been {number} {returnValue}

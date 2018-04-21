@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using ADD2CharacterService.Controllers;
 using ADD2CharacterService.Stats;
 using StoryTeller;
@@ -43,6 +44,11 @@ namespace CharGen.Storyteller.Fixtures
         public int CheckNumberOfRolls()
         {
             return _rollResults.Count;
+        }
+
+        public bool CheckNumberOfDiceRolled(int number)
+        {
+            return _rollResults.All(x => x.Length == number);
         }
     }
 }
