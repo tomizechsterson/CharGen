@@ -1,6 +1,5 @@
-using System;
+using System.Linq;
 using ADD2CharacterService.Controllers;
-using ADD2CharacterService.Model;
 using ADD2CharacterService.Stats;
 using Xunit;
 
@@ -61,6 +60,7 @@ namespace CharGen.UnitTests
             var results = _controller.RollStats(StatRollingRule.AddSevenDice);
 
             Assert.Equal(7, results.Count);
+            Assert.True(results.All(x => x.Length == 3));
         }
     }
 }
