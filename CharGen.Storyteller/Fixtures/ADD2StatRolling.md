@@ -23,3 +23,6 @@
 
 ## CheckNumberOfDiceRolled
 ### Number of dice used for each roll should have been {number} {returnValue}
+
+## CheckValuesOfDieRolls
+### The dice should have rolled above {lower} and below {higher} {returnValue}

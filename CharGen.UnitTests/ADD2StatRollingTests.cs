@@ -21,6 +21,7 @@ namespace CharGen.UnitTests
 
             Assert.Equal(6, results.Count);
             Assert.True(results.All(x => x.Length == 3));
+            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
         }
 
         [Fact]
@@ -30,6 +31,7 @@ namespace CharGen.UnitTests
 
             Assert.Equal(12, results.Count);
             Assert.True(results.All(x => x.Length == 3));
+            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
         }
 
         [Fact]
@@ -39,6 +41,7 @@ namespace CharGen.UnitTests
 
             Assert.Equal(6, results.Count);
             Assert.True(results.All(x => x.Length == 3));
+            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
         }
 
         [Fact]
@@ -48,6 +51,7 @@ namespace CharGen.UnitTests
 
             Assert.Equal(12, results.Count);
             Assert.True(results.All(x => x.Length == 3));
+            Assert.True(results.All(roll => roll.Sum() > 2 && roll.Sum() < 19));
         }
 
         [Fact]
@@ -57,6 +61,7 @@ namespace CharGen.UnitTests
 
             Assert.Equal(6, results.Count);
             Assert.True(results.All(x => x.Length == 4));
+            Assert.True(results.All(roll => roll.Sum() > 3 && roll.Sum() < 25));
         }
         
         [Fact]
@@ -66,6 +71,7 @@ namespace CharGen.UnitTests
 
             Assert.Equal(7, results.Count);
             Assert.True(results.All(x => x.Length == 1));
+            Assert.True(results.All(roll => roll.Sum() > 0 && roll.Sum() < 7));
         }
     }
 }

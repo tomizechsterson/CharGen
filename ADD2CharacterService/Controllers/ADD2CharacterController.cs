@@ -71,42 +71,42 @@ namespace ADD2CharacterService.Controllers
                 case StatRollingRule.RollOnce:
                     return new List<int[]>(6)
                     {
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 }
+                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
+                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 }
                     };
                 case StatRollingRule.RollTwice:
                     return new List<int[]>(12)
                     {
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 }
+                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
+                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
+                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
+                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 }
                     };
                 case StatRollingRule.Assignment:
                     return new List<int[]>(6)
                     {
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 }
+                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
+                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 }
                     };
                 case StatRollingRule.AssignmentDouble:
                     return new List<int[]>(12)
                     {
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 },
-                        new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0 }
+                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
+                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
+                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
+                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 }
                     };
                 case StatRollingRule.RollFour:
                     return new List<int[]>(6)
                     {
-                        new[] { 0, 0, 0, 0 }, new[] { 0, 0, 0, 0 }, new[] { 0, 0, 0, 0 },
-                        new[] { 0, 0, 0, 0 }, new[] { 0, 0, 0, 0 }, new[] { 0, 0, 0, 0 }
+                        new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 },
+                        new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 }
                     };
                 case StatRollingRule.AddSevenDice:
                     return new List<int[]>(7)
                     {
-                        new[] { 0 }, new[] { 0 }, new[] { 0 },
-                        new[] { 0 }, new[] { 0 }, new[] { 0 }, new[] { 0 }
+                        new[] { 1 }, new[] { 1 }, new[] { 1 },
+                        new[] { 1 }, new[] { 1 }, new[] { 1 }, new[] { 1 }
                     };
                 default:
                     throw new ArgumentOutOfRangeException(nameof(statRollingRule), statRollingRule,

@@ -50,5 +50,10 @@ namespace CharGen.Storyteller.Fixtures
         {
             return _rollResults.All(x => x.Length == number);
         }
+
+        public bool CheckValuesOfDieRolls(int lower, int higher)
+        {
+            return _rollResults.All(roll => roll.Sum() > lower && roll.Sum() < higher);
+        }
     }
 }
