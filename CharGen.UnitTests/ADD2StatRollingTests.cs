@@ -3,6 +3,7 @@ using System.Linq;
 using ADD2CharacterService.Controllers;
 using ADD2CharacterService.Stats;
 using Xunit;
+// ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
 
 namespace CharGen.UnitTests
 {
@@ -63,11 +64,11 @@ namespace CharGen.UnitTests
             AssertRolls(results, 7, 1, 0, 7);
         }
 
-        private static void AssertRolls(List<int[]> results, int numRolls, int numDice, int lowerBound, int upperBound)
+        private static void AssertRolls(List<int[]> results, int numRolls, int numDicePerRoll, int rollLowerBound, int rollUpperBound)
         {
             Assert.Equal(numRolls, results.Count);
-            Assert.True(results.All(x => x.Length == numDice));
-            Assert.True(results.All(roll => roll.Sum() > lowerBound && roll.Sum() < upperBound));
+            Assert.True(results.All(x => x.Length == numDicePerRoll));
+            Assert.True(results.All(roll => roll.Sum() > rollLowerBound && roll.Sum() < rollUpperBound));
         }
     }
 }
