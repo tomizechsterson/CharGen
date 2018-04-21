@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Model;
+using ADD2CharacterService.Stats;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +19,7 @@ namespace ADD2CharacterService.Controllers
         {
             _database = database;
         }
-
+#region Datastore crud ops
         [EnableCors("SpecificOrigin")]
         [HttpGet]
         public IEnumerable<HttpCharacterModel> Get()
@@ -59,6 +61,57 @@ namespace ADD2CharacterService.Controllers
             var characters = _database.Iterate();
             foreach (var c in characters)
                 _database.Delete(c.Id());
+        }
+#endregion
+        // will eventually delete DiceService
+        public List<int[]> RollStats(StatRollingRule statRollingRule)
+        {
+            switch (statRollingRule)
+            {
+                case StatRollingRule.RollOnce:
+                    return new List<int[]>(6)
+                    {
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }
+                    };
+                case StatRollingRule.RollTwice:
+                    return new List<int[]>(12)
+                    {
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }
+                    };
+                case StatRollingRule.Assignment:
+                    return new List<int[]>(6)
+                    {
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }
+                    };
+                case StatRollingRule.AssignmentDouble:
+                    return new List<int[]>(12)
+                    {
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 },
+                        new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }, new int[3] { 0, 0, 0 }
+                    };
+                case StatRollingRule.RollFour:
+                    return new List<int[]>(6)
+                    {
+                        new int[4] { 0, 0, 0, 0 }, new int[4] { 0, 0, 0, 0 }, new int[4] { 0, 0, 0, 0 },
+                        new int[4] { 0, 0, 0, 0 }, new int[4] { 0, 0, 0, 0 }, new int[4] { 0, 0, 0, 0 }
+                    };
+                case StatRollingRule.AddSevenDice:
+                    return new List<int[]>(7)
+                    {
+                        new int[1] { 0 }, new int[1] { 0 }, new int[1] { 0 },
+                        new int[1] { 0 }, new int[1] { 0 }, new int[1] { 0 }, new int[1] { 0 }
+                    };
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(statRollingRule), statRollingRule,
+                        "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
+            }
         }
     }
 }

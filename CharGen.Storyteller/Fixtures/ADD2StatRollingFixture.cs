@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using ADD2CharacterService.Controllers;
+using ADD2CharacterService.Stats;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
@@ -11,20 +12,32 @@ namespace CharGen.Storyteller.Fixtures
 
         public void RollOnce()
         {
-            var rollResults = new List<int[]>(6);
-            for (int i = 0; i < 6; i++)
-                rollResults.Add(new int[3] {3, 3, 3});
-
-            _rollResults = rollResults;
+            _rollResults = _controller.RollStats(StatRollingRule.RollOnce);
         }
 
         public void RollTwice()
         {
-            var rollResults = new List<int[]>(12);
-            for (int i = 0; i < 12; i++)
-                rollResults.Add(new int[3] { 3, 3, 3 });
+            _rollResults = _controller.RollStats(StatRollingRule.RollTwice);
+        }
 
-            _rollResults = rollResults;
+        public void Assignment()
+        {
+            _rollResults = _controller.RollStats(StatRollingRule.Assignment);
+        }
+
+        public void DoubleAssignment()
+        {
+            _rollResults = _controller.RollStats(StatRollingRule.AssignmentDouble);
+        }
+
+        public void RollFour()
+        {
+            _rollResults = _controller.RollStats(StatRollingRule.RollFour);
+        }
+
+        public void AddSevenDice()
+        {
+            _rollResults = _controller.RollStats(StatRollingRule.AddSevenDice);
         }
 
         public int CheckNumberOfRolls()

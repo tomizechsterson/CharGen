@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADD2CharacterService", "ADD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharGen.Storyteller", "CharGen.Storyteller\CharGen.Storyteller.csproj", "{315F8066-A79B-4CDD-B8CE-B34F2083F813}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharGen.UnitTests", "CharGen.UnitTests\CharGen.UnitTests.csproj", "{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{315F8066-A79B-4CDD-B8CE-B34F2083F813}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{315F8066-A79B-4CDD-B8CE-B34F2083F813}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{315F8066-A79B-4CDD-B8CE-B34F2083F813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
