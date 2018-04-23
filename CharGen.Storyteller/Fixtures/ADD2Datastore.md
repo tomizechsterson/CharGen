@@ -6,20 +6,26 @@
 ## GetAll
 ### The datastore should have {returnValue} characters
 
-## GetNameWithId
-### The name of the character with id {id} should be {returnValue}
+## RetrieveCharacter
+### Retrieve the character with id {id}
 
-## GetPlayedByWithId
-### The person who plays the character with id {id} should be {returnValue}
+## GetRetrievedName
+### The name of the retrieved character should be {returnValue}
+
+## GetRetrievedPlayedBy
+### The person who plays the retrieved character should be {returnValue}
 
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
 ## UpdateCharacter
-### Update a character with id {id} to name {name} and played by {playedBy}
+### Update the character with id {id} to name {name} and played by {playedBy}
+
+## UpdateStats
+### Update stats for character id {id} to str: {str} dex: {dex} con: {con} int: {int} wis: {wis} chr: {chr}
 
 ## DeleteCharacter
-### Delete a character with id {id}
+### Delete the character with id {id}
 
 ## EmptyDatabase
 ### Clear out the datastore
