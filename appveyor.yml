@@ -21,6 +21,6 @@ before_build:
 test:
   assemblies:
     only:
-      - DiceService.UnitTests.dll
+      - CharGen.UnitTests.dll
       
 deploy: off
