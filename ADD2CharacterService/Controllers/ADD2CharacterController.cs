@@ -71,42 +71,42 @@ namespace ADD2CharacterService.Controllers
                 case StatRollingRule.RollOnce:
                     return new List<int[]>(6)
                     {
-                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
-                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 }
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
                     };
                 case StatRollingRule.RollTwice:
                     return new List<int[]>(12)
                     {
-                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
-                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
-                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 },
-                        new[] { 1, 1, 1 }, new[] { 1, 1, 1 }, new[] { 1, 1, 1 }
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
                     };
                 case StatRollingRule.Assignment:
                     return new List<int[]>(6)
                     {
-                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
-                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 }
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
                     };
                 case StatRollingRule.AssignmentDouble:
                     return new List<int[]>(12)
                     {
-                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
-                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
-                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 },
-                        new[] { 6, 6, 6 }, new[] { 6, 6, 6 }, new[] { 6, 6, 6 }
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
+                        new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
                     };
                 case StatRollingRule.RollFour:
                     return new List<int[]>(6)
                     {
-                        new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 },
-                        new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 }, new[] { 6, 6, 6, 6 }
+                        new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll(),
+                        new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll()
                     };
                 case StatRollingRule.AddSevenDice:
                     return new List<int[]>(7)
                     {
-                        new[] { 1 }, new[] { 1 }, new[] { 1 },
-                        new[] { 1 }, new[] { 1 }, new[] { 1 }, new[] { 1 }
+                        new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(),
+                        new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll()
                     };
                 default:
                     throw new ArgumentOutOfRangeException(nameof(statRollingRule), statRollingRule,
