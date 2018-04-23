@@ -77,5 +77,12 @@ namespace ADD2CharacterService.Controllers
             throw new ArgumentOutOfRangeException(nameof(statRollingRule), statRollingRule,
                 "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
         }
+
+        [EnableCors("SpecificOrigin")]
+        [HttpGet("{statRollingRule}")]
+        public string[] RacesAvailable([FromBody] HttpCharacterModel characterModel)
+        {
+            return new string[3];
+        }
     }
 }
