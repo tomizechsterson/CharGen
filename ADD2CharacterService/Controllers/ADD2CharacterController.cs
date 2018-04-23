@@ -12,14 +12,16 @@ namespace ADD2CharacterService.Controllers
     public class ADD2CharacterController : Controller
     {
         private readonly ADD2Characters _database;
-        
+
         public ADD2CharacterController() : this(new ADD2SqliteCharacters("Data Source=characters")) {}
 
         public ADD2CharacterController(ADD2Characters database)
         {
             _database = database;
         }
-#region Datastore crud ops
+
+        #region Datastore crud ops
+
         [EnableCors("SpecificOrigin")]
         [HttpGet]
         public IEnumerable<HttpCharacterModel> Get()
@@ -62,63 +64,18 @@ namespace ADD2CharacterService.Controllers
             foreach (var c in characters)
                 _database.Delete(c.Id());
         }
-#endregion
+
+        #endregion
+
         [EnableCors("SpecificOrigin")]
         [HttpGet("{statRollingRule}")]
         public List<int[]> RollStats(string statRollingRule)
         {
             if (Enum.TryParse<StatRollingRule>(statRollingRule, true, out var rule))
-            {
-                switch (rule)
-                {
-                    case StatRollingRule.RollOnce:
-                        return new List<int[]>(6)
-                        {
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
-                        };
-                    case StatRollingRule.RollTwice:
-                        return new List<int[]>(12)
-                        {
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
-                        };
-                    case StatRollingRule.Assignment:
-                        return new List<int[]>(6)
-                        {
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
-                        };
-                    case StatRollingRule.AssignmentDouble:
-                        return new List<int[]>(12)
-                        {
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(),
-                            new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll(), new DieRoll(6, 3).Roll()
-                        };
-                    case StatRollingRule.RollFour:
-                        return new List<int[]>(6)
-                        {
-                            new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll(),
-                            new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll(), new DieRoll(6, 4).Roll()
-                        };
-                    case StatRollingRule.AddSevenDice:
-                        return new List<int[]>(7)
-                        {
-                            new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(),
-                            new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(), new DieRoll(6, 1).Roll(),
-                            new DieRoll(6, 1).Roll()
-                        };
-                    default:
-                        return null;
-                }
-            }
-            
+                return new StatRoll(rule).RollStats();
+
             throw new ArgumentOutOfRangeException(nameof(statRollingRule), statRollingRule,
-                    "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
+                "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
         }
     }
 }
