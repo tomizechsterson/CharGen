@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using ADD2CharacterService.Controllers;
 using ADD2CharacterService.Stats;
 using Xunit;
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
@@ -9,59 +8,21 @@ namespace CharGen.UnitTests
 {
     public class ADD2StatRollingTests
     {
-        private readonly ADD2CharacterController _controller;
-
-        public ADD2StatRollingTests()
+        [Theory]
+        [InlineData(StatRollingRule.RollOnce, 6, 3, 2, 19)]
+        [InlineData(StatRollingRule.RollTwice, 12, 3, 2, 19)]
+        [InlineData(StatRollingRule.Assignment, 6, 3, 2, 19)]
+        [InlineData(StatRollingRule.AssignmentDouble, 12, 3, 2, 19)]
+        [InlineData(StatRollingRule.RollFour, 6, 4, 3, 25)]
+        [InlineData(StatRollingRule.AddSevenDice, 7, 1, 0, 7)]
+        public void DiceRollingRules(StatRollingRule rule, int numRollsExpected, int numDiceUsedPerRoll,
+            int lowBoundForRollTotal, int highBoundForRollTotal)
         {
-            _controller = new ADD2CharacterController();
-        }
+            var statRoll = new StatRoll(rule);
 
-        [Fact]
-        public void RollOnceRule_Returns6Rolls()
-        {
-            var results = _controller.RollStats("RollOnce");
+            var results = statRoll.RollStats();
 
-            AssertRolls(results, 6, 3, 2, 19);
-        }
-
-        [Fact]
-        public void RollTwiceRule_Returns12Rolls()
-        {
-            var results = _controller.RollStats("RollTwice");
-
-            AssertRolls(results, 12, 3, 2, 19);
-        }
-
-        [Fact]
-        public void AssignmentRule_Returns6Rolls()
-        {
-            var results = _controller.RollStats("Assignment");
-
-            AssertRolls(results, 6, 3, 2, 19);
-        }
-
-        [Fact]
-        public void AssignmentDoubleRule_Returns12Rolls()
-        {
-            var results = _controller.RollStats("AssignmentDouble");
-
-            AssertRolls(results, 12, 3, 2, 19);
-        }
-
-        [Fact]
-        public void RollFourRule_Returns6RollsOfFourDice()
-        {
-            var results = _controller.RollStats("RollFour");
-
-            AssertRolls(results, 6, 4, 3, 25);
-        }
-
-        [Fact]
-        public void AddSevenDiceRule_Returns7RollsOfOneDie()
-        {
-            var results = _controller.RollStats("AddSevenDice");
-
-            AssertRolls(results, 7, 1, 0, 7);
+            AssertRolls(results, numRollsExpected, numDiceUsedPerRoll, lowBoundForRollTotal, highBoundForRollTotal);
         }
 
         private static void AssertRolls(List<int[]> results, int numRolls, int numDicePerRoll, int rollLowerBound, int rollUpperBound)
