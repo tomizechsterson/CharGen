@@ -1,0 +1,14 @@
+version: 0.1.{build}
+image: Visual Studio 2017
+clone_folder: c:\projects\CharGen.Storyteller
+before_build:
+- cmd: dotnet restore CharGen.Storyteller
+build:
+  project: CharGen.Storyteller
+  verbosity: quiet
+test_script:
+- cmd: cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
+artifacts:
+- path: CharGen.Storyteller/stresults.htm
+  name: StorytellerResults.htm
+deploy: off
