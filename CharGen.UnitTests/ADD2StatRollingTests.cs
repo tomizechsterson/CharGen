@@ -19,7 +19,7 @@ namespace CharGen.UnitTests
         [Fact]
         public void RollOnceRule_Returns6Rolls()
         {
-            var results = _controller.RollStats(StatRollingRule.RollOnce);
+            var results = _controller.RollStats("RollOnce");
 
             AssertRolls(results, 6, 3, 2, 19);
         }
@@ -27,7 +27,7 @@ namespace CharGen.UnitTests
         [Fact]
         public void RollTwiceRule_Returns12Rolls()
         {
-            var results = _controller.RollStats(StatRollingRule.RollTwice);
+            var results = _controller.RollStats("RollTwice");
 
             AssertRolls(results, 12, 3, 2, 19);
         }
@@ -35,7 +35,7 @@ namespace CharGen.UnitTests
         [Fact]
         public void AssignmentRule_Returns6Rolls()
         {
-            var results = _controller.RollStats(StatRollingRule.Assignment);
+            var results = _controller.RollStats("Assignment");
 
             AssertRolls(results, 6, 3, 2, 19);
         }
@@ -43,7 +43,7 @@ namespace CharGen.UnitTests
         [Fact]
         public void AssignmentDoubleRule_Returns12Rolls()
         {
-            var results = _controller.RollStats(StatRollingRule.AssignmentDouble);
+            var results = _controller.RollStats("AssignmentDouble");
 
             AssertRolls(results, 12, 3, 2, 19);
         }
@@ -51,7 +51,7 @@ namespace CharGen.UnitTests
         [Fact]
         public void RollFourRule_Returns6RollsOfFourDice()
         {
-            var results = _controller.RollStats(StatRollingRule.RollFour);
+            var results = _controller.RollStats("RollFour");
 
             AssertRolls(results, 6, 4, 3, 25);
         }
@@ -59,7 +59,7 @@ namespace CharGen.UnitTests
         [Fact]
         public void AddSevenDiceRule_Returns7RollsOfOneDie()
         {
-            var results = _controller.RollStats(StatRollingRule.AddSevenDice);
+            var results = _controller.RollStats("AddSevenDice");
 
             AssertRolls(results, 7, 1, 0, 7);
         }

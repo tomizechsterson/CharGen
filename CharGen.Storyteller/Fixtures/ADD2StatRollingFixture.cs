@@ -13,32 +13,32 @@ namespace CharGen.Storyteller.Fixtures
 
         public void RollOnce()
         {
-            _rollResults = _controller.RollStats(StatRollingRule.RollOnce);
+            _rollResults = _controller.RollStats("RollOnce");
         }
 
         public void RollTwice()
         {
-            _rollResults = _controller.RollStats(StatRollingRule.RollTwice);
+            _rollResults = _controller.RollStats("RollTwice");
         }
 
         public void Assignment()
         {
-            _rollResults = _controller.RollStats(StatRollingRule.Assignment);
+            _rollResults = _controller.RollStats("Assignment");
         }
 
         public void DoubleAssignment()
         {
-            _rollResults = _controller.RollStats(StatRollingRule.AssignmentDouble);
+            _rollResults = _controller.RollStats("AssignmentDouble");
         }
 
         public void RollFour()
         {
-            _rollResults = _controller.RollStats(StatRollingRule.RollFour);
+            _rollResults = _controller.RollStats("RollFour");
         }
 
         public void AddSevenDice()
         {
-            _rollResults = _controller.RollStats(StatRollingRule.AddSevenDice);
+            _rollResults = _controller.RollStats("AddSevenDice");
         }
 
         public int CheckNumberOfRolls()
