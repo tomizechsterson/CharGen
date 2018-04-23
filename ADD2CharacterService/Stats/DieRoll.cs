@@ -8,7 +8,7 @@ namespace ADD2CharacterService.Stats
         private readonly int _sides;
         private readonly int _times;
         private readonly Random _random;
-        
+
         public DieRoll(int sides, int times)
         {
             _sides = sides;

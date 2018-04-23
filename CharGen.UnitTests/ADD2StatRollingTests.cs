@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Stats;
 using Xunit;
+
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
 
 namespace CharGen.UnitTests
@@ -25,7 +26,8 @@ namespace CharGen.UnitTests
             AssertRolls(results, numRollsExpected, numDiceUsedPerRoll, lowBoundForRollTotal, highBoundForRollTotal);
         }
 
-        private static void AssertRolls(List<int[]> results, int numRolls, int numDicePerRoll, int rollLowerBound, int rollUpperBound)
+        private static void AssertRolls(List<int[]> results, int numRolls, int numDicePerRoll, int rollLowerBound,
+            int rollUpperBound)
         {
             Assert.Equal(numRolls, results.Count);
             Assert.True(results.All(x => x.Length == numDicePerRoll));
