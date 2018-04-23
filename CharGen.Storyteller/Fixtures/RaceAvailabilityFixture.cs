@@ -4,7 +4,7 @@ using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
-    public class RaceSelectionFixture : Fixture
+    public class RaceAvailabilityFixture : Fixture
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
         
