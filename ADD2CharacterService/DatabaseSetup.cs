@@ -6,7 +6,7 @@ namespace ADD2CharacterService
     {
         private readonly string _dbName;
 
-        public DatabaseSetup() : this("default") { }
+        public DatabaseSetup() : this("default") {}
 
         public DatabaseSetup(string dbName)
         {
@@ -38,7 +38,7 @@ namespace ADD2CharacterService
                                       + "SELECT 'Test1', 'Test1', 0, 0, 0, 0, 0, 0, 1 "
                                       + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Test1'); "
                                       + "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
-                                      + "SELECT 'Someone', 'Somebody', 12, 12, 12, 12, 12, 12, 2 "
+                                      + "SELECT 'Someone', 'Somebody', 0, 0, 0, 0, 0, 0, 2 "
                                       + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Someone'); "
                                       + "INSERT INTO ADD2 (Name, PlayedBy) "
                                       + "SELECT 'Person', 'A Person' "
