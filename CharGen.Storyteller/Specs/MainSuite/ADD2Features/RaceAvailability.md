@@ -1,9 +1,9 @@
-# RaceSelection
+# RaceAvailability
 
 -> id = 2d930a0c-b2d4-469f-b5bb-867fa76b1b80
 -> lifecycle = Acceptance
 -> max-retries = 0
--> last-updated = 2018-04-23T05:52:16.4822414Z
+-> last-updated = 2018-04-23T05:53:52.7795398Z
 -> tags = 
 
 [RaceSelection]
