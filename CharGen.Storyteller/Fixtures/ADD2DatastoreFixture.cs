@@ -13,7 +13,8 @@ namespace CharGen.Storyteller.Fixtures
 
         public void Initialize()
         {
-            new DatabaseSetup("characters").Setup(); // This name is hardcoded in the controller... Probably a bad thing...
+            // This name is hardcoded in the controller... Probably a bad thing...
+            new DatabaseSetup("characters").Setup();
         }
 
         public int GetAll()
@@ -36,14 +37,24 @@ namespace CharGen.Storyteller.Fixtures
             return _character.PlayedBy();
         }
 
+        public void GetRetrievedStats(out int str, out int dex, out int con, out int @int, out int wis, out int chr)
+        {
+            str = _character.Str();
+            dex = _character.Dex();
+            con = _character.Con();
+            @int = _character.Int();
+            wis = _character.Wis();
+            chr = _character.Chr();
+        }
+
         public void AddCharacter(string name, string playedBy)
         {
-            _controller.Post(new HttpCharacterModel {Name = name, PlayedBy = playedBy});
+            _controller.Post(new HttpCharacterModel { Name = name, PlayedBy = playedBy });
         }
 
         public void UpdateCharacter(int id, string name, string playedBy)
         {
-            _controller.Put(id, new HttpCharacterModel {Name = name, PlayedBy = playedBy});
+            _controller.Put(id, new HttpCharacterModel { Name = name, PlayedBy = playedBy });
         }
 
         public void UpdateStats(int id, int str, int dex, int con, int @int, int wis, int chr)

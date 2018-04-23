@@ -15,6 +15,9 @@
 ## GetRetrievedPlayedBy
 ### The person who plays the retrieved character should be {returnValue}
 
+## GetRetrievedStats
+### The stats of the retrieved character should be str: {str} dex: {dex} con: {con} int: {int} wis: {wis} chr: {chr}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
