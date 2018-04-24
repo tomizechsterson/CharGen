@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Model;
 using ADD2CharacterService.Race;
@@ -72,12 +71,7 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("{statRollingRule}")]
         public List<int[]> RollStats(string statRollingRule)
         {
-            // Move this error check to StatRoll, return status code instead of throwing exception
-            if (Enum.TryParse<StatRollingRule>(statRollingRule, true, out var rule))
-                return new StatRoll(rule).RollStats();
-
-            throw new ArgumentOutOfRangeException(nameof(statRollingRule), statRollingRule,
-                "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
+            return new StatRoll(statRollingRule).RollStats();
         }
 
         [EnableCors("SpecificOrigin")]

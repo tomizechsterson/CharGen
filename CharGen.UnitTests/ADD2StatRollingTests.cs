@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Stats;
@@ -10,18 +11,24 @@ namespace CharGen.UnitTests
     public class ADD2StatRollingTests
     {
         [Theory]
-        [InlineData(StatRollingRule.RollOnce, 6, 3, 2, 19)]
-        [InlineData(StatRollingRule.RollTwice, 12, 3, 2, 19)]
-        [InlineData(StatRollingRule.Assignment, 6, 3, 2, 19)]
-        [InlineData(StatRollingRule.AssignmentDouble, 12, 3, 2, 19)]
-        [InlineData(StatRollingRule.RollFour, 6, 4, 3, 25)]
-        [InlineData(StatRollingRule.AddSevenDice, 7, 1, 0, 7)]
-        public void DiceRollingRules(StatRollingRule rule, int numRollsExpected, int numDiceUsedPerRoll,
+        [InlineData("RollOnce", 6, 3, 2, 19)]
+        [InlineData("RollTwice", 12, 3, 2, 19)]
+        [InlineData("Assignment", 6, 3, 2, 19)]
+        [InlineData("AssignmentDouble", 12, 3, 2, 19)]
+        [InlineData("RollFour", 6, 4, 3, 25)]
+        [InlineData("AddSevenDice", 7, 1, 0, 7)]
+        public void DiceRollingRules(string rule, int numRollsExpected, int numDiceUsedPerRoll,
             int lowBoundForRollTotal, int highBoundForRollTotal)
         {
             var results = new StatRoll(rule).RollStats();
 
             AssertRolls(results, numRollsExpected, numDiceUsedPerRoll, lowBoundForRollTotal, highBoundForRollTotal);
+        }
+
+        [Fact]
+        public void InvalidStatRollRule_ThrowsArgumentOutOfRangeException()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new StatRoll("INVALID").RollStats());
         }
 
         private static void AssertRolls(List<int[]> results, int numRolls, int numDicePerRoll, int rollLowerBound,
