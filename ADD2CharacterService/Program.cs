@@ -12,6 +12,7 @@ namespace ADD2CharacterService
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:42000/")
                 .UseApplicationInsights()
                 .Build();
 

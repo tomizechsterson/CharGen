@@ -13,45 +13,43 @@ namespace ADD2CharacterService.Controllers
     {
         private readonly ADD2Characters _database;
 
-        public ADD2CharacterController() : this(new ADD2SqliteCharacters("Data Source=characters")) {}
-
-        public ADD2CharacterController(ADD2Characters database)
+        public ADD2CharacterController(ADD2Characters database = null)
         {
-            _database = database;
+            _database = database ?? new ADD2SqliteCharacters("Data Source=characters");
         }
 
         #region Datastore crud ops
 
-        [EnableCors("SpecificOrigin")]
+        [EnableCors("AnyOrigin")]
         [HttpGet]
         public IEnumerable<HttpCharacterModel> Get()
         {
             return _database.Iterate().Select(a => a.ToModel());
         }
 
-        [EnableCors("SpecificOrigin")]
+        [EnableCors("AnyOrigin")]
         [HttpGet("{id}")]
         public ADD2Character Get(int id)
         {
             return _database.Get(id);
         }
 
-        [EnableCors("SpecificOrigin")]
+        [EnableCors("AnyOrigin")]
         [Route("new")]
         [HttpPost]
-        public void Post(HttpCharacterModel characterModel)
+        public void Post([FromBody] HttpCharacterModel characterModel)
         {
             _database.Add(characterModel);
         }
 
-        [EnableCors("SpecificOrigin")]
+        [EnableCors("AnyOrigin")]
         [HttpPut("{id}")]
-        public void Put(int id, HttpCharacterModel characterModel)
+        public void Put(int id, [FromBody] HttpCharacterModel characterModel)
         {
             _database.Update(id, characterModel);
         }
 
-        [EnableCors("SpecificOrigin")]
+        [EnableCors("AnyOrigin")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
@@ -67,15 +65,15 @@ namespace ADD2CharacterService.Controllers
 
         #endregion
 
-        [EnableCors("SpecificOrigin")]
-        [HttpGet("{statRollingRule}")]
+        [EnableCors("AnyOrigin")]
+        [HttpGet("rollstats/{statRollingRule}")]
         public List<int[]> RollStats(string statRollingRule)
         {
             return new StatRoll(statRollingRule).RollStats();
         }
 
-        [EnableCors("SpecificOrigin")]
-        [HttpGet("{str}/{dex}/{con}/{@int}/{wis}/{chr}")]
+        [EnableCors("AnyOrigin")]
+        [HttpGet("races/{str}/{dex}/{con}/{int}/{wis}/{chr}")]
         public string[] RacesAvailable(int str, int dex, int con, int @int, int wis, int chr)
         {
             return new RaceSelection(str, dex, con, @int, wis, chr).Select();

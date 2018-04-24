@@ -30,6 +30,10 @@ namespace ADD2CharacterService
                 {
                     builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
                 });
+                o.AddPolicy("AnyOrigin", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                });
             });
         }
 
