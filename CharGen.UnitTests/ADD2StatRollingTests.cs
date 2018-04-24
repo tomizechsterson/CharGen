@@ -19,9 +19,7 @@ namespace CharGen.UnitTests
         public void DiceRollingRules(StatRollingRule rule, int numRollsExpected, int numDiceUsedPerRoll,
             int lowBoundForRollTotal, int highBoundForRollTotal)
         {
-            var statRoll = new StatRoll(rule);
-
-            var results = statRoll.RollStats();
+            var results = new StatRoll(rule).RollStats();
 
             AssertRolls(results, numRollsExpected, numDiceUsedPerRoll, lowBoundForRollTotal, highBoundForRollTotal);
         }

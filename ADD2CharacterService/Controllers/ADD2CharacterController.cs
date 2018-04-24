@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Model;
+using ADD2CharacterService.Race;
 using ADD2CharacterService.Stats;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -71,6 +72,7 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("{statRollingRule}")]
         public List<int[]> RollStats(string statRollingRule)
         {
+            // Move this error check to StatRoll, return status code instead of throwing exception
             if (Enum.TryParse<StatRollingRule>(statRollingRule, true, out var rule))
                 return new StatRoll(rule).RollStats();
 
@@ -79,10 +81,10 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("SpecificOrigin")]
-        [HttpGet("{statRollingRule}")]
-        public string[] RacesAvailable([FromBody] HttpCharacterModel characterModel)
+        [HttpGet("{str}/{dex}/{con}/{@int}/{wis}/{chr}")]
+        public string[] RacesAvailable(int str, int dex, int con, int @int, int wis, int chr)
         {
-            return new string[3];
+            return new RaceSelection(str, dex, con, @int, wis, chr).Select();
         }
     }
 }

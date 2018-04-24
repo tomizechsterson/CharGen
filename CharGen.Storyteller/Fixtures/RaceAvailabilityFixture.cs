@@ -10,15 +10,7 @@ namespace CharGen.Storyteller.Fixtures
         
         public string[] RacesAvailableForStats(int str, int dex, int con, int @int, int wis, int chr)
         {
-            return _controller.RacesAvailable(new HttpCharacterModel
-            {
-                Str = str,
-                Dex = dex,
-                Con = con,
-                Int = @int,
-                Wis = wis,
-                Chr = chr
-            });
+            return _controller.RacesAvailable(str, dex, con, @int, wis, chr);
         }
     }
 }

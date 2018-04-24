@@ -1,9 +1,9 @@
 # StatRolling
 
 -> id = bacf30b2-2683-48e6-b28f-e97afeade3ec
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-21T07:11:06.7424907Z
+-> last-updated = 2018-04-24T03:53:51.1063312Z
 -> tags = 
 
 [ADD2StatRolling]
