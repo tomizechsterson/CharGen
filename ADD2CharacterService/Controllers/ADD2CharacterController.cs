@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADD2CharacterService.Controllers
-{    // test change
+{
     [Route("api/[controller]")]
     public class ADD2CharacterController : Controller
     {
