@@ -13,7 +13,7 @@ namespace ADD2CharacterService.Stats
         {
             _sides = sides;
             _times = times;
-            _random = new Random(System.Environment.TickCount);
+            _random = new Random(Environment.TickCount);
         }
 
         public int[] Roll()

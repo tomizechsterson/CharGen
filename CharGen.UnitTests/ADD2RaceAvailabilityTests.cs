@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using ADD2CharacterService.Race;
+﻿using ADD2CharacterService.Race;
 using Xunit;
 
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
@@ -29,7 +28,7 @@ namespace CharGen.UnitTests
         private static void AssertRaceEntries(string[] results, params string[] expectedRaces)
         {
             foreach (string race in expectedRaces)
-                Assert.True(results.Contains(race));
+                Assert.Contains(race, results);
         }
     }
 }
