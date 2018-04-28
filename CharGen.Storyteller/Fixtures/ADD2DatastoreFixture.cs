@@ -13,7 +13,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public void Initialize()
         {
-            // This name is hardcoded in the controller... Probably a bad thing...
+            // This name is hardcoded in the controller... Probably a bad thing.
             new DatabaseSetup("characters").Setup();
         }
 
