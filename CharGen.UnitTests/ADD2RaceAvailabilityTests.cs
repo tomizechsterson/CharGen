@@ -19,7 +19,7 @@ namespace CharGen.UnitTests
         [InlineData(18, 17, 18, 18, 18, 17, "Dwarf", "Elf", "Gnome", "Half-Elf", "Human")]
         public void RacesAvailable(int str, int dex, int con, int @int, int wis, int chr, params string[] expectedRaces)
         {
-            var results = new RaceSelection(str, dex, con, @int, wis, chr).Select();
+            var results = new AvailableRaces(str, dex, con, @int, wis, chr).Select();
 
             Assert.Equal(expectedRaces.Length, results.Length);
             AssertRaceEntries(results, expectedRaces);

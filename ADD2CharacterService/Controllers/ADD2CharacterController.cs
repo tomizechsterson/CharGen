@@ -76,7 +76,7 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("races/{str}/{dex}/{con}/{int}/{wis}/{chr}")]
         public string[] RacesAvailable(int str, int dex, int con, int @int, int wis, int chr)
         {
-            return new RaceSelection(str, dex, con, @int, wis, chr).Select();
+            return new AvailableRaces(str, dex, con, @int, wis, chr).Select();
         }
     }
 }

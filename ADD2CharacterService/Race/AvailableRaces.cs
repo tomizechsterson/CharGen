@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ADD2CharacterService.Race
 {
-    public class RaceSelection
+    public class AvailableRaces
     {
         private readonly int _str;
         private readonly int _dex;
@@ -13,7 +13,7 @@ namespace ADD2CharacterService.Race
         private readonly int _chr;
         private readonly List<RaceAvailability> _racesAvailable;
 
-        public RaceSelection(int str, int dex, int con, int @int, int wis, int chr)
+        public AvailableRaces(int str, int dex, int con, int @int, int wis, int chr)
         {
             _str = str;
             _dex = dex;
