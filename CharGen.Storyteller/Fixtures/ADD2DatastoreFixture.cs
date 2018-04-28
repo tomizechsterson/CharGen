@@ -9,7 +9,7 @@ namespace CharGen.Storyteller.Fixtures
     public class ADD2DatastoreFixture : Fixture
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
-        private ADD2Character _character;
+        private HttpCharacterModel _character;
 
         public void Initialize()
         {
@@ -29,22 +29,22 @@ namespace CharGen.Storyteller.Fixtures
 
         public string GetRetrievedName()
         {
-            return _character.Name();
+            return _character.Name;
         }
 
         public string GetRetrievedPlayedBy()
         {
-            return _character.PlayedBy();
+            return _character.PlayedBy;
         }
 
         public void GetRetrievedStats(out int str, out int dex, out int con, out int @int, out int wis, out int chr)
         {
-            str = _character.Str();
-            dex = _character.Dex();
-            con = _character.Con();
-            @int = _character.Int();
-            wis = _character.Wis();
-            chr = _character.Chr();
+            str = _character.Str;
+            dex = _character.Dex;
+            con = _character.Con;
+            @int = _character.Int;
+            wis = _character.Wis;
+            chr = _character.Chr;
         }
 
         public void AddCharacter(string name, string playedBy)
@@ -64,8 +64,8 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Put(id,
                 new HttpCharacterModel
                 {
-                    Name = character.Name(),
-                    PlayedBy = character.PlayedBy(),
+                    Name = character.Name,
+                    PlayedBy = character.PlayedBy,
                     Str = str,
                     Dex = dex,
                     Con = con,

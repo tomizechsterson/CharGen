@@ -29,9 +29,9 @@ namespace ADD2CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpGet("{id}")]
-        public ADD2Character Get(int id)
+        public HttpCharacterModel Get(int id)
         {
-            return _database.Get(id);
+            return _database.Get(id).ToModel();
         }
 
         [EnableCors("AnyOrigin")]
