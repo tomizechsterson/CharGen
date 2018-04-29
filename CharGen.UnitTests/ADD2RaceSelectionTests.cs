@@ -30,5 +30,30 @@ namespace CharGen.UnitTests
             foreach (string race in expectedRaces)
                 Assert.Contains(race, results);
         }
+
+        [Theory]
+        [InlineData("Dwarf", "con", 1, "chr", -1)]
+        [InlineData("Elf", "dex", 1, "con", -1)]
+        [InlineData("Gnome", "int", 1, "wis", -1)]
+        [InlineData("Halfling", "dex", 1, "str", -1)]
+        public void RacialStatAdjustments(string selectedRace, string stat1, int adj1, string stat2, int adj2)
+        {
+            var results = new RacialStatAdjust(selectedRace).Adjustmets();
+
+            Assert.True(results.ContainsKey(stat1));
+            Assert.Equal(1, results[stat1]);
+            Assert.True(results.ContainsKey(stat2));
+            Assert.Equal(-1, results[stat2]);
+        }
+
+        [Theory]
+        [InlineData("Human")]
+        [InlineData("Half-Elf")]
+        public void RacialStatAdjustments_HumanAndHalfElf(string selectedRace)
+        {
+            var results = new RacialStatAdjust(selectedRace).Adjustmets();
+
+            Assert.Equal(0, results.Count);
+        }
     }
 }
