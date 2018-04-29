@@ -12,5 +12,10 @@ namespace CharGen.Storyteller.Fixtures
         {
             return _controller.RacesAvailable(str, dex, con, @int, wis, chr);
         }
+
+        public void GetStatAdjustments(string race)
+        {
+            
+        }
     }
 }
