@@ -40,6 +40,7 @@ namespace CharGen.UnitTests
         {
             var results = new RacialStatAdjust(selectedRace).Adjustmets();
 
+            Assert.Equal(2, results.Count);
             Assert.True(results.ContainsKey(stat1));
             Assert.Equal(1, results[stat1]);
             Assert.True(results.ContainsKey(stat2));

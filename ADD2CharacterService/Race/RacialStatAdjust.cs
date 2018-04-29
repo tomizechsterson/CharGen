@@ -25,8 +25,8 @@ namespace ADD2CharacterService.Race
                 { "Dwarf", new Dictionary<string, int> { { "con", 1 }, { "chr", -1 } } },
                 { "Elf", new Dictionary<string, int> { { "dex", 1 }, { "con", -1 } } },
                 { "Gnome", new Dictionary<string, int> { { "int", 1 }, { "wis", -1 } } },
-                { "Halfling", new Dictionary<string, int> { { "dex", 1 }, { "str", -1 } } },
                 { "Half-Elf", new Dictionary<string, int>() },
+                { "Halfling", new Dictionary<string, int> { { "dex", 1 }, { "str", -1 } } },
                 { "Human", new Dictionary<string, int>() }
             };
         }

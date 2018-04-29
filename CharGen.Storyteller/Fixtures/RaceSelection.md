@@ -1,7 +1,13 @@
 # AD&D 2nd Edition Race Selection Fixture
 
 ## RacesAvailableForStats
-### The following races should be available given the following stats str: {str} dex: {dex} con: {con} int: {int} wis: {wis} chr: {chr} {returnValue}
+### Given the following stats STR: {str} DEX: {dex} CON: {con} INT: {int} WIS: {wis} CHR: {chr}, the following races should be available: {returnValue}
 
 ## GetStatAdjustments
-### Retrieve the stat adjustments for the chosen race: {race} 
+### Retrieve stat adjustments for race: {race}
+
+## AdjustmentCount
+### There should be {returnValue} adjustments
+
+## Adjustments
+### The following adjustments should apply: stat {stat1} amount {adj1}, stat {stat2} amount {adj2}

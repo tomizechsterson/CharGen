@@ -78,5 +78,10 @@ namespace ADD2CharacterService.Controllers
         {
             return new AvailableRaces(str, dex, con, @int, wis, chr).Select();
         }
+
+        public Dictionary<string, int> GetStatAdjustments(string selectedRace)
+        {
+            return new RacialStatAdjust(selectedRace).Adjustmets();
+        }
     }
 }
