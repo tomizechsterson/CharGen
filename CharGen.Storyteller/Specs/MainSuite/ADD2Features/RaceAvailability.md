@@ -6,7 +6,7 @@
 -> last-updated = 2018-04-28T02:18:01.4437389Z
 -> tags = 
 
-[RaceAvailability]
+[RaceSelection]
 
 Restrictions with minimums
 
@@ -37,7 +37,7 @@ Dwarf, Human
 
 ~~~
 
-[RaceAvailability]
+[RaceSelection]
 
 Restrictions with maximums
 

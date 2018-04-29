@@ -6,6 +6,6 @@
 -> last-updated = 2018-04-28T01:07:10.0475939Z
 -> tags = 
 
-[RaceAvailability]
+[RaceSelection]
 |> GetStatAdjustments race=Dwarf
 ~~~
