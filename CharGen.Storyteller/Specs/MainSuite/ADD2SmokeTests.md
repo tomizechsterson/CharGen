@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-23T05:07:39.5431145Z
+-> last-updated = 2018-04-29T23:49:11.5507984Z
 -> tags = 
 
 [ADD2Datastore]
@@ -37,4 +37,37 @@
 |> GetRetrievedName returnValue=Upserted
 |> GetRetrievedPlayedBy returnValue=Generic McRando
 |> EmptyDatabase
+~~~
+
+[ADD2StatRolling]
+|> RollOnce
+|> CheckNumberOfRolls returnValue=6
+|> CheckNumberOfDiceRolled number=3, returnValue=True
+|> CheckValuesOfDieRolls lower=2, higher=19, returnValue=True
+|> RollFour
+|> CheckNumberOfRolls returnValue=6
+|> CheckNumberOfDiceRolled number=4, returnValue=True
+|> CheckValuesOfDieRolls lower=3, higher=25, returnValue=True
+|> AddSevenDice
+|> CheckNumberOfRolls returnValue=7
+|> CheckNumberOfDiceRolled number=1, returnValue=True
+|> CheckValuesOfDieRolls lower=0, higher=7, returnValue=True
+~~~
+
+[RaceSelection]
+|> RacesAvailableForStats str=8, dex=5, con=11, int=3, wis=3, chr=8
+``` returnValue
+Dwarf, Human
+```
+
+|> RacesAvailableForStats str=18, dex=18, con=18, int=18, wis=18, chr=18
+``` returnValue
+Elf, Gnome, Half-Elf, Human
+```
+
+|> GetStatAdjustments race=Dwarf
+|> AdjustmentCount returnValue=2
+|> Adjustments stat1=con, adj1=1, stat2=chr, adj2=-1
+|> GetStatAdjustments race=Human
+|> AdjustmentCount returnValue=0
 ~~~
