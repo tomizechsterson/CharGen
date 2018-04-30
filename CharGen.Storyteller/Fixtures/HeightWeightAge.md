@@ -1,6 +1,6 @@
 # AD&D 2nd Edition Height Weight Age Fixture
 
-## StoreRaceAndGender
+## GivenRaceAndGender
 ### Given race {race} and gender {gender}
 
 ## CheckHeight

@@ -9,7 +9,7 @@ namespace CharGen.Storyteller.Fixtures
         private string _race;
         private string _gender;
         
-        public void StoreRaceAndGender(string race, string gender)
+        public void GivenRaceAndGender(string race, string gender)
         {
             _race = race;
             _gender = gender;

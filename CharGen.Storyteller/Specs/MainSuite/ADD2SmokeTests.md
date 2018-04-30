@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-30T03:24:42.0982331Z
+-> last-updated = 2018-04-30T05:48:14.2098426Z
 -> tags = 
 
 [ADD2Datastore]
@@ -76,4 +76,15 @@ Elf, Gnome, Half-Elf, Human
 |> Adjustments stat1=con, adj1=1, stat2=chr, adj2=-1
 |> GetStatAdjustments race=Human
 |> AdjustmentCount returnValue=0
+~~~
+
+[HeightWeightAge]
+|> GivenRaceAndGender race=dwarf, gender=m
+|> CheckHeight lowBound=44, highBound=53, returnValue=True
+|> CheckWeight lowBound=134, highBound=170, returnValue=True
+|> CheckAge lowBound=45, highBound=70, returnValue=True
+|> GivenRaceAndGender race=half-elf, gender=f
+|> CheckHeight lowBound=60, highBound=70, returnValue=True
+|> CheckWeight lowBound=88, highBound=121, returnValue=True
+|> CheckAge lowBound=16, highBound=21, returnValue=True
 ~~~
