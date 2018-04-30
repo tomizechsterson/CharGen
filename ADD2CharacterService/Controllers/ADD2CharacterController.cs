@@ -88,7 +88,12 @@ namespace ADD2CharacterService.Controllers
 
         public int[] GetHeightWeightAge(string race, string gender)
         {
-            return new int[3];
+            return new int[3]
+            {
+                new HeightWeightAge(race, gender).Height(),
+                new HeightWeightAge(race, gender).Weight(),
+                new HeightWeightAge(race, gender).Age()
+            };
         }
     }
 }
