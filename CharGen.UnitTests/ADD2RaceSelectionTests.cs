@@ -42,9 +42,9 @@ namespace CharGen.UnitTests
 
             Assert.Equal(2, results.Count);
             Assert.True(results.ContainsKey(stat1));
-            Assert.Equal(1, results[stat1]);
+            Assert.Equal(adj1, results[stat1]);
             Assert.True(results.ContainsKey(stat2));
-            Assert.Equal(-1, results[stat2]);
+            Assert.Equal(adj2, results[stat2]);
         }
 
         [Theory]
@@ -54,7 +54,7 @@ namespace CharGen.UnitTests
         {
             var results = new RacialStatAdjust(selectedRace).Adjustmets();
 
-            Assert.Equal(0, results.Count);
+            Assert.Empty(results);
         }
     }
 }
