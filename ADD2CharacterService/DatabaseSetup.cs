@@ -28,8 +28,9 @@ namespace ADD2CharacterService
                     "Con INTEGER DEFAULT 0, " +
                     "Int INTEGER DEFAULT 0, " +
                     "Wis INTEGER DEFAULT 0, " +
-                    "Chr INTEGER DEFAULT 0," +
+                    "Chr INTEGER DEFAULT 0, " +
                     "Race VARCHAR(8) DEFAULT 'none' NULL, " +
+                    "Gender VARCHAR(1) DEFAULT 'n' NULL, " +
                     "CompletionStep INTEGER DEFAULT 1 )";
                 connection.Open();
                 command.ExecuteNonQuery();

@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-30T00:45:38.0144087Z
+-> last-updated = 2018-04-30T03:24:42.0982331Z
 -> tags = 
 
 [ADD2Datastore]
@@ -22,14 +22,17 @@
 |> GetRetrievedName returnValue=Person
 |> GetRetrievedStats str=0, dex=0, con=0, int=0, wis=0, chr=0
 |> GetRetrievedRace returnValue=none
+|> GetRetrievedGender returnValue=n
 |> UpdateCharacter id=3, name=NewPerson, playedBy=Random Person
 |> UpdateStats id=3, str=7, dex=7, con=7, int=7, wis=7, chr=7
 |> UpdateRace id=3, race=Elf
+|> UpdateGender id=3, gender=F
 |> RetrieveCharacter id=3
 |> GetRetrievedName returnValue=NewPerson
 |> GetRetrievedPlayedBy returnValue=Random Person
 |> GetRetrievedStats str=7, dex=7, con=7, int=7, wis=7, chr=7
 |> GetRetrievedRace returnValue=Elf
+|> GetRetrievedGender returnValue=F
 |> DeleteCharacter id=3
 |> RetrieveCharacter id=3
 |> GetRetrievedName returnValue=EMPTY

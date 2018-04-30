@@ -13,6 +13,7 @@ namespace ADD2CharacterService.Datastore
         public int Wis { get; set; }
         public int Chr { get; set; }
         public string Race { get; set; }
+        public string Gender { get; set; }
 
         public int CompletionStep { get; set; }
     }

@@ -12,6 +12,7 @@
         int Wis();
         int Chr();
         string Race();
+        string Gender();
         HttpCharacterModel ToModel();
     }
 }

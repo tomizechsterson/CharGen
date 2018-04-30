@@ -52,6 +52,11 @@ namespace CharGen.Storyteller.Fixtures
             return _character.Race;
         }
 
+        public string GetRetrievedGender()
+        {
+            return _character.Gender;
+        }
+
         public void AddCharacter(string name, string playedBy)
         {
             _controller.Post(new HttpCharacterModel { Name = name, PlayedBy = playedBy });
@@ -66,24 +71,23 @@ namespace CharGen.Storyteller.Fixtures
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id,
-                new HttpCharacterModel
-                {
-                    Name = character.Name,
-                    PlayedBy = character.PlayedBy,
-                    Str = str,
-                    Dex = dex,
-                    Con = con,
-                    Int = @int,
-                    Wis = wis,
-                    Chr = chr
-                });
+            _controller.Put(id, new HttpCharacterModel
+            {
+                Name = character.Name,
+                PlayedBy = character.PlayedBy,
+                Str = str,
+                Dex = dex,
+                Con = con,
+                Int = @int,
+                Wis = wis,
+                Chr = chr
+            });
         }
 
         public void UpdateRace(int id, string race)
         {
             var character = _controller.Get(id);
-            
+
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
@@ -95,6 +99,25 @@ namespace CharGen.Storyteller.Fixtures
                 Wis = character.Wis,
                 Chr = character.Chr,
                 Race = race
+            });
+        }
+
+        public void UpdateGender(int id, string gender)
+        {
+            var character = _controller.Get(id);
+
+            _controller.Put(id, new HttpCharacterModel
+            {
+                Name = character.Name,
+                PlayedBy = character.PlayedBy,
+                Str = character.Str,
+                Dex = character.Dex,
+                Con = character.Con,
+                Int = character.Int,
+                Wis = character.Wis,
+                Chr = character.Chr,
+                Race = character.Race,
+                Gender = gender
             });
         }
 

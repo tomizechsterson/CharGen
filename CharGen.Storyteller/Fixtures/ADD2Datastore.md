@@ -21,6 +21,9 @@
 ## GetRetrievedRace
 ### The race of the retrieved character should be {returnValue}
 
+## GetRetrievedGender
+### The gender of the retrieved character should be {returnValue}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
@@ -32,6 +35,9 @@
 
 ## UpdateRace
 ### Update race for character id {id} to {race}
+
+## UpdateGender
+### Update gender for character id {id} to {gender}
 
 ## DeleteCharacter
 ### Delete the character with id {id}

@@ -78,6 +78,7 @@ namespace ADD2CharacterService.Datastore
                                           "Wis = $wis, " +
                                           "Chr = $chr, " +
                                           "Race = $race, " +
+                                          "Gender = $gender, " +
                                           "CompletionStep = $completionStep " +
                                           "WHERE Id = $id";
                     command.Parameters.AddWithValue("$id", id);
@@ -90,6 +91,7 @@ namespace ADD2CharacterService.Datastore
                     command.Parameters.AddWithValue("$wis", model.Wis);
                     command.Parameters.AddWithValue("$chr", model.Chr);
                     command.Parameters.AddWithValue("$race", model.Race ?? "none");
+                    command.Parameters.AddWithValue("gender", model.Gender ?? "n");
                     command.Parameters.AddWithValue("$completionStep", model.CompletionStep);
                     conn.Open();
                     command.ExecuteNonQuery();

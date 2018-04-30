@@ -63,6 +63,11 @@ namespace ADD2CharacterService.Datastore
             return GetColumnString("Race");
         }
 
+        public string Gender()
+        {
+            return GetColumnString("Gender");
+        }
+
         public int CompletionStep()
         {
             return GetColumnInt("CompletionStep");
@@ -82,6 +87,7 @@ namespace ADD2CharacterService.Datastore
                 Wis = Wis(),
                 Chr = Chr(),
                 Race = Race(),
+                Gender = Gender(),
                 CompletionStep = CompletionStep()
             };
         }
