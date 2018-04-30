@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Controllers;
-using ADD2CharacterService.Stats;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
