@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ADD2CharacterService.Model;
+using ADD2CharacterService.Datastore;
 using ADD2CharacterService.Race;
 using ADD2CharacterService.Stats;
 using Microsoft.AspNetCore.Cors;

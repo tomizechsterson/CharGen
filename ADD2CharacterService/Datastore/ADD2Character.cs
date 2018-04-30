@@ -1,4 +1,4 @@
-﻿namespace ADD2CharacterService.Model
+﻿namespace ADD2CharacterService.Datastore
 {
     public interface ADD2Character
     {

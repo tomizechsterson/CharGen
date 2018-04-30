@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using ADD2CharacterService;
 using ADD2CharacterService.Controllers;
-using ADD2CharacterService.Model;
+using ADD2CharacterService.Datastore;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures

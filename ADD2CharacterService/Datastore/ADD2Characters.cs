@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ADD2CharacterService.Model
+namespace ADD2CharacterService.Datastore
 {
     public interface ADD2Characters
     {

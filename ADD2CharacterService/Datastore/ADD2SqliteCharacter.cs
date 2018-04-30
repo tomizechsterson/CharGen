@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.Sqlite;
 
-namespace ADD2CharacterService.Model
+namespace ADD2CharacterService.Datastore
 {
     public class ADD2SqliteCharacter : ADD2Character
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Data.Sqlite;
 
-namespace ADD2CharacterService.Model
+namespace ADD2CharacterService.Datastore
 {
     public class ADD2SqliteCharacters : ADD2Characters
     {
