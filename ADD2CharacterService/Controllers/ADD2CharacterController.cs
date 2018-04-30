@@ -86,6 +86,8 @@ namespace ADD2CharacterService.Controllers
             return new RacialStatAdjust(selectedRace).Adjustmets();
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("heightweightage/{race}/{gender}")]
         public int[] GetHeightWeightAge(string race, string gender)
         {
             return new int[3]
