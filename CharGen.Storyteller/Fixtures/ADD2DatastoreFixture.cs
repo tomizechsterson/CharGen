@@ -47,6 +47,11 @@ namespace CharGen.Storyteller.Fixtures
             chr = _character.Chr;
         }
 
+        public string GetRetrievedRace()
+        {
+            return _character.Race;
+        }
+
         public void AddCharacter(string name, string playedBy)
         {
             _controller.Post(new HttpCharacterModel { Name = name, PlayedBy = playedBy });
@@ -73,6 +78,24 @@ namespace CharGen.Storyteller.Fixtures
                     Wis = wis,
                     Chr = chr
                 });
+        }
+
+        public void UpdateRace(int id, string race)
+        {
+            var character = _controller.Get(id);
+            
+            _controller.Put(id, new HttpCharacterModel
+            {
+                Name = character.Name,
+                PlayedBy = character.PlayedBy,
+                Str = character.Str,
+                Dex = character.Dex,
+                Con = character.Con,
+                Int = character.Int,
+                Wis = character.Wis,
+                Chr = character.Chr,
+                Race = race
+            });
         }
 
         public void DeleteCharacter(int id)

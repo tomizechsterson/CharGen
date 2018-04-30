@@ -11,6 +11,7 @@
         int Int();
         int Wis();
         int Chr();
+        string Race();
         HttpCharacterModel ToModel();
     }
 }

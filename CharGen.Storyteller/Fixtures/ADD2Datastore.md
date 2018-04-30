@@ -18,6 +18,9 @@
 ## GetRetrievedStats
 ### The stats of the retrieved character should be str: {str} dex: {dex} con: {con} int: {int} wis: {wis} chr: {chr}
 
+## GetRetrievedRace
+### The race of the retrieved character should be {returnValue}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
@@ -26,6 +29,9 @@
 
 ## UpdateStats
 ### Update stats for character id {id} to str: {str} dex: {dex} con: {con} int: {int} wis: {wis} chr: {chr}
+
+## UpdateRace
+### Update race for character id {id} to {race}
 
 ## DeleteCharacter
 ### Delete the character with id {id}
