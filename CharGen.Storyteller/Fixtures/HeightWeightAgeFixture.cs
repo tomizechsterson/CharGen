@@ -17,17 +17,20 @@ namespace CharGen.Storyteller.Fixtures
 
         public bool CheckHeight(int lowBound, int highBound)
         {
-            return false;
+            int height = _controller.GetHeightWeightAge(_race, _gender)[0];
+            return height >= lowBound && height <= highBound;
         }
 
         public bool CheckWeight(int lowBound, int highBound)
         {
-            return false;
+            int weight = _controller.GetHeightWeightAge(_race, _gender)[1];
+            return weight >= lowBound && weight <= highBound;
         }
 
         public bool CheckAge(int lowBound, int highBound)
         {
-            return false;
+            int age = _controller.GetHeightWeightAge(_race, _gender)[2];
+            return age >= lowBound && age <= highBound;
         }
     }
 }

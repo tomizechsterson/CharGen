@@ -85,5 +85,10 @@ namespace ADD2CharacterService.Controllers
         {
             return new RacialStatAdjust(selectedRace).Adjustmets();
         }
+
+        public int[] GetHeightWeightAge(string race, string gender)
+        {
+            return new int[3];
+        }
     }
 }
