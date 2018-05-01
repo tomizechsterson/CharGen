@@ -24,6 +24,9 @@
 ## GetRetrievedGender
 ### The gender of the retrieved character should be {returnValue}
 
+## GetRetrievedHeightWeightAge
+### The height, weight and age of the retrieved character should be {height} {weight} {age}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
@@ -38,6 +41,9 @@
 
 ## UpdateGender
 ### Update gender for character id {id} to {gender}
+
+## UpdateHeightWeightAge
+### Update the height, weight and age for character id {id} to {height} {weight} {age}
 
 ## DeleteCharacter
 ### Delete the character with id {id}

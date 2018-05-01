@@ -57,6 +57,13 @@ namespace CharGen.Storyteller.Fixtures
             return _character.Gender;
         }
 
+        public void GetRetrievedHeightWeightAge(out int height, out int weight, out int age)
+        {
+            height = _character.Height;
+            weight = _character.Weight;
+            age = _character.Age;
+        }
+
         public void AddCharacter(string name, string playedBy)
         {
             _controller.Post(new HttpCharacterModel { Name = name, PlayedBy = playedBy });
@@ -118,6 +125,28 @@ namespace CharGen.Storyteller.Fixtures
                 Chr = character.Chr,
                 Race = character.Race,
                 Gender = gender
+            });
+        }
+
+        public void UpdateHeightWeightAge(int id, int height, int weight, int age)
+        {
+            var character = _controller.Get(id);
+            
+            _controller.Put(id, new HttpCharacterModel
+            {
+                Name = character.Name,
+                PlayedBy = character.PlayedBy,
+                Str = character.Str,
+                Dex = character.Dex,
+                Con = character.Con,
+                Int = character.Int,
+                Wis = character.Wis,
+                Chr = character.Chr,
+                Race = character.Race,
+                Gender = character.Gender,
+                Height = height,
+                Weight = weight,
+                Age = age
             });
         }
 

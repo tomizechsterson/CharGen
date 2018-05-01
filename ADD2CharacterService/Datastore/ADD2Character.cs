@@ -13,6 +13,9 @@
         int Chr();
         string Race();
         string Gender();
+        int Height();
+        int Weight();
+        int Age();
         HttpCharacterModel ToModel();
     }
 }
