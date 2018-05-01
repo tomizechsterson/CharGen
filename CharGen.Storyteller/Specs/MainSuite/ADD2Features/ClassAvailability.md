@@ -3,7 +3,7 @@
 -> id = 36bf4342-a0c7-4d32-ace1-47e10b87c536
 -> lifecycle = Acceptance
 -> max-retries = 0
--> last-updated = 2018-05-01T05:36:41.6715710Z
+-> last-updated = 2018-05-01T05:41:22.5686374Z
 -> tags = 
 
 [ADD2ClassSelection]
@@ -29,6 +29,39 @@ Cleric, Druid
 |> ClassAbilityMinimums str=3, dex=12, con=3, int=13, wis=3, chr=15
 ``` returnValue
 Mage, Thief, Bard
+```
+
+~~~
+
+[ADD2ClassSelection]
+|> AvailableClassesForRace race=Dwarf
+``` returnValue
+Fighter, Cleric, Thief, Fighter/Thief, Fighter/Cleric
+```
+
+|> AvailableClassesForRace race=Elf
+``` returnValue
+Fighter, Ranger, Mage, Cleric, Thief, Fighter/Mage, Fighter/Thief, Mage/Thief, Fighter/Mage/Thief
+```
+
+|> AvailableClassesForRace race=Gnome
+``` returnValue
+Fighter, Cleric, Thief, Fighter/Cleric, Fighter/Thief, Cleric/Thief
+```
+
+|> AvailableClassesForRace race=Half-elf
+``` returnValue
+Fighter, Ranger, Mage, Cleric, Druid, Thief, Bard, Fighter/Cleric, Fighter/Thief, Fighter/Druid, Fighter/Mage, Cleric/Ranger, Cleric/Mage, Thief/Mage, Fighter/Mage/Cleric, Fighter/Mage/Thief
+```
+
+|> AvailableClassesForRace race=Halfling
+``` returnValue
+Fighter, Cleric, Thief, Fighter/Thief
+```
+
+|> AvailableClassesForRace race=Human
+``` returnValue
+Fighter, Paladin, Ranger, Mage, Cleric, Druid, Thief, Bard
 ```
 
 ~~~
