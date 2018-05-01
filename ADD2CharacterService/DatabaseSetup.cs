@@ -34,7 +34,8 @@ namespace ADD2CharacterService
                     "Height INTEGER DEFAULT 0, " +
                     "Weight INTEGER DEFAULT 0, " +
                     "Age INTEGER DEFAULT 0, " +
-                    "CompletionStep INTEGER DEFAULT 1 )";
+                    "CompletionStep INTEGER DEFAULT 1, " +
+                    "Unique(Name, PlayedBy) )";
                 connection.Open();
                 command.ExecuteNonQuery();
 
