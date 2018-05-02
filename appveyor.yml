@@ -14,6 +14,7 @@ matrix:
 build:
   parallel: true
   project: CharGen.sln
+  publish_wap: true
   publish_wap_xcopy: true
   verbosity: minimal
 
