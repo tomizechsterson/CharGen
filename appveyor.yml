@@ -39,4 +39,4 @@ deploy:
   username: $chargendev
   password:
     secure: aYrX7hXvsTgU9Eri9HLRDMpvnUI6AjD0kR/Z5losoiDS8ddYGfRR15R+pThX5EaymRAUIC9Xm2uC72NI9VcFqA==
-  artifact: ADD2CharacterService/publish
+  artifact: publish
