@@ -9,12 +9,12 @@ namespace CharGen.Storyteller.Fixtures
 
         public string[] ClassAbilityMinimums(int str, int dex, int con, int @int, int wis, int chr)
         {
-            return new string[1];
+            return _controller.GetClasses("human", str, dex, con, @int, wis, chr);
         }
 
         public string[] AvailableClassesForRace(string race)
         {
-            return new string[1];
+            return _controller.GetClasses(race, 13, 13, 14, 13, 14, 17);
         }
     }
 }

@@ -97,5 +97,10 @@ namespace ADD2CharacterService.Controllers
                 new HeightWeightAge(race, gender).Age()
             };
         }
+
+        public string[] GetClasses(string race, int str, int dex, int con, int @int, int wis, int chr)
+        {
+            return new string[1];
+        }
     }
 }
