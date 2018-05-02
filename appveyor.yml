@@ -31,7 +31,6 @@ after_test:
 artifacts:
 - path: ADD2CharacterService/publish
   name: publish
-  type: WebDeployPackage
       
 deploy:
 - provider: AzureAppServiceZipDeploy
