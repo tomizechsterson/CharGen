@@ -14,6 +14,7 @@ matrix:
 build:
   parallel: true
   project: CharGen.sln
+  publish_wap_xcopy: true
 
 before_build:
   - dotnet restore
