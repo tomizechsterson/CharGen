@@ -36,7 +36,8 @@ deploy:
 - provider: AzureAppServiceZipDeploy
   appservice_environment: false
   website: chargendev
-  username: $chargendev
+  slot: dev
+  username: tomideploy4343__77
   password:
-    secure: aYrX7hXvsTgU9Eri9HLRDMpvnUI6AjD0kR/Z5losoiDS8ddYGfRR15R+pThX5EaymRAUIC9Xm2uC72NI9VcFqA==
+    secure: oKbhRae+jXWP252XnI9DCsM8Jpiml0w6UN7NiT2GfEA=
   artifact: publish
