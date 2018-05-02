@@ -14,7 +14,6 @@ matrix:
 build:
   parallel: true
   project: CharGen.sln
-  publish_wap: true
   publish_wap_xcopy: true
   verbosity: minimal
 
@@ -26,6 +25,14 @@ test:
     only:
       - CharGen.UnitTests.dll
       
+after_test:
+- cmd: dotnet publish ADD2CharacterService -c Release -o ./publish
+      
+artifacts:
+- path: ADD2CharacterService/publish
+  name: publish
+  type: WebDeployPackage
+      
 deploy:
 - provider: AzureAppServiceZipDeploy
   appservice_environment: false
@@ -33,3 +40,4 @@ deploy:
   username: $chargendev
   password:
     secure: aYrX7hXvsTgU9Eri9HLRDMpvnUI6AjD0kR/Z5losoiDS8ddYGfRR15R+pThX5EaymRAUIC9Xm2uC72NI9VcFqA==
+  artifact: publish
