@@ -11,7 +11,7 @@ namespace ADD2CharacterService.Stats
 
         public DieRoll(int sides, int times)
         {
-            _sides = sides;
+            _sides = 1;
             _times = times;
             _random = new Random(Environment.TickCount);
         }
