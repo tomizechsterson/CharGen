@@ -41,7 +41,7 @@ namespace ADD2CharacterService.Race
                 new HeightWeightAgeRoll("elf", "m", 55, 90, 100, new DieRoll(10, 1), new DieRoll(10, 3), new DieRoll(6, 5)),
                 new HeightWeightAgeRoll("elf", "f", 50, 70, 100, new DieRoll(10, 1), new DieRoll(10, 3), new DieRoll(6, 5)),
                 new HeightWeightAgeRoll("gnome", "m", 38, 72, 60, new DieRoll(6, 1), new DieRoll(4, 5), new DieRoll(12, 3)),
-                new HeightWeightAgeRoll("gnome", "f", 36, 68, 60, new DieRoll(6, 1), new DieRoll(5, 4), new DieRoll(12, 3)),
+                new HeightWeightAgeRoll("gnome", "f", 36, 68, 60, new DieRoll(6, 1), new DieRoll(4, 5), new DieRoll(12, 3)),
                 new HeightWeightAgeRoll("half-elf", "m", 60, 110, 15, new DieRoll(6, 2), new DieRoll(12, 3), new DieRoll(6, 1)),
                 new HeightWeightAgeRoll("half-elf", "f", 58, 85, 15, new DieRoll(6, 2), new DieRoll(12, 3), new DieRoll(6, 1)),
                 new HeightWeightAgeRoll("halfling", "m", 32, 52, 20, new DieRoll(8, 2), new DieRoll(4, 5), new DieRoll(4, 3)),
