@@ -22,5 +22,3 @@ test:
   assemblies:
     only:
       - CharGen.UnitTests.dll
-      
-deploy: off
