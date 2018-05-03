@@ -1,6 +1,6 @@
 #### Ongoing Questions/Insights
 
-1. (bad) Following SQL-speaking objects dogmatically does, in fact, lead to very low efficiency with database calls. Don't need to follow it to its very end
+1. (bad) Following SQL-speaking objects dogmatically does, in fact, lead to very low efficiency with database calls. Don't need to follow it to its very end. It's also very, very awkward
     * Can most likely follow it to a bit lesser degree for good OO and efficiency middle-ground
 2. (good) Acceptance tests w/storyteller helpful
 3. (bad) Asserting facts with inputs requires {returnValue} and a bool return value, which generates a checkbox on every step??? WTF!?!?!?!
