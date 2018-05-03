@@ -99,6 +99,8 @@ namespace ADD2CharacterService.Controllers
             };
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("classes/{race}/{str}/{dex}/{con}/{int}/{wis}/{chr}")]
         public string[] GetClasses(string race, int str, int dex, int con, int @int, int wis, int chr)
         {
             return new AvailableClasses(race, str, dex, con, @int, wis, chr).Select();
