@@ -17,11 +17,6 @@ namespace ADD2CharacterService.Race
             _heightWeightRolls = GenerateHeightWeightAgeRolls();
         }
 
-        public int Age()
-        {
-            return _heightWeightRolls.First(a => a.Race == _race).RollAge();
-        }
-
         public int Height()
         {
             return _heightWeightRolls.First(h => h.Race == _race && h.Gender == _gender).RollHeight();
@@ -30,6 +25,11 @@ namespace ADD2CharacterService.Race
         public int Weight()
         {
             return _heightWeightRolls.First(h => h.Race == _race && h.Gender == _gender).RollWeight();
+        }
+
+        public int Age()
+        {
+            return _heightWeightRolls.First(a => a.Race == _race).RollAge();
         }
 
         private static List<HeightWeightAgeRoll> GenerateHeightWeightAgeRolls()

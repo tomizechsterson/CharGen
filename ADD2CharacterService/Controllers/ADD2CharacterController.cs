@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using ADD2CharacterService.CharacterClass;
 using ADD2CharacterService.Datastore;
 using ADD2CharacterService.Race;
 using ADD2CharacterService.Stats;
@@ -100,7 +101,7 @@ namespace ADD2CharacterService.Controllers
 
         public string[] GetClasses(string race, int str, int dex, int con, int @int, int wis, int chr)
         {
-            return new string[1];
+            return new AvailableClasses(race, str, dex, con, @int, wis, chr).Select();
         }
     }
 }

@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-01T04:34:26.9498459Z
+-> last-updated = 2018-05-03T04:30:15.2597411Z
 -> tags = 
 
 [ADD2Datastore]
@@ -90,4 +90,26 @@ Elf, Gnome, Half-Elf, Human
 |> CheckHeight lowBound=60, highBound=70, returnValue=True
 |> CheckWeight lowBound=88, highBound=121, returnValue=True
 |> CheckAge lowBound=16, highBound=21, returnValue=True
+~~~
+
+[ADD2ClassSelection]
+|> AvailableClasses race=Half-Elf, str=13, dex=13, con=14, int=3, wis=14, chr=15
+``` returnValue
+Fighter, Ranger, Cleric, Druid, Thief, Fighter/Cleric, Fighter/Thief, Fighter/Druid, Cleric/Ranger
+```
+|> AvailableClasses race=Human, str=9, dex=12, con=3, int=13, wis=3, chr=15
+``` returnValue
+Fighter, Mage, Thief, Bard
+```
+
+|> AvailableClasses race=Elf, str=9, dex=9, con=3, int=9, wis=3, chr=3
+``` returnValue
+Fighter, Mage, Thief, Fighter/Mage, Fighter/Thief, Mage/Thief, Fighter/Mage/Thief
+```
+
+|> AvailableClasses race=Gnome, str=8, dex=18, con=10, int=13, wis=18, chr=9
+``` returnValue
+Cleric, Thief, Cleric/Thief
+```
+
 ~~~
