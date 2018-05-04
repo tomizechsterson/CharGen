@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using ADD2CharacterService.CharacterClass;
 using ADD2CharacterService.Datastore;
 using ADD2CharacterService.Race;
@@ -70,7 +72,15 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("rollstats/{statRollingRule}")]
         public List<int[]> RollStats(string statRollingRule)
         {
-            return new StatRoll(statRollingRule).RollStats();
+            try
+            {
+                return new StatRoll(statRollingRule).RollStats();
+            }
+            catch (Exception e)
+            {
+                throw new HttpRequestException(e.Message, e);
+            }
+            
         }
 
         [EnableCors("AnyOrigin")]
