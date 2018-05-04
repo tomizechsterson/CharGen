@@ -2,6 +2,41 @@
 	"version": 1,
 	"collections": [
 		{
+			"id": "7169d703-0127-4ea4-8e06-3bf26a4378f1",
+			"name": "Adhoc",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": null,
+			"order": [
+				"925afbe8-8a6d-43fc-821a-eba2aae8661f"
+			],
+			"folders_order": [],
+			"folders": [],
+			"requests": [
+				{
+					"id": "925afbe8-8a6d-43fc-821a-eba2aae8661f",
+					"name": "localget",
+					"url": "http://localhost:42000/api/ADD2Character/rollstats/WHOA",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "7169d703-0127-4ea4-8e06-3bf26a4378f1",
+					"headers": "",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
 			"id": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
 			"name": "AD&D  2nd Ed",
 			"description": "",
@@ -112,10 +147,10 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "69717ac4-7cad-4522-b196-9dfa22216a04",
+								"id": "026dfdbd-8d67-47f0-8f46-f9bae063fecc",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Response must be an error\", function() {",
+									"pm.test(\"Response must be 400 - bad request\", function() {",
 									"    pm.response.to.be.clientError;",
 									"});"
 								]
@@ -124,7 +159,7 @@
 					],
 					"folder": "fa0df12d-1958-4d02-9baa-d15a3094fefa",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be an error\", function() {\n    pm.response.to.be.clientError;\n});",
+					"tests": "pm.test(\"Response must be 400 - bad request\", function() {\n    pm.response.to.be.clientError;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
@@ -134,7 +169,7 @@
 				{
 					"id": "335a7045-a510-4f81-abb0-c4e6dee383eb",
 					"name": "Update Added Character",
-					"url": "https://chargendev-dev.azurewebsites.net/api/ADD2Character/4",
+					"url": "https://chargendev-dev.azurewebsites.net/api/ADD2Character/7",
 					"description": "",
 					"data": [],
 					"dataMode": "raw",
@@ -308,7 +343,7 @@
 				{
 					"id": "96a58df8-0269-4e37-81c0-e48cff9d7794",
 					"name": "Delete Added Character",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/4",
+					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/7",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -343,7 +378,7 @@
 				{
 					"id": "9a077301-aa0c-4a1c-a5f8-687c676703f3",
 					"name": "Get Updated Character",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/4",
+					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/7",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -356,7 +391,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a2b655a3-5633-4dac-9d47-7155ca350b22",
+								"id": "681cfdb7-d0a5-4d89-a04c-24aef5757ba7",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -366,7 +401,7 @@
 									"",
 									"pm.test(\"Check that all properties of character were updated\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(4);",
+									"    pm.expect(jsonData.id).to.eql(7);",
 									"    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));",
 									"    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));",
 									"    pm.expect(jsonData.str).to.eql(10);",
@@ -387,7 +422,7 @@
 					],
 					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(7);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
@@ -481,7 +516,7 @@
 				{
 					"id": "f78d1c4d-fd06-4f99-b8ed-bc905eafe4c8",
 					"name": "Get New Character",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/4",
+					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/7",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -494,7 +529,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d63b8bbb-abc5-4ec5-88fb-bfa1473e5680",
+								"id": "e61493f4-90d4-44a6-bbab-a1348a585e4a",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -502,9 +537,9 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"pm.test(\"Check Id, name, playedBy and stats of character id 4\", function () {",
+									"pm.test(\"Check Id, name, playedBy and stats of character id 7\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(4);",
+									"    pm.expect(jsonData.id).to.eql(7);",
 									"    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
 									"    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));",
 									"    pm.expect(jsonData.str).to.eql(0);",
@@ -520,7 +555,7 @@
 					],
 					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name, playedBy and stats of character id 4\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(0);\n    pm.expect(jsonData.dex).to.eql(0);\n    pm.expect(jsonData.con).to.eql(0);\n    pm.expect(jsonData.int).to.eql(0);\n    pm.expect(jsonData.wis).to.eql(0);\n    pm.expect(jsonData.chr).to.eql(0);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name, playedBy and stats of character id 7\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(7);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(0);\n    pm.expect(jsonData.dex).to.eql(0);\n    pm.expect(jsonData.con).to.eql(0);\n    pm.expect(jsonData.int).to.eql(0);\n    pm.expect(jsonData.wis).to.eql(0);\n    pm.expect(jsonData.chr).to.eql(0);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
