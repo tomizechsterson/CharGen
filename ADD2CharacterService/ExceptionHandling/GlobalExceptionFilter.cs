@@ -22,7 +22,7 @@ namespace ADD2CharacterService.ExceptionHandling
                 message = context.Exception.Message;
                 status = HttpStatusCode.InternalServerError;
             }
-            
+
             context.ExceptionHandled = true;
  
             var response = context.HttpContext.Response;

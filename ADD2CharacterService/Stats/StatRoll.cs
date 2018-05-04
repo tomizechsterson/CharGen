@@ -70,7 +70,7 @@ namespace ADD2CharacterService.Stats
                         return new List<int[]>();
                 }
             }
-            
+
             throw new StatRollRuleInvalidException(nameof(_rule), _rule,
                 "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
         }
