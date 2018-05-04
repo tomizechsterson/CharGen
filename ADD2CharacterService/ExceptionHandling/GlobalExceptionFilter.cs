@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -13,7 +12,7 @@ namespace ADD2CharacterService.ExceptionHandling
             string message;
  
             var exceptionType = context.Exception.GetType();
-            if (exceptionType == typeof(ArgumentOutOfRangeException))
+            if (exceptionType == typeof(StatRollRuleInvalidException))
             {
                 message = context.Exception.Message;
                 status = HttpStatusCode.BadRequest;
