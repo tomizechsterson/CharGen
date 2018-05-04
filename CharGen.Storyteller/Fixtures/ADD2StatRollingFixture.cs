@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ADD2CharacterService.Controllers;
+using ADD2CharacterService.ExceptionHandling;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
@@ -13,6 +14,15 @@ namespace CharGen.Storyteller.Fixtures
         public void RollStats([SelectionValues("RollOnce", "RollTwice", "Assignment", "AssignmentDouble", "RollFour", "AddSevenDice")]string rule)
         {
             _rollResults = _controller.RollStats(rule);
+        }
+
+        public void RollStatsWithInvalidRule()
+        {
+            try
+            {
+                _rollResults = _controller.RollStats("WRONG");
+            }
+            catch (StatRollRuleInvalidException) {}
         }
 
         public int CheckNumberOfRolls()

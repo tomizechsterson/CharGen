@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ADD2CharacterService.ExceptionHandling;
 
 namespace ADD2CharacterService.Stats
 {
@@ -70,7 +71,7 @@ namespace ADD2CharacterService.Stats
                 }
             }
             
-            throw new ArgumentOutOfRangeException(nameof(_rule), _rule,
+            throw new StatRollRuleInvalidException(nameof(_rule), _rule,
                 "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
         }
     }

@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using ADD2CharacterService.ExceptionHandling;
 using ADD2CharacterService.Stats;
 using Xunit;
 
@@ -28,7 +28,7 @@ namespace CharGen.UnitTests
         [Fact]
         public void InvalidStatRollRule_ThrowsArgumentOutOfRangeException()
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => new StatRoll("INVALID").RollStats());
+            Assert.Throws<StatRollRuleInvalidException>(() => new StatRoll("INVALID").RollStats());
         }
 
         private static void AssertRolls(List<int[]> results, int numRolls, int numDicePerRoll, int rollLowerBound,

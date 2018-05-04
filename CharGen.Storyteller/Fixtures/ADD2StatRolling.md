@@ -3,6 +3,9 @@
 ## RollStats
 ### Roll stats given the following rule: {rule}
 
+## RollStatsWithInvalidRule
+### Attempting to use an invalid rule for rolling stats should result in a StatRollRuleInvalidException
+
 ## CheckNumberOfRolls
 ### There should have been {returnValue} rolls
 

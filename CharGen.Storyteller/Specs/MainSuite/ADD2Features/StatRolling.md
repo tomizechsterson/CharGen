@@ -3,7 +3,7 @@
 -> id = bacf30b2-2683-48e6-b28f-e97afeade3ec
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-04T21:46:02.9143202Z
+-> last-updated = 2018-05-04T21:58:46.7043202Z
 -> tags = 
 
 [ADD2StatRolling]
@@ -46,4 +46,8 @@
 |> CheckNumberOfRolls returnValue=7
 |> CheckNumberOfDiceRolled number=1, returnValue=True
 |> CheckValuesOfDieRolls lower=0, higher=7, returnValue=True
+~~~
+
+[ADD2StatRolling]
+|> RollStatsWithInvalidRule
 ~~~

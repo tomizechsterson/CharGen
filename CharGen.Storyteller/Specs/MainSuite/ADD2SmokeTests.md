@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-04T21:47:05.4383202Z
+-> last-updated = 2018-05-04T22:08:17.0373202Z
 -> tags = 
 
 [ADD2Datastore]
@@ -61,6 +61,7 @@
 |> CheckNumberOfRolls returnValue=7
 |> CheckNumberOfDiceRolled number=1, returnValue=True
 |> CheckValuesOfDieRolls lower=0, higher=7, returnValue=True
+|> RollStatsWithInvalidRule
 ~~~
 
 [RaceSelection]
