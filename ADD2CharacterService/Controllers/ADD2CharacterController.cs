@@ -88,7 +88,7 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
-        [HttpGet("heightweightage/{race}/{gender}")]
+        [HttpGet("hwa/{race}/{gender}")]
         public int[] GetHeightWeightAge(string race, string gender)
         {
             return new int[3]

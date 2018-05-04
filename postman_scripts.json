@@ -11,9 +11,27 @@
 			"order": [],
 			"folders_order": [
 				"b671d6b2-dde5-40c3-a79d-c512b98f02a6",
-				"cd07027a-a0b5-4209-87a0-e11b844f3941"
+				"cd07027a-a0b5-4209-87a0-e11b844f3941",
+				"376a6eb9-0197-402c-9cba-0e732d3f6dba",
+				"1b863024-85ec-46f6-aa06-d2786d3d8f33"
 			],
 			"folders": [
+				{
+					"id": "1b863024-85ec-46f6-aa06-d2786d3d8f33",
+					"name": "Class Selection",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"folder": null,
+					"order": [
+						"316ebf6f-9e95-4079-b23c-9747b3fb2681",
+						"8a0c3d4c-d00f-4fdd-b7ab-4ade0ae042de"
+					],
+					"folders_order": [],
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"folderId": "1b863024-85ec-46f6-aa06-d2786d3d8f33"
+				},
 				{
 					"id": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
 					"name": "CrudOps",
@@ -37,8 +55,29 @@
 					"folderId": "b671d6b2-dde5-40c3-a79d-c512b98f02a6"
 				},
 				{
+					"id": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"name": "Race Selection",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"folder": null,
+					"order": [
+						"3b4106de-3a92-4f95-bba0-08aeedf68f5b",
+						"41e24c79-534e-4f15-a995-e92a398bf14c",
+						"d9511ab9-da08-414f-a128-41e8a65eb73b",
+						"ee9e315f-598f-4c24-9698-bd315e4cf10a",
+						"b06680c9-b8ff-4ef7-8076-c09187b365c5",
+						"dd6f7f6b-a46d-4d53-946d-86112ace9dc1",
+						"562c513e-36b5-45c9-ad6f-749959e8675f"
+					],
+					"folders_order": [],
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"folderId": "376a6eb9-0197-402c-9cba-0e732d3f6dba"
+				},
+				{
 					"id": "cd07027a-a0b5-4209-87a0-e11b844f3941",
-					"name": "Stats",
+					"name": "Stat Rolling",
 					"description": "",
 					"auth": null,
 					"events": null,
@@ -172,6 +211,208 @@
 					"folder": "cd07027a-a0b5-4209-87a0-e11b844f3941",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 7 rolls were made\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(7);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "316ebf6f-9e95-4079-b23c-9747b3fb2681",
+					"name": "Classes Available for Average Human",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/classes/Human/9/9/9/9/9/9",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "72766a88-393d-41d4-bb98-6174d7605a50",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 4 classes were returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(4);",
+									"});",
+									"",
+									"pm.test(\"Check that the expected classes were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Mage\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Thief\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b863024-85ec-46f6-aa06-d2786d3d8f33",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 4 classes were returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(4);\n});\n\npm.test(\"Check that the expected classes were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;\n    pm.expect(jsonData.includes(\"Mage\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Thief\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "3b4106de-3a92-4f95-bba0-08aeedf68f5b",
+					"name": "Races Available with Low Stats",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/8/7/11/5/3/8",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c42a0682-2742-45d1-9a44-75f17aff51e8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 3 races were returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(3);",
+									"});",
+									"",
+									"pm.test(\"Check that the expected races were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 3 races were returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(3);\n});\n\npm.test(\"Check that the expected races were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "41e24c79-534e-4f15-a995-e92a398bf14c",
+					"name": "Races Available with High Stats",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/17/17/17/17/17/17",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cebbf2fd-2f19-48bd-acf9-61afe18ab5fa",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 6 races were returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(6);",
+									"});",
+									"",
+									"pm.test(\"Check that the expected races were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 6 races were returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that the expected races were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "562c513e-36b5-45c9-ad6f-749959e8675f",
+					"name": "Starting Height/Weight/Age for Half-Elf Female",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/hwa/half-elf/f",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbff48e8-a358-4ebb-9cf9-543396070391",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0]).to.be.above(59);",
+									"    pm.expect(jsonData[0]).to.be.below(71);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[1]).to.be.above(87);",
+									"    pm.expect(jsonData[1]).to.be.below(122);",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the correct range\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[2]).to.be.above(15);",
+									"    pm.expect(jsonData[2]).to.be.below(22);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the height was in the correct range\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData[0]).to.be.above(59);\n    pm.expect(jsonData[0]).to.be.below(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData[1]).to.be.above(87);\n    pm.expect(jsonData[1]).to.be.below(122);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData[2]).to.be.above(15);\n    pm.expect(jsonData[2]).to.be.below(22);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
@@ -341,6 +582,54 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "8a0c3d4c-d00f-4fdd-b7ab-4ade0ae042de",
+					"name": "Classes Available for Gnome",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/classes/Gnome/8/18/10/13/18/9",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "71c4e0a4-9a73-4ae6-b5b3-699b9789d93c",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 3 classes were returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(3);",
+									"});",
+									"",
+									"pm.test(\"Check that the expected classes were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Thief\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Cleric/Thief\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b863024-85ec-46f6-aa06-d2786d3d8f33",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 3 classes were returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(3);\n});\n\npm.test(\"Check that the expected classes were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Thief\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric/Thief\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "9a5315d6-9f50-4e88-9960-abdedfa8367d",
 					"name": "GetId1",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/1",
@@ -377,6 +666,47 @@
 					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "b06680c9-b8ff-4ef7-8076-c09187b365c5",
+					"name": "Stat Adjustments for Human",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/statadjust/Human",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "de14ade3-c96a-48a3-96f6-2f6ceb0ce9e2",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the right adjustments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData).length).to.eql(0);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
@@ -467,6 +797,148 @@
 					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check 3 seed characters exist\", function () {\n    var jsonData = pm.response.json();\n    var first = jsonData.find(x => x.id === 1);\n    pm.expect(first.name).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n    pm.expect(first.playedBy).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n    var second = jsonData.find(x => x.id === 2 );\n    pm.expect(second.name).to.eql(\"Someone\" + pm.environment.get(\"envName\"));\n    pm.expect(second.playedBy).to.eql(\"Somebody\" + pm.environment.get(\"envName\"));\n    var third = jsonData.find(x => x.id === 3);\n    pm.expect(third.name).to.eql(\"Person\" + pm.environment.get(\"envName\"));\n    pm.expect(third.playedBy).to.eql(\"A Person\" + pm.environment.get(\"envName\"));\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "d9511ab9-da08-414f-a128-41e8a65eb73b",
+					"name": "Races Available for the Most Unlucky Stat Roller Ever",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/3/3/3/3/3/3",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6c91e50a-6c1e-4b5a-8353-c21d23c7d956",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 1 race was returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(1);",
+									"});",
+									"",
+									"pm.test(\"Check that human was returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 1 race was returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(1);\n});\n\npm.test(\"Check that human was returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "dd6f7f6b-a46d-4d53-946d-86112ace9dc1",
+					"name": "Starting Height/Weight/Age for Dwarf Male",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/hwa/dwarf/m",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "04fd7c96-bbfa-4112-8260-3a61a975b24a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0]).to.be.above(43);",
+									"    pm.expect(jsonData[0]).to.be.below(54);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[1]).to.be.above(133);",
+									"    pm.expect(jsonData[1]).to.be.below(171);",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the correct range\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[2]).to.be.above(44);",
+									"    pm.expect(jsonData[2]).to.be.below(71);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the height was in the correct range\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData[0]).to.be.above(43);\n    pm.expect(jsonData[0]).to.be.below(54);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData[1]).to.be.above(133);\n    pm.expect(jsonData[1]).to.be.below(171);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData[2]).to.be.above(44);\n    pm.expect(jsonData[2]).to.be.below(71);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "ee9e315f-598f-4c24-9698-bd315e4cf10a",
+					"name": "Stat Adjustments for Dwarf",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/statadjust/gnome",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4572370a-0be6-4664-a9fa-fa64c4635782",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the right adjustments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.int).to.eql(1);",
+									"    pm.expect(jsonData.wis).to.eql(-1);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "376a6eb9-0197-402c-9cba-0e732d3f6dba",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.int).to.eql(1);\n    pm.expect(jsonData.wis).to.eql(-1);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
@@ -647,23 +1119,20 @@
 				{
 					"key": "siteName",
 					"value": "localhost:42000",
-					"description": "",
-					"type": "text",
-					"enabled": true
+					"enabled": true,
+					"type": "text"
 				},
 				{
 					"key": "envName",
 					"value": "",
-					"description": "",
-					"type": "text",
-					"enabled": true
+					"enabled": true,
+					"type": "text"
 				},
 				{
 					"key": "protocol",
 					"value": "http",
-					"description": "",
-					"type": "text",
-					"enabled": true
+					"enabled": true,
+					"type": "text"
 				}
 			]
 		}
