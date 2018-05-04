@@ -2,42 +2,7 @@
 	"version": 1,
 	"collections": [
 		{
-			"id": "7169d703-0127-4ea4-8e06-3bf26a4378f1",
-			"name": "Adhoc",
-			"description": null,
-			"auth": null,
-			"events": null,
-			"variables": null,
-			"order": [
-				"925afbe8-8a6d-43fc-821a-eba2aae8661f"
-			],
-			"folders_order": [],
-			"folders": [],
-			"requests": [
-				{
-					"id": "925afbe8-8a6d-43fc-821a-eba2aae8661f",
-					"name": "localget",
-					"url": "http://localhost:42000/api/ADD2Character/rollstats/WHOA",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [],
-					"folder": null,
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "7169d703-0127-4ea4-8e06-3bf26a4378f1",
-					"headers": "",
-					"pathVariables": {}
-				}
-			]
-		},
-		{
-			"id": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+			"id": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 			"name": "AD&D  2nd Ed",
 			"description": "",
 			"auth": null,
@@ -45,55 +10,96 @@
 			"variables": [],
 			"order": [],
 			"folders_order": [
-				"920bbaf0-fdc4-457d-81e4-b9c72c616893",
-				"fa0df12d-1958-4d02-9baa-d15a3094fefa"
+				"b671d6b2-dde5-40c3-a79d-c512b98f02a6",
+				"cd07027a-a0b5-4209-87a0-e11b844f3941"
 			],
 			"folders": [
 				{
-					"id": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
+					"id": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
 					"name": "CrudOps",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collection": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 					"folder": null,
 					"order": [
-						"79fe994e-0e86-4ff0-80d5-7057f6779f8f",
-						"ec8d35de-2a41-4617-8217-47ea0dc05d0b",
-						"74e79b79-b034-4e27-8880-75463ca996b7",
-						"b8176b18-a308-405d-b1d6-5a4952725ce8",
-						"f78d1c4d-fd06-4f99-b8ed-bc905eafe4c8",
-						"335a7045-a510-4f81-abb0-c4e6dee383eb",
-						"9a077301-aa0c-4a1c-a5f8-687c676703f3",
-						"96a58df8-0269-4e37-81c0-e48cff9d7794"
+						"cd6218dc-abed-4e71-a7bb-f0d8d735820d",
+						"9a5315d6-9f50-4e88-9960-abdedfa8367d",
+						"754df9d2-118a-4e1b-86fb-5edc71b29dc0",
+						"c859c2f1-1780-447a-95e0-3a18dd5d2315",
+						"6fb8252f-1d90-4835-ba7f-8454dbce76bd",
+						"1829074a-e1bd-48f3-8366-3acf0455b986",
+						"f9865d18-fe18-42dd-924a-e38ae15ca97d",
+						"63378154-c9d9-431c-82cc-7994eda9fe4e"
 					],
 					"folders_order": [],
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
-					"folderId": "920bbaf0-fdc4-457d-81e4-b9c72c616893"
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"folderId": "b671d6b2-dde5-40c3-a79d-c512b98f02a6"
 				},
 				{
-					"id": "fa0df12d-1958-4d02-9baa-d15a3094fefa",
+					"id": "cd07027a-a0b5-4209-87a0-e11b844f3941",
 					"name": "Stats",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collection": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 					"folder": null,
 					"order": [
-						"114301a0-3013-4169-ab5d-ff0553f8df77",
-						"4a1cb774-5666-4f2f-b9be-cda395d343f8",
-						"20d07c56-0e74-4857-90c8-a17b43f23513"
+						"21eb4e18-f828-494a-ab0a-754786328c40",
+						"276526f1-1104-4cda-a76a-d915819dcdc2",
+						"73f79aa4-4ff6-4f02-b861-35f39f0dc46b"
 					],
 					"folders_order": [],
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
-					"folderId": "fa0df12d-1958-4d02-9baa-d15a3094fefa"
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"folderId": "cd07027a-a0b5-4209-87a0-e11b844f3941"
 				}
 			],
 			"requests": [
 				{
-					"id": "114301a0-3013-4169-ab5d-ff0553f8df77",
+					"id": "1829074a-e1bd-48f3-8366-3acf0455b986",
+					"name": "Update Added Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/7",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4bd886ea-b68f-4636-8b5d-204f6135cff8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Put must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"playedBy\":\"new person{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "21eb4e18-f828-494a-ab0a-754786328c40",
 					"name": "RollOnce",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/rollstats/rollonce",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/rollstats/rollonce",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -122,95 +128,19 @@
 							}
 						}
 					],
-					"folder": "fa0df12d-1958-4d02-9baa-d15a3094fefa",
+					"folder": "cd07027a-a0b5-4209-87a0-e11b844f3941",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 6 rolls were made\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(6);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "20d07c56-0e74-4857-90c8-a17b43f23513",
-					"name": "Invalid Roll Rule",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/rollstats/invalid",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "026dfdbd-8d67-47f0-8f46-f9bae063fecc",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be 400 - bad request\", function() {",
-									"    pm.response.to.be.clientError;",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "fa0df12d-1958-4d02-9baa-d15a3094fefa",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be 400 - bad request\", function() {\n    pm.response.to.be.clientError;\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "335a7045-a510-4f81-abb0-c4e6dee383eb",
-					"name": "Update Added Character",
-					"url": "https://chargendev-dev.azurewebsites.net/api/ADD2Character/7",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "PUT",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "4bd886ea-b68f-4636-8b5d-204f6135cff8",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Put must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
-					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"playedBy\":\"new person{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "4a1cb774-5666-4f2f-b9be-cda395d343f8",
+					"id": "276526f1-1104-4cda-a76a-d915819dcdc2",
 					"name": "Add 7 Dice",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/rollstats/AddSevenDice",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/rollstats/AddSevenDice",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -239,19 +169,138 @@
 							}
 						}
 					],
-					"folder": "fa0df12d-1958-4d02-9baa-d15a3094fefa",
+					"folder": "cd07027a-a0b5-4209-87a0-e11b844f3941",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 7 rolls were made\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(7);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "74e79b79-b034-4e27-8880-75463ca996b7",
+					"id": "63378154-c9d9-431c-82cc-7994eda9fe4e",
+					"name": "Delete Added Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/7",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7a4e5eba-b474-4a64-b0f3-d11577a3a770",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Delete must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "6fb8252f-1d90-4835-ba7f-8454dbce76bd",
+					"name": "Get New Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/7",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e61493f4-90d4-44a6-bbab-a1348a585e4a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id, name, playedBy and stats of character id 7\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(7);",
+									"    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
+									"    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));",
+									"    pm.expect(jsonData.str).to.eql(0);",
+									"    pm.expect(jsonData.dex).to.eql(0);",
+									"    pm.expect(jsonData.con).to.eql(0);",
+									"    pm.expect(jsonData.int).to.eql(0);",
+									"    pm.expect(jsonData.wis).to.eql(0);",
+									"    pm.expect(jsonData.chr).to.eql(0);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name, playedBy and stats of character id 7\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(7);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(0);\n    pm.expect(jsonData.dex).to.eql(0);\n    pm.expect(jsonData.con).to.eql(0);\n    pm.expect(jsonData.int).to.eql(0);\n    pm.expect(jsonData.wis).to.eql(0);\n    pm.expect(jsonData.chr).to.eql(0);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "73f79aa4-4ff6-4f02-b861-35f39f0dc46b",
+					"name": "Invalid Roll Rule",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/rollstats/invalid",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "026dfdbd-8d67-47f0-8f46-f9bae063fecc",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be 400 - bad request\", function() {",
+									"    pm.response.to.be.clientError;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "cd07027a-a0b5-4209-87a0-e11b844f3941",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be 400 - bad request\", function() {\n    pm.response.to.be.clientError;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "754df9d2-118a-4e1b-86fb-5edc71b29dc0",
 					"name": "GetId3",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/3",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/3",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -282,19 +331,103 @@
 							}
 						}
 					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 3\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(3);\n    pm.expect(jsonData.name).to.eql(\"Person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"A Person\" + pm.environment.get(\"envName\"));\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "79fe994e-0e86-4ff0-80d5-7057f6779f8f",
+					"id": "9a5315d6-9f50-4e88-9960-abdedfa8367d",
+					"name": "GetId1",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "38862cac-833e-4b94-a0e3-13556d652890",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id, name and playedBy of character id 1\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(1);",
+									"    pm.expect(jsonData.name).to.eql(\"Test1\" + pm.environment.get(\"envName\"));",
+									"    pm.expect(jsonData.playedBy).to.eql(\"Test1\" + pm.environment.get(\"envName\"));",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "c859c2f1-1780-447a-95e0-3a18dd5d2315",
+					"name": "Add New Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2fc16979-7ae3-432a-8410-fc15c0bc363d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "cd6218dc-abed-4e71-a7bb-f0d8d735820d",
 					"name": "GetAll",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -331,54 +464,19 @@
 							}
 						}
 					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check 3 seed characters exist\", function () {\n    var jsonData = pm.response.json();\n    var first = jsonData.find(x => x.id === 1);\n    pm.expect(first.name).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n    pm.expect(first.playedBy).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n    var second = jsonData.find(x => x.id === 2 );\n    pm.expect(second.name).to.eql(\"Someone\" + pm.environment.get(\"envName\"));\n    pm.expect(second.playedBy).to.eql(\"Somebody\" + pm.environment.get(\"envName\"));\n    var third = jsonData.find(x => x.id === 3);\n    pm.expect(third.name).to.eql(\"Person\" + pm.environment.get(\"envName\"));\n    pm.expect(third.playedBy).to.eql(\"A Person\" + pm.environment.get(\"envName\"));\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "96a58df8-0269-4e37-81c0-e48cff9d7794",
-					"name": "Delete Added Character",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/7",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "DELETE",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "7a4e5eba-b474-4a64-b0f3-d11577a3a770",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Delete must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "9a077301-aa0c-4a1c-a5f8-687c676703f3",
+					"id": "f9865d18-fe18-42dd-924a-e38ae15ca97d",
 					"name": "Get Updated Character",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/7",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/7",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -420,60 +518,34 @@
 							}
 						}
 					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
+					"folder": "b671d6b2-dde5-40c3-a79d-c512b98f02a6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(7);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collectionId": "2fc35777-828a-44b5-87fb-98acc6e4297f",
 					"headers": "",
 					"pathVariables": {}
-				},
+				}
+			]
+		},
+		{
+			"id": "fae46686-8de8-4a3c-8457-0d4996a8e4e9",
+			"name": "Adhoc",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": null,
+			"order": [
+				"93cb92fe-bdd0-40be-b3cf-f051bcba4111"
+			],
+			"folders_order": [],
+			"folders": [],
+			"requests": [
 				{
-					"id": "b8176b18-a308-405d-b1d6-5a4952725ce8",
-					"name": "Add New Character",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/new",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "POST",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "2fc16979-7ae3-432a-8410-fc15c0bc363d",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Post must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
-					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "ec8d35de-2a41-4617-8217-47ea0dc05d0b",
-					"name": "GetId1",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/1",
+					"id": "93cb92fe-bdd0-40be-b3cf-f051bcba4111",
+					"name": "localget",
+					"url": "http://localhost:42000/api/ADD2Character",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -482,83 +554,11 @@
 					"pathVariableData": [],
 					"queryParams": [],
 					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "38862cac-833e-4b94-a0e3-13556d652890",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check Id, name and playedBy of character id 1\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(1);",
-									"    pm.expect(jsonData.name).to.eql(\"Test1\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.playedBy).to.eql(\"Test1\" + pm.environment.get(\"envName\"));",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"Test1\" + pm.environment.get(\"envName\"));\n});",
+					"events": [],
+					"folder": null,
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "f78d1c4d-fd06-4f99-b8ed-bc905eafe4c8",
-					"name": "Get New Character",
-					"url": "https://{{siteName}}.azurewebsites.net/api/ADD2Character/7",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "e61493f4-90d4-44a6-bbab-a1348a585e4a",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check Id, name, playedBy and stats of character id 7\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(7);",
-									"    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.str).to.eql(0);",
-									"    pm.expect(jsonData.dex).to.eql(0);",
-									"    pm.expect(jsonData.con).to.eql(0);",
-									"    pm.expect(jsonData.int).to.eql(0);",
-									"    pm.expect(jsonData.wis).to.eql(0);",
-									"    pm.expect(jsonData.chr).to.eql(0);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "920bbaf0-fdc4-457d-81e4-b9c72c616893",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name, playedBy and stats of character id 7\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(7);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(0);\n    pm.expect(jsonData.dex).to.eql(0);\n    pm.expect(jsonData.con).to.eql(0);\n    pm.expect(jsonData.int).to.eql(0);\n    pm.expect(jsonData.wis).to.eql(0);\n    pm.expect(jsonData.chr).to.eql(0);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "da103ed2-1160-4817-ae82-8e37db9a2bb5",
+					"collectionId": "fae46686-8de8-4a3c-8457-0d4996a8e4e9",
 					"headers": "",
 					"pathVariables": {}
 				}
@@ -567,12 +567,12 @@
 	],
 	"environments": [
 		{
-			"id": "499399f9-0f33-4cbb-ad69-635b9f816361",
+			"id": "50a72bda-d243-4ba0-806d-12778e50feb8",
 			"name": "prod",
 			"values": [
 				{
 					"key": "siteName",
-					"value": "chargendev",
+					"value": "chargendev.azurewebsites.net",
 					"enabled": true,
 					"type": "text"
 				},
@@ -581,16 +581,23 @@
 					"value": "",
 					"enabled": true,
 					"type": "text"
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"description": "",
+					"type": "text",
+					"enabled": true
 				}
 			]
 		},
 		{
-			"id": "811ebb81-2610-4b3a-83ba-7d5f6047cff9",
+			"id": "838399d5-054b-4807-bee8-a422a1fcf68f",
 			"name": "dev",
 			"values": [
 				{
 					"key": "siteName",
-					"value": "chargendev-dev",
+					"value": "chargendev-dev.azurewebsites.net",
 					"enabled": true,
 					"type": "text"
 				},
@@ -599,16 +606,22 @@
 					"value": "dev",
 					"enabled": true,
 					"type": "text"
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"enabled": true,
+					"type": "text"
 				}
 			]
 		},
 		{
-			"id": "bf66a079-edda-42b0-a67b-feb6acb5851b",
+			"id": "afda9a18-88b7-45a0-8994-6be35bbfc97f",
 			"name": "stage",
 			"values": [
 				{
 					"key": "siteName",
-					"value": "chargendev-stage",
+					"value": "chargendev-stage.azurewebsites.net",
 					"enabled": true,
 					"type": "text"
 				},
@@ -617,6 +630,40 @@
 					"value": "stage",
 					"enabled": true,
 					"type": "text"
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "bee07bc2-6cdd-41f7-8ea3-31bb931ad60b",
+			"name": "local",
+			"values": [
+				{
+					"key": "siteName",
+					"value": "localhost:42000",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "envName",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "protocol",
+					"value": "http",
+					"description": "",
+					"type": "text",
+					"enabled": true
 				}
 			]
 		}
