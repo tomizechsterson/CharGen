@@ -3,7 +3,7 @@
 -> id = 2d930a0c-b2d4-469f-b5bb-867fa76b1b80
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-04-28T02:18:01.4437389Z
+-> last-updated = 2018-05-04T22:43:58.1823202Z
 -> tags = 
 
 [RaceSelection]
@@ -35,6 +35,7 @@ Dwarf, Gnome, Human
 Dwarf, Human
 ```
 
+|> RacesAvailableForStats str=3, dex=3, con=3, int=3, wis=3, chr=3, returnValue=Human
 ~~~
 
 [RaceSelection]
