@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-03T04:30:15.2597411Z
+-> last-updated = 2018-05-04T21:47:05.4383202Z
 -> tags = 
 
 [ADD2Datastore]
@@ -49,15 +49,15 @@
 ~~~
 
 [ADD2StatRolling]
-|> RollOnce
+|> RollStats rule=RollOnce
 |> CheckNumberOfRolls returnValue=6
 |> CheckNumberOfDiceRolled number=3, returnValue=True
 |> CheckValuesOfDieRolls lower=2, higher=19, returnValue=True
-|> RollFour
+|> RollStats rule=RollFour
 |> CheckNumberOfRolls returnValue=6
 |> CheckNumberOfDiceRolled number=4, returnValue=True
 |> CheckValuesOfDieRolls lower=3, higher=25, returnValue=True
-|> AddSevenDice
+|> RollStats rule=AddSevenDice
 |> CheckNumberOfRolls returnValue=7
 |> CheckNumberOfDiceRolled number=1, returnValue=True
 |> CheckValuesOfDieRolls lower=0, higher=7, returnValue=True
@@ -97,6 +97,7 @@ Elf, Gnome, Half-Elf, Human
 ``` returnValue
 Fighter, Ranger, Cleric, Druid, Thief, Fighter/Cleric, Fighter/Thief, Fighter/Druid, Cleric/Ranger
 ```
+
 |> AvailableClasses race=Human, str=9, dex=12, con=3, int=13, wis=3, chr=15
 ``` returnValue
 Fighter, Mage, Thief, Bard
