@@ -18,8 +18,11 @@ namespace ADD2CharacterService
             using (var connection = new SqliteConnection($"Data Source={_dbName}"))
             {
                 var command = connection.CreateCommand();
+                command.CommandText = "DROP TABLE IF EXISTS ADD2";
+                
+                command = connection.CreateCommand();
                 command.CommandText =
-                    "CREATE TABLE IF NOT EXISTS ADD2 (" +
+                    "CREATE TABLE ADD2 (" +
                     "Id INTEGER PRIMARY KEY NOT NULL, " +
                     "Name VARCHAR(32) NOT NULL, " +
                     "PlayedBy VARCHAR(32) NOT NULL, " +
@@ -34,6 +37,7 @@ namespace ADD2CharacterService
                     "Height INTEGER DEFAULT 0, " +
                     "Weight INTEGER DEFAULT 0, " +
                     "Age INTEGER DEFAULT 0, " +
+                    "Class VARCHAR(8) DEFAULT 'none' NULL, " +
                     "CompletionStep INTEGER DEFAULT 1, " +
                     "Unique(Name, PlayedBy) )";
                 connection.Open();
