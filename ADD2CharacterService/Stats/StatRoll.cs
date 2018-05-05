@@ -26,46 +26,17 @@ namespace ADD2CharacterService.Stats
                 switch (rule)
                 {
                     case StatRollingRule.RollOnce:
-                        return new List<int[]>(6)
-                        {
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll()
-                        };
+                        return ThreeSixSidedDieRoll(6);
                     case StatRollingRule.RollTwice:
-                        return new List<int[]>(12)
-                        {
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll()
-                        };
+                        return ThreeSixSidedDieRoll(12);
                     case StatRollingRule.Assignment:
-                        return new List<int[]>(6)
-                        {
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll()
-                        };
+                        return ThreeSixSidedDieRoll(6);
                     case StatRollingRule.AssignmentDouble:
-                        return new List<int[]>(12)
-                        {
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(),
-                            _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll(), _threeSixSidedDice.Roll()
-                        };
+                        return ThreeSixSidedDieRoll(12);
                     case StatRollingRule.RollFour:
-                        return new List<int[]>(6)
-                        {
-                            _fourSixSidedDice.Roll(), _fourSixSidedDice.Roll(), _fourSixSidedDice.Roll(),
-                            _fourSixSidedDice.Roll(), _fourSixSidedDice.Roll(), _fourSixSidedDice.Roll()
-                        };
+                        return FourSixSidedDieRoll(6);
                     case StatRollingRule.AddSevenDice:
-                        return new List<int[]>(7)
-                        {
-                            _oneSixSidedDie.Roll(), _oneSixSidedDie.Roll(), _oneSixSidedDie.Roll(),
-                            _oneSixSidedDie.Roll(), _oneSixSidedDie.Roll(), _oneSixSidedDie.Roll(),
-                            _oneSixSidedDie.Roll()
-                        };
+                        return OneSixSidedDieRoll(7);
                     default:
                         return new List<int[]>();
                 }
@@ -73,6 +44,30 @@ namespace ADD2CharacterService.Stats
 
             throw new StatRollRuleInvalidException(nameof(_rule), _rule,
                 "The rule to use for rolling stats needs to be one of the six defined in the Player's Handbook");
+        }
+
+        private List<int[]> ThreeSixSidedDieRoll(int numRolls)
+        {
+            var result = new List<int[]>(numRolls);
+            for(int i = 0; i < numRolls; i++)
+                result.Add(_threeSixSidedDice.Roll());
+            return result;
+        }
+        
+        private List<int[]> FourSixSidedDieRoll(int numRolls)
+        {
+            var result = new List<int[]>(numRolls);
+            for(int i = 0; i < numRolls; i++)
+                result.Add(_fourSixSidedDice.Roll());
+            return result;
+        }
+        
+        private List<int[]> OneSixSidedDieRoll(int numRolls)
+        {
+            var result = new List<int[]>(numRolls);
+            for(int i = 0; i < numRolls; i++)
+                result.Add(_oneSixSidedDie.Roll());
+            return result;
         }
     }
 }
