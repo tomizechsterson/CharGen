@@ -27,7 +27,7 @@ test:
       
 after_test:
 - cmd: cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
-- cmd: dotnet publish ADD2CharacterService -c Release -o ./publish
+- cmd: cd .. & dotnet publish ADD2CharacterService -c Release -o ./publish
       
 artifacts:
 - path: ADD2CharacterService/publish
