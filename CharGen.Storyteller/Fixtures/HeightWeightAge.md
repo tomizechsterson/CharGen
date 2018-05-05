@@ -1,4 +1,4 @@
-# AD&D 2nd Edition Height Weight Age Fixture
+# AD&D 2nd Edition Height Weight Age
 
 ## GivenRaceAndGender
 ### Given {gender} {race}

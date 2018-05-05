@@ -1,4 +1,4 @@
-# AD&D 2nd Edition Race Selection Fixture
+# AD&D 2nd Edition Race Selection
 
 ## RacesAvailableForStats
 ### Given the following stats STR: {str} DEX: {dex} CON: {con} INT: {int} WIS: {wis} CHR: {chr}, the following races should be available: {returnValue}

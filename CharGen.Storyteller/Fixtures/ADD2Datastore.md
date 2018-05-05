@@ -1,4 +1,4 @@
-# AD&D 2nd Edition Datastore Fixture
+# AD&D 2nd Edition Datastore
 
 ## Initialize
 ### Initialize the datastore

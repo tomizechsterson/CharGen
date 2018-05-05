@@ -1,4 +1,4 @@
-# AD&D 2nd Edition Class Selection Fixture
+# AD&D 2nd Edition Class Selection
 
 ## ClassAbilityMinimums
 ### The classes available for the following stats str {str} dex {dex} con {con} int {int} wis {wis} chr {chr} should be {returnValue}

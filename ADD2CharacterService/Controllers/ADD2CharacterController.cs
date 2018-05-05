@@ -117,5 +117,14 @@ namespace ADD2CharacterService.Controllers
         }
 
         #endregion
+
+        #region Alignment
+
+        public string[] Alignments(string className)
+        {
+            return new string[0];
+        }
+
+        #endregion
     }
 }

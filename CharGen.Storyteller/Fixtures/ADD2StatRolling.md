@@ -1,4 +1,4 @@
-# AD&D 2nd Edition Stat Rolling Fixture
+# AD&D 2nd Edition Stat Rolling
 
 ## RollStats
 ### Roll stats given the following rule: {rule}
