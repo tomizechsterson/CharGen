@@ -1057,9 +1057,8 @@
 				{
 					"key": "protocol",
 					"value": "https",
-					"description": "",
-					"type": "text",
-					"enabled": true
+					"enabled": true,
+					"type": "text"
 				}
 			]
 		},
