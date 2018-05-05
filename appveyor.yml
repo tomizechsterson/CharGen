@@ -24,6 +24,8 @@ test:
   assemblies:
     only:
       - CharGen.UnitTests.dll
+test_script:
+  - cmd: dotnet test ~/CharGen.UnitTests/CharGen.UnitTests.csproj -c Release -v diag --no-build
       
 after_test:
 - cmd: cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
