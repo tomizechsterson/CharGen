@@ -11,7 +11,8 @@ namespace CharGen.Storyteller.Fixtures
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
         private List<int[]> _rollResults = new List<int[]>();
 
-        public void RollStats([SelectionValues("RollOnce", "RollTwice", "Assignment", "AssignmentDouble", "RollFour", "AddSevenDice")]string rule)
+        public void RollStats(
+            [SelectionValues("RollOnce", "RollTwice", "Assignment", "AssignmentDouble", "RollFour", "AddSevenDice")] string rule)
         {
             _rollResults = _controller.RollStats(rule);
         }

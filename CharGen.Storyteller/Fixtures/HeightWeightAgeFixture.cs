@@ -8,11 +8,13 @@ namespace CharGen.Storyteller.Fixtures
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
         private string _race;
         private string _gender;
-        
-        public void GivenRaceAndGender(string race, string gender)
+
+        public void GivenRaceAndGender(
+            [SelectionValues("Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human")] string race, 
+            [SelectionValues("Female", "Male")] string gender)
         {
             _race = race;
-            _gender = gender;
+            _gender = gender == "Female" ? "F" : "M";
         }
 
         public bool CheckHeight(int lowBound, int highBound)
