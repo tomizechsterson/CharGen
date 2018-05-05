@@ -28,6 +28,22 @@ namespace ADD2CharacterService.CharacterClass
             _multiClassesAvailable = InitializeAvailableMultiClasses();
         }
 
+        public string[] Select()
+        {
+            var results = new List<string>();
+            results.AddRange(_classesAvailable.Where(c => c.IsAvailable(_race, _str, _dex, _con, _int, _wis, _chr))
+                .Select(c => c.Name()));
+            
+            foreach(var multiclass in _multiClassesAvailable[_race])
+            {
+                string[] classes = multiclass.Split('/');
+                if (classes.All(c => results.Contains(c)))
+                    results.Add(multiclass);
+            }
+
+            return results.ToArray();
+        }
+
         private static List<AvailableClass> InitializeAvailableClasses()
         {
             return new List<AvailableClass> {
@@ -59,22 +75,6 @@ namespace ADD2CharacterService.CharacterClass
                 { "Human", new string[0] }
             };
             return result;
-        }
-
-        public string[] Select()
-        {
-            var results = new List<string>();
-            results.AddRange(_classesAvailable.Where(c => c.IsAvailable(_race, _str, _dex, _con, _int, _wis, _chr))
-                .Select(c => c.Name()));
-            
-            foreach(var multiclass in _multiClassesAvailable[_race])
-            {
-                string[] classes = multiclass.Split('/');
-                if (classes.All(c => results.Contains(c)))
-                    results.Add(multiclass);
-            }
-
-            return results.ToArray();
         }
     }
 }
