@@ -91,7 +91,7 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("hwa/{race}/{gender}")]
         public int[] GetHeightWeightAge(string race, string gender)
         {
-            return new int[3]
+            return new[]
             {
                 new HeightWeightAge(race, gender).Height(),
                 new HeightWeightAge(race, gender).Weight(),
