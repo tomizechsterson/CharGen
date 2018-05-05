@@ -31,15 +31,20 @@ namespace ADD2CharacterService.CharacterClass
         private static List<AvailableClass> InitializeAvailableClasses()
         {
             return new List<AvailableClass> {
-                new AvailableClass("Fighter", 9, 3, 3, 3, 3, 3, new[] {"Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human"}),
+                new AvailableClass("Fighter", 9, 3, 3, 3, 3, 3, AllRaces()),
                 new AvailableClass("Paladin", 12, 3, 9, 3, 13, 17, new[] {"Human"}),
                 new AvailableClass("Ranger", 13, 13, 14, 3, 14, 3, new[] {"Elf", "Half-Elf", "Human"}),
                 new AvailableClass("Mage", 3, 3, 3, 9, 3, 3, new[] {"Elf", "Half-Elf", "Human"}),
-                new AvailableClass("Cleric", 3, 3, 3, 3, 9, 3, new[] {"Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human"}),
+                new AvailableClass("Cleric", 3, 3, 3, 3, 9, 3, AllRaces()),
                 new AvailableClass("Druid", 3, 3, 3, 3, 12, 15, new[] {"Half-Elf", "Human"}),
-                new AvailableClass("Thief", 3, 9, 3, 3, 3, 3, new[] {"Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human"}),
+                new AvailableClass("Thief", 3, 9, 3, 3, 3, 3, AllRaces()),
                 new AvailableClass("Bard", 3, 12, 3, 13, 3, 15, new[] {"Half-Elf", "Human"})
             };
+        }
+
+        private static string[] AllRaces()
+        {
+            return new[] { "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human" };
         }
 
         private Dictionary<string, string[]> InitializeAvailableMultiClasses()
