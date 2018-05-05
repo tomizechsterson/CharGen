@@ -14,7 +14,7 @@ namespace CharGen.Storyteller.Fixtures
             [SelectionValues("Female", "Male")] string gender)
         {
             _race = race;
-            _gender = gender == "Female" ? "F" : "M";
+            _gender = gender == "Female" ? "F" : "M"; 
         }
 
         public bool CheckHeight(int lowBound, int highBound)
