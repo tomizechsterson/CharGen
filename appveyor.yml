@@ -25,10 +25,10 @@ test:
     only:
       - CharGen.UnitTests.dll
 test_script:
-  - cmd: dotnet test ~/CharGen/CharGen.UnitTests/CharGen.UnitTests.csproj -c Release -v diag --no-build
+  - cmd: cd CharGen.UnitTests & dotnet test -c Release -v diag --no-build
       
 after_test:
-- cmd: cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
+- cmd: cd .. & cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
 - cmd: cd .. & dotnet publish ADD2CharacterService -c Release -o ./publish
       
 artifacts:
