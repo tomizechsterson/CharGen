@@ -13,9 +13,27 @@
 				"2a1724d3-e649-4f14-994f-7b872ee1ebf3",
 				"be9fc8a4-095f-4c4c-acd9-2bcef91e517b",
 				"ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
-				"be2824a5-c2b5-4002-94cb-94831b6769c1"
+				"be2824a5-c2b5-4002-94cb-94831b6769c1",
+				"45a1f892-4242-46a1-aab2-4b1db717968d"
 			],
 			"folders": [
+				{
+					"id": "45a1f892-4242-46a1-aab2-4b1db717968d",
+					"name": "Alignment Selection",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folder": null,
+					"order": [
+						"84dda99d-cdfa-4d0e-ab8d-f34583233223",
+						"01ab713e-db15-441e-9782-f81b47ed6f07",
+						"93cc4e6b-c361-415e-9e1a-14311d67ef70"
+					],
+					"folders_order": [],
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folderId": "45a1f892-4242-46a1-aab2-4b1db717968d"
+				},
 				{
 					"id": "be2824a5-c2b5-4002-94cb-94831b6769c1",
 					"name": "Class Selection",
@@ -93,6 +111,56 @@
 				}
 			],
 			"requests": [
+				{
+					"id": "01ab713e-db15-441e-9782-f81b47ed6f07",
+					"name": "Get Alignments for Bard",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Bard",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b65d05f3-ff68-4787-bcd0-8ac85b896354",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 5 alignments were returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(5);",
+									"});",
+									"",
+									"pm.test(\"Check that the correct alignments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "45a1f892-4242-46a1-aab2-4b1db717968d",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 5 alignments were returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(5);\n});\n\npm.test(\"Check that the correct alignments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
 				{
 					"id": "111fb33c-149f-4ad5-9ad9-1dd20f2dc086",
 					"name": "Races Available for the Most Unlucky Stat Roller Ever",
@@ -421,7 +489,7 @@
 				},
 				{
 					"id": "74edacfb-2958-4672-9684-fd8790ebbfb8",
-					"name": "Stat Adjustments for Dwarf",
+					"name": "Stat Adjustments for Gnome",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/statadjust/gnome",
 					"description": "",
 					"data": null,
@@ -455,6 +523,52 @@
 					"folder": "ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.int).to.eql(1);\n    pm.expect(jsonData.wis).to.eql(-1);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "84dda99d-cdfa-4d0e-ab8d-f34583233223",
+					"name": "Get Alignments for Paladin",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Paladin",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "650493ab-ffdd-4804-86fc-f5c7f1980411",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 1 alignment was returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(1);",
+									"});",
+									"",
+									"pm.test(\"Check that Lawful Good was returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "45a1f892-4242-46a1-aab2-4b1db717968d",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 1 alignment was returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(1);\n});\n\npm.test(\"Check that Lawful Good was returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -537,6 +651,60 @@
 					"folder": "be9fc8a4-095f-4c4c-acd9-2bcef91e517b",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 7 rolls were made\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(7);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "93cc4e6b-c361-415e-9e1a-14311d67ef70",
+					"name": "Get Alignments for Cleric",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Cleric",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d288fe8e-dce6-459e-bdeb-e3c1bc9310fe",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that 9 alignments were returned\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(9);",
+									"});",
+									"",
+									"pm.test(\"Check that all the alignments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Lawful Evil\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Chaotic Good\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Chaotic Evil\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "45a1f892-4242-46a1-aab2-4b1db717968d",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 9 alignments were returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(9);\n});\n\npm.test(\"Check that all the alignments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Evil\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",

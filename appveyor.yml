@@ -31,13 +31,3 @@ after_test:
 artifacts:
 - path: ADD2CharacterService/publish
   name: publish
-      
-deploy:
-- provider: AzureAppServiceZipDeploy
-  appservice_environment: false
-  website: chargendev
-  slot: dev
-  username: tomideploy4343__77
-  password:
-    secure: oKbhRae+jXWP252XnI9DCsM8Jpiml0w6UN7NiT2GfEA=
-  artifact: publish
