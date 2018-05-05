@@ -3,7 +3,7 @@
 -> id = 593f7d0c-1272-4dc8-81d4-b647d2ab5dd9
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-05T04:55:49.2579654Z
+-> last-updated = 2018-05-05T06:52:52.1006490Z
 -> tags = 
 
 [ADD2Datastore]
@@ -115,6 +115,15 @@ Fighter, Mage, Thief, Fighter/Mage, Fighter/Thief, Mage/Thief, Fighter/Mage/Thie
 |> AvailableClasses race=Gnome, str=8, dex=18, con=10, int=13, wis=18, chr=9
 ``` returnValue
 Cleric, Thief, Cleric/Thief
+```
+
+~~~
+
+[Alignment]
+|> AvailableAlignments className=Paladin, returnValue=Lawful Good
+|> AvailableAlignments className=Ranger
+``` returnValue
+Lawful Good, Neutral Good, Chaotic Good
 ```
 
 ~~~

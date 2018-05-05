@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using ADD2CharacterService.Alignments;
 using ADD2CharacterService.CharacterClass;
 using ADD2CharacterService.Datastore;
 using ADD2CharacterService.Race;
@@ -122,7 +123,7 @@ namespace ADD2CharacterService.Controllers
 
         public string[] Alignments(string className)
         {
-            return new string[0];
+            return new AllowedAlignments(className).Get();
         }
 
         #endregion
