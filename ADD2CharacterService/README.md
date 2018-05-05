@@ -10,6 +10,7 @@
     * Try relying mostly on database next time, then evaluate
 6. (bad) Seeding database data in creation script. Move this to acceptance/unit tests and let creation script only create db
     * Do not allow creation script to insert test data
+    * DOING THIS WAS A TERRIBLE IDEA!!! #neverAgain
 7. Datastore acceptance tests, specifically updates. Necessary to have them this way?
 8. (good) Sqlite; very convenient and lightweight
 9. Consider TestServer for integration tests, etc. Maybe replace storyteller? See [this](https://docs.microsoft.com/en-us/aspnet/core/testing/integration-testing?view=aspnetcore-2.1) [this](https://www.infoworld.com/article/3258813/web-development/how-to-do-integration-testing-in-aspnet-core.html) [this](http://www.dotnetcurry.com/aspnet-core/1420/integration-testing-aspnet-core)
