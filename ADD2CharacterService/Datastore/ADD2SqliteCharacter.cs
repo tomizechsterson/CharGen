@@ -83,6 +83,11 @@ namespace ADD2CharacterService.Datastore
             return GetColumnInt("Age");
         }
 
+        public string ClassName()
+        {
+            return GetColumnString("Class");
+        }
+
         public int CompletionStep()
         {
             return GetColumnInt("CompletionStep");
@@ -106,6 +111,7 @@ namespace ADD2CharacterService.Datastore
                 Height = Height(),
                 Weight = Weight(),
                 Age = Age(),
+                ClassName = ClassName(),
                 CompletionStep = CompletionStep()
             };
         }

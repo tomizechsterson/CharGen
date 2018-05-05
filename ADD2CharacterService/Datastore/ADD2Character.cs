@@ -16,6 +16,7 @@
         int Height();
         int Weight();
         int Age();
+        string ClassName();
         HttpCharacterModel ToModel();
     }
 }
