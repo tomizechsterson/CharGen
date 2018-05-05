@@ -1,9 +1,9 @@
 # HeightWeightAge
 
 -> id = d00a2eaa-c2f8-461e-8364-00ee0e33add2
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-05T00:15:49.7413202Z
+-> last-updated = 2018-05-05T05:56:39.1077249Z
 -> tags = 
 
 [HeightWeightAge]

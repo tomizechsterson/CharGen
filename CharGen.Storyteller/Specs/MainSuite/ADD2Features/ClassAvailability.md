@@ -1,9 +1,9 @@
 # ClassAvailability
 
 -> id = 36bf4342-a0c7-4d32-ace1-47e10b87c536
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-03T04:26:21.9903988Z
+-> last-updated = 2018-05-05T05:56:47.0311781Z
 -> tags = 
 
 [ADD2ClassSelection]
