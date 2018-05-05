@@ -27,7 +27,7 @@ test:
     only:
       - CharGen.UnitTests.dll
 test_script:
-  - cmd: cd CharGen.UnitTests & dotnet test -c Release -v n --no-build
+  - cmd: cd CharGen.UnitTests & dotnet test -c Release -v m --no-build
       
 after_test:
 - cmd: cd .. & cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
@@ -36,3 +36,5 @@ after_test:
 artifacts:
 - path: ADD2CharacterService/publish
   name: publish
+- path: CharGen.Storyteller/stresults.htm
+  name: StorytellerResults.htm
