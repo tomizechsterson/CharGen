@@ -27,7 +27,7 @@ test:
     only:
       - CharGen.UnitTests.dll
 test_script:
-  - cmd: cd CharGen.UnitTests & dotnet test -c Release -v m --no-build
+  - cmd: cd CharGen.UnitTests & dotnet test -c Release -v q --no-build
       
 after_test:
 - cmd: cd .. & cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
