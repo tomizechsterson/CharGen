@@ -17,6 +17,7 @@ namespace ADD2CharacterService.Datastore
         public int Height { get; set; }
         public int Weight { get; set; }
         public int Age { get; set; }
+        public string ClassName { get; set; }
 
         public int CompletionStep { get; set; }
     }

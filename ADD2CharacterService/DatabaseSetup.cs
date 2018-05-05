@@ -19,10 +19,12 @@ namespace ADD2CharacterService
             {
                 var command = connection.CreateCommand();
                 command.CommandText = "DROP TABLE IF EXISTS ADD2";
-                
+                connection.Open();
+                command.ExecuteNonQuery();
+
                 command = connection.CreateCommand();
                 command.CommandText =
-                    "CREATE TABLE ADD2 (" +
+                    "CREATE TABLE IF NOT EXISTS ADD2 (" +
                     "Id INTEGER PRIMARY KEY NOT NULL, " +
                     "Name VARCHAR(32) NOT NULL, " +
                     "PlayedBy VARCHAR(32) NOT NULL, " +
@@ -40,7 +42,6 @@ namespace ADD2CharacterService
                     "Class VARCHAR(8) DEFAULT 'none' NULL, " +
                     "CompletionStep INTEGER DEFAULT 1, " +
                     "Unique(Name, PlayedBy) )";
-                connection.Open();
                 command.ExecuteNonQuery();
 
                 command = connection.CreateCommand();

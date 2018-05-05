@@ -27,6 +27,9 @@
 ## GetRetrievedHeightWeightAge
 ### The height, weight and age of the retrieved character should be {height} {weight} {age}
 
+## GetRetrievedClass
+### The class of the retrieved character should be {returnValue}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
@@ -44,6 +47,9 @@
 
 ## UpdateHeightWeightAge
 ### Update the height, weight and age for character id {id} to {height} {weight} {age}
+
+## UpdateClass
+### Update class for character id {id} to {className}
 
 ## DeleteCharacter
 ### Delete the character with id {id}
