@@ -26,6 +26,7 @@ test:
       - CharGen.UnitTests.dll
       
 after_test:
+- cmd: cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
 - cmd: dotnet publish ADD2CharacterService -c Release -o ./publish
       
 artifacts:
