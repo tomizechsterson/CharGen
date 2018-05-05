@@ -136,7 +136,7 @@ namespace CharGen.Storyteller.Fixtures
         public void UpdateHeightWeightAge(int id, int height, int weight, int age)
         {
             var character = _controller.Get(id);
-            
+
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
@@ -158,7 +158,7 @@ namespace CharGen.Storyteller.Fixtures
         public void UpdateClass(int id, string className)
         {
             var character = _controller.Get(id);
-            
+
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
