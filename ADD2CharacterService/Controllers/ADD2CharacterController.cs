@@ -19,7 +19,7 @@ namespace ADD2CharacterService.Controllers
             _database = database ?? new ADD2SqliteCharacters("Data Source=characters");
         }
 
-        #region Datastore crud ops
+        #region Datastore Crud Ops
 
         [EnableCors("AnyOrigin")]
         [HttpGet]
@@ -66,12 +66,18 @@ namespace ADD2CharacterService.Controllers
 
         #endregion
 
+        #region Stats
+
         [EnableCors("AnyOrigin")]
         [HttpGet("rollstats/{statRollingRule}")]
         public List<int[]> RollStats(string statRollingRule)
         {
             return new StatRoll(statRollingRule).RollStats();
         }
+
+        #endregion
+
+        #region Race Stuff
 
         [EnableCors("AnyOrigin")]
         [HttpGet("races/{str}/{dex}/{con}/{int}/{wis}/{chr}")]
@@ -99,11 +105,17 @@ namespace ADD2CharacterService.Controllers
             };
         }
 
+        #endregion
+
+        #region Class Stuff
+
         [EnableCors("AnyOrigin")]
         [HttpGet("classes/{race}/{str}/{dex}/{con}/{int}/{wis}/{chr}")]
         public string[] GetClasses(string race, int str, int dex, int con, int @int, int wis, int chr)
         {
             return new AvailableClasses(race, str, dex, con, @int, wis, chr).Select();
         }
+
+        #endregion
     }
 }

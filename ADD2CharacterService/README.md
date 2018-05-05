@@ -6,6 +6,7 @@
 3. (bad) Asserting facts with inputs requires {returnValue} and a bool return value, which generates a checkbox on every step??? WTF!?!?!?!
 4. One controller with all methods. Good or bad??
     * Split for next one, then evaluate
+    * Most likely bad because it smells a lot like an SRP violation
 5. Data such as height/weight/age tables, better stored in the database?
     * Try relying mostly on database next time, then evaluate
 6. (bad) Seeding database data in creation script. Move this to acceptance/unit tests and let creation script only create db
