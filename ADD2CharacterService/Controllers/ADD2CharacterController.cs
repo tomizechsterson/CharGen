@@ -121,6 +121,8 @@ namespace ADD2CharacterService.Controllers
 
         #region Alignment
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("alignment/{className}")]
         public string[] Alignments(string className)
         {
             return new AllowedAlignments(className).Get();
