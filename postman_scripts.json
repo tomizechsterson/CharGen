@@ -62,6 +62,7 @@
 						"5fb985e4-65b6-4461-ac1d-adf48585c2a2",
 						"dae229da-b8e0-4edc-88f2-55c94b79bb4e",
 						"1d85ff1a-ad53-4c76-80e0-f926156de381",
+						"1ddbc202-0c6f-4df2-bac5-11702a3c2973",
 						"a4606a24-4f45-47fc-ba5b-917452c50a3d",
 						"6cf18575-d20a-4956-820d-37c958d20195",
 						"aaef42db-4bd4-4159-aca8-2214bbaf5c85",
@@ -241,6 +242,47 @@
 					"folder": "2a1724d3-e649-4f14-994f-7b872ee1ebf3",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "1ddbc202-0c6f-4df2-bac5-11702a3c2973",
+					"name": "Attempt to Add Duplicate Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a73dcfb2-5334-4ab2-81bc-1b7ea3bcd6ba",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post should return 400\", function() {",
+									"    pm.expect(pm.response.to.be.clientError);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "2a1724d3-e649-4f14-994f-7b872ee1ebf3",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post should return 400\", function() {\n    pm.expect(pm.response.to.be.clientError);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
