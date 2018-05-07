@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ADD2CharacterService.Race
+namespace ADD2CharacterService.App.Race
 {
     public class RacialStatAdjust
     {

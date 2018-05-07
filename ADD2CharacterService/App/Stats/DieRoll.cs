@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ADD2CharacterService.Stats
+namespace ADD2CharacterService.App.Stats
 {
     public class DieRoll
     {

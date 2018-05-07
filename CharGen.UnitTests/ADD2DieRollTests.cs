@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using ADD2CharacterService.Stats;
+using ADD2CharacterService.App.Stats;
 using Xunit;
 
 namespace CharGen.UnitTests

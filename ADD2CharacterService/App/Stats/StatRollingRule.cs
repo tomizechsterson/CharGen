@@ -1,4 +1,4 @@
-﻿namespace ADD2CharacterService.Stats
+﻿namespace ADD2CharacterService.App.Stats
 {
     public enum StatRollingRule
     {

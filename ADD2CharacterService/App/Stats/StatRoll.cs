@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using ADD2CharacterService.ExceptionHandling;
 
-namespace ADD2CharacterService.Stats
+namespace ADD2CharacterService.App.Stats
 {
     public class StatRoll
     {

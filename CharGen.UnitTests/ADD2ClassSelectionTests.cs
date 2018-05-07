@@ -1,4 +1,4 @@
-﻿using ADD2CharacterService.CharacterClass;
+﻿using ADD2CharacterService.App.CharacterClass;
 using Xunit;
 
 namespace CharGen.UnitTests

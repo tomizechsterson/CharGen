@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using ADD2CharacterService.App.Stats;
 using ADD2CharacterService.ExceptionHandling;
-using ADD2CharacterService.Stats;
 using Xunit;
 
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ADD2CharacterService.Race
+namespace ADD2CharacterService.App.Race
 {
     public class AvailableRaces
     {

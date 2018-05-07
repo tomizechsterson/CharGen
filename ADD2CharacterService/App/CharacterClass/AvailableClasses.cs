@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ADD2CharacterService.CharacterClass
+namespace ADD2CharacterService.App.CharacterClass
 {
     public class AvailableClasses
     {

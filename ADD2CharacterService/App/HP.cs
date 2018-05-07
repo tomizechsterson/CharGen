@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ADD2CharacterService.Stats;
+using ADD2CharacterService.App.Stats;
 
-namespace ADD2CharacterService.InitialHP
+namespace ADD2CharacterService.App
 {
     public class HP
     {

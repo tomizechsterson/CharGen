@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ADD2CharacterService.Alignments
+namespace ADD2CharacterService.App
 {
     public class AllowedAlignments
     {

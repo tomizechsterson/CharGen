@@ -1,4 +1,4 @@
-﻿using ADD2CharacterService.Race;
+﻿using ADD2CharacterService.App.Race;
 using Xunit;
 
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local

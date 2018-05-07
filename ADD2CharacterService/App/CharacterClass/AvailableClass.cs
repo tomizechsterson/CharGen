@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace ADD2CharacterService.CharacterClass
+namespace ADD2CharacterService.App.CharacterClass
 {
     internal struct AvailableClass
     {

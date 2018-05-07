@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using ADD2CharacterService.Stats;
+using ADD2CharacterService.App.Stats;
 
-namespace ADD2CharacterService.Race
+namespace ADD2CharacterService.App.Race
 {
     internal struct HeightWeightAgeRoll
     {

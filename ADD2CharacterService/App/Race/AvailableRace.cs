@@ -1,4 +1,4 @@
-﻿namespace ADD2CharacterService.Race
+﻿namespace ADD2CharacterService.App.Race
 {
     internal struct AvailableRace
     {
