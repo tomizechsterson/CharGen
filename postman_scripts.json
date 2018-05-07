@@ -354,7 +354,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6e919588-e7c6-4919-b2eb-76193069fc60",
+								"id": "1b5efdf6-dc16-457e-9a36-97ef655765fe",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -365,18 +365,15 @@
 									"var jsonData = pm.response.json();",
 									"",
 									"pm.test(\"Check that the height was in the correct range\", function() {",
-									"    pm.expect(jsonData[0]).to.be.above(43);",
-									"    pm.expect(jsonData[0]).to.be.below(54);",
+									"    pm.expect(jsonData[0]).to.be.above(43).and.below(54);",
 									"});",
 									"",
 									"pm.test(\"Check that the weight was in the correct range\", function() {",
-									"    pm.expect(jsonData[1]).to.be.above(133);",
-									"    pm.expect(jsonData[1]).to.be.below(171);",
+									"    pm.expect(jsonData[1]).to.be.above(133).and.below(171);",
 									"});",
 									"",
 									"pm.test(\"Check that the age was in the correct range\", function() {",
-									"    pm.expect(jsonData[2]).to.be.above(44);",
-									"    pm.expect(jsonData[2]).to.be.below(71);",
+									"    pm.expect(jsonData[2]).to.be.above(44).and.below(71);",
 									"});"
 								]
 							}
@@ -384,7 +381,7 @@
 					],
 					"folder": "ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(43);\n    pm.expect(jsonData[0]).to.be.below(54);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(133);\n    pm.expect(jsonData[1]).to.be.below(171);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(44);\n    pm.expect(jsonData[2]).to.be.below(71);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(43).and.below(54);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(133).and.below(171);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(44).and.below(71);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -448,7 +445,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "43dee488-c6ce-454f-944d-68601c5f3087",
+								"id": "3d434e8d-7932-4918-81be-c851ed068377",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -459,18 +456,15 @@
 									"var jsonData = pm.response.json();",
 									"",
 									"pm.test(\"Check that the height was in the correct range\", function() {",
-									"    pm.expect(jsonData[0]).to.be.above(59);",
-									"    pm.expect(jsonData[0]).to.be.below(71);",
+									"    pm.expect(jsonData[0]).to.be.above(59).and.below(71);",
 									"});",
 									"",
 									"pm.test(\"Check that the weight was in the correct range\", function() {",
-									"    pm.expect(jsonData[1]).to.be.above(87);",
-									"    pm.expect(jsonData[1]).to.be.below(122);",
+									"    pm.expect(jsonData[1]).to.be.above(87).and.below(122);",
 									"});",
 									"",
 									"pm.test(\"Check that the age was in the correct range\", function() {",
-									"    pm.expect(jsonData[2]).to.be.above(15);",
-									"    pm.expect(jsonData[2]).to.be.below(22);",
+									"    pm.expect(jsonData[2]).to.be.above(15).and.below(22);",
 									"});"
 								]
 							}
@@ -478,7 +472,7 @@
 					],
 					"folder": "ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(59);\n    pm.expect(jsonData[0]).to.be.below(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(87);\n    pm.expect(jsonData[1]).to.be.below(122);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(15);\n    pm.expect(jsonData[2]).to.be.below(22);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(59).and.below(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(87).and.below(122);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(15).and.below(22);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -693,7 +687,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8df74583-9fa6-4e2c-847a-95c1c926423c",
+								"id": "b31fa013-9bbf-4c4d-baee-55e867987f33",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -703,7 +697,7 @@
 									"",
 									"var jsonData = pm.response.json();",
 									"",
-									"pm.test(\"Check that 9 alignments were returned\", function () {",
+									"pm.test(\"Check that all 9 alignments were returned\", function () {",
 									"    pm.expect(jsonData.length).to.eql(9);",
 									"});",
 									"",
@@ -724,7 +718,7 @@
 					],
 					"folder": "45a1f892-4242-46a1-aab2-4b1db717968d",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 9 alignments were returned\", function () {\n    pm.expect(jsonData.length).to.eql(9);\n});\n\npm.test(\"Check that all the alignments were returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Evil\")).to.be.true;\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that all 9 alignments were returned\", function () {\n    pm.expect(jsonData.length).to.eql(9);\n});\n\npm.test(\"Check that all the alignments were returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Evil\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
