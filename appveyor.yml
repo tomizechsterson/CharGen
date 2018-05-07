@@ -22,10 +22,6 @@ build:
 before_build:
   - cmd: dotnet restore
   
-test:
-  assemblies:
-    only:
-      - CharGen.UnitTests.dll
 test_script:
   - cmd: cd CharGen.UnitTests & dotnet test -c Release -v q --no-build
       
