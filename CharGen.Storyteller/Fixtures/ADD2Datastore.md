@@ -30,6 +30,9 @@
 ## GetRetrievedClass
 ### The class of the retrieved character should be {returnValue}
 
+## GetRetrievedAlignment
+### The alignment of the retrieved character should be {returnValue}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
@@ -50,6 +53,9 @@
 
 ## UpdateClass
 ### Update class for character id {id} to {className}
+
+## UpdateAlignment
+### Update alignment for character id {id} to {alignment}
 
 ## DeleteCharacter
 ### Delete the character with id {id}

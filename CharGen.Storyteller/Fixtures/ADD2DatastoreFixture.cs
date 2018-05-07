@@ -69,6 +69,11 @@ namespace CharGen.Storyteller.Fixtures
             return _character.ClassName;
         }
 
+        public string GetRetrievedAlignment()
+        {
+            return _character.Alignment;
+        }
+
         public void AddCharacter(string name, string playedBy)
         {
             _controller.Post(new HttpCharacterModel { Name = name, PlayedBy = playedBy });
@@ -175,6 +180,30 @@ namespace CharGen.Storyteller.Fixtures
                 Weight = character.Weight,
                 Age = character.Age,
                 ClassName = className
+            });
+        }
+
+        public void UpdateAlignment(int id, string alignment)
+        {
+            var character = _controller.Get(id);
+
+            _controller.Put(id, new HttpCharacterModel
+            {
+                Name = character.Name,
+                PlayedBy = character.PlayedBy,
+                Str = character.Str,
+                Dex = character.Dex,
+                Con = character.Con,
+                Int = character.Int,
+                Wis = character.Wis,
+                Chr = character.Chr,
+                Race = character.Race,
+                Gender = character.Gender,
+                Height = character.Height,
+                Weight = character.Weight,
+                Age = character.Age,
+                ClassName = character.ClassName,
+                Alignment = alignment
             });
         }
 

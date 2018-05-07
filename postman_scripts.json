@@ -467,7 +467,7 @@
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
-					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"playedBy\":\"new person{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\",\r\n  \"classname\":\"Thief\"\r\n}",
+					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"playedBy\":\"new person{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\",\r\n  \"classname\":\"Thief\",\r\n  \"alignment\":\"Chaotic Good\"\r\n}",
 					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				},
@@ -867,7 +867,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7c97475a-cdc9-4b28-8cf4-d94de605e28c",
+								"id": "96062453-6924-40b9-8982-4eaa3132e307",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -892,6 +892,7 @@
 									"    pm.expect(jsonData.weight).to.eql(150);",
 									"    pm.expect(jsonData.age).to.eql(20);",
 									"    pm.expect(jsonData.className).to.eql(\"Thief\");",
+									"    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");",
 									"});"
 								]
 							}
@@ -899,7 +900,7 @@
 					],
 					"folder": "2a1724d3-e649-4f14-994f-7b872ee1ebf3",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n    pm.expect(jsonData.className).to.eql(\"Thief\");\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n    pm.expect(jsonData.className).to.eql(\"Thief\");\n    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",

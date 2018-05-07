@@ -40,6 +40,7 @@ namespace ADD2CharacterService
                     "Weight INTEGER DEFAULT 0, " +
                     "Age INTEGER DEFAULT 0, " +
                     "Class VARCHAR(8) DEFAULT 'none' NULL, " +
+                    "Alignment VARCHAR(16) DEFAULT 'none' NULL, " +
                     "CompletionStep INTEGER DEFAULT 1, " +
                     "Unique(Name, PlayedBy) )";
                 command.ExecuteNonQuery();
