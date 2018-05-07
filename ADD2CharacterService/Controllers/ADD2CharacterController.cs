@@ -131,9 +131,15 @@ namespace ADD2CharacterService.Controllers
 
         #endregion
 
+        #region Initial HP
+
+        [EnableCors("AnyOrigin")]
+        [HttpGet("initialhp/{className}")]
         public int InitialHitPoints(string className)
         {
             return new HP(className).GetInitial();
         }
+
+        #endregion
     }
 }
