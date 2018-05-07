@@ -3,6 +3,7 @@ using System.Linq;
 using ADD2CharacterService.Alignments;
 using ADD2CharacterService.CharacterClass;
 using ADD2CharacterService.Datastore;
+using ADD2CharacterService.InitialHP;
 using ADD2CharacterService.Race;
 using ADD2CharacterService.Stats;
 using Microsoft.AspNetCore.Cors;
@@ -132,7 +133,7 @@ namespace ADD2CharacterService.Controllers
 
         public int InitialHitPoints(string className)
         {
-            return 0;
+            return new HP(className).GetInitial();
         }
     }
 }
