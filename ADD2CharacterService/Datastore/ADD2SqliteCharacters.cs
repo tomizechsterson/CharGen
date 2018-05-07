@@ -44,17 +44,10 @@ namespace ADD2CharacterService.Datastore
             {
                 var command = conn.CreateCommand();
                 command.CommandText =
-                    "INSERT INTO add2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) " +
-                    "VALUES ($name, $playedby, $str, $dex, $con, $int, $wis, $chr, $completionStep)";
+                    "INSERT INTO add2 (Name, PlayedBy) " +
+                    "VALUES ($name, $playedby)";
                 command.Parameters.AddWithValue("$name", model.Name);
                 command.Parameters.AddWithValue("$playedby", model.PlayedBy);
-                command.Parameters.AddWithValue("$str", model.Str);
-                command.Parameters.AddWithValue("$dex", model.Dex);
-                command.Parameters.AddWithValue("$con", model.Con);
-                command.Parameters.AddWithValue("$int", model.Int);
-                command.Parameters.AddWithValue("$wis", model.Wis);
-                command.Parameters.AddWithValue("$chr", model.Chr);
-                command.Parameters.AddWithValue("$completionStep", model.CompletionStep);
                 conn.Open();
                 command.ExecuteNonQuery();
             }
