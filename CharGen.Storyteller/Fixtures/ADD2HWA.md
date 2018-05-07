@@ -1,7 +1,7 @@
-# AD&D 2nd Edition Height Weight Age
+# AD&D 2nd Edition Starting Height Weight Age
 
 ## GivenRaceAndGender
-### Given {gender} {race}
+### Given a {gender} {race}
 
 ## CheckHeight
 ### Starting height should be between {lowBound} and {highBound} {returnValue}

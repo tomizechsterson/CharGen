@@ -6,7 +6,7 @@
 -> last-updated = 2018-05-05T05:56:39.1077249Z
 -> tags = 
 
-[HeightWeightAge]
+[ADD2HWA]
 |> GivenRaceAndGender race=Dwarf, gender=Female
 |> CheckHeight lowBound=42, highBound=51, returnValue=True
 |> CheckWeight lowBound=109, highBound=145, returnValue=True
@@ -16,7 +16,7 @@
 |> CheckAge lowBound=45, highBound=70, returnValue=True
 ~~~
 
-[HeightWeightAge]
+[ADD2HWA]
 |> GivenRaceAndGender race=Elf, gender=Male
 |> CheckHeight lowBound=56, highBound=65, returnValue=True
 |> CheckWeight lowBound=93, highBound=120, returnValue=True
@@ -26,7 +26,7 @@
 |> CheckAge lowBound=105, highBound=130, returnValue=True
 ~~~
 
-[HeightWeightAge]
+[ADD2HWA]
 |> GivenRaceAndGender race=Gnome, gender=Female
 |> CheckHeight lowBound=37, highBound=42, returnValue=True
 |> CheckWeight lowBound=73, highBound=88, returnValue=True
@@ -36,7 +36,7 @@
 |> CheckAge lowBound=63, highBound=96, returnValue=True
 ~~~
 
-[HeightWeightAge]
+[ADD2HWA]
 |> GivenRaceAndGender race=Half-elf, gender=Male
 |> CheckHeight lowBound=62, highBound=72, returnValue=True
 |> CheckWeight lowBound=113, highBound=146, returnValue=True
@@ -46,7 +46,7 @@
 |> CheckAge lowBound=16, highBound=21, returnValue=True
 ~~~
 
-[HeightWeightAge]
+[ADD2HWA]
 |> GivenRaceAndGender race=halfling, gender=Female
 |> CheckHeight lowBound=32, highBound=46, returnValue=True
 |> CheckWeight lowBound=53, highBound=68, returnValue=True
@@ -56,7 +56,7 @@
 |> CheckAge lowBound=23, highBound=32, returnValue=True
 ~~~
 
-[HeightWeightAge]
+[ADD2HWA]
 |> GivenRaceAndGender race=human, gender=Male
 |> CheckHeight lowBound=62, highBound=80, returnValue=True
 |> CheckWeight lowBound=146, highBound=200, returnValue=True

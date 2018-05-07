@@ -1,12 +1,12 @@
 # Alignment
 
 -> id = 13e5a4b2-02bd-4a08-961b-302904cabca5
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-05T06:51:06.8436287Z
+-> last-updated = 2018-05-07T05:28:04.9373969Z
 -> tags = 
 
-[Alignment]
+[ADD2Alignment]
 |> AvailableAlignments className=Paladin, returnValue=Lawful Good
 |> AvailableAlignments className=Ranger
 ``` returnValue

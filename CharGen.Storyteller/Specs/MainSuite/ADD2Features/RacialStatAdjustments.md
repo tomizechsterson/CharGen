@@ -6,7 +6,7 @@
 -> last-updated = 2018-04-30T00:01:12.3692961Z
 -> tags = 
 
-[RaceSelection]
+[ADD2Race]
 |> GetStatAdjustments race=Dwarf
 |> AdjustmentCount returnValue=2
 |> Adjustments stat1=con, adj1=1, stat2=chr, adj2=-1

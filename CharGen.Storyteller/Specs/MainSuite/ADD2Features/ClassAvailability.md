@@ -6,7 +6,7 @@
 -> last-updated = 2018-05-05T05:56:47.0311781Z
 -> tags = 
 
-[ADD2ClassSelection]
+[ADD2Class]
 |> ClassAbilityMinimums str=9, dex=3, con=3, int=3, wis=3, chr=3, returnValue=Fighter
 |> ClassAbilityMinimums str=12, dex=3, con=9, int=3, wis=13, chr=17
 ``` returnValue
@@ -33,7 +33,7 @@ Mage, Thief, Bard
 
 ~~~
 
-[ADD2ClassSelection]
+[ADD2Class]
 |> AvailableClassesForRace race=Dwarf
 ``` returnValue
 Fighter, Cleric, Thief, Fighter/Thief, Fighter/Cleric
@@ -66,7 +66,7 @@ Fighter, Paladin, Ranger, Mage, Cleric, Druid, Thief, Bard
 
 ~~~
 
-[ADD2ClassSelection]
+[ADD2Class]
 |> AvailableClasses race=Human, str=9, dex=12, con=3, int=13, wis=3, chr=15
 ``` returnValue
 Fighter, Mage, Thief, Bard

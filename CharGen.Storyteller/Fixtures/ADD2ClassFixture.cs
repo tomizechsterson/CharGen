@@ -3,7 +3,7 @@ using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
-    public class ADD2ClassSelectionFixture : Fixture
+    public class ADD2ClassFixture : Fixture
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
 

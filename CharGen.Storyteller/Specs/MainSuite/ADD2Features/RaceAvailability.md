@@ -6,7 +6,7 @@
 -> last-updated = 2018-05-04T22:43:58.1823202Z
 -> tags = 
 
-[RaceSelection]
+[ADD2Race]
 
 Restrictions with minimums
 
@@ -38,7 +38,7 @@ Dwarf, Human
 |> RacesAvailableForStats str=3, dex=3, con=3, int=3, wis=3, chr=3, returnValue=Human
 ~~~
 
-[RaceSelection]
+[ADD2Race]
 
 Restrictions with maximums
 

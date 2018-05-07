@@ -6,7 +6,7 @@ using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
-    public class ADD2StatRollingFixture : Fixture
+    public class ADD2StatRollsFixture : Fixture
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
         private List<int[]> _rollResults = new List<int[]>();

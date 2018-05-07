@@ -3,7 +3,7 @@ using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
-    public class HeightWeightAgeFixture : Fixture
+    public class ADD2HWAFixture : Fixture
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
         private string _race;
