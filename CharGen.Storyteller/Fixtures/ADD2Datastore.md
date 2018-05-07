@@ -33,6 +33,9 @@
 ## GetRetrievedAlignment
 ### The alignment of the retrieved character should be {returnValue}
 
+## GetRetrievedHP
+### The hit points of the retrieved character should be {returnValue}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
@@ -56,6 +59,9 @@
 
 ## UpdateAlignment
 ### Update alignment for character id {id} to {alignment}
+
+## UpdateHP
+### Update hit points for character id {id} to {hp}
 
 ## DeleteCharacter
 ### Delete the character with id {id}

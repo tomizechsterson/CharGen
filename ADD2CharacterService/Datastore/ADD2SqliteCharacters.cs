@@ -77,6 +77,7 @@ namespace ADD2CharacterService.Datastore
                                           "Age = $age, " +
                                           "Class = $className, " +
                                           "Alignment = $alignment, " +
+                                          "HP = $hp, " +
                                           "CompletionStep = $completionStep " +
                                           "WHERE Id = $id";
                     command.Parameters.AddWithValue("$id", id);
@@ -90,11 +91,12 @@ namespace ADD2CharacterService.Datastore
                     command.Parameters.AddWithValue("$chr", model.Chr);
                     command.Parameters.AddWithValue("$race", model.Race ?? "none");
                     command.Parameters.AddWithValue("$gender", model.Gender ?? "n");
-                    command.Parameters.AddWithValue("height", model.Height);
-                    command.Parameters.AddWithValue("weight", model.Weight);
-                    command.Parameters.AddWithValue("age", model.Age);
-                    command.Parameters.AddWithValue("className", model.ClassName ?? "none");
+                    command.Parameters.AddWithValue("$height", model.Height);
+                    command.Parameters.AddWithValue("$weight", model.Weight);
+                    command.Parameters.AddWithValue("$age", model.Age);
+                    command.Parameters.AddWithValue("$className", model.ClassName ?? "none");
                     command.Parameters.AddWithValue("$alignment", model.Alignment ?? "none");
+                    command.Parameters.AddWithValue("$hp", model.HP);
                     command.Parameters.AddWithValue("$completionStep", model.CompletionStep);
                     conn.Open();
                     command.ExecuteNonQuery();

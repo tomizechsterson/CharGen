@@ -18,6 +18,7 @@
         int Age();
         string ClassName();
         string Alignment();
+        int HP();
         HttpCharacterModel ToModel();
     }
 }

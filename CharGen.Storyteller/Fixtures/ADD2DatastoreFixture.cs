@@ -74,6 +74,11 @@ namespace CharGen.Storyteller.Fixtures
             return _character.Alignment;
         }
 
+        public int GetRetrievedHP()
+        {
+            return _character.HP;
+        }
+
         public void AddCharacter(string name, string playedBy)
         {
             _controller.Post(new HttpCharacterModel { Name = name, PlayedBy = playedBy });
@@ -205,6 +210,31 @@ namespace CharGen.Storyteller.Fixtures
                 ClassName = character.ClassName,
                 Alignment = alignment
             });
+        }
+
+        public void UpdateHP(int id, int hp)
+        {
+            var character = _controller.Get(id);
+
+            _controller.Put(id, new HttpCharacterModel
+            {
+                Name = character.Name,
+                PlayedBy = character.PlayedBy,
+                Str = character.Str,
+                Dex = character.Dex,
+                Con = character.Con,
+                Int = character.Int,
+                Wis = character.Wis,
+                Chr = character.Chr,
+                Race = character.Race,
+                Gender = character.Gender,
+                Height = character.Height,
+                Weight = character.Weight,
+                Age = character.Age,
+                ClassName = character.ClassName,
+                Alignment = character.Alignment,
+                HP = hp
+            }); 
         }
 
         public void DeleteCharacter(int id)

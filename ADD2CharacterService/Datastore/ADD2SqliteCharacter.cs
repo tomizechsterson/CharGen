@@ -93,6 +93,11 @@ namespace ADD2CharacterService.Datastore
             return GetColumnString("Alignment");
         }
 
+        public int HP()
+        {
+            return GetColumnInt("HP");
+        }
+
         public int CompletionStep()
         {
             return GetColumnInt("CompletionStep");
@@ -118,6 +123,7 @@ namespace ADD2CharacterService.Datastore
                 Age = Age(),
                 ClassName = ClassName(),
                 Alignment = Alignment(),
+                HP = HP(),
                 CompletionStep = CompletionStep()
             };
         }
