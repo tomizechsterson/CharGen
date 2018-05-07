@@ -591,7 +591,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e3aca06c-01e1-49fc-8970-4a55aad4ea69",
+								"id": "85b624ab-48ca-4e46-96e7-da99baaa18eb",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -599,9 +599,20 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
+									"var jsonData = pm.response.json();",
+									"",
 									"pm.test(\"Check that 6 rolls were made\", function () {",
-									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.length).to.eql(6);",
+									"});",
+									"",
+									"pm.test(\"Check that each roll had 3 dice in it\", function() {",
+									"    for(var i = 0; i < jsonData.length; i++)",
+									"        pm.expect(jsonData[i].length).to.eql(3);",
+									"});",
+									"",
+									"pm.test(\"Check that each roll was within expected bounds\", function() {",
+									"    for(var i = 0; i < jsonData.length; i++)",
+									"        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(3).and.lte(18);",
 									"});"
 								]
 							}
@@ -609,7 +620,7 @@
 					],
 					"folder": "be9fc8a4-095f-4c4c-acd9-2bcef91e517b",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 6 rolls were made\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(6);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that each roll had 3 dice in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(3);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(3).and.lte(18);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -632,7 +643,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "58c18889-b89a-465d-9ede-2d109190c9c3",
+								"id": "b5f247b8-e76e-4d68-81e8-074083d65838",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -640,9 +651,20 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
+									"var jsonData = pm.response.json();",
+									"",
 									"pm.test(\"Check that 7 rolls were made\", function () {",
-									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.length).to.eql(7);",
+									"});",
+									"",
+									"pm.test(\"Check that each roll had 1 die in it\", function() {",
+									"    for(var i = 0; i < jsonData.length; i++)",
+									"        pm.expect(jsonData[i].length).to.eql(1);",
+									"});",
+									"",
+									"pm.test(\"Check that each roll was within expected bounds\", function() {",
+									"    for(var i = 0; i < jsonData.length; i++)",
+									"        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(1).and.lte(6);",
 									"});"
 								]
 							}
@@ -650,7 +672,7 @@
 					],
 					"folder": "be9fc8a4-095f-4c4c-acd9-2bcef91e517b",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that 7 rolls were made\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(7);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 7 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(7);\n});\n\npm.test(\"Check that each roll had 1 die in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(1);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(1).and.lte(6);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -1134,19 +1156,51 @@
 			"events": null,
 			"variables": null,
 			"order": [
-				"f7208a5b-f809-4b84-ba68-de2e5c2ae7c8"
+				"f7208a5b-f809-4b84-ba68-de2e5c2ae7c8",
+				"0ee4addc-600d-4526-aa8e-e2330c465b74"
 			],
 			"folders_order": [],
 			"folders": [],
 			"requests": [
 				{
+					"id": "0ee4addc-600d-4526-aa8e-e2330c465b74",
+					"name": "localpost",
+					"url": "http://localhost:42000/api/ADD2Character/new",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fe04cebb-7316-4359-875c-6e86060f8d12",
+					"rawModeData": "{\r\n  \"name\": \"Test1\",\r\n  \"playedBy\": \"Test1\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
 					"id": "f7208a5b-f809-4b84-ba68-de2e5c2ae7c8",
 					"name": "localget",
 					"url": "http://localhost:42000/api/ADD2Character",
 					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
 					"method": "GET",
 					"pathVariableData": [],
 					"queryParams": [],
@@ -1156,7 +1210,8 @@
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "fe04cebb-7316-4359-875c-6e86060f8d12",
-					"headers": "",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				}
 			]
