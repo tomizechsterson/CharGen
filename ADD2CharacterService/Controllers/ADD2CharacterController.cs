@@ -129,5 +129,10 @@ namespace ADD2CharacterService.Controllers
         }
 
         #endregion
+
+        public int InitialHitPoints(string className)
+        {
+            return 0;
+        }
     }
 }

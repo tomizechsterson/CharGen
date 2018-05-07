@@ -9,7 +9,8 @@ namespace CharGen.Storyteller.Fixtures
         
         public bool RollHitPoints(string className, int low, int high)
         {
-            return true;
+            int hp = _controller.InitialHitPoints(className);
+            return hp >= low && hp <= high;
         }
     }
 }
