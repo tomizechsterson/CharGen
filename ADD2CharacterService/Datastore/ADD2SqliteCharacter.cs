@@ -98,7 +98,7 @@ namespace ADD2CharacterService.Datastore
             return GetColumnInt("HP");
         }
 
-        public int CompletionStep()
+        private int CompletionStep()
         {
             return GetColumnInt("CompletionStep");
         }
