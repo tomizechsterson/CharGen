@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.ExceptionHandling
 {
@@ -15,6 +16,12 @@ namespace ADD2CharacterService.ExceptionHandling
             if (exceptionType == typeof(StatRollRuleInvalidException))
             {
                 message = context.Exception.Message;
+                status = HttpStatusCode.BadRequest;
+            }
+            else if (exceptionType == typeof(SqliteException) &&
+                     context.Exception.Message.Contains("UNIQUE constraint failed"))
+            {
+                message = "Cannot insert duplicate characters played by the same person";
                 status = HttpStatusCode.BadRequest;
             }
             else
