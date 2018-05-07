@@ -14,7 +14,8 @@
 				"be9fc8a4-095f-4c4c-acd9-2bcef91e517b",
 				"ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
 				"be2824a5-c2b5-4002-94cb-94831b6769c1",
-				"45a1f892-4242-46a1-aab2-4b1db717968d"
+				"45a1f892-4242-46a1-aab2-4b1db717968d",
+				"98b6dd5d-c63b-4f06-9d98-50edc422a720"
 			],
 			"folders": [
 				{
@@ -92,6 +93,24 @@
 					"folders_order": [],
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
 					"folderId": "ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25"
+				},
+				{
+					"id": "98b6dd5d-c63b-4f06-9d98-50edc422a720",
+					"name": "Starting Hit Points",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folder": null,
+					"order": [
+						"bcaa68c7-ff58-47f6-b4e4-b78a27d7f88d",
+						"8512c019-3fab-4880-9460-6817d11fba59",
+						"3ebd3974-7eae-4a6e-8cd5-fc7f83c14bf0",
+						"1f8ae331-6ef0-435b-b150-570bd8142f9a"
+					],
+					"folders_order": [],
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folderId": "98b6dd5d-c63b-4f06-9d98-50edc422a720"
 				},
 				{
 					"id": "be9fc8a4-095f-4c4c-acd9-2bcef91e517b",
@@ -291,6 +310,47 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "1f8ae331-6ef0-435b-b150-570bd8142f9a",
+					"name": "Starting HP for Mage",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/initialhp/Mage",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5fa260e-d18c-4ddd-b2c5-b1c8b7ef5144",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"HP must be between 1 and 4\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(1).and.lte(4);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "98b6dd5d-c63b-4f06-9d98-50edc422a720",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"HP must be between 1 and 4\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(1).and.lte(4);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "23c47ee1-1630-46b6-99f7-620d5319a6e7",
 					"name": "Stat Adjustments for Human",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/statadjust/Human",
@@ -325,6 +385,47 @@
 					"folder": "ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "3ebd3974-7eae-4a6e-8cd5-fc7f83c14bf0",
+					"name": "Starting HP for Bard",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/initialhp/Bard",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9733cec3-04fd-4899-be29-f9aa2a804a0a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"HP must be between 1 and 6\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(1).and.lte(6);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "98b6dd5d-c63b-4f06-9d98-50edc422a720",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"HP must be between 1 and 6\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(1).and.lte(6);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -603,6 +704,47 @@
 					"folder": "45a1f892-4242-46a1-aab2-4b1db717968d",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 1 alignment was returned\", function () {\n    pm.expect(jsonData.length).to.eql(1);\n});\n\npm.test(\"Check that Lawful Good was returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "8512c019-3fab-4880-9460-6817d11fba59",
+					"name": "Starting HP for Cleric",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/initialhp/Cleric",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7ff34440-a901-45f7-ba70-59094d26a219",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"HP must be between 1 and 8\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(1).and.lte(8);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "98b6dd5d-c63b-4f06-9d98-50edc422a720",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"HP must be between 1 and 8\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(1).and.lte(8);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -1033,6 +1175,47 @@
 					"folder": "be2824a5-c2b5-4002-94cb-94831b6769c1",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 4 classes were returned\", function () {\n    pm.expect(jsonData.length).to.eql(4);\n});\n\npm.test(\"Check that the expected classes were returned\", function() {\n    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;\n    pm.expect(jsonData.includes(\"Mage\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Thief\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "bcaa68c7-ff58-47f6-b4e4-b78a27d7f88d",
+					"name": "Starting HP for Fighter",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/initialhp/Fighter",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "206fa3aa-a1ff-4982-b2a1-03d595032a19",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"HP must be between 1 and 10\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(1).and.lte(10);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "98b6dd5d-c63b-4f06-9d98-50edc422a720",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"HP must be between 1 and 10\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(1).and.lte(10);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
