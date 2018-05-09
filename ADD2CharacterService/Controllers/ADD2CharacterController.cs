@@ -140,5 +140,14 @@ namespace ADD2CharacterService.Controllers
         }
 
         #endregion
+        
+        #region Saving Throws
+
+        public int[] SavingThrows(string className)
+        {
+            return new int[5];
+        }
+        
+        #endregion
     }
 }
