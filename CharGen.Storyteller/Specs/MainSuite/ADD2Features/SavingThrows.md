@@ -1,9 +1,9 @@
 # SavingThrows
 
 -> id = 47d70162-cb9e-4fa3-b83a-100ddea1de60
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-09T06:12:53.5418352Z
+-> last-updated = 2018-05-10T06:22:46.0108545Z
 -> tags = 
 
 [ADD2SavingThrow]

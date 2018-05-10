@@ -1,9 +1,9 @@
 # BaseMovementRates
 
 -> id = 8d313f73-d8f9-4619-90d5-e4f4030a60d1
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-10T05:34:37.8556614Z
+-> last-updated = 2018-05-10T06:22:46.0188549Z
 -> tags = 
 
 [ADD2BaseMove]

@@ -1,9 +1,9 @@
 # InitialFunds
 
 -> id = b0b4cf83-dabb-4d2b-843c-e34eb202a4e2
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-10T06:05:52.0638600Z
+-> last-updated = 2018-05-10T06:22:46.0028540Z
 -> tags = 
 
 [ADD2InitialFunds]

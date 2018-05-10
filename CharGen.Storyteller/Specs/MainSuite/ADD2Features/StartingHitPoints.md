@@ -1,9 +1,9 @@
 # StartingHitPoints
 
 -> id = a9fbd650-e97c-432d-b5da-7cf6371f83d7
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-07T05:55:42.0931808Z
+-> last-updated = 2018-05-10T06:22:45.9948536Z
 -> tags = 
 
 [ADD2InitialHP]
