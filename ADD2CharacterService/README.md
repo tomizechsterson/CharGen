@@ -14,6 +14,7 @@
     * DOING THIS WAS A TERRIBLE IDEA!!! #neverAgain
 7. Datastore acceptance tests, specifically updates. Necessary to have them this way?
 8. (good) Sqlite; very convenient and lightweight
+    * Attack in-memory option for tests again. Try allowing tests to get connection object out of datastore (optional parameter on constructor?)
 9. Consider TestServer for integration tests, etc. Maybe replace storyteller? See [this](https://docs.microsoft.com/en-us/aspnet/core/testing/integration-testing?view=aspnetcore-2.1) [this](https://www.infoworld.com/article/3258813/web-development/how-to-do-integration-testing-in-aspnet-core.html) [this](http://www.dotnetcurry.com/aspnet-core/1420/integration-testing-aspnet-core)
     * Will this allow the use of IActionResult from controller methods without integration/acceptance test issues?
 10. Maintaining the smoke tests in storyteller seems redundant since we have postman now
