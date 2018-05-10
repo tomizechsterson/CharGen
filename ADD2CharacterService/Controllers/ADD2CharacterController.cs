@@ -143,9 +143,11 @@ namespace ADD2CharacterService.Controllers
         
         #region Saving Throws
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("saves/{className}")]
         public int[] SavingThrows(string className)
         {
-            return new int[5];
+            return new SavingThrows(className).Get();
         }
         
         #endregion
