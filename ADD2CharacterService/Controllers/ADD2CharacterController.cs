@@ -151,5 +151,16 @@ namespace ADD2CharacterService.Controllers
         }
         
         #endregion
+
+        #region Base Movement Rate
+
+        [EnableCors("AnyOrigin")]
+        [HttpGet("basemove/{race}")]
+        public int BaseMove(string race)
+        {
+            return new MovementRate(race).Get();
+        }
+
+        #endregion
     }
 }

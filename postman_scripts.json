@@ -15,7 +15,9 @@
 				"ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
 				"be2824a5-c2b5-4002-94cb-94831b6769c1",
 				"45a1f892-4242-46a1-aab2-4b1db717968d",
-				"98b6dd5d-c63b-4f06-9d98-50edc422a720"
+				"98b6dd5d-c63b-4f06-9d98-50edc422a720",
+				"ff30e757-d327-4832-bdf1-9a12d3b242e7",
+				"7adad0b0-3674-45ff-9dbf-73902824ffad"
 			],
 			"folders": [
 				{
@@ -34,6 +36,26 @@
 					"folders_order": [],
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
 					"folderId": "45a1f892-4242-46a1-aab2-4b1db717968d"
+				},
+				{
+					"id": "7adad0b0-3674-45ff-9dbf-73902824ffad",
+					"name": "Base Movement Rates",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folder": null,
+					"order": [
+						"d6bbab7d-fd3b-41a1-abbe-e775593b4702",
+						"caf4d450-e224-4a66-8be4-990fbbd2e5e7",
+						"22e30c2a-63cd-4c9f-ae9b-12dc3030f207",
+						"ec9df2ca-6587-4acf-84d1-620144f646c1",
+						"807eb898-0a54-41d0-a445-49cfd934f6b7",
+						"1be596c3-79c1-4e29-966b-0b1635f91410"
+					],
+					"folders_order": [],
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folderId": "7adad0b0-3674-45ff-9dbf-73902824ffad"
 				},
 				{
 					"id": "be2824a5-c2b5-4002-94cb-94831b6769c1",
@@ -93,6 +115,24 @@
 					"folders_order": [],
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
 					"folderId": "ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25"
+				},
+				{
+					"id": "ff30e757-d327-4832-bdf1-9a12d3b242e7",
+					"name": "Saving Throws",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folder": null,
+					"order": [
+						"1d4246ce-cfa0-424b-aeed-6fa0c97fbe15",
+						"afb658eb-a8a6-45ff-8d8a-892e8df76630",
+						"b048231c-0ced-4e48-a1a4-64f98586659e",
+						"b6a2eef7-9506-48a4-8547-48049aa9ddc6"
+					],
+					"folders_order": [],
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"folderId": "ff30e757-d327-4832-bdf1-9a12d3b242e7"
 				},
 				{
 					"id": "98b6dd5d-c63b-4f06-9d98-50edc422a720",
@@ -228,6 +268,93 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "1be596c3-79c1-4e29-966b-0b1635f91410",
+					"name": "Base Movement for Human",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/basemove/Human",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c1e66ac5-8e67-445c-a8f9-941430bf11ce",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Movement rate should be correct\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(12);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "7adad0b0-3674-45ff-9dbf-73902824ffad",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Movement rate should be correct\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.eql(12);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "1d4246ce-cfa0-424b-aeed-6fa0c97fbe15",
+					"name": "Saving Throws for Fighter",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/saves/Fighter",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b1654e7e-39f6-4257-8a67-67fb7c8c558e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that correct saving throws were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(5);",
+									"    pm.expect(jsonData[0]).to.eql(14);",
+									"    pm.expect(jsonData[1]).to.eql(16);",
+									"    pm.expect(jsonData[2]).to.eql(15);",
+									"    pm.expect(jsonData[3]).to.eql(17);",
+									"    pm.expect(jsonData[4]).to.eql(17);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "ff30e757-d327-4832-bdf1-9a12d3b242e7",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that correct saving throws were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(5);\n    pm.expect(jsonData[0]).to.eql(14);\n    pm.expect(jsonData[1]).to.eql(16);\n    pm.expect(jsonData[2]).to.eql(15);\n    pm.expect(jsonData[3]).to.eql(17);\n    pm.expect(jsonData[4]).to.eql(17);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "1d85ff1a-ad53-4c76-80e0-f926156de381",
 					"name": "Add New Character",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
@@ -344,6 +471,47 @@
 					"folder": "98b6dd5d-c63b-4f06-9d98-50edc422a720",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"HP must be between 1 and 4\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(1).and.lte(4);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "22e30c2a-63cd-4c9f-ae9b-12dc3030f207",
+					"name": "Base Movement for Gnome",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/basemove/Gnome",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cfb6894e-840d-44cf-8b84-0890bd941ab6",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Movement rate should be correct\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(6);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "7adad0b0-3674-45ff-9dbf-73902824ffad",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Movement rate should be correct\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.eql(6);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -658,6 +826,47 @@
 					"folder": "ee9e4503-9a75-4a58-aaaa-dc0ab5b45c25",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.int).to.eql(1);\n    pm.expect(jsonData.wis).to.eql(-1);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "807eb898-0a54-41d0-a445-49cfd934f6b7",
+					"name": "Base Movement for Halfling",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/basemove/Halfling",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b02bc8b3-f1a7-47a0-a4af-a1b411751eb6",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Movement rate should be correct\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(6);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "7adad0b0-3674-45ff-9dbf-73902824ffad",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Movement rate should be correct\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.eql(6);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -1051,6 +1260,98 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "afb658eb-a8a6-45ff-8d8a-892e8df76630",
+					"name": "Saving Throws for Cleric",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/saves/Cleric",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4b61940c-482d-4a23-876e-b9df31885805",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that correct saving throws were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(5);",
+									"    pm.expect(jsonData[0]).to.eql(10);",
+									"    pm.expect(jsonData[1]).to.eql(14);",
+									"    pm.expect(jsonData[2]).to.eql(13);",
+									"    pm.expect(jsonData[3]).to.eql(16);",
+									"    pm.expect(jsonData[4]).to.eql(15);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "ff30e757-d327-4832-bdf1-9a12d3b242e7",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that correct saving throws were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(5);\n    pm.expect(jsonData[0]).to.eql(10);\n    pm.expect(jsonData[1]).to.eql(14);\n    pm.expect(jsonData[2]).to.eql(13);\n    pm.expect(jsonData[3]).to.eql(16);\n    pm.expect(jsonData[4]).to.eql(15);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "b048231c-0ced-4e48-a1a4-64f98586659e",
+					"name": "Saving Throws for Thief",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/saves/Thief",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4900f23a-594b-4f7e-acb0-a78c1cc2feb7",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that correct saving throws were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(5);",
+									"    pm.expect(jsonData[0]).to.eql(13);",
+									"    pm.expect(jsonData[1]).to.eql(14);",
+									"    pm.expect(jsonData[2]).to.eql(12);",
+									"    pm.expect(jsonData[3]).to.eql(16);",
+									"    pm.expect(jsonData[4]).to.eql(15);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "ff30e757-d327-4832-bdf1-9a12d3b242e7",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that correct saving throws were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(5);\n    pm.expect(jsonData[0]).to.eql(13);\n    pm.expect(jsonData[1]).to.eql(14);\n    pm.expect(jsonData[2]).to.eql(12);\n    pm.expect(jsonData[3]).to.eql(16);\n    pm.expect(jsonData[4]).to.eql(15);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "b3b94e8b-7dab-46a9-a78d-fdadd955edde",
 					"name": "Classes Available for Gnome",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/classes/Gnome/8/18/10/13/18/9",
@@ -1092,6 +1393,52 @@
 					"folder": "be2824a5-c2b5-4002-94cb-94831b6769c1",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 3 classes were returned\", function () {\n    pm.expect(jsonData.length).to.eql(3);\n});\n\npm.test(\"Check that the expected classes were returned\", function() {\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Thief\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric/Thief\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "b6a2eef7-9506-48a4-8547-48049aa9ddc6",
+					"name": "Saving Throws for Mage",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/saves/Mage",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c01b04d4-dda4-49db-ae35-0b36ce39bc30",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that correct saving throws were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length).to.eql(5);",
+									"    pm.expect(jsonData[0]).to.eql(14);",
+									"    pm.expect(jsonData[1]).to.eql(11);",
+									"    pm.expect(jsonData[2]).to.eql(13);",
+									"    pm.expect(jsonData[3]).to.eql(15);",
+									"    pm.expect(jsonData[4]).to.eql(12);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "ff30e757-d327-4832-bdf1-9a12d3b242e7",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that correct saving throws were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.length).to.eql(5);\n    pm.expect(jsonData[0]).to.eql(14);\n    pm.expect(jsonData[1]).to.eql(11);\n    pm.expect(jsonData[2]).to.eql(13);\n    pm.expect(jsonData[3]).to.eql(15);\n    pm.expect(jsonData[4]).to.eql(12);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
@@ -1275,6 +1622,88 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "caf4d450-e224-4a66-8be4-990fbbd2e5e7",
+					"name": "Base Movement for Elf",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/basemove/Elf",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fe9fbac5-1e25-4fe2-a122-89ad8bc1d19a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Movement rate should be correct\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(12);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "7adad0b0-3674-45ff-9dbf-73902824ffad",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Movement rate should be correct\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.eql(12);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "d6bbab7d-fd3b-41a1-abbe-e775593b4702",
+					"name": "Base Movement for Dwarf",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/basemove/Dwarf",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea1cdcbb-810c-4bda-9746-caf76207da97",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Movement rate should be correct\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(6);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "7adad0b0-3674-45ff-9dbf-73902824ffad",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Movement rate should be correct\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.eql(6);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "dae229da-b8e0-4edc-88f2-55c94b79bb4e",
 					"name": "GetId1",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/1",
@@ -1311,6 +1740,47 @@
 					"folder": "2a1724d3-e649-4f14-994f-7b872ee1ebf3",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"Test1\");\n    pm.expect(jsonData.playedBy).to.eql(\"Test1\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "ec9df2ca-6587-4acf-84d1-620144f646c1",
+					"name": "Base Movement for Half-Elf",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/basemove/Half-Elf",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "31b44fd1-617e-47af-84cc-5f3ec539925b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Movement rate should be correct\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(12);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "7adad0b0-3674-45ff-9dbf-73902824ffad",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Movement rate should be correct\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.eql(12);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ee54c8cd-0605-4778-a5bb-da6190d5597d",
