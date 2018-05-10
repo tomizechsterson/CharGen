@@ -162,5 +162,16 @@ namespace ADD2CharacterService.Controllers
         }
 
         #endregion
+        
+        #region Initial Funds
+
+        [EnableCors("AnyOrigin")]
+        [HttpGet("funds/{className}")]
+        public int InitialFunds(string className)
+        {
+            return new Funds(className).Get();
+        }
+        
+        #endregion
     }
 }
