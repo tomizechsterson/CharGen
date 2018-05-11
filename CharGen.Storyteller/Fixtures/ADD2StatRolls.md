@@ -10,7 +10,7 @@
 ### There should have been {returnValue} rolls
 
 ## CheckNumberOfDiceRolled
-### Number of dice used for each roll should have been {number} {returnValue}
+### Number of dice used for each roll should have been {number}
 
 ## CheckValuesOfDieRolls
-### The dice should have totalled above {lower} and below {higher} {returnValue}
+### The dice of each roll should have totalled between {lower} and {higher}

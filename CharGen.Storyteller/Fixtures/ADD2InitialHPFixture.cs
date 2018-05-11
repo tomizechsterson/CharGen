@@ -7,10 +7,13 @@ namespace CharGen.Storyteller.Fixtures
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
         
-        public bool RollHitPoints(string className, int low, int high)
+        public void RollHitPoints(string className, int low, int high)
         {
             int hp = _controller.InitialHitPoints(className);
-            return hp >= low && hp <= high;
+            if (hp < low)
+                throw new StorytellerAssertionException($"{hp} HP is below {low}");
+            if (hp > high)
+                throw new StorytellerAssertionException($"{hp} HP is above {high}");
         }
     }
 }

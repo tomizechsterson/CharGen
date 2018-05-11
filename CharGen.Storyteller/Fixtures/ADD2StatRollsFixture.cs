@@ -31,14 +31,18 @@ namespace CharGen.Storyteller.Fixtures
             return _rollResults.Count;
         }
 
-        public bool CheckNumberOfDiceRolled(int number)
+        public void CheckNumberOfDiceRolled(int number)
         {
-            return _rollResults.All(x => x.Length == number);
+            if (_rollResults.All(x => x.Length != number))
+                throw new StorytellerAssertionException($"All rolls didn't use {number} dice");
         }
 
-        public bool CheckValuesOfDieRolls(int lower, int higher)
+        public void CheckValuesOfDieRolls(int lower, int higher)
         {
-            return _rollResults.All(roll => roll.Sum() > lower && roll.Sum() < higher);
+            if (_rollResults.Any(r => r.Sum() < lower))
+                throw new StorytellerAssertionException($"There was a roll below {lower}");
+            if (_rollResults.Any(r => r.Sum() > higher))
+                throw new StorytellerAssertionException($"There was a roll above {higher}");
         }
     }
 }

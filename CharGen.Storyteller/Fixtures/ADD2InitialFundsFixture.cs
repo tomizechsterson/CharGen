@@ -7,12 +7,15 @@ namespace CharGen.Storyteller.Fixtures
     {
         private readonly ADD2CharacterController _controller = new ADD2CharacterController();
 
-        public bool GetFunds(
+        public void GetFunds(
             [SelectionValues("Fighter", "Ranger", "Paladin", "Mage", "Thief", "Bard", "Cleric", "Druid")]
             string className, int low, int high)
         {
             int funds = _controller.InitialFunds(className);
-            return funds >= low && funds <= high;
+            if (funds < low)
+                throw new StorytellerAssertionException($"{funds} is below {low}");
+            if (funds > high)
+                throw new StorytellerAssertionException($"{funds} is above {high}");
         }
     }
 }
