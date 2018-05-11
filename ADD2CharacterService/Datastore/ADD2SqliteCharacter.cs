@@ -98,6 +98,41 @@ namespace ADD2CharacterService.Datastore
             return GetColumnInt("HP");
         }
 
+        public int Paralyze()
+        {
+            return GetColumnInt("Paralyze");
+        }
+
+        public int Rod()
+        {
+            return GetColumnInt("Rod");
+        }
+
+        public int Petrification()
+        {
+            return GetColumnInt("Petrification");
+        }
+
+        public int Breath()
+        {
+            return GetColumnInt("Breath");
+        }
+
+        public int Spell()
+        {
+            return GetColumnInt("Spell");
+        }
+
+        public int MoveRate()
+        {
+            return GetColumnInt("MoveRate");
+        }
+
+        public int Funds()
+        {
+            return GetColumnInt("Funds");
+        }
+
         private int CompletionStep()
         {
             return GetColumnInt("CompletionStep");
@@ -124,6 +159,13 @@ namespace ADD2CharacterService.Datastore
                 ClassName = ClassName(),
                 Alignment = Alignment(),
                 HP = HP(),
+                Paralyze = Paralyze(),
+                Rod = Rod(),
+                Petrification = Petrification(),
+                Breath = Breath(),
+                Spell = Spell(),
+                MoveRate = MoveRate(),
+                Funds = Funds(),
                 CompletionStep = CompletionStep()
             };
         }

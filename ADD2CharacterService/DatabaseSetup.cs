@@ -42,6 +42,13 @@ namespace ADD2CharacterService
                     "Class VARCHAR(8) DEFAULT 'none' NULL, " +
                     "Alignment VARCHAR(16) DEFAULT 'none' NULL, " +
                     "HP INTEGER DEFAULT 0, " +
+                    "Paralyze INTEGER DEFAULT 0, " +
+                    "Rod INTEGER DEFAULT 0, " +
+                    "Petrification INTEGER DEFAULT 0, " +
+                    "Breath INTEGER DEFAULT 0, " +
+                    "Spell INTEGER DEFAULT 0, " +
+                    "MoveRate INTEGER DEFAULT 0, " +
+                    "Funds INTEGER DEFAULT 0, " +
                     "CompletionStep INTEGER DEFAULT 1, " +
                     "Unique(Name, PlayedBy) )";
                 command.ExecuteNonQuery();

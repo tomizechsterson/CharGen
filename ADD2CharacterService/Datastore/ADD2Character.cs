@@ -19,6 +19,13 @@
         string ClassName();
         string Alignment();
         int HP();
+        int Paralyze();
+        int Rod();
+        int Petrification();
+        int Breath();
+        int Spell();
+        int MoveRate();
+        int Funds();
         HttpCharacterModel ToModel();
     }
 }

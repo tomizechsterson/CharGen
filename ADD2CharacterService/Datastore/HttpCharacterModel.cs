@@ -20,6 +20,13 @@ namespace ADD2CharacterService.Datastore
         public string ClassName { get; set; }
         public string Alignment { get; set; }
         public int HP { get; set; }
+        public int Paralyze { get; set; }
+        public int Rod { get; set; }
+        public int Petrification { get; set; }
+        public int Breath { get; set; }
+        public int Spell { get; set; }
+        public int MoveRate { get; set; }
+        public int Funds { get; set; }
 
         public int CompletionStep { get; set; }
     }

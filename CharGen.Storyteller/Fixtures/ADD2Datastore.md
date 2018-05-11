@@ -36,6 +36,9 @@
 ## GetRetrievedHP
 ### The hit points of the retrieved character should be {returnValue}
 
+## GetRetrievedSavingThrowsMovementAndFunds
+### The attributes of the retrieved character should be {paralyze}, {rod}, {petrification}, {breath}, {spell}, {moveRate}, {funds}
+
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}
 
@@ -62,6 +65,9 @@
 
 ## UpdateHP
 ### Update hit points for character id {id} to {hp}
+
+## UpdateSavingThrowsMovementFunds
+### Update attributes for character id {id} to {paralyze}, {rod}, {petrification}, {breath}, {spell}, {moveRate}, {funds}
 
 ## DeleteCharacter
 ### Delete the character with id {id}

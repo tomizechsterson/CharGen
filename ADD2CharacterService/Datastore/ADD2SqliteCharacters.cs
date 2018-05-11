@@ -78,6 +78,13 @@ namespace ADD2CharacterService.Datastore
                                           "Class = $className, " +
                                           "Alignment = $alignment, " +
                                           "HP = $hp, " +
+                                          "Paralyze = $paralyze, " +
+                                          "Rod = $rod, " +
+                                          "Petrification = $petrification, " +
+                                          "Breath = $breath, " +
+                                          "Spell = $spell, " +
+                                          "MoveRate = $moveRate, " +
+                                          "Funds = $funds, " +
                                           "CompletionStep = $completionStep " +
                                           "WHERE Id = $id";
                     command.Parameters.AddWithValue("$id", id);
@@ -97,6 +104,13 @@ namespace ADD2CharacterService.Datastore
                     command.Parameters.AddWithValue("$className", model.ClassName ?? "none");
                     command.Parameters.AddWithValue("$alignment", model.Alignment ?? "none");
                     command.Parameters.AddWithValue("$hp", model.HP);
+                    command.Parameters.AddWithValue("$paralyze", model.Paralyze);
+                    command.Parameters.AddWithValue("$rod", model.Rod);
+                    command.Parameters.AddWithValue("$petrification", model.Petrification);
+                    command.Parameters.AddWithValue("$breath", model.Breath);
+                    command.Parameters.AddWithValue("$spell", model.Spell);
+                    command.Parameters.AddWithValue("$moveRate", model.MoveRate);
+                    command.Parameters.AddWithValue("$funds", model.Funds);
                     command.Parameters.AddWithValue("$completionStep", model.CompletionStep);
                     conn.Open();
                     command.ExecuteNonQuery();
