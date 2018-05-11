@@ -3,7 +3,7 @@
 -> id = 7168a2c6-8cc5-4587-9163-7e428f24c8b1
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-11T20:46:07.4862675Z
+-> last-updated = 2018-05-11T22:42:03.5972675Z
 -> tags = 
 
 [ADD2Datastore]
@@ -27,8 +27,7 @@
 |> UpdateHeightWeightAge id=3, height=60, weight=160, age=25
 |> UpdateClass id=3, className=Fighter
 |> UpdateAlignment id=3, alignment=Chaotic Good
-|> UpdateHP id=3, hp=4
-|> UpdateSavingThrowsMovementFunds id=3, paralyze=10, rod=10, petrification=10, breath=10, spell=10, moveRate=12, funds=100
+|> FinalUpdate id=3, hp=8, paralyze=10, rod=10, petrification=10, breath=10, spell=10, moveRate=12, funds=100
 |> RetrieveCharacter id=3
 |> GetRetrievedName returnValue=ModifiedPerson
 |> GetRetrievedPlayedBy returnValue=SomeoneElse
@@ -38,7 +37,7 @@
 |> GetRetrievedHeightWeightAge height=60, weight=160, age=25
 |> GetRetrievedClass returnValue=Fighter
 |> GetRetrievedAlignment returnValue=Chaotic Good
-|> GetRetrievedHP returnValue=4
+|> GetRetrievedHP returnValue=8
 |> GetRetrievedSavingThrowsMovementAndFunds paralyze=10, rod=10, petrification=10, breath=10, spell=10, moveRate=12, funds=100
 |> EmptyDatabase
 ~~~

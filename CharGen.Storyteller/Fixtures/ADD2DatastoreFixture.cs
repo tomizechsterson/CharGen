@@ -224,32 +224,7 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void UpdateHP(int id, int hp)
-        {
-            var character = _controller.Get(id);
-
-            _controller.Put(id, new HttpCharacterModel
-            {
-                Name = character.Name,
-                PlayedBy = character.PlayedBy,
-                Str = character.Str,
-                Dex = character.Dex,
-                Con = character.Con,
-                Int = character.Int,
-                Wis = character.Wis,
-                Chr = character.Chr,
-                Race = character.Race,
-                Gender = character.Gender,
-                Height = character.Height,
-                Weight = character.Weight,
-                Age = character.Age,
-                ClassName = character.ClassName,
-                Alignment = character.Alignment,
-                HP = hp
-            });
-        }
-
-        public void UpdateSavingThrowsMovementFunds(int id, int paralyze, int rod, int petrification, int breath,
+        public void FinalUpdate(int id, int hp, int paralyze, int rod, int petrification, int breath,
             int spell, int moveRate, int funds)
         {
             var character = _controller.Get(id);
@@ -271,7 +246,7 @@ namespace CharGen.Storyteller.Fixtures
                 Age = character.Age,
                 ClassName = character.ClassName,
                 Alignment = character.Alignment,
-                HP = character.HP,
+                HP = hp,
                 Paralyze = paralyze,
                 Rod = rod,
                 Petrification = petrification,

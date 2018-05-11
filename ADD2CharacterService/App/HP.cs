@@ -30,7 +30,7 @@ namespace ADD2CharacterService.App
             };
         }
 
-        public int GetInitial()
+        public int Get()
         {
             return _initialHpRolls[_className].Roll().Sum();
         }

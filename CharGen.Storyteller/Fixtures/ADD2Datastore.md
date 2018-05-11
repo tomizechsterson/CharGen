@@ -63,11 +63,8 @@
 ## UpdateAlignment
 ### Update alignment for character id {id} to {alignment}
 
-## UpdateHP
-### Update hit points for character id {id} to {hp}
-
-## UpdateSavingThrowsMovementFunds
-### Update attributes for character id {id} to {paralyze}, {rod}, {petrification}, {breath}, {spell}, {moveRate}, {funds}
+## FinalUpdate
+### Update final attributes for character id {id} to {hp}, {paralyze}, {rod}, {petrification}, {breath}, {spell}, {moveRate}, {funds}
 
 ## DeleteCharacter
 ### Delete the character with id {id}

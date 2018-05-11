@@ -52,6 +52,22 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
+        [HttpPut("{id}/final")]
+        public void FinalUpdate(int id, [FromBody] HttpCharacterModel characterModel)
+        {
+            characterModel.HP = new HP(characterModel.ClassName).Get();
+            var savingThrows = new SavingThrows(characterModel.ClassName).Get();
+            characterModel.Paralyze = savingThrows[0];
+            characterModel.Rod = savingThrows[1];
+            characterModel.Petrification = savingThrows[2];
+            characterModel.Breath = savingThrows[3];
+            characterModel.Spell = savingThrows[4];
+            characterModel.MoveRate = new MovementRate(characterModel.Race).Get();
+            characterModel.Funds = new Funds(characterModel.ClassName).Get();
+            _database.Update(id, characterModel);
+        }
+
+        [EnableCors("AnyOrigin")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
@@ -128,50 +144,6 @@ namespace ADD2CharacterService.Controllers
             return new AllowedAlignments(className).Get();
         }
 
-        #endregion
-
-        #region Initial HP
-
-        [EnableCors("AnyOrigin")]
-        [HttpGet("initialhp/{className}")]
-        public int InitialHitPoints(string className)
-        {
-            return new HP(className).GetInitial();
-        }
-
-        #endregion
-        
-        #region Saving Throws
-
-        [EnableCors("AnyOrigin")]
-        [HttpGet("saves/{className}")]
-        public int[] SavingThrows(string className)
-        {
-            return new SavingThrows(className).Get();
-        }
-        
-        #endregion
-
-        #region Base Movement Rate
-
-        [EnableCors("AnyOrigin")]
-        [HttpGet("basemove/{race}")]
-        public int BaseMove(string race)
-        {
-            return new MovementRate(race).Get();
-        }
-
-        #endregion
-        
-        #region Initial Funds
-
-        [EnableCors("AnyOrigin")]
-        [HttpGet("funds/{className}")]
-        public int InitialFunds(string className)
-        {
-            return new Funds(className).Get();
-        }
-        
         #endregion
     }
 }

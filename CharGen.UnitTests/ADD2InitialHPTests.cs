@@ -16,7 +16,7 @@ namespace CharGen.UnitTests
         [InlineData("Mage", 1, 4)]
         public void InitialHP(string className, int low, int high)
         {
-            int hp = new HP(className).GetInitial();
+            int hp = new HP(className).Get();
 
             Assert.True(hp >= low);
             Assert.True(hp <= high);
