@@ -3,7 +3,7 @@
 -> id = 7168a2c6-8cc5-4587-9163-7e428f24c8b1
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-11T22:42:03.5972675Z
+-> last-updated = 2018-05-12T05:48:10.0447008Z
 -> tags = 
 
 [ADD2Datastore]
@@ -18,8 +18,10 @@
 |> GetRetrievedHeightWeightAge height=0, weight=0, age=0
 |> GetRetrievedClass returnValue=none
 |> GetRetrievedAlignment returnValue=none
-|> GetRetrievedHP returnValue=0
-|> GetRetrievedSavingThrowsMovementAndFunds paralyze=0, rod=0, petrification=0, breath=0, spell=0, moveRate=0, funds=0
+|> CheckRetrievedHP lowBound=0, highBound=0
+|> GetRetrievedSavingThrows paralyze=0, rod=0, petrification=0, breath=0, spell=0
+|> GetRetrievedMovementRate returnValue=0
+|> CheckRetrievedInitialFunds lowBound=0, highBound=0
 |> UpdateCharacter id=3, name=ModifiedPerson, playedBy=SomeoneElse
 |> UpdateStats id=3, str=3, dex=4, con=5, int=6, wis=7, chr=8
 |> UpdateRace id=3, race=Dwarf
@@ -37,7 +39,9 @@
 |> GetRetrievedHeightWeightAge height=60, weight=160, age=25
 |> GetRetrievedClass returnValue=Fighter
 |> GetRetrievedAlignment returnValue=Chaotic Good
-|> GetRetrievedHP returnValue=8
-|> GetRetrievedSavingThrowsMovementAndFunds paralyze=10, rod=10, petrification=10, breath=10, spell=10, moveRate=12, funds=100
+|> CheckRetrievedHP lowBound=1, highBound=10
+|> GetRetrievedSavingThrows paralyze=14, rod=16, petrification=15, breath=17, spell=17
+|> GetRetrievedMovementRate returnValue=6
+|> CheckRetrievedInitialFunds lowBound=50, highBound=200
 |> EmptyDatabase
 ~~~

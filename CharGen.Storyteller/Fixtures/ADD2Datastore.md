@@ -33,11 +33,17 @@
 ## GetRetrievedAlignment
 ### The alignment of the retrieved character should be {returnValue}
 
-## GetRetrievedHP
-### The hit points of the retrieved character should be {returnValue}
+## CheckRetrievedHP
+### The hit points of the retrieved character should be between {lowBound} and {highBound}
 
-## GetRetrievedSavingThrowsMovementAndFunds
-### The attributes of the retrieved character should be {paralyze}, {rod}, {petrification}, {breath}, {spell}, {moveRate}, {funds}
+## GetRetrievedSavingThrows
+### The saving throws of the retrieved character should be {paralyze}, {rod}, {petrification}, {breath}, {spell}
+
+## GetRetrievedMovementRate
+### The movement rate of the retrieved character should be {returnValue}
+
+## CheckRetrievedInitialFunds
+### The initial funds of the retrieved character should be between {lowBound} and {highBound}
 
 ## AddCharacter
 ### Add a new character with name {name} and is played by {playedBy}

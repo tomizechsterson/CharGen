@@ -74,21 +74,35 @@ namespace CharGen.Storyteller.Fixtures
             return _character.Alignment;
         }
 
-        public int GetRetrievedHP()
+        public void CheckRetrievedHP(int lowBound, int highBound)
         {
-            return _character.HP;
+            if(_character.HP < lowBound)
+                throw new StorytellerAssertionException($"HP {_character.HP} is below {lowBound}");
+            if(_character.HP > highBound)
+                throw new StorytellerAssertionException($"HP {_character.HP} is above {highBound}");
         }
 
-        public void GetRetrievedSavingThrowsMovementAndFunds(out int paralyze, out int rod, out int petrification, out int breath,
-            out int spell, out int moveRate, out int funds)
+        public void GetRetrievedSavingThrows(out int paralyze, out int rod, out int petrification, out int breath,
+            out int spell)
         {
             paralyze = _character.Paralyze;
             rod = _character.Rod;
             petrification = _character.Petrification;
             breath = _character.Breath;
             spell = _character.Spell;
-            moveRate = _character.MoveRate;
-            funds = _character.Funds;
+        }
+
+        public int GetRetrievedMovementRate()
+        {
+            return _character.MoveRate;
+        }
+
+        public void CheckRetrievedInitialFunds(int lowBound, int highBound)
+        {
+            if (_character.Funds < lowBound)
+                throw new StorytellerAssertionException($"Initial funds {_character.Funds} is below {lowBound}");
+            if(_character.Funds > highBound)
+                throw new StorytellerAssertionException($"Initial funds {_character.Funds} is above {highBound}");
         }
 
         public void AddCharacter(string name, string playedBy)
@@ -229,7 +243,7 @@ namespace CharGen.Storyteller.Fixtures
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id, new HttpCharacterModel
+            _controller.FinalUpdate(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 PlayedBy = character.PlayedBy,
