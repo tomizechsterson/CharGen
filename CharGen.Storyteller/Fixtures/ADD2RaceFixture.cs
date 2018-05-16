@@ -29,20 +29,19 @@ namespace CharGen.Storyteller.Fixtures
             try
             {
                 adj1 = _statAdjustments[stat1];
-                
             }
-            catch (KeyNotFoundException e)
+            catch (KeyNotFoundException)
             {
-                throw new KeyNotFoundException($"The stat {stat1.ToUpper()} was not adjusted for the selected race", e);
+                throw new StorytellerAssertionException($"The stat {stat1.ToUpper()} was not adjusted for the selected race");
             }
 
             try
             {
                 adj2 = _statAdjustments[stat2];
             }
-            catch (KeyNotFoundException e)
+            catch (KeyNotFoundException)
             {
-                throw new KeyNotFoundException($"The stat {stat2.ToUpper()} was not adjusted for the selected race", e);
+                throw new StorytellerAssertionException($"The stat {stat2.ToUpper()} was not adjusted for the selected race");
             }
         }
     }
