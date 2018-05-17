@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharGen.Storyteller", "Char
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharGen.UnitTests", "CharGen.UnitTests\CharGen.UnitTests.csproj", "{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DD35CharacterService", "DD35CharacterService\DD35CharacterService.csproj", "{608BB614-9965-4D8C-9126-2D20A7DC458D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83D34BE2-ED5E-4AA2-8BD9-AEDDD93D53B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608BB614-9965-4D8C-9126-2D20A7DC458D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608BB614-9965-4D8C-9126-2D20A7DC458D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608BB614-9965-4D8C-9126-2D20A7DC458D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608BB614-9965-4D8C-9126-2D20A7DC458D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
