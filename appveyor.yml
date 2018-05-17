@@ -27,10 +27,10 @@ test_script:
       
 after_test:
 - cmd: cd .. & cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
-- cmd: cd .. & dotnet publish ADD2CharacterService -c Release -o ./publish
+- cmd: cd .. & dotnet publish ADD2CharacterService -c Release -o ./add2publish
       
 artifacts:
-- path: ADD2CharacterService/publish
-  name: publish
+- path: ADD2CharacterService/add2publish
+  name: add2publish
 - path: CharGen.Storyteller/stresults.htm
   name: StorytellerResults.htm
