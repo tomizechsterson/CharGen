@@ -1366,7 +1366,7 @@
 			"values": [
 				{
 					"key": "siteName",
-					"value": "chargendev.azurewebsites.net",
+					"value": "add20.azurewebsites.net",
 					"enabled": true,
 					"type": "text"
 				},
@@ -1390,7 +1390,7 @@
 			"values": [
 				{
 					"key": "siteName",
-					"value": "chargendev-dev.azurewebsites.net",
+					"value": "add20-dev.azurewebsites.net",
 					"enabled": true,
 					"type": "text"
 				},
@@ -1438,7 +1438,7 @@
 			"values": [
 				{
 					"key": "siteName",
-					"value": "chargendev-stage.azurewebsites.net",
+					"value": "add20-stage.azurewebsites.net",
 					"enabled": true,
 					"type": "text"
 				},
