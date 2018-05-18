@@ -15,6 +15,8 @@ namespace DD35CharacterService.Controllers
             return "HAI!";
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("stats")]
         public List<int[]> RollStats()
         {
             return new DD35StatRoll().RollStats();
