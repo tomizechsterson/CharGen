@@ -2,7 +2,7 @@
 using ADD2CharacterService.App.Stats;
 using Xunit;
 
-namespace CharGen.UnitTests
+namespace CharGen.UnitTests.ADD2
 {
     public class DieRollTests
     {

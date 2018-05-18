@@ -3,7 +3,7 @@ using Xunit;
 
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
 
-namespace CharGen.UnitTests
+namespace CharGen.UnitTests.ADD2
 {
     public class RaceSelectionTests
     {

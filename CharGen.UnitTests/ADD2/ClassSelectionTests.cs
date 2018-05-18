@@ -1,7 +1,7 @@
 ﻿using ADD2CharacterService.App.CharacterClass;
 using Xunit;
 
-namespace CharGen.UnitTests
+namespace CharGen.UnitTests.ADD2
 {
     public class ClassSelectionTests
     {
