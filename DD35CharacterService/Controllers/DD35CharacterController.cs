@@ -15,11 +15,15 @@ namespace DD35CharacterService.Controllers
             return new DD35StatRoll().RollStats();
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("races")]
         public string[] Races()
         {
             return new[] { "Dwarf", "Elf", "Gnome", "Halfling", "Half-Elf", "Half-Orc", "Human" };
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("classes")]
         public string[] Classes()
         {
             return new[] { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard" };

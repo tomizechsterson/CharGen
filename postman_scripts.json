@@ -1366,7 +1366,9 @@
 			"events": null,
 			"variables": [],
 			"order": [
-				"4beef160-556e-40d3-91c1-b7a395186060"
+				"4beef160-556e-40d3-91c1-b7a395186060",
+				"ecc7f521-405b-4704-9d31-fee66efb94a1",
+				"78c15433-b243-4e94-9aab-6e028e6cdad9"
 			],
 			"folders_order": [],
 			"folders": [],
@@ -1417,6 +1419,114 @@
 					"folder": null,
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that each roll had 3 dice in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(4);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(4).and.lte(24);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "c3c9e256-7ec0-4adb-9464-956551774488",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "78c15433-b243-4e94-9aab-6e028e6cdad9",
+					"name": "Classes",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/classes",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0314c726-a84a-408f-aa8b-99f197e73b2a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that 11 classes were returned\", function() {",
+									"    pm.expect(jsonData.length).to.eql(11);",
+									"});",
+									"",
+									"pm.test(\"Check the classes that were returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Barbarian\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Bard\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Druid\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Monk\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Paladin\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Ranger\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Rogue\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Sorcerer\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Wizard\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 11 classes were returned\", function() {\n    pm.expect(jsonData.length).to.eql(11);\n});\n\npm.test(\"Check the classes that were returned\", function() {\n    pm.expect(jsonData.includes(\"Barbarian\")).to.be.true;\n    pm.expect(jsonData.includes(\"Bard\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Druid\")).to.be.true;\n    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;\n    pm.expect(jsonData.includes(\"Monk\")).to.be.true;\n    pm.expect(jsonData.includes(\"Paladin\")).to.be.true;\n    pm.expect(jsonData.includes(\"Ranger\")).to.be.true;\n    pm.expect(jsonData.includes(\"Rogue\")).to.be.true;\n    pm.expect(jsonData.includes(\"Sorcerer\")).to.be.true;\n    pm.expect(jsonData.includes(\"Wizard\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "c3c9e256-7ec0-4adb-9464-956551774488",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "ecc7f521-405b-4704-9d31-fee66efb94a1",
+					"name": "Races",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/races",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8a562f25-3cab-4987-9943-6e68a6786bfe",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that 7 races were returned\", function() {",
+									"    pm.expect(jsonData.length).to.eql(7);",
+									"});",
+									"",
+									"pm.test(\"Check the races that were returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Half-Orc\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 7 races were returned\", function() {\n    pm.expect(jsonData.length).to.eql(7);\n});\n\npm.test(\"Check the races that were returned\", function() {\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;\n    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Orc\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "c3c9e256-7ec0-4adb-9464-956551774488",
