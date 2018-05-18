@@ -12,7 +12,4 @@
   <ItemGroup>
     <ProjectReference Include="..\ADD2CharacterService\ADD2CharacterService.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DD35" />
-  </ItemGroup>
 </Project>
