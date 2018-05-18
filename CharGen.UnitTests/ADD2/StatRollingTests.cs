@@ -8,7 +8,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2StatRollingTests
+    public class StatRollingTests
     {
         [Theory]
         [InlineData("RollOnce", 6, 3, 2, 19)]

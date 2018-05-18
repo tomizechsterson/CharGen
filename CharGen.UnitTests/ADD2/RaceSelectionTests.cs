@@ -5,7 +5,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2RaceSelectionTests
+    public class RaceSelectionTests
     {
         [Theory]
         [InlineData(8, 7, 11, 8, 3, 8, "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human")]

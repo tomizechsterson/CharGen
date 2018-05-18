@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2SavingThrowTests
+    public class SavingThrowTests
     {
         [Theory]
         [InlineData("Cleric", 10, 14, 13, 16, 15)]
@@ -14,7 +14,7 @@ namespace CharGen.UnitTests
         [InlineData("Ranger", 14, 16, 15, 17, 17)]
         [InlineData("Paladin", 14, 16, 15, 17, 17)]
         [InlineData("Mage", 14, 11, 13, 15, 12)]
-        public void SavingThrowTests(string className, int paralyze, int rod, int petrification, int breath, int spell)
+        public void SavingThrows(string className, int paralyze, int rod, int petrification, int breath, int spell)
         {
             var results = new SavingThrows(className).Get();
             

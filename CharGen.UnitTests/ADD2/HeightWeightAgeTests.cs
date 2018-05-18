@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2HeightWeightAgeTests
+    public class HeightWeightAgeTests
     {
         [Theory]
         [InlineData("dwarf", 45, 70)]

@@ -4,7 +4,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2DieRollTests
+    public class DieRollTests
     {
         [Theory]
         [InlineData(1, 1)]

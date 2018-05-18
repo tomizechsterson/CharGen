@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2InitialFundsTests
+    public class InitialFundsTests
     {
         [Theory]
         [InlineData("Fighter", 50, 200)]

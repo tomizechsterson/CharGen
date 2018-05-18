@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2BaseMovementTests
+    public class BaseMovementTests
     {
         [Theory]
         [InlineData("Dwarf", 6)]

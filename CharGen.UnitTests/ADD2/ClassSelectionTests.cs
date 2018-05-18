@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CharGen.UnitTests
 {
-    public class ADD2ClassSelectionTests
+    public class ClassSelectionTests
     {
         [Theory]
         [InlineData("Human", 9, 3, 3, 3, 3, 3, "Fighter")]
