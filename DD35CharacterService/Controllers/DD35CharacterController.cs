@@ -24,5 +24,10 @@ namespace DD35CharacterService.Controllers
         {
             return new[] { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard" };
         }
+
+        public Dictionary<string, int> StatAdjustments(string race)
+        {
+            return new Dictionary<string, int>();
+        }
     }
 }

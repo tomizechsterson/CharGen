@@ -21,7 +21,7 @@ namespace CharGen.Storyteller.Fixtures
         
         public void GetStatAdjustments([SelectionValues("Dwarf", "Elf", "Gnome", "Halfling", "Half-Elf", "Half-Orc", "Human")] string race)
         {
-            _statAdjustments = new Dictionary<string, int>();
+            _statAdjustments = _controller.StatAdjustments(race);
         }
 
         public int AdjustmentCount()
