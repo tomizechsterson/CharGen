@@ -1,20 +1,22 @@
 ﻿using System.Collections.Generic;
+using DD35CharacterService.Controllers;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {    
     public class DD35RaceClassFixture : Fixture
     {
+        private readonly DD35CharacterController _controller = new DD35CharacterController();
         private Dictionary<string, int> _statAdjustments = new Dictionary<string, int>();
         
         public string[] ClassesAvailable()
         {
-            return new string[0];
+            return _controller.Classes();
         }
 
         public string[] RacesAvailable()
         {
-            return new string[0];
+            return _controller.Races();
         }
         
         public void GetStatAdjustments([SelectionValues("Dwarf", "Elf", "Gnome", "Halfling", "Half-Elf", "Half-Orc", "Human")] string race)
