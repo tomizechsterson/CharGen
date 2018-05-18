@@ -11,5 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ADD2CharacterService\ADD2CharacterService.csproj" />
+    <ProjectReference Include="..\DD35CharacterService\DD35CharacterService.csproj" />
   </ItemGroup>
 </Project>

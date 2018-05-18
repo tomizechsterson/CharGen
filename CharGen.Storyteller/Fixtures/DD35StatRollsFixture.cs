@@ -1,16 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using DD35CharacterService.Controllers;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
     public class DD35StatRollsFixture : Fixture
     {
+        private readonly DD35CharacterController _controller = new DD35CharacterController();
         private List<int[]> _rollResults = new List<int[]>();
         
         public void RollStats()
         {
-            _rollResults = new List<int[]>();
+            _rollResults = _controller.RollStats();
         }
 
         public int CheckNumberOfRolls()

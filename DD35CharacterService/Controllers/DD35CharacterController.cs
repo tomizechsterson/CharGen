@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using System.Collections.Generic;
+using DD35CharacterService.App.Stats;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DD35CharacterService.Controllers
@@ -11,6 +13,11 @@ namespace DD35CharacterService.Controllers
         public string Test()
         {
             return "HAI!";
+        }
+
+        public List<int[]> RollStats()
+        {
+            return new DD35StatRoll().RollStats();
         }
     }
 }
