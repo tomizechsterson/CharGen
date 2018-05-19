@@ -1,9 +1,9 @@
 # RacesAndClasses
 
 -> id = f539f41f-c8b8-4a8b-bc82-9b9ec41629db
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-16T04:29:09.7920745Z
+-> last-updated = 2018-05-19T01:00:42.3367077Z
 -> tags = 
 
 [DD35RaceClass]

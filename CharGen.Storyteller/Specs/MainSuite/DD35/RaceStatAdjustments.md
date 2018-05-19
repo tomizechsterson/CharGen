@@ -1,9 +1,9 @@
 # RaceStatAdjustments
 
 -> id = f7f673ab-2101-4da2-96cd-11eebe994e27
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-16T04:32:56.8500615Z
+-> last-updated = 2018-05-19T01:00:48.4693209Z
 -> tags = 
 
 [DD35RaceClass]
