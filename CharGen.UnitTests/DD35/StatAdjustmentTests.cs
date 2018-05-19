@@ -26,7 +26,7 @@ namespace CharGen.UnitTests.DD35
         {
             var adjustments = new StatAdjust(race).Adjustments();
 
-            Assert.Equal(0, adjustments.Count);
+            Assert.Empty(adjustments);
         }
 
         [Fact]
@@ -35,9 +35,9 @@ namespace CharGen.UnitTests.DD35
             var adjustments = new StatAdjust("Half-Orc").Adjustments();
 
             Assert.Equal(3, adjustments.Count);
-            Assert.Equal(adjustments["str"], 2);
-            Assert.Equal(adjustments["int"], -2);
-            Assert.Equal(adjustments["chr"], -2);
+            Assert.Equal(2, adjustments["str"]);
+            Assert.Equal(-2, adjustments["int"]);
+            Assert.Equal(-2, adjustments["chr"]);
         }
     }
 }
