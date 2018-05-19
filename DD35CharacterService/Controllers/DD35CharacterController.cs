@@ -36,5 +36,17 @@ namespace DD35CharacterService.Controllers
         {
             return new StatAdjust(race).Adjustments();
         }
+
+        [EnableCors("AnyOrigin")]
+        [HttpGet("algn")]
+        public string[] Alignments()
+        {
+            return new[]
+            {
+                "Lawful Good", "Lawful Neutral", "Lawful Evil", 
+                "Neutral Good", "Neutral", "Neutral Evil", 
+                "Chaotic Good", "Chaotic Neutral", "Chaotic Evil"
+            };
+        }
     }
 }
