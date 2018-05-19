@@ -6,7 +6,7 @@
 -> last-updated = 2018-05-19T01:00:48.4693209Z
 -> tags = 
 
-[DD35RaceClass]
+[DD35RaceClassAlignment]
 |> GetStatAdjustments race=Dwarf
 |> AdjustmentCount returnValue=2
 |> Adjustment stat=con, adjustment=2

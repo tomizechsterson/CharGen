@@ -27,7 +27,11 @@ namespace DD35CharacterService.Controllers
         [HttpGet("classes")]
         public string[] Classes()
         {
-            return new[] { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard" };
+            return new[]
+            {
+                "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", 
+                "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard"
+            };
         }
 
         [EnableCors("AnyOrigin")]

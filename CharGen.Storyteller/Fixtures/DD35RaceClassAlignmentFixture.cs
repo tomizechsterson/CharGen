@@ -4,7 +4,7 @@ using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {    
-    public class DD35RaceClassFixture : Fixture
+    public class DD35RaceClassAlignmentFixture : Fixture
     {
         private readonly DD35CharacterController _controller = new DD35CharacterController();
         private Dictionary<string, int> _statAdjustments = new Dictionary<string, int>();
@@ -39,6 +39,11 @@ namespace CharGen.Storyteller.Fixtures
             {
                 throw new StorytellerAssertionException($"The stat {stat.ToUpper()} was not adjusted for the selected race");
             }
+        }
+
+        public string[] Alignments()
+        {
+            return _controller.Alignments();
         }
     }
 }
