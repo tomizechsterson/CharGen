@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DD35CharacterService.App;
 using DD35CharacterService.App.Stats;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -31,7 +32,7 @@ namespace DD35CharacterService.Controllers
 
         public Dictionary<string, int> StatAdjustments(string race)
         {
-            return new Dictionary<string, int>();
+            return new StatAdjust(race).Adjustments();
         }
     }
 }
