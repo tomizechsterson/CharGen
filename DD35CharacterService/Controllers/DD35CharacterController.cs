@@ -30,6 +30,8 @@ namespace DD35CharacterService.Controllers
             return new[] { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard" };
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("statadj/{race}")]
         public Dictionary<string, int> StatAdjustments(string race)
         {
             return new StatAdjust(race).Adjustments();

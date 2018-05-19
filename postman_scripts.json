@@ -1368,7 +1368,9 @@
 			"order": [
 				"4beef160-556e-40d3-91c1-b7a395186060",
 				"ecc7f521-405b-4704-9d31-fee66efb94a1",
-				"78c15433-b243-4e94-9aab-6e028e6cdad9"
+				"78c15433-b243-4e94-9aab-6e028e6cdad9",
+				"eca98d52-faa6-4ef1-8f5a-c4415e85899d",
+				"85bef259-9fbc-4ac2-9658-c3a160ca0aa3"
 			],
 			"folders_order": [],
 			"folders": [],
@@ -1475,6 +1477,89 @@
 					"folder": null,
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 11 classes were returned\", function() {\n    pm.expect(jsonData.length).to.eql(11);\n});\n\npm.test(\"Check the classes that were returned\", function() {\n    pm.expect(jsonData.includes(\"Barbarian\")).to.be.true;\n    pm.expect(jsonData.includes(\"Bard\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Druid\")).to.be.true;\n    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;\n    pm.expect(jsonData.includes(\"Monk\")).to.be.true;\n    pm.expect(jsonData.includes(\"Paladin\")).to.be.true;\n    pm.expect(jsonData.includes(\"Ranger\")).to.be.true;\n    pm.expect(jsonData.includes(\"Rogue\")).to.be.true;\n    pm.expect(jsonData.includes(\"Sorcerer\")).to.be.true;\n    pm.expect(jsonData.includes(\"Wizard\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "c3c9e256-7ec0-4adb-9464-956551774488",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "85bef259-9fbc-4ac2-9658-c3a160ca0aa3",
+					"name": "Stat Adjustments - Human",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/statadj/Human",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "93343938-6e34-4310-9abb-38c33d0546ac",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that no adjustments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData).length).to.eql(0);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that no adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "c3c9e256-7ec0-4adb-9464-956551774488",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "eca98d52-faa6-4ef1-8f5a-c4415e85899d",
+					"name": "Stat Adjustments - Gnome",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/statadj/Gnome",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "188c7669-52b0-4bf2-95c6-62c6c4b13816",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the right adjustments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.con).to.eql(2);",
+									"    pm.expect(jsonData.str).to.eql(-2);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.con).to.eql(2);\n    pm.expect(jsonData.str).to.eql(-2);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "c3c9e256-7ec0-4adb-9464-956551774488",
