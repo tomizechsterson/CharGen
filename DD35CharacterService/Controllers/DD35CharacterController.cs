@@ -52,5 +52,10 @@ namespace DD35CharacterService.Controllers
                 "Chaotic Good", "Chaotic Neutral", "Chaotic Evil"
             };
         }
+
+        public int StartingAge(string race, string className)
+        {
+            return new StartingAge(race, className).Get();
+        }
     }
 }
