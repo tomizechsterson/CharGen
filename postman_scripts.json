@@ -1303,7 +1303,10 @@
 				"8c3b5bf0-e96e-413f-9c62-43834ae0f0a6",
 				"43b74e23-8be8-47a1-a791-ef94f4d0fd92",
 				"6b76e0d4-6b4a-4700-a432-d97af29c2698",
-				"926a16bc-acfb-4da4-97c7-d7e2a71e2aed"
+				"926a16bc-acfb-4da4-97c7-d7e2a71e2aed",
+				"4802437f-d8a5-4878-b96c-9b637a6f89fb",
+				"4e7c3d1c-0d1f-4cba-8d5c-2ac2fcb506fb",
+				"2bd5202c-d23a-4e5d-86fe-e03c3260c8b1"
 			],
 			"folders_order": [],
 			"folders": [],
@@ -1354,6 +1357,47 @@
 					"folder": null,
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that each roll had 3 dice in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(4);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(4).and.lte(24);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "2bd5202c-d23a-4e5d-86fe-e03c3260c8b1",
+					"name": "Starting Age - Half-Orc Monk",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Half-Orc/Monk",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e1a2ac29-ef8a-4d36-847f-afab652d2f9c",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the expected bounds\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(16).and.lte(26);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(16).and.lte(26);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
@@ -1448,6 +1492,88 @@
 					"folder": null,
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.con).to.eql(2);\n    pm.expect(jsonData.str).to.eql(-2);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "4802437f-d8a5-4878-b96c-9b637a6f89fb",
+					"name": "Starting Age - Dwarf Fighter",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Dwarf/Fighter",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "73eaf788-71ba-4338-90e8-c9fe5af0f2e5",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the expected bounds\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(45).and.lte(70);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(45).and.lte(70);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "4e7c3d1c-0d1f-4cba-8d5c-2ac2fcb506fb",
+					"name": "Starting Age - Gnome Barbarian",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Gnome/Barbarian",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "77599e61-173d-4d98-a391-41674da19f1f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the expected bounds\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(44).and.lte(64);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(44).and.lte(64);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",

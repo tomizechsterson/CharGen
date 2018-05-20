@@ -53,6 +53,8 @@ namespace DD35CharacterService.Controllers
             };
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("age/{race}/{className}")]
         public int StartingAge(string race, string className)
         {
             return new StartingAge(race, className).Get();
