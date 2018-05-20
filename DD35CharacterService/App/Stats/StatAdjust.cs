@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DD35CharacterService.App
+namespace DD35CharacterService.App.Stats
 {
     public class StatAdjust
     {

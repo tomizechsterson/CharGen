@@ -1,4 +1,5 @@
 ﻿using DD35CharacterService.App;
+using DD35CharacterService.App.Stats;
 using Xunit;
 
 namespace CharGen.UnitTests.DD35

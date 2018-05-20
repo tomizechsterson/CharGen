@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DD35CharacterService.App.Stats
+namespace DD35CharacterService.App
 {
     public class DD35DieRoll
     {
