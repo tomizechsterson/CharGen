@@ -1298,22 +1298,72 @@
 			"events": null,
 			"variables": [],
 			"order": [
-				"25f42502-8f39-4fe4-9425-6bc7f0425517",
 				"32a1262e-a790-40d3-a48c-7f6b79647128",
 				"8c3b5bf0-e96e-413f-9c62-43834ae0f0a6",
-				"43b74e23-8be8-47a1-a791-ef94f4d0fd92",
-				"6b76e0d4-6b4a-4700-a432-d97af29c2698",
-				"926a16bc-acfb-4da4-97c7-d7e2a71e2aed",
-				"4802437f-d8a5-4878-b96c-9b637a6f89fb",
-				"4e7c3d1c-0d1f-4cba-8d5c-2ac2fcb506fb",
-				"2bd5202c-d23a-4e5d-86fe-e03c3260c8b1"
+				"926a16bc-acfb-4da4-97c7-d7e2a71e2aed"
 			],
-			"folders_order": [],
-			"folders": [],
+			"folders_order": [
+				"6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
+				"2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
+				"a741d99f-7453-4bb8-bffd-cede79e69cf4"
+			],
+			"folders": [
+				{
+					"id": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
+					"name": "Starting Age",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folder": null,
+					"order": [
+						"4802437f-d8a5-4878-b96c-9b637a6f89fb",
+						"4e7c3d1c-0d1f-4cba-8d5c-2ac2fcb506fb",
+						"2bd5202c-d23a-4e5d-86fe-e03c3260c8b1"
+					],
+					"folders_order": [],
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folderId": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6"
+				},
+				{
+					"id": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"name": "Starting Height/Weight",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folder": null,
+					"order": [
+						"e1a4fc25-999e-4de5-a319-c31c24c07c69",
+						"ebc03d2d-84d3-4b1a-9a6d-fed85da524bb",
+						"310932a7-c4c4-4367-ab52-82a3b185da97"
+					],
+					"folders_order": [],
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folderId": "a741d99f-7453-4bb8-bffd-cede79e69cf4"
+				},
+				{
+					"id": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
+					"name": "Stats",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folder": null,
+					"order": [
+						"25f42502-8f39-4fe4-9425-6bc7f0425517",
+						"43b74e23-8be8-47a1-a791-ef94f4d0fd92",
+						"6b76e0d4-6b4a-4700-a432-d97af29c2698"
+					],
+					"folders_order": [],
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folderId": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167"
+				}
+			],
 			"requests": [
 				{
 					"id": "25f42502-8f39-4fe4-9425-6bc7f0425517",
-					"name": "Stats",
+					"name": "Stat Rolls",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/stats",
 					"description": "",
 					"data": null,
@@ -1354,7 +1404,7 @@
 							}
 						}
 					],
-					"folder": null,
+					"folder": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that each roll had 3 dice in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(4);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(4).and.lte(24);\n});",
 					"currentHelper": null,
@@ -1395,9 +1445,55 @@
 							}
 						}
 					],
-					"folder": null,
+					"folder": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(16).and.lte(26);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "310932a7-c4c4-4367-ab52-82a3b185da97",
+					"name": "Starting Height Weight - Human Female",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Human/F",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb0cf0c7-4818-4165-a09c-74087dbc8582",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    pm.expect(jsonData[0]).to.be.gte(55).and.lte(73);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    pm.expect(jsonData[1]).to.be.gte(89).and.lte(245);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(55).and.lte(73);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(89).and.lte(245);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
@@ -1489,7 +1585,7 @@
 							}
 						}
 					],
-					"folder": null,
+					"folder": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.con).to.eql(2);\n    pm.expect(jsonData.str).to.eql(-2);\n});",
 					"currentHelper": null,
@@ -1530,7 +1626,7 @@
 							}
 						}
 					],
-					"folder": null,
+					"folder": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(45).and.lte(70);\n});",
 					"currentHelper": null,
@@ -1571,7 +1667,7 @@
 							}
 						}
 					],
-					"folder": null,
+					"folder": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(44).and.lte(64);\n});",
 					"currentHelper": null,
@@ -1612,7 +1708,7 @@
 							}
 						}
 					],
-					"folder": null,
+					"folder": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that no adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
 					"currentHelper": null,
@@ -1725,6 +1821,98 @@
 					"folder": null,
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 9 alignments were returned\", function() {\n    pm.expect(jsonData.length).to.eql(9);\n});\n\npm.test(\"Check the alignments that were returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Evil\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "e1a4fc25-999e-4de5-a319-c31c24c07c69",
+					"name": "Starting Height Weight - Gnome Female",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Gnome/F",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9025bb31-cbd4-4c4f-8099-5ff0dda9cc77",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    pm.expect(jsonData[0]).to.be.above(36).and.below(42);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    pm.expect(jsonData[1]).to.be.above(37).and.below(43);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(36).and.below(42);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(37).and.below(43);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "ebc03d2d-84d3-4b1a-9a6d-fed85da524bb",
+					"name": "Starting Height Weight - Half-Elf Male",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Half-Elf/M",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4de20a6-3cc1-41d3-8152-cdc26b62c417",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    pm.expect(jsonData[0]).to.be.gte(57).and.lte(71);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    pm.expect(jsonData[1]).to.be.gte(104).and.lte(228);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(57).and.lte(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(104).and.lte(228);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",

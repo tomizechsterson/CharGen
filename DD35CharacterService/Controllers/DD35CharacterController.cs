@@ -61,6 +61,8 @@ namespace DD35CharacterService.Controllers
             return new StartingAge(race, className).Get();
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("hw/{race}/{gender}")]
         public int[] StartingHeightWeight(string race, string gender)
         {
             return new StartingHeightWeight(race, gender).Get();
