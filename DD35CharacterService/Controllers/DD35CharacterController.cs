@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DD35CharacterService.App;
+using DD35CharacterService.App.HeightWeight;
 using DD35CharacterService.App.Stats;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -58,6 +59,11 @@ namespace DD35CharacterService.Controllers
         public int StartingAge(string race, string className)
         {
             return new StartingAge(race, className).Get();
+        }
+
+        public int[] StartingHeightWeight(string race, string gender)
+        {
+            return new StartingHeightWeight(race, gender).Get();
         }
     }
 }

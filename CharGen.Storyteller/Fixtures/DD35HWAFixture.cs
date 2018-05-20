@@ -21,13 +21,21 @@ namespace CharGen.Storyteller.Fixtures
         public void CheckHeight([SelectionValues("Dwarf", "Elf", "Gnome", "Halfling", "Half-Elf", "Half-Orc", "Human")] string race, 
             [SelectionValues("Male", "Female")]string gender, int lower, int higher)
         {
-            throw new StorytellerAssertionException("Not implemented");
+            var heightWeight = _controller.StartingHeightWeight(race, gender == "Male" ? "M" : "F");
+            if(heightWeight[0] < lower)
+                throw new StorytellerAssertionException($"Starting height {heightWeight[0].ToString()} is lower than {lower.ToString()}");
+            if (heightWeight[0] > higher)
+                throw new StorytellerAssertionException($"Starting height {heightWeight[0].ToString()} is higher than {higher.ToString()}");
         }
         
         public void CheckWeight([SelectionValues("Dwarf", "Elf", "Gnome", "Halfling", "Half-Elf", "Half-Orc", "Human")] string race, 
             [SelectionValues("Male", "Female")]string gender, int lower, int higher)
         {
-            throw new StorytellerAssertionException("Not implemented");
+            var heightWeight = _controller.StartingHeightWeight(race, gender == "Male" ? "M" : "F");
+            if(heightWeight[1] < lower)
+                throw new StorytellerAssertionException($"Starting weight {heightWeight[1].ToString()} is lower than {lower.ToString()}");
+            if (heightWeight[1] > higher)
+                throw new StorytellerAssertionException($"Starting weight {heightWeight[1].ToString()} is higher than {higher.ToString()}");
         }
     }
 }

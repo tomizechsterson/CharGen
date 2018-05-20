@@ -3,7 +3,7 @@
 -> id = 0ae5fb13-41a0-4d6b-9eec-4f53630c4802
 -> lifecycle = Acceptance
 -> max-retries = 0
--> last-updated = 2018-05-16T05:43:54.2535711Z
+-> last-updated = 2018-05-20T05:47:08.8072145Z
 -> tags = 
 
 [DD35HWA]
@@ -32,7 +32,7 @@
 |> CheckHeight race=Half-Orc, gender=Female, lower=55, higher=77
 |> CheckWeight race=Half-Orc, gender=Female, lower=114, higher=398
 |> CheckHeight race=Human, gender=Male, lower=60, higher=78
-|> CheckWeight race=Human, gender=Male, lower=124, higher=180
+|> CheckWeight race=Human, gender=Male, lower=124, higher=280
 |> CheckHeight race=Human, gender=Female, lower=55, higher=73
-|> CheckWeight race=Human, gender=Female, lower=89, higher=165
+|> CheckWeight race=Human, gender=Female, lower=89, higher=245
 ~~~

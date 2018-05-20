@@ -14,7 +14,8 @@ namespace ADD2CharacterService.App.Race
         private readonly DieRoll _weightModifier;
         private readonly DieRoll _ageModifier;
 
-        public HeightWeightAgeRoll(string race, string gender, int baseHeight, int baseWeight, int baseAge, DieRoll heightModifier, DieRoll weightModifier, DieRoll ageModifier)
+        public HeightWeightAgeRoll(string race, string gender, int baseHeight, int baseWeight, int baseAge, 
+            DieRoll heightModifier, DieRoll weightModifier, DieRoll ageModifier)
         {
             Race = race;
             Gender = gender;
