@@ -1,28 +1,19 @@
-﻿using StoryTeller;
+﻿using DD35CharacterService.Controllers;
+using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
     public class DD35StorageFixture : Fixture
     {
-        public void Get(int id)
-        {
-            
-        }
+        private readonly DD35CharacterController _controller = new DD35CharacterController();
 
-        public void Create(string name)
-        {
-            
-        }
+        public void Get(int id) {}
 
-        public void Update(int id, string name)
-        {
-            
-        }
+        public void Create(string name) {}
 
-        public void Delete(int id)
-        {
-            
-        }
+        public void Update(int id, string name) {}
+
+        public void Delete(int id) {}
 
         public string CheckName()
         {

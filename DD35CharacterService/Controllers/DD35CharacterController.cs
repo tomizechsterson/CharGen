@@ -2,6 +2,7 @@
 using DD35CharacterService.App;
 using DD35CharacterService.App.HeightWeight;
 using DD35CharacterService.App.Stats;
+using DD35CharacterService.Storage;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,26 @@ namespace DD35CharacterService.Controllers
     [Route("api/[controller]")]
     public class DD35CharacterController : Controller
     {
+        public CharacterTransferModel Get()
+        {
+            return null;
+        }
+        
+        public CharacterTransferModel Get(int id)
+        {
+            return null;
+        }
+
+        public void Update(int id, [FromBody] CharacterTransferModel model)
+        {
+            
+        }
+
+        public void Insert([FromBody] CharacterTransferModel mdoel)
+        {
+            
+        }
+        
         [EnableCors("AnyOrigin")]
         [HttpGet("stats")]
         public List<int[]> RollStats()
