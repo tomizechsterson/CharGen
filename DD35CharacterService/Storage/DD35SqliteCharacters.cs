@@ -50,6 +50,7 @@ namespace DD35CharacterService.Storage
                                           "WHERE Id = $id";
                     command.Parameters.AddWithValue("$id", id.ToString());
                     conn.Open();
+
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
