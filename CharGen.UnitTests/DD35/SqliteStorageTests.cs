@@ -10,14 +10,14 @@ namespace CharGen.UnitTests.DD35
 
         public SqliteStorageTests()
         {
-            _connection = DD35SqliteCharacters.TestConnection();
+            _connection = DD35SqliteInMemoryCharacters.TestConnection();
             new DBSetup(_connection).CreateTables();
         }
 
         [Fact]
         public void Insert()
         {
-            var db = new DD35SqliteCharacters(_connection);
+            var db = new DD35SqliteInMemoryCharacters(_connection);
 
             long addedId = db.Add(new CharacterTransferModel { Name = "test" });
             var character = db.Get(addedId);
