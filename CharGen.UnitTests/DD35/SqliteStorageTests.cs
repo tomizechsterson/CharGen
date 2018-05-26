@@ -24,5 +24,19 @@ namespace CharGen.UnitTests.DD35
 
             Assert.Equal("test", character.Name);
         }
+
+        [Fact]
+        public void Update()
+        {
+            var db = new DD35SqliteInMemoryCharacters(_connection);
+            long addedId = db.Add(new CharacterTransferModel { Name = "test" });
+            var character = db.Get(addedId);
+            Assert.Equal("test", character.Name);
+
+            db.Update(addedId, new CharacterTransferModel { Name = "updated" });
+
+            character = db.Get(addedId);
+            Assert.Equal("updated", character.Name);
+        }
     }
 }

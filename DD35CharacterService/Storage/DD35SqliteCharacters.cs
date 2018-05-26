@@ -31,6 +31,14 @@ namespace DD35CharacterService.Storage
             }
         }
 
+        public void Update(long id, CharacterTransferModel model)
+        {
+            using (var conn = new SqliteConnection(_connectionString))
+            {
+                Update(id, model, conn);
+            }
+        }
+
         public static CharacterTransferModel Get(long id, SqliteConnection connection)
         {
             var result = new CharacterTransferModel();
@@ -65,6 +73,17 @@ namespace DD35CharacterService.Storage
             command.CommandText = "SELECT last_insert_rowid()";
             connection.Open();
             return (long)command.ExecuteScalar();
+        }
+
+        public static void Update(long id, CharacterTransferModel model, SqliteConnection connection)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = "UPDATE dd35 SET Name = $name " +
+                                  "WHERE Id = $id";
+            command.Parameters.AddWithValue("$name", model.Name);
+            command.Parameters.AddWithValue("$id", id.ToString());
+            connection.Open();
+            command.ExecuteNonQuery();
         }
     }
 }

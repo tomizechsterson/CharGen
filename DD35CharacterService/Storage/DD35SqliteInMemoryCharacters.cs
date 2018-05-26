@@ -27,5 +27,10 @@ namespace DD35CharacterService.Storage
         {
             return Add(model, _testConnection);
         }
+
+        public override void Update(long id, CharacterTransferModel model)
+        {
+            Update(id, model, _testConnection);
+        }
     }
 }
