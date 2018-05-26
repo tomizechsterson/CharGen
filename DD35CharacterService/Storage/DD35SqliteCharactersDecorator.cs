@@ -28,6 +28,11 @@ namespace DD35CharacterService.Storage
             _characters.Update(id, model);
         }
 
+        public virtual void Delete(long id)
+        {
+            _characters.Delete(id);
+        }
+
         protected static CharacterTransferModel GetResult(long id, SqliteConnection conn)
         {
             return DD35SqliteCharacters.Get(id, conn);
@@ -41,6 +46,11 @@ namespace DD35CharacterService.Storage
         protected static void Update(long id, CharacterTransferModel model, SqliteConnection conn)
         {
             DD35SqliteCharacters.Update(id, model, conn);
+        }
+
+        protected static void Delete(long id, SqliteConnection connection)
+        {
+            DD35SqliteCharacters.Delete(id, connection);
         }
     }
 }

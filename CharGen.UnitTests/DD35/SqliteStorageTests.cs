@@ -38,5 +38,20 @@ namespace CharGen.UnitTests.DD35
             character = db.Get(addedId);
             Assert.Equal("updated", character.Name);
         }
+
+        [Fact]
+        public void Delete()
+        {
+            var db = new DD35SqliteInMemoryCharacters(_connection);
+            long addedId = db.Add(new CharacterTransferModel { Name = "delete" });
+            var character = db.Get(addedId);
+            Assert.Equal("delete", character.Name);
+
+            db.Delete(addedId);
+
+            character = db.Get(addedId);
+            Assert.Equal(0, character.Id);
+            Assert.Equal("none", character.Name);
+        }
     }
 }

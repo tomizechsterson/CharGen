@@ -13,14 +13,10 @@ namespace DD35CharacterService.Storage
 
         public CharacterTransferModel Get(long id)
         {
-            CharacterTransferModel result;
-            
             using (var conn = new SqliteConnection(_connectionString))
             {
-                result = Get(id, conn);
+                return Get(id, conn);
             }
-
-            return result;
         }
 
         public long Add(CharacterTransferModel model)
@@ -39,9 +35,17 @@ namespace DD35CharacterService.Storage
             }
         }
 
+        public void Delete(long id)
+        {
+            using (var conn = new SqliteConnection(_connectionString))
+            {
+                Delete(id, conn);
+            }
+        }
+
         public static CharacterTransferModel Get(long id, SqliteConnection connection)
         {
-            var result = new CharacterTransferModel();
+            var result = new CharacterTransferModel { Name = "none" };
             var command = connection.CreateCommand();
             command.CommandText = "SELECT * FROM dd35 " +
                                   "WHERE Id = $id";
@@ -82,6 +86,15 @@ namespace DD35CharacterService.Storage
                                   "WHERE Id = $id";
             command.Parameters.AddWithValue("$name", model.Name);
             command.Parameters.AddWithValue("$id", id.ToString());
+            connection.Open();
+            command.ExecuteNonQuery();
+        }
+
+        public static void Delete(long id, SqliteConnection connection)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = "DELETE FROM dd35 WHERE Id = $id";
+            command.Parameters.AddWithValue("id", id.ToString());
             connection.Open();
             command.ExecuteNonQuery();
         }

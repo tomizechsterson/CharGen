@@ -32,5 +32,10 @@ namespace DD35CharacterService.Storage
         {
             Update(id, model, _testConnection);
         }
+
+        public override void Delete(long id)
+        {
+            Delete(id, _testConnection);
+        }
     }
 }
