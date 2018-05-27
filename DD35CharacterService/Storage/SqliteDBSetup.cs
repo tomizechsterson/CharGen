@@ -2,17 +2,17 @@
 
 namespace DD35CharacterService.Storage
 {
-    public class DBSetup
+    public class SqliteDBSetup
     {
         private readonly string _dbName;
         private readonly SqliteConnection _testConnection;
 
-        public DBSetup(string dbName)
+        public SqliteDBSetup(string dbName)
         {
             _dbName = dbName;
         }
 
-        public DBSetup(SqliteConnection connection)
+        public SqliteDBSetup(SqliteConnection connection)
         {
             _testConnection = connection;
         }

@@ -11,7 +11,7 @@ namespace CharGen.UnitTests.DD35
         public SqliteStorageTests()
         {
             _connection = DD35SqliteInMemoryCharacters.TestConnection();
-            new DBSetup(_connection).CreateTables();
+            new SqliteDBSetup(_connection).CreateTables();
         }
 
         [Fact]
