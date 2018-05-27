@@ -5,41 +5,60 @@ namespace DD35CharacterService.Storage
     public class DD35SqliteCharacters : DD35Characters
     {
         private readonly string _connectionString;
+        private readonly SqliteConnection _testConnection;
 
         public DD35SqliteCharacters(string connectionString)
         {
             _connectionString = connectionString;
         }
 
+        public DD35SqliteCharacters(SqliteConnection testConnection)
+        {
+            _testConnection = testConnection;
+        }
+        
+        public static SqliteConnection TestConnection()
+        {
+            return new SqliteConnection("DataSource=:memory:");
+        }
+
         public CharacterTransferModel Get(long id)
         {
+            if (_testConnection != null)
+                return Get(id, _testConnection);
+            
             using (var conn = new SqliteConnection(_connectionString))
-            {
                 return Get(id, conn);
-            }
         }
 
         public long Add(CharacterTransferModel model)
         {
+            if (_testConnection != null)
+                return Add(model, _testConnection);
+            
             using (var conn = new SqliteConnection(_connectionString))
-            {
                 return Add(model, conn);
-            }
         }
 
         public void Update(long id, CharacterTransferModel model)
         {
-            using (var conn = new SqliteConnection(_connectionString))
+            if (_testConnection != null)
+                Update(id, model, _testConnection);
+            else
             {
-                Update(id, model, conn);
+                using (var conn = new SqliteConnection(_connectionString))
+                    Update(id, model, conn);
             }
         }
 
         public void Delete(long id)
         {
-            using (var conn = new SqliteConnection(_connectionString))
+            if (_testConnection != null)
+                Delete(id, _testConnection);
+            else
             {
-                Delete(id, conn);
+                using (var conn = new SqliteConnection(_connectionString))
+                    Delete(id, conn);
             }
         }
 
