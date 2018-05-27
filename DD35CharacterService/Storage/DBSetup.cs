@@ -20,22 +20,22 @@ namespace DD35CharacterService.Storage
         public void CreateTables()
         {
             if (_testConnection != null)
-            {
-                var cmd = _testConnection.CreateCommand();
-                cmd.CommandText = CreateTableSql();
-                _testConnection.Open();
-                cmd.ExecuteNonQuery();
-            }
+                ExecuteCommand(_testConnection);
             else
             {
                 using (var conn = new SqliteConnection($"DataSource={_dbName}"))
                 {
-                    var cmd = conn.CreateCommand();
-                    cmd.CommandText = CreateTableSql();
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
+                    ExecuteCommand(conn);
                 }
             }
+        }
+
+        private void ExecuteCommand(SqliteConnection connection)
+        {
+            var cmd = connection.CreateCommand();
+            cmd.CommandText = CreateTableSql();
+            connection.Open();
+            cmd.ExecuteNonQuery();
         }
 
         private string CreateTableSql()
