@@ -6,18 +6,18 @@ namespace CharGen.UnitTests.DD35
 {
     public class SqliteStorageTests
     {
-        private readonly SqliteConnection _connection;
-
+        private readonly SqliteConnection _testConnection;
+        
         public SqliteStorageTests()
         {
-            _connection = DD35SqliteCharacters.TestConnection();
-            new SqliteDBSetup(_connection).CreateTables();
+            _testConnection = new SqliteConnection("DataSource=:memory:");
+            new SqliteDBSetup(_testConnection).CreateTables();
         }
 
         [Fact]
         public void Insert()
         {
-            var db = new DD35SqliteCharacters(_connection);
+            var db = new DD35SqliteCharacters(_testConnection);
 
             long addedId = db.Add(new CharacterTransferModel { Name = "test" });
             var character = db.Get(addedId);
@@ -28,7 +28,7 @@ namespace CharGen.UnitTests.DD35
         [Fact]
         public void Update()
         {
-            var db = new DD35SqliteCharacters(_connection);
+            var db = new DD35SqliteCharacters(_testConnection);
             long addedId = db.Add(new CharacterTransferModel { Name = "test" });
             var character = db.Get(addedId);
             Assert.Equal("test", character.Name);
@@ -42,7 +42,7 @@ namespace CharGen.UnitTests.DD35
         [Fact]
         public void Delete()
         {
-            var db = new DD35SqliteCharacters(_connection);
+            var db = new DD35SqliteCharacters(_testConnection);
             long addedId = db.Add(new CharacterTransferModel { Name = "delete" });
             var character = db.Get(addedId);
             Assert.Equal("delete", character.Name);

@@ -17,11 +17,6 @@ namespace DD35CharacterService.Storage
             _testConnection = testConnection;
         }
         
-        public static SqliteConnection TestConnection()
-        {
-            return new SqliteConnection("DataSource=:memory:");
-        }
-
         public CharacterTransferModel Get(long id)
         {
             if (_testConnection != null)
