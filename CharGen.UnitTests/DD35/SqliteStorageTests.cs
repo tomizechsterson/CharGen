@@ -21,9 +21,8 @@ namespace CharGen.UnitTests.DD35
             var db = new DD35SqliteCharacters(_testConnection);
 
             long addedId = db.Add(new CharacterTransferModel { Name = "test" });
-            var character = db.Get(addedId);
 
-            Assert.Equal("test", character.Name);
+            Assert.Equal("test", db.Get(addedId).Name);
         }
 
         [Fact]
@@ -42,13 +41,11 @@ namespace CharGen.UnitTests.DD35
         {
             var db = new DD35SqliteCharacters(_testConnection);
             long addedId = db.Add(new CharacterTransferModel { Name = "test" });
-            var character = db.Get(addedId);
-            Assert.Equal("test", character.Name);
+            Assert.Equal("test", db.Get(addedId).Name);
 
             db.Update(addedId, new CharacterTransferModel { Name = "updated" });
 
-            character = db.Get(addedId);
-            Assert.Equal("updated", character.Name);
+            Assert.Equal("updated", db.Get(addedId).Name);
         }
 
         [Fact]
@@ -56,12 +53,11 @@ namespace CharGen.UnitTests.DD35
         {
             var db = new DD35SqliteCharacters(_testConnection);
             long addedId = db.Add(new CharacterTransferModel { Name = "delete" });
-            var character = db.Get(addedId);
-            Assert.Equal("delete", character.Name);
+            Assert.Equal("delete", db.Get(addedId).Name);
 
             db.Delete(addedId);
 
-            character = db.Get(addedId);
+            var character = db.Get(addedId);
             Assert.Equal(0, character.Id);
             Assert.Equal("none", character.Name);
         }
