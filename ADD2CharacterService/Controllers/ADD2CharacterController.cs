@@ -15,9 +15,9 @@ namespace ADD2CharacterService.Controllers
     {
         private readonly ADD2Characters _database;
 
-        public ADD2CharacterController(ADD2Characters database = null)
+        public ADD2CharacterController()
         {
-            _database = database ?? new ADD2SqliteCharacters("Data Source=characters");
+            _database = new ADD2SqliteCharacters("Data Source=characters");
         }
 
         #region Datastore Crud Ops

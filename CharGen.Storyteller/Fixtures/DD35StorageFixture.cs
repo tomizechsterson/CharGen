@@ -1,23 +1,46 @@
 ﻿using DD35CharacterService.Controllers;
+using DD35CharacterService.Storage;
+using Microsoft.Data.Sqlite;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
     public class DD35StorageFixture : Fixture
     {
-        private readonly DD35CharacterController _controller = new DD35CharacterController();
+        private readonly SqliteConnection _testConnection = new SqliteConnection("DataSource=:memory:");
+        private DD35CharacterController _controller;
 
-        public void Get(int id) {}
+        private CharacterTransferModel _character;
 
-        public void Create(string name) {}
+        public override void SetUp()
+        {
+            new SqliteDBSetup(_testConnection).CreateTables();
+            _controller = new DD35CharacterController(new DD35SqliteCharacters(_testConnection));
+        }
 
-        public void Update(int id, string name) {}
+        public void Get(int id)
+        {
+            _character = _controller.Get(id);
+        }
 
-        public void Delete(int id) {}
+        public void Create(string name)
+        {
+            _controller.Insert(new CharacterTransferModel { Name = name });
+        }
+
+        public void Update(int id, string name)
+        {
+            _controller.Update(id, new CharacterTransferModel {Name = name});
+        }
+
+        public void Delete(int id)
+        {
+            _controller.Delete(id);
+        }
 
         public string CheckName()
         {
-            return null;
+            return _character.Name;
         }
     }
 }

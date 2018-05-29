@@ -11,26 +11,46 @@ namespace DD35CharacterService.Controllers
     [Route("api/[controller]")]
     public class DD35CharacterController : Controller
     {
-        public CharacterTransferModel Get()
+        private readonly DD35Characters _storage;
+
+        public DD35CharacterController(DD35Characters storage = null)
+        {
+            _storage = storage ?? new DD35SqliteCharacters("DataSource=characters");
+        }
+
+        public IEnumerable<CharacterTransferModel> Get()
         {
             return null;
         }
-        
+
+        [EnableCors("AnyOrigin")]
+        [HttpGet("{id}")]
         public CharacterTransferModel Get(int id)
         {
-            return null;
+            return _storage.Get(id);
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpPut("{id}")]
         public void Update(int id, [FromBody] CharacterTransferModel model)
         {
-            
+            _storage.Update(id, model);
         }
 
-        public void Insert([FromBody] CharacterTransferModel mdoel)
+        [EnableCors("AnyOrigin")]
+        [HttpPost]
+        public void Insert([FromBody] CharacterTransferModel model)
         {
-            
+            _storage.Add(model);
         }
-        
+
+        [EnableCors("AnyOrigin")]
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            _storage.Delete(id);
+        }
+
         [EnableCors("AnyOrigin")]
         [HttpGet("stats")]
         public List<int[]> RollStats()

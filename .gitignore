@@ -140,3 +140,4 @@ UpgradeLog*.htm
 stresults.*
 # Definitely don't need to commit the database that the actual service creates
 ADD2CharacterService/characters
+DD35CharacterService/characters
