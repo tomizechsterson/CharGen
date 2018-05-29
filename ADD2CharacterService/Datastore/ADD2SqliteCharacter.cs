@@ -6,10 +6,17 @@ namespace ADD2CharacterService.Datastore
     {
         private readonly string _connectionString;
         private readonly int _id;
+        private readonly SqliteConnection _testConnection;
 
         public ADD2SqliteCharacter(string connectionString, int id)
         {
             _connectionString = connectionString;
+            _id = id;
+        }
+
+        public ADD2SqliteCharacter(SqliteConnection testConnection, int id)
+        {
+            _testConnection = testConnection;
             _id = id;
         }
 
@@ -172,32 +179,40 @@ namespace ADD2CharacterService.Datastore
 
         private string GetColumnString(string columnName)
         {
+            if (_testConnection != null)
+                return GetColumnString(columnName, _testConnection);
+
             using (var conn = new SqliteConnection(_connectionString))
-            {
-                var command = conn.CreateCommand();
-                command.CommandText = "SELECT " + columnName + " FROM ADD2 WHERE Id = $id";
-                command.Parameters.AddWithValue("$id", _id);
-                conn.Open();
-                using (var reader = command.ExecuteReader())
-                {
-                    return reader.Read() ? reader.GetString(0) : "";
-                }
-            }
+                return GetColumnString(columnName, conn);
         }
 
         private int GetColumnInt(string columnName)
         {
+            if (_testConnection != null)
+                return GetColumnInt(columnName, _testConnection);
+
             using (var conn = new SqliteConnection(_connectionString))
-            {
-                var command = conn.CreateCommand();
-                command.CommandText = "SELECT " + columnName + " FROM ADD2 WHERE Id = $id";
-                command.Parameters.AddWithValue("$id", _id);
-                conn.Open();
-                using (var reader = command.ExecuteReader())
-                {
-                    return reader.Read() ? reader.GetInt32(0) : 0;
-                }
-            }
+                return GetColumnInt(columnName, conn);
+        }
+
+        private int GetColumnInt(string columnName, SqliteConnection connection)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT " + columnName + " FROM ADD2 WHERE Id = $id";
+            command.Parameters.AddWithValue("$id", _id);
+            connection.Open();
+            using (var reader = command.ExecuteReader())
+                return reader.Read() ? reader.GetInt32(0) : 0;
+        }
+
+        private string GetColumnString(string columnName, SqliteConnection connection)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT " + columnName + " FROM ADD2 WHERE Id = $id";
+            command.Parameters.AddWithValue("$id", _id);
+            connection.Open();
+            using (var reader = command.ExecuteReader())
+                return reader.Read() ? reader.GetString(0) : "";
         }
     }
 }

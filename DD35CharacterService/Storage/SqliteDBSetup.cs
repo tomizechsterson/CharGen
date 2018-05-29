@@ -24,13 +24,11 @@ namespace DD35CharacterService.Storage
             else
             {
                 using (var conn = new SqliteConnection($"DataSource={_dbName}"))
-                {
                     ExecuteCommand(conn);
-                }
             }
         }
 
-        private void ExecuteCommand(SqliteConnection connection)
+        private static void ExecuteCommand(SqliteConnection connection)
         {
             var cmd = connection.CreateCommand();
             cmd.CommandText = CreateTableSql();
@@ -38,7 +36,7 @@ namespace DD35CharacterService.Storage
             cmd.ExecuteNonQuery();
         }
 
-        private string CreateTableSql()
+        private static string CreateTableSql()
         {
             return "CREATE TABLE IF NOT EXISTS DD35 (" +
                    "Id INTEGER PRIMARY KEY NOT NULL, " +

@@ -2,19 +2,26 @@
 using ADD2CharacterService;
 using ADD2CharacterService.Controllers;
 using ADD2CharacterService.Datastore;
+using Microsoft.Data.Sqlite;
 using StoryTeller;
 
 namespace CharGen.Storyteller.Fixtures
 {
     public class ADD2DatastoreFixture : Fixture
     {
-        private readonly ADD2CharacterController _controller = new ADD2CharacterController();
+        private readonly SqliteConnection _testConnection = new SqliteConnection("DataSource=:memory:");
+        private ADD2CharacterController _controller;
         private HttpCharacterModel _character;
+
+        public override void SetUp()
+        {
+            new DatabaseSetup(_testConnection).Setup();
+            _controller = new ADD2CharacterController(new ADD2SqliteCharacters(_testConnection));
+        }
 
         public void Initialize()
         {
-            // This name is hardcoded in the controller... Probably a bad thing.
-            new DatabaseSetup("characters").Setup();
+            new DatabaseSetup(_testConnection).Setup();
         }
 
         public int GetAll()

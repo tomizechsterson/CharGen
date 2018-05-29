@@ -9,7 +9,6 @@ namespace CharGen.Storyteller.Fixtures
     {
         private readonly SqliteConnection _testConnection = new SqliteConnection("DataSource=:memory:");
         private DD35CharacterController _controller;
-
         private CharacterTransferModel _character;
 
         public override void SetUp()
