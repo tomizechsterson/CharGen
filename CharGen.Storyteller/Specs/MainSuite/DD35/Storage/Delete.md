@@ -1,9 +1,9 @@
 # Delete
 
 -> id = b623297f-3415-46c7-beee-9b9f947fab43
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-28T23:30:30.3716734Z
+-> last-updated = 2018-05-29T04:19:25.5191872Z
 -> tags = 
 
 [DD35Storage]

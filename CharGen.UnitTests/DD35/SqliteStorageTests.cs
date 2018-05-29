@@ -8,11 +8,23 @@ namespace CharGen.UnitTests.DD35
     public class SqliteStorageTests
     {
         private readonly SqliteConnection _testConnection;
-        
+
         public SqliteStorageTests()
         {
             _testConnection = new SqliteConnection("DataSource=:memory:");
             new SqliteDBSetup(_testConnection).CreateTables();
+        }
+
+        [Fact]
+        public void GetAll()
+        {
+            var db = new DD35SqliteCharacters(_testConnection);
+            db.Add(new CharacterTransferModel { Name = "first" });
+            db.Add(new CharacterTransferModel { Name = "second" });
+
+            var results = db.Get();
+
+            Assert.Equal(2, results.Length);
         }
 
         [Fact]

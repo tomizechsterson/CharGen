@@ -1,9 +1,9 @@
 # Update
 
 -> id = b91af484-90e0-426b-9ba2-df423adf7924
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-28T23:31:02.9285356Z
+-> last-updated = 2018-05-29T04:19:29.0133870Z
 -> tags = 
 
 [DD35Storage]

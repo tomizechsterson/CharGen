@@ -1,4 +1,5 @@
-﻿using DD35CharacterService.ExceptionHandling;
+﻿using System.Collections.Generic;
+using DD35CharacterService.ExceptionHandling;
 using Microsoft.Data.Sqlite;
 
 namespace DD35CharacterService.Storage
@@ -17,7 +18,16 @@ namespace DD35CharacterService.Storage
         {
             _testConnection = testConnection;
         }
-        
+
+        public CharacterTransferModel[] Get()
+        {
+            if (_testConnection != null)
+                return Get(_testConnection);
+
+            using (var conn = new SqliteConnection(_connectionString))
+                return Get(conn);
+        }
+
         public CharacterTransferModel Get(long id)
         {
             if (_testConnection != null)
@@ -56,6 +66,28 @@ namespace DD35CharacterService.Storage
                 using (var conn = new SqliteConnection(_connectionString))
                     Delete(id, conn);
             }
+        }
+
+        private static CharacterTransferModel[] Get(SqliteConnection connection)
+        {
+            var results = new List<CharacterTransferModel>();
+
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT * FROM DD35";
+            connection.Open();
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    results.Add(new CharacterTransferModel
+                    {
+                        Id = reader.GetInt32(0),
+                        Name = reader.GetString(1)
+                    });
+                }
+            }
+
+            return results.ToArray();
         }
 
         private static CharacterTransferModel Get(long id, SqliteConnection connection)

@@ -23,6 +23,11 @@ namespace CharGen.Storyteller.Fixtures
             _character = _controller.Get(id);
         }
 
+        public int GetAll()
+        {
+            return _controller.Get().Length;
+        }
+
         public void Create(string name)
         {
             _controller.Insert(new CharacterTransferModel { Name = name });

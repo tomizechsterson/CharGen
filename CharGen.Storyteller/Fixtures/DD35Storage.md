@@ -3,6 +3,9 @@
 ## Get
 ### Get character with id {id}
 
+## GetAll
+### There should be {returnValue} characters in storage
+
 ## Create
 ### Create a character with name {name}
 
