@@ -2025,7 +2025,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9025bb31-cbd4-4c4f-8099-5ff0dda9cc77",
+								"id": "0a0f33ae-168c-4e4f-a132-e0114ee8561b",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -2036,11 +2036,11 @@
 									"var jsonData = pm.response.json();",
 									"",
 									"pm.test(\"Check that the height was in the correct range\", function() {",
-									"    pm.expect(jsonData[0]).to.be.above(36).and.below(42);",
+									"    pm.expect(jsonData[0]).to.be.gte(36).and.lte(42);",
 									"});",
 									"",
 									"pm.test(\"Check that the weight was in the correct range\", function() {",
-									"    pm.expect(jsonData[1]).to.be.above(37).and.below(43);",
+									"    pm.expect(jsonData[1]).to.be.gte(37).and.lte(43);",
 									"});"
 								]
 							}
@@ -2048,7 +2048,7 @@
 					],
 					"folder": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(36).and.below(42);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(37).and.below(43);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(36).and.lte(42);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(37).and.lte(43);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
