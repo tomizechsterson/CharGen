@@ -1305,7 +1305,8 @@
 			"folders_order": [
 				"6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
 				"2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
-				"a741d99f-7453-4bb8-bffd-cede79e69cf4"
+				"a741d99f-7453-4bb8-bffd-cede79e69cf4",
+				"1b96b7df-aa03-4462-b0f5-17e60379b98c"
 			],
 			"folders": [
 				{
@@ -1358,9 +1359,113 @@
 					"folders_order": [],
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
 					"folderId": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167"
+				},
+				{
+					"id": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"name": "Storage",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folder": null,
+					"order": [
+						"fd470575-5635-4098-a3de-b6cdb1e98665",
+						"1f48b599-ba8e-42ec-a427-787ac295ca2d",
+						"f93122f0-9d48-49b7-8c93-99c7a0ea2483",
+						"06f11b96-9fb6-466a-985c-9883c07e8e19",
+						"6d1bbd99-cfbd-462b-826e-c2bbe1ac51e0",
+						"43cbf06c-8c02-4ea1-9bce-b9b976b2ee93"
+					],
+					"folders_order": [],
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"folderId": "1b96b7df-aa03-4462-b0f5-17e60379b98c"
 				}
 			],
 			"requests": [
+				{
+					"id": "06f11b96-9fb6-466a-985c-9883c07e8e19",
+					"name": "Get Updated",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4683abcb-d712-42ce-847d-afb17f3ae734",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id, name and playedBy of character id 1\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(1);",
+									"    pm.expect(jsonData.name).to.eql(\"updated\" + pm.environment.get(\"envName\"));",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"updated\" + pm.environment.get(\"envName\"));\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "1f48b599-ba8e-42ec-a427-787ac295ca2d",
+					"name": "Get Id 1",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df71189a-3556-447f-9c83-998cc31beb8b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id, name and playedBy of character id 1\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(1);",
+									"    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
 				{
 					"id": "25f42502-8f39-4fe4-9425-6bc7f0425517",
 					"name": "Stat Rolls",
@@ -1595,6 +1700,48 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "43cbf06c-8c02-4ea1-9bce-b9b976b2ee93",
+					"name": "Get Deleted",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0d6c727b-1291-4950-8385-ab18b80ea9c1",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id, name and playedBy of character id 1\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(0);",
+									"    pm.expect(jsonData.name).to.eql(\"none\");",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(0);\n    pm.expect(jsonData.name).to.eql(\"none\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "4802437f-d8a5-4878-b96c-9b637a6f89fb",
 					"name": "Starting Age - Dwarf Fighter",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Dwarf/Fighter",
@@ -1711,6 +1858,41 @@
 					"folder": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that no adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "6d1bbd99-cfbd-462b-826e-c2bbe1ac51e0",
+					"name": "Delete Id 1",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "edf7bc3c-9dcf-489b-a506-c1158b05d130",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Delete must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
@@ -1918,6 +2100,88 @@
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
 					"headers": "",
 					"pathVariables": {}
+				},
+				{
+					"id": "f93122f0-9d48-49b7-8c93-99c7a0ea2483",
+					"name": "Update Id 1",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e4156efe-29c0-461a-b68b-10be31e2affa",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Put must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"rawModeData": "{\r\n  \"name\":\"updated{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "fd470575-5635-4098-a3de-b6cdb1e98665",
+					"name": "Create",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a8390577-78f9-4969-8b63-1f3171de072d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
 				}
 			]
 		},
@@ -2124,7 +2388,7 @@
 				},
 				{
 					"key": "envName",
-					"value": "",
+					"value": "local",
 					"enabled": true,
 					"type": "text"
 				},
