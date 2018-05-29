@@ -2267,7 +2267,7 @@
 				},
 				{
 					"key": "envName",
-					"value": "",
+					"value": "local",
 					"enabled": true,
 					"type": "text"
 				},
