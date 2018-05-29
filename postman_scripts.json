@@ -1370,6 +1370,7 @@
 					"folder": null,
 					"order": [
 						"fd470575-5635-4098-a3de-b6cdb1e98665",
+						"c85ccd49-8fd0-4091-9611-12e4f4d27c44",
 						"1f48b599-ba8e-42ec-a427-787ac295ca2d",
 						"f93122f0-9d48-49b7-8c93-99c7a0ea2483",
 						"06f11b96-9fb6-466a-985c-9883c07e8e19",
@@ -2007,6 +2008,47 @@
 					"helperAttributes": null,
 					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
 					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "c85ccd49-8fd0-4091-9611-12e4f4d27c44",
+					"name": "Create Duplicate",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8afd843f-9ab1-40a6-96ea-b18607b52a89",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post must return 400\", function() {",
+									"    pm.expect(pm.response.to.be.clientError);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post must return 400\", function() {\n    pm.expect(pm.response.to.be.clientError);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				},
 				{

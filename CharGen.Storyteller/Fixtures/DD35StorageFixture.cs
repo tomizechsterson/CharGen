@@ -1,4 +1,5 @@
 ﻿using DD35CharacterService.Controllers;
+using DD35CharacterService.ExceptionHandling;
 using DD35CharacterService.Storage;
 using Microsoft.Data.Sqlite;
 using StoryTeller;
@@ -25,6 +26,15 @@ namespace CharGen.Storyteller.Fixtures
         public void Create(string name)
         {
             _controller.Insert(new CharacterTransferModel { Name = name });
+        }
+
+        public void CreateDup(string name)
+        {
+            try
+            {
+                _controller.Insert(new CharacterTransferModel { Name = name });
+            }
+            catch (DuplicateAddException) {}
         }
 
         public void Update(int id, string name)

@@ -1,4 +1,5 @@
-﻿using DD35CharacterService.Storage;
+﻿using DD35CharacterService.ExceptionHandling;
+using DD35CharacterService.Storage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,7 +19,7 @@ namespace DD35CharacterService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(config => config.Filters.Add(typeof(GlobalExceptionFilter)));
             services.AddCors(o =>
             {
                 o.AddPolicy("AnyOrigin", builder => { builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
@@ -32,7 +33,7 @@ namespace DD35CharacterService
                 app.UseDeveloperExceptionPage();
 
             app.UseMvc();
-            
+
             new SqliteDBSetup("characters").CreateTables();
         }
     }

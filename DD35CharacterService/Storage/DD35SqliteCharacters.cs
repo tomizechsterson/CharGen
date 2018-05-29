@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using DD35CharacterService.ExceptionHandling;
+using Microsoft.Data.Sqlite;
 
 namespace DD35CharacterService.Storage
 {
@@ -80,17 +81,28 @@ namespace DD35CharacterService.Storage
 
         private static long Add(CharacterTransferModel model, SqliteConnection connection)
         {
-            var command = connection.CreateCommand();
-            command.CommandText = "INSERT INTO dd35 (Name) " +
-                                  "VALUES ($name)";
-            command.Parameters.AddWithValue("$name", model.Name);
-            connection.Open();
-            command.ExecuteNonQuery();
+            try
+            {
+                var command = connection.CreateCommand();
+                command.CommandText = "INSERT INTO dd35 (Name) " +
+                                      "VALUES ($name)";
+                command.Parameters.AddWithValue("$name", model.Name);
+                connection.Open();
+                command.ExecuteNonQuery();
 
-            command = connection.CreateCommand();
-            command.CommandText = "SELECT last_insert_rowid()";
-            connection.Open();
-            return (long)command.ExecuteScalar();
+                command = connection.CreateCommand();
+                command.CommandText = "SELECT last_insert_rowid()";
+                connection.Open();
+                return (long)command.ExecuteScalar();
+            }
+            catch (SqliteException e)
+            {
+                if (e.Message.Contains("UNIQUE constraint failed") && e.Message.Contains("DD35.Name"))
+                    throw new DuplicateAddException("That character name is unavailable");
+
+                System.Console.WriteLine(e);
+                throw;
+            }
         }
 
         private static void Update(long id, CharacterTransferModel model, SqliteConnection connection)

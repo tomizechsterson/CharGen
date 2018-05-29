@@ -1,4 +1,5 @@
-﻿using DD35CharacterService.Storage;
+﻿using DD35CharacterService.ExceptionHandling;
+using DD35CharacterService.Storage;
 using Microsoft.Data.Sqlite;
 using Xunit;
 
@@ -23,6 +24,17 @@ namespace CharGen.UnitTests.DD35
             var character = db.Get(addedId);
 
             Assert.Equal("test", character.Name);
+        }
+
+        [Fact]
+        public void InsertDuplicate()
+        {
+            var db = new DD35SqliteCharacters(_testConnection);
+            db.Add(new CharacterTransferModel { Name = "duplicate" });
+
+            void Act() => db.Add(new CharacterTransferModel { Name = "duplicate" });
+
+            Assert.Throws<DuplicateAddException>((System.Action)Act);
         }
 
         [Fact]
