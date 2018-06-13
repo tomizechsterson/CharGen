@@ -52,7 +52,7 @@ namespace ADD2CharacterService
             return "CREATE TABLE IF NOT EXISTS ADD2 (" +
                    "Id INTEGER PRIMARY KEY NOT NULL, " +
                    "Name VARCHAR(32) NOT NULL, " +
-                   "PlayedBy VARCHAR(32) NOT NULL, " +
+                   "PlayedBy VARCHAR(32) DEFAULT 'none' NULL, " +
                    "Str INTEGER DEFAULT 0, " +
                    "Dex INTEGER DEFAULT 0, " +
                    "Con INTEGER DEFAULT 0, " +
