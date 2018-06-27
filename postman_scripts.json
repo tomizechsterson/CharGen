@@ -2,7 +2,7 @@
 	"version": 1,
 	"collections": [
 		{
-			"id": "287ef276-def0-43ef-8199-f985b5548502",
+			"id": "4c171992-075c-47bc-87f2-31474ea14465",
 			"name": "AD&D  2nd Ed",
 			"description": "",
 			"auth": null,
@@ -10,112 +10,251 @@
 			"variables": [],
 			"order": [],
 			"folders_order": [
-				"fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
-				"f5aabcf4-d31d-4fc7-84e5-d421c92bf198",
-				"5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
-				"b65f3a70-12f8-476b-81af-a308db2bd978",
-				"db9529bb-b9ab-4011-8b70-581bfbbdaf52"
+				"3f6036d8-12e3-4f86-9768-25575187b517",
+				"b59e2761-6af5-41f1-8f83-bf3029cf81fd",
+				"848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
+				"46e00619-841b-4ad7-8e93-bea8e0f4bd9c",
+				"4d1368d6-65b1-41ec-b6b8-3e12b1758297"
 			],
 			"folders": [
 				{
-					"id": "db9529bb-b9ab-4011-8b70-581bfbbdaf52",
+					"id": "4d1368d6-65b1-41ec-b6b8-3e12b1758297",
 					"name": "Alignment Selection",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "287ef276-def0-43ef-8199-f985b5548502",
+					"collection": "4c171992-075c-47bc-87f2-31474ea14465",
 					"folder": null,
 					"order": [
-						"e0122350-f484-4c96-967f-7991f279e9dc",
-						"c64ac169-2968-4fc7-8dea-6013b45684a0",
-						"b64a6264-0418-4249-a0ac-fb4ddf809179"
+						"da35c005-0180-4a43-b0d3-1240a42162e9",
+						"b922845f-0a2f-4820-b5e4-c79778ed8589",
+						"e1da52b9-a7d4-4bb0-8957-123c58b44a34"
 					],
 					"folders_order": [],
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"folderId": "db9529bb-b9ab-4011-8b70-581bfbbdaf52"
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"folderId": "4d1368d6-65b1-41ec-b6b8-3e12b1758297"
 				},
 				{
-					"id": "b65f3a70-12f8-476b-81af-a308db2bd978",
+					"id": "46e00619-841b-4ad7-8e93-bea8e0f4bd9c",
 					"name": "Class Selection",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "287ef276-def0-43ef-8199-f985b5548502",
+					"collection": "4c171992-075c-47bc-87f2-31474ea14465",
 					"folder": null,
 					"order": [
-						"e76c16d5-043b-4fcb-8d50-198bdd3e7a62",
-						"883c2797-7f21-42e5-bda8-e8db58d04649"
+						"f78e41c2-8a12-4171-ab7f-9cc7882b44f6",
+						"c6780ce9-c44a-4ba8-9ead-911f711cac42"
 					],
 					"folders_order": [],
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"folderId": "b65f3a70-12f8-476b-81af-a308db2bd978"
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"folderId": "46e00619-841b-4ad7-8e93-bea8e0f4bd9c"
 				},
 				{
-					"id": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
+					"id": "3f6036d8-12e3-4f86-9768-25575187b517",
 					"name": "CrudOps",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "287ef276-def0-43ef-8199-f985b5548502",
+					"collection": "4c171992-075c-47bc-87f2-31474ea14465",
 					"folder": null,
 					"order": [
-						"65297157-fc27-4d80-9def-264c019ebee0",
-						"eb0908e6-5324-43d9-b89a-4876bd29fc3a",
-						"8fb29cb8-66d9-4c04-9b3f-475c32eac7bf",
-						"f8800e6d-d445-40e3-81e3-0b0ac4d554ff",
-						"bfa40de7-4b8e-4873-8239-b7f726b90007",
-						"eaa9829c-3502-4b73-b68b-657201bebae3",
-						"2d16f65c-e0a6-4b0f-9eb2-b00ee6fd404c",
-						"e743bdc8-f3f7-472f-85ac-b681ba066080",
-						"930644e4-3f08-48f2-9195-8f75b27b1e6a",
-						"2285422b-30d0-489f-8595-9eac41dbdc4f"
+						"de30f350-b409-41fe-b223-59aeb71c2456",
+						"bc7a1df0-b050-4598-b58e-333eae14fbf3",
+						"61bad5e3-7ecd-4209-9cc6-1d875e88b327",
+						"be88862a-ba31-41b0-ba10-06f4ab0b0756",
+						"2b9d010e-476f-460d-9d13-e88576a12fa2",
+						"199250df-7acc-41d1-a263-d9c45bc18267",
+						"d671d5df-841b-4c57-9068-bca5c02ce21a",
+						"7c0eec2f-9bd6-41e6-99c8-0b76e031908d",
+						"11b7a6f7-a4a5-4b2e-bccd-7410ba2ca33a",
+						"0c7cb8b2-08c7-49e4-a4ff-3d1e8c764c53"
 					],
 					"folders_order": [],
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"folderId": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49"
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"folderId": "3f6036d8-12e3-4f86-9768-25575187b517"
 				},
 				{
-					"id": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
+					"id": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
 					"name": "Race Selection",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "287ef276-def0-43ef-8199-f985b5548502",
+					"collection": "4c171992-075c-47bc-87f2-31474ea14465",
 					"folder": null,
 					"order": [
-						"8de1d399-707e-40f6-9618-e3751ef33a1a",
-						"43b9a5c3-326e-405f-aec9-3aaa1ecf40d3",
-						"9e1b9106-b58f-4ba6-98fd-78211c775ed5",
-						"094cb2ea-581d-439e-a057-210580aa4c47",
-						"05224393-3148-4b57-9035-00be18f7106b",
-						"d0f2838b-37e2-4b50-bf1d-6d391751ff49",
-						"52d45848-1cc3-48d5-8c93-663a706e657e"
+						"2686a527-edec-4e6c-a00f-f84c1e26407f",
+						"635848f1-93a5-46e7-b277-b784866bf547",
+						"b7f7490d-678b-4299-bce2-382b9bd2ca54",
+						"f7c4331c-2275-4fac-9339-c2a1fe10fad1",
+						"25458507-09b1-4321-8cc6-75abc38c57cb",
+						"3c38a102-3ff4-4676-b747-6333aa3d8e42",
+						"3307fd85-a36c-4efd-965d-e409c244f21b"
 					],
 					"folders_order": [],
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"folderId": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8"
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"folderId": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc"
 				},
 				{
-					"id": "f5aabcf4-d31d-4fc7-84e5-d421c92bf198",
+					"id": "b59e2761-6af5-41f1-8f83-bf3029cf81fd",
 					"name": "Stat Rolling",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "287ef276-def0-43ef-8199-f985b5548502",
+					"collection": "4c171992-075c-47bc-87f2-31474ea14465",
 					"folder": null,
 					"order": [
-						"2e6dc8cf-2165-4e1a-bbb9-3b3d59c3e747",
-						"16e07adb-de9d-4994-9a69-612304ff050e",
-						"6819256d-c3e8-4974-b3ea-19ed64ff7195"
+						"cc90650a-5608-4927-9704-23f2cb7da37c",
+						"48aadb87-a89e-463e-baf9-212e5682af88",
+						"aa0e41fd-428c-443a-a80a-5b64c9dad686"
 					],
 					"folders_order": [],
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"folderId": "f5aabcf4-d31d-4fc7-84e5-d421c92bf198"
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"folderId": "b59e2761-6af5-41f1-8f83-bf3029cf81fd"
 				}
 			],
 			"requests": [
 				{
-					"id": "05224393-3148-4b57-9035-00be18f7106b",
+					"id": "0c7cb8b2-08c7-49e4-a4ff-3d1e8c764c53",
+					"name": "Delete Added Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7a4e5eba-b474-4a64-b0f3-d11577a3a770",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Delete must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "11b7a6f7-a4a5-4b2e-bccd-7410ba2ca33a",
+					"name": "Get Final Updated Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ef02cf6c-f4ce-4bb5-b399-32264af2b0f1",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that all properties of character were updated and in the expected ranges\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(4);",
+									"    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));",
+									"    pm.expect(jsonData.str).to.eql(10);",
+									"    pm.expect(jsonData.dex).to.eql(18);",
+									"    pm.expect(jsonData.con).to.eql(13);",
+									"    pm.expect(jsonData.int).to.eql(9);",
+									"    pm.expect(jsonData.wis).to.eql(7);",
+									"    pm.expect(jsonData.chr).to.eql(11);",
+									"    pm.expect(jsonData.race).to.eql(\"Human\");",
+									"    pm.expect(jsonData.gender).to.eql(\"M\");",
+									"    pm.expect(jsonData.height).to.eql(65);",
+									"    pm.expect(jsonData.weight).to.eql(150);",
+									"    pm.expect(jsonData.age).to.eql(20);",
+									"    pm.expect(jsonData.className).to.eql(\"Thief\");",
+									"    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");",
+									"    pm.expect(jsonData.hp).to.be.gte(1).and.lte(6);",
+									"    pm.expect(jsonData.paralyze).to.eql(13);",
+									"    pm.expect(jsonData.rod).to.eql(14);",
+									"    pm.expect(jsonData.petrification).to.eql(12);",
+									"    pm.expect(jsonData.breath).to.eql(16);",
+									"    pm.expect(jsonData.spell).to.eql(15);",
+									"    pm.expect(jsonData.moveRate).to.eql(12);",
+									"    pm.expect(jsonData.funds).to.be.gte(20).and.lte(120);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated and in the expected ranges\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n    pm.expect(jsonData.className).to.eql(\"Thief\");\n    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");\n    pm.expect(jsonData.hp).to.be.gte(1).and.lte(6);\n    pm.expect(jsonData.paralyze).to.eql(13);\n    pm.expect(jsonData.rod).to.eql(14);\n    pm.expect(jsonData.petrification).to.eql(12);\n    pm.expect(jsonData.breath).to.eql(16);\n    pm.expect(jsonData.spell).to.eql(15);\n    pm.expect(jsonData.moveRate).to.eql(12);\n    pm.expect(jsonData.funds).to.be.gte(20).and.lte(120);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "199250df-7acc-41d1-a263-d9c45bc18267",
+					"name": "Update Added Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4bd886ea-b68f-4636-8b5d-204f6135cff8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Put must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\",\r\n  \"classname\":\"Thief\",\r\n  \"alignment\":\"Chaotic Good\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "25458507-09b1-4321-8cc6-75abc38c57cb",
 					"name": "Stat Adjustments for Human",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/statadjust/Human",
 					"description": "",
@@ -146,19 +285,19 @@
 							}
 						}
 					],
-					"folder": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
+					"folder": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "094cb2ea-581d-439e-a057-210580aa4c47",
-					"name": "Stat Adjustments for Gnome",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/statadjust/gnome",
+					"id": "2686a527-edec-4e6c-a00f-f84c1e26407f",
+					"name": "Races Available with Low Stats",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/8/7/11/5/3/8",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -171,7 +310,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4572370a-0be6-4664-a9fa-fa64c4635782",
+								"id": "6844fe5c-066b-4b71-9df8-e7b02d273d5b",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -179,26 +318,180 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"pm.test(\"Check that the right adjustments were returned\", function() {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.int).to.eql(1);",
-									"    pm.expect(jsonData.wis).to.eql(-1);",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that 3 races were returned\", function () {",
+									"    pm.expect(jsonData.length).to.eql(3);",
+									"});",
+									"",
+									"pm.test(\"Check that the expected races were returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
+					"folder": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.int).to.eql(1);\n    pm.expect(jsonData.wis).to.eql(-1);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 3 races were returned\", function () {\n    pm.expect(jsonData.length).to.eql(3);\n});\n\npm.test(\"Check that the expected races were returned\", function() {\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "16e07adb-de9d-4994-9a69-612304ff050e",
+					"id": "2b9d010e-476f-460d-9d13-e88576a12fa2",
+					"name": "Get New Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "16107f5f-a69b-418a-b79c-dd7140cde7e8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id, name, playedBy and stats of character id 4\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(4);",
+									"    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
+									"    pm.expect(jsonData.str).to.eql(0);",
+									"    pm.expect(jsonData.dex).to.eql(0);",
+									"    pm.expect(jsonData.con).to.eql(0);",
+									"    pm.expect(jsonData.int).to.eql(0);",
+									"    pm.expect(jsonData.wis).to.eql(0);",
+									"    pm.expect(jsonData.chr).to.eql(0);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name, playedBy and stats of character id 4\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(0);\n    pm.expect(jsonData.dex).to.eql(0);\n    pm.expect(jsonData.con).to.eql(0);\n    pm.expect(jsonData.int).to.eql(0);\n    pm.expect(jsonData.wis).to.eql(0);\n    pm.expect(jsonData.chr).to.eql(0);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "3307fd85-a36c-4efd-965d-e409c244f21b",
+					"name": "Starting Height/Weight/Age for Half-Elf Female",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/hwa/half-elf/f",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3d434e8d-7932-4918-81be-c851ed068377",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    pm.expect(jsonData[0]).to.be.above(59).and.below(71);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    pm.expect(jsonData[1]).to.be.above(87).and.below(122);",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the correct range\", function() {",
+									"    pm.expect(jsonData[2]).to.be.above(15).and.below(22);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(59).and.below(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(87).and.below(122);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(15).and.below(22);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "3c38a102-3ff4-4676-b747-6333aa3d8e42",
+					"name": "Starting Height/Weight/Age for Dwarf Male",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/hwa/dwarf/m",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1b5efdf6-dc16-457e-9a36-97ef655765fe",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    pm.expect(jsonData[0]).to.be.above(43).and.below(54);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    pm.expect(jsonData[1]).to.be.above(133).and.below(171);",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the correct range\", function() {",
+									"    pm.expect(jsonData[2]).to.be.above(44).and.below(71);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(43).and.below(54);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(133).and.below(171);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(44).and.below(71);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "48aadb87-a89e-463e-baf9-212e5682af88",
 					"name": "Add 7 Dice",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/rollstats/AddSevenDice",
 					"description": "",
@@ -240,24 +533,29 @@
 							}
 						}
 					],
-					"folder": "f5aabcf4-d31d-4fc7-84e5-d421c92bf198",
+					"folder": "b59e2761-6af5-41f1-8f83-bf3029cf81fd",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 7 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(7);\n});\n\npm.test(\"Check that each roll had 1 die in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(1);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(1).and.lte(6);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "2285422b-30d0-489f-8595-9eac41dbdc4f",
-					"name": "Delete Added Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
+					"id": "61bad5e3-7ecd-4209-9cc6-1d875e88b327",
+					"name": "Add New Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
 					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "DELETE",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
 					"pathVariableData": [],
 					"queryParams": [],
 					"auth": null,
@@ -265,29 +563,30 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7a4e5eba-b474-4a64-b0f3-d11577a3a770",
+								"id": "2fc16979-7ae3-432a-8410-fc15c0bc363d",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Delete must be successful\", function() {",
+									"pm.test(\"Post must be successful\", function() {",
 									"    pm.expect(pm.response.to.be.success);",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				},
 				{
-					"id": "2d16f65c-e0a6-4b0f-9eb2-b00ee6fd404c",
-					"name": "Get Updated Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
+					"id": "635848f1-93a5-46e7-b277-b784866bf547",
+					"name": "Races Available with High Stats",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/17/17/17/17/17/17",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -300,7 +599,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7610d9b2-cc2e-476a-9647-13259b7eec3f",
+								"id": "9fe87da8-88cf-48e1-b531-241cd9e5cc4a",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -308,40 +607,338 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"pm.test(\"Check that all properties of character were updated\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(4);",
-									"    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.str).to.eql(10);",
-									"    pm.expect(jsonData.dex).to.eql(18);",
-									"    pm.expect(jsonData.con).to.eql(13);",
-									"    pm.expect(jsonData.int).to.eql(9);",
-									"    pm.expect(jsonData.wis).to.eql(7);",
-									"    pm.expect(jsonData.chr).to.eql(11);",
-									"    pm.expect(jsonData.race).to.eql(\"Human\");",
-									"    pm.expect(jsonData.gender).to.eql(\"M\");",
-									"    pm.expect(jsonData.height).to.eql(65);",
-									"    pm.expect(jsonData.weight).to.eql(150);",
-									"    pm.expect(jsonData.age).to.eql(20);",
-									"    pm.expect(jsonData.className).to.eql(\"Thief\");",
-									"    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that 6 races were returned\", function () {",
+									"    pm.expect(jsonData.length).to.eql(6);",
+									"});",
+									"",
+									"pm.test(\"Check that the expected races were returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
+					"folder": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n    pm.expect(jsonData.className).to.eql(\"Thief\");\n    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 races were returned\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that the expected races were returned\", function() {\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "2e6dc8cf-2165-4e1a-bbb9-3b3d59c3e747",
+					"id": "7c0eec2f-9bd6-41e6-99c8-0b76e031908d",
+					"name": "Final Update Added Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4/final",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4bd886ea-b68f-4636-8b5d-204f6135cff8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Put must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\",\r\n  \"classname\":\"Thief\",\r\n  \"alignment\":\"Chaotic Good\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "aa0e41fd-428c-443a-a80a-5b64c9dad686",
+					"name": "Invalid Roll Rule",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/rollstats/invalid",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "026dfdbd-8d67-47f0-8f46-f9bae063fecc",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be 400 - bad request\", function() {",
+									"    pm.response.to.be.clientError;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "b59e2761-6af5-41f1-8f83-bf3029cf81fd",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be 400 - bad request\", function() {\n    pm.response.to.be.clientError;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "b7f7490d-678b-4299-bce2-382b9bd2ca54",
+					"name": "Races Available for the Most Unlucky Stat Roller Ever",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/3/3/3/3/3/3",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "289d0a83-fd86-455e-a103-06f78b5118b4",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that 1 race was returned\", function () {",
+									"    pm.expect(jsonData.length).to.eql(1);",
+									"});",
+									"",
+									"pm.test(\"Check that human was returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 1 race was returned\", function () {\n    pm.expect(jsonData.length).to.eql(1);\n});\n\npm.test(\"Check that human was returned\", function() {\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "b922845f-0a2f-4820-b5e4-c79778ed8589",
+					"name": "Get Alignments for Bard",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Bard",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f183d1df-da36-4480-9c2f-05361bb8735d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that 5 alignments were returned\", function () {",
+									"    pm.expect(jsonData.length).to.eql(5);",
+									"});",
+									"",
+									"pm.test(\"Check that the correct alignments were returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "4d1368d6-65b1-41ec-b6b8-3e12b1758297",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 5 alignments were returned\", function () {\n    pm.expect(jsonData.length).to.eql(5);\n});\n\npm.test(\"Check that the correct alignments were returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "bc7a1df0-b050-4598-b58e-333eae14fbf3",
+					"name": "GetId1",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3ab51db7-6683-4f5a-b098-90a274178655",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id, name and playedBy of character id 1\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(1);",
+									"    pm.expect(jsonData.name).to.eql(\"Test1\");",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"Test1\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "be88862a-ba31-41b0-ba10-06f4ab0b0756",
+					"name": "Attempt to Add Duplicate Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a73dcfb2-5334-4ab2-81bc-1b7ea3bcd6ba",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post should return 400\", function() {",
+									"    pm.expect(pm.response.to.be.clientError);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post should return 400\", function() {\n    pm.expect(pm.response.to.be.clientError);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "c6780ce9-c44a-4ba8-9ead-911f711cac42",
+					"name": "Classes Available for Gnome",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/classes/Gnome/8/18/10/13/18/9",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "48d4b257-5597-43a7-9b74-0515c0d95f6e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that 3 classes were returned\", function () {",
+									"    pm.expect(jsonData.length).to.eql(3);",
+									"});",
+									"",
+									"pm.test(\"Check that the expected classes were returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Thief\")).to.be.true;",
+									"    pm.expect(jsonData.includes(\"Cleric/Thief\")).to.be.true;",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "46e00619-841b-4ad7-8e93-bea8e0f4bd9c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 3 classes were returned\", function () {\n    pm.expect(jsonData.length).to.eql(3);\n});\n\npm.test(\"Check that the expected classes were returned\", function() {\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Thief\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric/Thief\")).to.be.true;\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "cc90650a-5608-4927-9704-23f2cb7da37c",
 					"name": "RollOnce",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/rollstats/rollonce",
 					"description": "",
@@ -383,19 +980,19 @@
 							}
 						}
 					],
-					"folder": "f5aabcf4-d31d-4fc7-84e5-d421c92bf198",
+					"folder": "b59e2761-6af5-41f1-8f83-bf3029cf81fd",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that each roll had 3 dice in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(3);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(3).and.lte(18);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "43b9a5c3-326e-405f-aec9-3aaa1ecf40d3",
-					"name": "Races Available with High Stats",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/17/17/17/17/17/17",
+					"id": "d671d5df-841b-4c57-9068-bca5c02ce21a",
+					"name": "Get Updated Character",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -408,7 +1005,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9fe87da8-88cf-48e1-b531-241cd9e5cc4a",
+								"id": "e9b5eb1c-49ef-4b3f-af4f-959235f8af6c",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -416,37 +1013,41 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that 6 races were returned\", function () {",
-									"    pm.expect(jsonData.length).to.eql(6);",
-									"});",
-									"",
-									"pm.test(\"Check that the expected races were returned\", function() {",
-									"    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Elf\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
+									"pm.test(\"Check that all properties of character were updated\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(4);",
+									"    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));",
+									"    pm.expect(jsonData.str).to.eql(10);",
+									"    pm.expect(jsonData.dex).to.eql(18);",
+									"    pm.expect(jsonData.con).to.eql(13);",
+									"    pm.expect(jsonData.int).to.eql(9);",
+									"    pm.expect(jsonData.wis).to.eql(7);",
+									"    pm.expect(jsonData.chr).to.eql(11);",
+									"    pm.expect(jsonData.race).to.eql(\"Human\");",
+									"    pm.expect(jsonData.gender).to.eql(\"M\");",
+									"    pm.expect(jsonData.height).to.eql(65);",
+									"    pm.expect(jsonData.weight).to.eql(150);",
+									"    pm.expect(jsonData.age).to.eql(20);",
+									"    pm.expect(jsonData.className).to.eql(\"Thief\");",
+									"    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 races were returned\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that the expected races were returned\", function() {\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n    pm.expect(jsonData.className).to.eql(\"Thief\");\n    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "52d45848-1cc3-48d5-8c93-663a706e657e",
-					"name": "Starting Height/Weight/Age for Half-Elf Female",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/hwa/half-elf/f",
+					"id": "da35c005-0180-4a43-b0d3-1240a42162e9",
+					"name": "Get Alignments for Paladin",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Paladin",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -459,7 +1060,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3d434e8d-7932-4918-81be-c851ed068377",
+								"id": "391b407f-20b6-4bfd-9634-3245053cf606",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -469,32 +1070,28 @@
 									"",
 									"var jsonData = pm.response.json();",
 									"",
-									"pm.test(\"Check that the height was in the correct range\", function() {",
-									"    pm.expect(jsonData[0]).to.be.above(59).and.below(71);",
+									"pm.test(\"Check that 1 alignment was returned\", function () {",
+									"    pm.expect(jsonData.length).to.eql(1);",
 									"});",
 									"",
-									"pm.test(\"Check that the weight was in the correct range\", function() {",
-									"    pm.expect(jsonData[1]).to.be.above(87).and.below(122);",
-									"});",
-									"",
-									"pm.test(\"Check that the age was in the correct range\", function() {",
-									"    pm.expect(jsonData[2]).to.be.above(15).and.below(22);",
+									"pm.test(\"Check that Lawful Good was returned\", function() {",
+									"    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
+					"folder": "4d1368d6-65b1-41ec-b6b8-3e12b1758297",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(59).and.below(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(87).and.below(122);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(15).and.below(22);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 1 alignment was returned\", function () {\n    pm.expect(jsonData.length).to.eql(1);\n});\n\npm.test(\"Check that Lawful Good was returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "65297157-fc27-4d80-9def-264c019ebee0",
+					"id": "de30f350-b409-41fe-b223-59aeb71c2456",
 					"name": "GetAll",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character",
 					"description": "",
@@ -509,7 +1106,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "55702324-2339-4279-813d-04217925e7e7",
+								"id": "85e4df17-daba-4411-a0ca-739a479dce64",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -521,311 +1118,26 @@
 									"    var jsonData = pm.response.json();",
 									"    var first = jsonData.find(x => x.id === 1);",
 									"    pm.expect(first.name).to.eql(\"Test1\");",
-									"    pm.expect(first.playedBy).to.eql(\"Test1\");",
 									"    var second = jsonData.find(x => x.id === 2 );",
 									"    pm.expect(second.name).to.eql(\"Someone\");",
-									"    pm.expect(second.playedBy).to.eql(\"Somebody\");",
 									"    var third = jsonData.find(x => x.id === 3);",
 									"    pm.expect(third.name).to.eql(\"Person\");",
-									"    pm.expect(third.playedBy).to.eql(\"A Person\");",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
+					"folder": "3f6036d8-12e3-4f86-9768-25575187b517",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check 3 seed characters exist\", function () {\n    var jsonData = pm.response.json();\n    var first = jsonData.find(x => x.id === 1);\n    pm.expect(first.name).to.eql(\"Test1\");\n    pm.expect(first.playedBy).to.eql(\"Test1\");\n    var second = jsonData.find(x => x.id === 2 );\n    pm.expect(second.name).to.eql(\"Someone\");\n    pm.expect(second.playedBy).to.eql(\"Somebody\");\n    var third = jsonData.find(x => x.id === 3);\n    pm.expect(third.name).to.eql(\"Person\");\n    pm.expect(third.playedBy).to.eql(\"A Person\");\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check 3 seed characters exist\", function () {\n    var jsonData = pm.response.json();\n    var first = jsonData.find(x => x.id === 1);\n    pm.expect(first.name).to.eql(\"Test1\");\n    var second = jsonData.find(x => x.id === 2 );\n    pm.expect(second.name).to.eql(\"Someone\");\n    var third = jsonData.find(x => x.id === 3);\n    pm.expect(third.name).to.eql(\"Person\");\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "6819256d-c3e8-4974-b3ea-19ed64ff7195",
-					"name": "Invalid Roll Rule",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/rollstats/invalid",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "026dfdbd-8d67-47f0-8f46-f9bae063fecc",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be 400 - bad request\", function() {",
-									"    pm.response.to.be.clientError;",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "f5aabcf4-d31d-4fc7-84e5-d421c92bf198",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be 400 - bad request\", function() {\n    pm.response.to.be.clientError;\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "883c2797-7f21-42e5-bda8-e8db58d04649",
-					"name": "Classes Available for Gnome",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/classes/Gnome/8/18/10/13/18/9",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "48d4b257-5597-43a7-9b74-0515c0d95f6e",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that 3 classes were returned\", function () {",
-									"    pm.expect(jsonData.length).to.eql(3);",
-									"});",
-									"",
-									"pm.test(\"Check that the expected classes were returned\", function() {",
-									"    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Thief\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Cleric/Thief\")).to.be.true;",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "b65f3a70-12f8-476b-81af-a308db2bd978",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 3 classes were returned\", function () {\n    pm.expect(jsonData.length).to.eql(3);\n});\n\npm.test(\"Check that the expected classes were returned\", function() {\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Thief\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric/Thief\")).to.be.true;\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "8de1d399-707e-40f6-9618-e3751ef33a1a",
-					"name": "Races Available with Low Stats",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/8/7/11/5/3/8",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "6844fe5c-066b-4b71-9df8-e7b02d273d5b",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that 3 races were returned\", function () {",
-									"    pm.expect(jsonData.length).to.eql(3);",
-									"});",
-									"",
-									"pm.test(\"Check that the expected races were returned\", function() {",
-									"    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 3 races were returned\", function () {\n    pm.expect(jsonData.length).to.eql(3);\n});\n\npm.test(\"Check that the expected races were returned\", function() {\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "8fb29cb8-66d9-4c04-9b3f-475c32eac7bf",
-					"name": "Add New Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "POST",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "2fc16979-7ae3-432a-8410-fc15c0bc363d",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Post must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "930644e4-3f08-48f2-9195-8f75b27b1e6a",
-					"name": "Get Final Updated Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "5c54d903-ee83-4939-9914-05aa78876606",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check that all properties of character were updated and in the expected ranges\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(4);",
-									"    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.str).to.eql(10);",
-									"    pm.expect(jsonData.dex).to.eql(18);",
-									"    pm.expect(jsonData.con).to.eql(13);",
-									"    pm.expect(jsonData.int).to.eql(9);",
-									"    pm.expect(jsonData.wis).to.eql(7);",
-									"    pm.expect(jsonData.chr).to.eql(11);",
-									"    pm.expect(jsonData.race).to.eql(\"Human\");",
-									"    pm.expect(jsonData.gender).to.eql(\"M\");",
-									"    pm.expect(jsonData.height).to.eql(65);",
-									"    pm.expect(jsonData.weight).to.eql(150);",
-									"    pm.expect(jsonData.age).to.eql(20);",
-									"    pm.expect(jsonData.className).to.eql(\"Thief\");",
-									"    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");",
-									"    pm.expect(jsonData.hp).to.be.gte(1).and.lte(6);",
-									"    pm.expect(jsonData.paralyze).to.eql(13);",
-									"    pm.expect(jsonData.rod).to.eql(14);",
-									"    pm.expect(jsonData.petrification).to.eql(12);",
-									"    pm.expect(jsonData.breath).to.eql(16);",
-									"    pm.expect(jsonData.spell).to.eql(15);",
-									"    pm.expect(jsonData.moveRate).to.eql(12);",
-									"    pm.expect(jsonData.funds).to.be.gte(20).and.lte(120);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that all properties of character were updated and in the expected ranges\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"new toon\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"new person\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(10);\n    pm.expect(jsonData.dex).to.eql(18);\n    pm.expect(jsonData.con).to.eql(13);\n    pm.expect(jsonData.int).to.eql(9);\n    pm.expect(jsonData.wis).to.eql(7);\n    pm.expect(jsonData.chr).to.eql(11);\n    pm.expect(jsonData.race).to.eql(\"Human\");\n    pm.expect(jsonData.gender).to.eql(\"M\");\n    pm.expect(jsonData.height).to.eql(65);\n    pm.expect(jsonData.weight).to.eql(150);\n    pm.expect(jsonData.age).to.eql(20);\n    pm.expect(jsonData.className).to.eql(\"Thief\");\n    pm.expect(jsonData.alignment).to.eql(\"Chaotic Good\");\n    pm.expect(jsonData.hp).to.be.gte(1).and.lte(6);\n    pm.expect(jsonData.paralyze).to.eql(13);\n    pm.expect(jsonData.rod).to.eql(14);\n    pm.expect(jsonData.petrification).to.eql(12);\n    pm.expect(jsonData.breath).to.eql(16);\n    pm.expect(jsonData.spell).to.eql(15);\n    pm.expect(jsonData.moveRate).to.eql(12);\n    pm.expect(jsonData.funds).to.be.gte(20).and.lte(120);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "9e1b9106-b58f-4ba6-98fd-78211c775ed5",
-					"name": "Races Available for the Most Unlucky Stat Roller Ever",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/races/3/3/3/3/3/3",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "289d0a83-fd86-455e-a103-06f78b5118b4",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that 1 race was returned\", function () {",
-									"    pm.expect(jsonData.length).to.eql(1);",
-									"});",
-									"",
-									"pm.test(\"Check that human was returned\", function() {",
-									"    pm.expect(jsonData.includes(\"Human\")).to.be.true;",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 1 race was returned\", function () {\n    pm.expect(jsonData.length).to.eql(1);\n});\n\npm.test(\"Check that human was returned\", function() {\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "b64a6264-0418-4249-a0ac-fb4ddf809179",
+					"id": "e1da52b9-a7d4-4bb0-8957-123c58b44a34",
 					"name": "Get Alignments for Cleric",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Cleric",
 					"description": "",
@@ -869,253 +1181,17 @@
 							}
 						}
 					],
-					"folder": "db9529bb-b9ab-4011-8b70-581bfbbdaf52",
+					"folder": "4d1368d6-65b1-41ec-b6b8-3e12b1758297",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that all 9 alignments were returned\", function () {\n    pm.expect(jsonData.length).to.eql(9);\n});\n\npm.test(\"Check that all the alignments were returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Evil\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "bfa40de7-4b8e-4873-8239-b7f726b90007",
-					"name": "Get New Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "f36966a4-4b8d-4fd5-a701-bb629e55c959",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check Id, name, playedBy and stats of character id 4\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(4);",
-									"    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));",
-									"    pm.expect(jsonData.str).to.eql(0);",
-									"    pm.expect(jsonData.dex).to.eql(0);",
-									"    pm.expect(jsonData.con).to.eql(0);",
-									"    pm.expect(jsonData.int).to.eql(0);",
-									"    pm.expect(jsonData.wis).to.eql(0);",
-									"    pm.expect(jsonData.chr).to.eql(0);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name, playedBy and stats of character id 4\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(4);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.playedBy).to.eql(\"AnotherNewTest\" + pm.environment.get(\"envName\"));\n    pm.expect(jsonData.str).to.eql(0);\n    pm.expect(jsonData.dex).to.eql(0);\n    pm.expect(jsonData.con).to.eql(0);\n    pm.expect(jsonData.int).to.eql(0);\n    pm.expect(jsonData.wis).to.eql(0);\n    pm.expect(jsonData.chr).to.eql(0);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "c64ac169-2968-4fc7-8dea-6013b45684a0",
-					"name": "Get Alignments for Bard",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Bard",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "f183d1df-da36-4480-9c2f-05361bb8735d",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that 5 alignments were returned\", function () {",
-									"    pm.expect(jsonData.length).to.eql(5);",
-									"});",
-									"",
-									"pm.test(\"Check that the correct alignments were returned\", function() {",
-									"    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;",
-									"    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "db9529bb-b9ab-4011-8b70-581bfbbdaf52",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 5 alignments were returned\", function () {\n    pm.expect(jsonData.length).to.eql(5);\n});\n\npm.test(\"Check that the correct alignments were returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"True Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "d0f2838b-37e2-4b50-bf1d-6d391751ff49",
-					"name": "Starting Height/Weight/Age for Dwarf Male",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/hwa/dwarf/m",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "1b5efdf6-dc16-457e-9a36-97ef655765fe",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that the height was in the correct range\", function() {",
-									"    pm.expect(jsonData[0]).to.be.above(43).and.below(54);",
-									"});",
-									"",
-									"pm.test(\"Check that the weight was in the correct range\", function() {",
-									"    pm.expect(jsonData[1]).to.be.above(133).and.below(171);",
-									"});",
-									"",
-									"pm.test(\"Check that the age was in the correct range\", function() {",
-									"    pm.expect(jsonData[2]).to.be.above(44).and.below(71);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "5ae9cb2a-320b-4f2e-890a-6bdea9d0d7c8",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.above(43).and.below(54);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.above(133).and.below(171);\n});\n\npm.test(\"Check that the age was in the correct range\", function() {\n    pm.expect(jsonData[2]).to.be.above(44).and.below(71);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "e0122350-f484-4c96-967f-7991f279e9dc",
-					"name": "Get Alignments for Paladin",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/alignment/Paladin",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "391b407f-20b6-4bfd-9634-3245053cf606",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that 1 alignment was returned\", function () {",
-									"    pm.expect(jsonData.length).to.eql(1);",
-									"});",
-									"",
-									"pm.test(\"Check that Lawful Good was returned\", function() {",
-									"    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "db9529bb-b9ab-4011-8b70-581bfbbdaf52",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 1 alignment was returned\", function () {\n    pm.expect(jsonData.length).to.eql(1);\n});\n\npm.test(\"Check that Lawful Good was returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "e743bdc8-f3f7-472f-85ac-b681ba066080",
-					"name": "Final Update Added Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4/final",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "PUT",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "4bd886ea-b68f-4636-8b5d-204f6135cff8",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Put must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"playedBy\":\"new person{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\",\r\n  \"classname\":\"Thief\",\r\n  \"alignment\":\"Chaotic Good\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "e76c16d5-043b-4fcb-8d50-198bdd3e7a62",
+					"id": "f78e41c2-8a12-4171-ab7f-9cc7882b44f6",
 					"name": "Classes Available for Average Human",
 					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/classes/Human/9/9/9/9/9/9",
 					"description": "",
@@ -1154,60 +1230,19 @@
 							}
 						}
 					],
-					"folder": "b65f3a70-12f8-476b-81af-a308db2bd978",
+					"folder": "46e00619-841b-4ad7-8e93-bea8e0f4bd9c",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 4 classes were returned\", function () {\n    pm.expect(jsonData.length).to.eql(4);\n});\n\npm.test(\"Check that the expected classes were returned\", function() {\n    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;\n    pm.expect(jsonData.includes(\"Mage\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Thief\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "eaa9829c-3502-4b73-b68b-657201bebae3",
-					"name": "Update Added Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/4",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "PUT",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "4bd886ea-b68f-4636-8b5d-204f6135cff8",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Put must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"rawModeData": "{\r\n  \"name\":\"new toon{{envName}}\",\r\n  \"playedBy\":\"new person{{envName}}\",\r\n  \"str\":10,\r\n  \"dex\":18,\r\n  \"con\":13,\r\n  \"int\":9,\r\n  \"wis\":7,\r\n  \"chr\":11,\r\n  \"race\":\"Human\",\r\n  \"gender\":\"M\",\r\n  \"height\":\"65\",\r\n  \"weight\":\"150\",\r\n  \"age\":\"20\",\r\n  \"classname\":\"Thief\",\r\n  \"alignment\":\"Chaotic Good\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "eb0908e6-5324-43d9-b89a-4876bd29fc3a",
-					"name": "GetId1",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/1",
+					"id": "f7c4331c-2275-4fac-9339-c2a1fe10fad1",
+					"name": "Stat Adjustments for Gnome",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/statadjust/gnome",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -1220,7 +1255,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f866e231-d075-4fa0-bd17-b6440d4de225",
+								"id": "4572370a-0be6-4664-a9fa-fa64c4635782",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -1228,168 +1263,161 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"pm.test(\"Check Id, name and playedBy of character id 1\", function () {",
+									"pm.test(\"Check that the right adjustments were returned\", function() {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(1);",
-									"    pm.expect(jsonData.name).to.eql(\"Test1\");",
-									"    pm.expect(jsonData.playedBy).to.eql(\"Test1\");",
+									"    pm.expect(jsonData.int).to.eql(1);",
+									"    pm.expect(jsonData.wis).to.eql(-1);",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
+					"folder": "848f9be0-31e1-4cc7-903f-57b9b3b0d0cc",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id, name and playedBy of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"Test1\");\n    pm.expect(jsonData.playedBy).to.eql(\"Test1\");\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.int).to.eql(1);\n    pm.expect(jsonData.wis).to.eql(-1);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
+					"collectionId": "4c171992-075c-47bc-87f2-31474ea14465",
 					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "f8800e6d-d445-40e3-81e3-0b0ac4d554ff",
-					"name": "Attempt to Add Duplicate Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "POST",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "a73dcfb2-5334-4ab2-81bc-1b7ea3bcd6ba",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Post should return 400\", function() {",
-									"    pm.expect(pm.response.to.be.clientError);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "fd904b33-a7a9-4fe4-a06e-22dbb5911c49",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Post should return 400\", function() {\n    pm.expect(pm.response.to.be.clientError);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "287ef276-def0-43ef-8199-f985b5548502",
-					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				}
 			]
 		},
 		{
-			"id": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+			"id": "58d943d2-c7a8-4769-8871-0b27d181792c",
 			"name": "D&D 3.5",
 			"description": "",
 			"auth": null,
 			"events": null,
 			"variables": [],
 			"order": [
-				"32a1262e-a790-40d3-a48c-7f6b79647128",
-				"8c3b5bf0-e96e-413f-9c62-43834ae0f0a6",
-				"926a16bc-acfb-4da4-97c7-d7e2a71e2aed"
+				"c685b003-8127-42f6-a097-b967b2ca4ba8",
+				"d6ae9d82-9c91-4975-980c-d081029f2707",
+				"e6aa4ca6-51b8-4a16-802d-35ea345c2f09"
 			],
 			"folders_order": [
-				"6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
-				"2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
-				"a741d99f-7453-4bb8-bffd-cede79e69cf4",
-				"1b96b7df-aa03-4462-b0f5-17e60379b98c"
+				"9a389408-1b36-46ef-8969-7bb33e47d628",
+				"5ad78447-b0b7-4617-96b5-ab341b4ddd43",
+				"542d5ece-f042-4538-92ab-95d927306960",
+				"f1878b93-8bbd-461c-9ded-6f004313649c"
 			],
 			"folders": [
 				{
-					"id": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
+					"id": "5ad78447-b0b7-4617-96b5-ab341b4ddd43",
 					"name": "Starting Age",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collection": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"folder": null,
 					"order": [
-						"4802437f-d8a5-4878-b96c-9b637a6f89fb",
-						"4e7c3d1c-0d1f-4cba-8d5c-2ac2fcb506fb",
-						"2bd5202c-d23a-4e5d-86fe-e03c3260c8b1"
+						"ff75903f-fb13-4f58-8720-18eec9267715",
+						"20abaaab-a8b8-4f99-bc35-c4b9d7cab6c8",
+						"3078252a-038e-4ccf-bf8b-02fc8ece6498"
 					],
 					"folders_order": [],
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"folderId": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6"
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"folderId": "5ad78447-b0b7-4617-96b5-ab341b4ddd43"
 				},
 				{
-					"id": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"id": "542d5ece-f042-4538-92ab-95d927306960",
 					"name": "Starting Height/Weight",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collection": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"folder": null,
 					"order": [
-						"e1a4fc25-999e-4de5-a319-c31c24c07c69",
-						"ebc03d2d-84d3-4b1a-9a6d-fed85da524bb",
-						"310932a7-c4c4-4367-ab52-82a3b185da97"
+						"665dcbe7-cda0-4f77-8a70-db6d9597537d",
+						"cb78b817-e67c-483b-b52d-1461d9434a64",
+						"55515d76-89c2-4218-8f41-b7b9c3d111a5"
 					],
 					"folders_order": [],
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"folderId": "a741d99f-7453-4bb8-bffd-cede79e69cf4"
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"folderId": "542d5ece-f042-4538-92ab-95d927306960"
 				},
 				{
-					"id": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
+					"id": "9a389408-1b36-46ef-8969-7bb33e47d628",
 					"name": "Stats",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collection": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"folder": null,
 					"order": [
-						"25f42502-8f39-4fe4-9425-6bc7f0425517",
-						"43b74e23-8be8-47a1-a791-ef94f4d0fd92",
-						"6b76e0d4-6b4a-4700-a432-d97af29c2698"
+						"ee96f913-0f77-4658-90d0-0323bd348c58",
+						"37c8e006-30d2-4798-abee-97a7950dcc8f",
+						"f1c74138-4c55-4abe-bf95-d6dc76e49645"
 					],
 					"folders_order": [],
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"folderId": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167"
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"folderId": "9a389408-1b36-46ef-8969-7bb33e47d628"
 				},
 				{
-					"id": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"id": "f1878b93-8bbd-461c-9ded-6f004313649c",
 					"name": "Storage",
 					"description": "",
 					"auth": null,
 					"events": null,
-					"collection": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collection": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"folder": null,
 					"order": [
-						"fd470575-5635-4098-a3de-b6cdb1e98665",
-						"e675f770-ffce-4a8c-a7bb-bfd1d40fcc2f",
-						"c85ccd49-8fd0-4091-9611-12e4f4d27c44",
-						"661bc6d5-e77b-4807-9d17-2d1af96ee1ed",
-						"1f48b599-ba8e-42ec-a427-787ac295ca2d",
-						"f93122f0-9d48-49b7-8c93-99c7a0ea2483",
-						"06f11b96-9fb6-466a-985c-9883c07e8e19",
-						"6d1bbd99-cfbd-462b-826e-c2bbe1ac51e0",
-						"960865d6-1d6a-4b58-96cc-423c95b35775",
-						"43cbf06c-8c02-4ea1-9bce-b9b976b2ee93"
+						"b826a3ff-e642-4ef1-ae9e-6ba71eee379c",
+						"67c0dd62-833e-4a52-bc00-8c12be049c8b",
+						"9c789544-1e66-403c-ac5c-c47ebf7b821f",
+						"5e4af646-afbd-4be8-aab2-c5cc3436a748",
+						"257c686e-fb42-4207-bedf-a9cef54f350b",
+						"dc308246-f7e9-445e-91e1-f9c536e4f78d",
+						"bf77228f-09fa-49e7-adf0-c81a1ed420bf",
+						"0066df0a-847e-4fcc-8698-b3bcba8aaaf1",
+						"50080af7-560a-4293-ba11-94939f75326a",
+						"6ac78332-5a73-4f6b-b575-ee3f9dadd75f"
 					],
 					"folders_order": [],
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"folderId": "1b96b7df-aa03-4462-b0f5-17e60379b98c"
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"folderId": "f1878b93-8bbd-461c-9ded-6f004313649c"
 				}
 			],
 			"requests": [
 				{
-					"id": "06f11b96-9fb6-466a-985c-9883c07e8e19",
-					"name": "Get Updated",
+					"id": "0066df0a-847e-4fcc-8698-b3bcba8aaaf1",
+					"name": "Delete Id 1",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "edf7bc3c-9dcf-489b-a506-c1158b05d130",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Delete must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "20abaaab-a8b8-4f99-bc35-c4b9d7cab6c8",
+					"name": "Starting Age - Gnome Barbarian",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Gnome/Barbarian",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -1402,7 +1430,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1ad4f7a5-9770-46f2-996a-21aeca60dc86",
+								"id": "77599e61-173d-4d98-a391-41674da19f1f",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -1410,26 +1438,25 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"pm.test(\"Check Id and name of updated character\", function () {",
+									"pm.test(\"Check that the age was in the expected bounds\", function() {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(1);",
-									"    pm.expect(jsonData.name).to.eql(\"updated\" + pm.environment.get(\"envName\"));",
+									"    pm.expect(jsonData).to.be.gte(44).and.lte(64);",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"folder": "5ad78447-b0b7-4617-96b5-ab341b4ddd43",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id and name of updated character\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"updated\" + pm.environment.get(\"envName\"));\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(44).and.lte(64);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "1f48b599-ba8e-42ec-a427-787ac295ca2d",
+					"id": "257c686e-fb42-4207-bedf-a9cef54f350b",
 					"name": "Get Id 1",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
 					"description": "",
@@ -1461,69 +1488,17 @@
 							}
 						}
 					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id and name of character id 1\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "25f42502-8f39-4fe4-9425-6bc7f0425517",
-					"name": "Stat Rolls",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/stats",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "0486dd32-b30a-4fc0-b073-e4bbf035457b",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that 6 rolls were made\", function () {",
-									"    pm.expect(jsonData.length).to.eql(6);",
-									"});",
-									"",
-									"pm.test(\"Check that each roll had 3 dice in it\", function() {",
-									"    for(var i = 0; i < jsonData.length; i++)",
-									"        pm.expect(jsonData[i].length).to.eql(4);",
-									"});",
-									"",
-									"pm.test(\"Check that each roll was within expected bounds\", function() {",
-									"    for(var i = 0; i < jsonData.length; i++)",
-									"        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(4).and.lte(24);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that each roll had 3 dice in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(4);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(4).and.lte(24);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "2bd5202c-d23a-4e5d-86fe-e03c3260c8b1",
+					"id": "3078252a-038e-4ccf-bf8b-02fc8ece6498",
 					"name": "Starting Age - Half-Orc Monk",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Half-Orc/Monk",
 					"description": "",
@@ -1554,17 +1529,94 @@
 							}
 						}
 					],
-					"folder": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
+					"folder": "5ad78447-b0b7-4617-96b5-ab341b4ddd43",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(16).and.lte(26);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "310932a7-c4c4-4367-ab52-82a3b185da97",
+					"id": "37c8e006-30d2-4798-abee-97a7950dcc8f",
+					"name": "Stat Adjustments - Gnome",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/statadj/Gnome",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "188c7669-52b0-4bf2-95c6-62c6c4b13816",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the right adjustments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.con).to.eql(2);",
+									"    pm.expect(jsonData.str).to.eql(-2);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "9a389408-1b36-46ef-8969-7bb33e47d628",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.con).to.eql(2);\n    pm.expect(jsonData.str).to.eql(-2);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "50080af7-560a-4293-ba11-94939f75326a",
+					"name": "Delete Id 2",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/2",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "edf7bc3c-9dcf-489b-a506-c1158b05d130",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Delete must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "55515d76-89c2-4218-8f41-b7b9c3d111a5",
 					"name": "Starting Height Weight - Human Female",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Human/F",
 					"description": "",
@@ -1600,17 +1652,314 @@
 							}
 						}
 					],
-					"folder": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"folder": "542d5ece-f042-4538-92ab-95d927306960",
 					"preRequestScript": null,
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(55).and.lte(73);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(89).and.lte(245);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "32a1262e-a790-40d3-a48c-7f6b79647128",
+					"id": "5e4af646-afbd-4be8-aab2-c5cc3436a748",
+					"name": "Get All",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "42f352a7-0913-43f4-a34f-7df6671f07b8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check 2 characters exist\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var first = jsonData.find(x => x.id === 1);",
+									"    pm.expect(first.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
+									"    var second = jsonData.find(x => x.id === 2 );",
+									"    pm.expect(second.name).to.eql(\"Second\" + pm.environment.get(\"envName\"));",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check 2 characters exist\", function () {\n    var jsonData = pm.response.json();\n    var first = jsonData.find(x => x.id === 1);\n    pm.expect(first.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    var second = jsonData.find(x => x.id === 2 );\n    pm.expect(second.name).to.eql(\"Second\" + pm.environment.get(\"envName\"));\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "665dcbe7-cda0-4f77-8a70-db6d9597537d",
+					"name": "Starting Height Weight - Gnome Female",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Gnome/F",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a0f33ae-168c-4e4f-a132-e0114ee8561b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    pm.expect(jsonData[0]).to.be.gte(36).and.lte(42);",
+									"});",
+									"",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    pm.expect(jsonData[1]).to.be.gte(37).and.lte(43);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "542d5ece-f042-4538-92ab-95d927306960",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(36).and.lte(42);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(37).and.lte(43);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "67c0dd62-833e-4a52-bc00-8c12be049c8b",
+					"name": "Create Second",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a8390577-78f9-4969-8b63-1f3171de072d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"rawModeData": "{\r\n  \"name\": \"Second{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "6ac78332-5a73-4f6b-b575-ee3f9dadd75f",
+					"name": "Get Deleted",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5d7573d0-eee3-4b3d-bfdd-c670027d8af1",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that character id 1 was deleted\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(0);",
+									"    pm.expect(jsonData.name).to.eql(\"none\");",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that character id 1 was deleted\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(0);\n    pm.expect(jsonData.name).to.eql(\"none\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "9c789544-1e66-403c-ac5c-c47ebf7b821f",
+					"name": "Create Duplicate",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8afd843f-9ab1-40a6-96ea-b18607b52a89",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post must return 400\", function() {",
+									"    pm.expect(pm.response.to.be.clientError);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post must return 400\", function() {\n    pm.expect(pm.response.to.be.clientError);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "b826a3ff-e642-4ef1-ae9e-6ba71eee379c",
+					"name": "Create First",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a8390577-78f9-4969-8b63-1f3171de072d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Post must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "bf77228f-09fa-49e7-adf0-c81a1ed420bf",
+					"name": "Get Updated",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1ad4f7a5-9770-46f2-996a-21aeca60dc86",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check Id and name of updated character\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(1);",
+									"    pm.expect(jsonData.name).to.eql(\"updated\" + pm.environment.get(\"envName\"));",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check Id and name of updated character\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(1);\n    pm.expect(jsonData.name).to.eql(\"updated\" + pm.environment.get(\"envName\"));\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "c685b003-8127-42f6-a097-b967b2ca4ba8",
 					"name": "Races",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/races",
 					"description": "",
@@ -1657,14 +2006,14 @@
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 7 races were returned\", function() {\n    pm.expect(jsonData.length).to.eql(7);\n});\n\npm.test(\"Check the races that were returned\", function() {\n    pm.expect(jsonData.includes(\"Dwarf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Gnome\")).to.be.true;\n    pm.expect(jsonData.includes(\"Halfling\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Elf\")).to.be.true;\n    pm.expect(jsonData.includes(\"Half-Orc\")).to.be.true;\n    pm.expect(jsonData.includes(\"Human\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "43b74e23-8be8-47a1-a791-ef94f4d0fd92",
-					"name": "Stat Adjustments - Gnome",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/statadj/Gnome",
+					"id": "cb78b817-e67c-483b-b52d-1461d9434a64",
+					"name": "Starting Height Weight - Half-Elf Male",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Half-Elf/M",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -1677,7 +2026,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "188c7669-52b0-4bf2-95c6-62c6c4b13816",
+								"id": "a4de20a6-3cc1-41d3-8152-cdc26b62c417",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -1685,270 +2034,30 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"pm.test(\"Check that the right adjustments were returned\", function() {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.con).to.eql(2);",
-									"    pm.expect(jsonData.str).to.eql(-2);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the right adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.con).to.eql(2);\n    pm.expect(jsonData.str).to.eql(-2);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "43cbf06c-8c02-4ea1-9bce-b9b976b2ee93",
-					"name": "Get Deleted",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "5d7573d0-eee3-4b3d-bfdd-c670027d8af1",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Check that the height was in the correct range\", function() {",
+									"    pm.expect(jsonData[0]).to.be.gte(57).and.lte(71);",
 									"});",
 									"",
-									"pm.test(\"Check that character id 1 was deleted\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.eql(0);",
-									"    pm.expect(jsonData.name).to.eql(\"none\");",
+									"pm.test(\"Check that the weight was in the correct range\", function() {",
+									"    pm.expect(jsonData[1]).to.be.gte(104).and.lte(228);",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"folder": "542d5ece-f042-4538-92ab-95d927306960",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that character id 1 was deleted\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.id).to.eql(0);\n    pm.expect(jsonData.name).to.eql(\"none\");\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(57).and.lte(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(104).and.lte(228);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "4802437f-d8a5-4878-b96c-9b637a6f89fb",
-					"name": "Starting Age - Dwarf Fighter",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Dwarf/Fighter",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "73eaf788-71ba-4338-90e8-c9fe5af0f2e5",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check that the age was in the expected bounds\", function() {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData).to.be.gte(45).and.lte(70);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(45).and.lte(70);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "4e7c3d1c-0d1f-4cba-8d5c-2ac2fcb506fb",
-					"name": "Starting Age - Gnome Barbarian",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Gnome/Barbarian",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "77599e61-173d-4d98-a391-41674da19f1f",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check that the age was in the expected bounds\", function() {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData).to.be.gte(44).and.lte(64);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "2cbc8a43-a49c-45b0-847c-3ed1bc6df5e6",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(44).and.lte(64);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "661bc6d5-e77b-4807-9d17-2d1af96ee1ed",
-					"name": "Get All",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "42f352a7-0913-43f4-a34f-7df6671f07b8",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check 2 characters exist\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    var first = jsonData.find(x => x.id === 1);",
-									"    pm.expect(first.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));",
-									"    var second = jsonData.find(x => x.id === 2 );",
-									"    pm.expect(second.name).to.eql(\"Second\" + pm.environment.get(\"envName\"));",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check 2 characters exist\", function () {\n    var jsonData = pm.response.json();\n    var first = jsonData.find(x => x.id === 1);\n    pm.expect(first.name).to.eql(\"NewTest\" + pm.environment.get(\"envName\"));\n    var second = jsonData.find(x => x.id === 2 );\n    pm.expect(second.name).to.eql(\"Second\" + pm.environment.get(\"envName\"));\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "6b76e0d4-6b4a-4700-a432-d97af29c2698",
-					"name": "Stat Adjustments - Human",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/statadj/Human",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "93343938-6e34-4310-9abb-38c33d0546ac",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Response must be valid and have a body\", function() {",
-									"    pm.response.to.be.ok;",
-									"    pm.response.to.be.json;",
-									"});",
-									"",
-									"pm.test(\"Check that no adjustments were returned\", function() {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(Object.keys(jsonData).length).to.eql(0);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "6e6f6ef3-d8cf-43a5-b1b9-d8f2c56e7167",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that no adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "6d1bbd99-cfbd-462b-826e-c2bbe1ac51e0",
-					"name": "Delete Id 1",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "DELETE",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "edf7bc3c-9dcf-489b-a506-c1158b05d130",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Delete must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "8c3b5bf0-e96e-413f-9c62-43834ae0f0a6",
+					"id": "d6ae9d82-9c91-4975-980c-d081029f2707",
 					"name": "Classes",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/classes",
 					"description": "",
@@ -1999,12 +2108,53 @@
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 11 classes were returned\", function() {\n    pm.expect(jsonData.length).to.eql(11);\n});\n\npm.test(\"Check the classes that were returned\", function() {\n    pm.expect(jsonData.includes(\"Barbarian\")).to.be.true;\n    pm.expect(jsonData.includes(\"Bard\")).to.be.true;\n    pm.expect(jsonData.includes(\"Cleric\")).to.be.true;\n    pm.expect(jsonData.includes(\"Druid\")).to.be.true;\n    pm.expect(jsonData.includes(\"Fighter\")).to.be.true;\n    pm.expect(jsonData.includes(\"Monk\")).to.be.true;\n    pm.expect(jsonData.includes(\"Paladin\")).to.be.true;\n    pm.expect(jsonData.includes(\"Ranger\")).to.be.true;\n    pm.expect(jsonData.includes(\"Rogue\")).to.be.true;\n    pm.expect(jsonData.includes(\"Sorcerer\")).to.be.true;\n    pm.expect(jsonData.includes(\"Wizard\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "926a16bc-acfb-4da4-97c7-d7e2a71e2aed",
+					"id": "dc308246-f7e9-445e-91e1-f9c536e4f78d",
+					"name": "Update Id 1",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e4156efe-29c0-461a-b68b-10be31e2affa",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Put must be successful\", function() {",
+									"    pm.expect(pm.response.to.be.success);",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "f1878b93-8bbd-461c-9ded-6f004313649c",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"rawModeData": "{\r\n  \"name\":\"updated{{envName}}\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "e6aa4ca6-51b8-4a16-802d-35ea345c2f09",
 					"name": "Alignments",
 					"url": "{{protocol}}://{{siteName}}/api/DD35Character/algn",
 					"description": "",
@@ -2053,90 +2203,14 @@
 					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 9 alignments were returned\", function() {\n    pm.expect(jsonData.length).to.eql(9);\n});\n\npm.test(\"Check the alignments that were returned\", function() {\n    pm.expect(jsonData.includes(\"Lawful Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Lawful Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Neutral Evil\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Good\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Neutral\")).to.be.true;\n    pm.expect(jsonData.includes(\"Chaotic Evil\")).to.be.true;\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "960865d6-1d6a-4b58-96cc-423c95b35775",
-					"name": "Delete Id 2",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/2",
-					"description": "",
-					"data": null,
-					"dataMode": "params",
-					"headerData": [],
-					"method": "DELETE",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "edf7bc3c-9dcf-489b-a506-c1158b05d130",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Delete must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Delete must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"headers": "",
-					"pathVariables": {}
-				},
-				{
-					"id": "c85ccd49-8fd0-4091-9611-12e4f4d27c44",
-					"name": "Create Duplicate",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "POST",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "8afd843f-9ab1-40a6-96ea-b18607b52a89",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Post must return 400\", function() {",
-									"    pm.expect(pm.response.to.be.clientError);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Post must return 400\", function() {\n    pm.expect(pm.response.to.be.clientError);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "e1a4fc25-999e-4de5-a319-c31c24c07c69",
-					"name": "Starting Height Weight - Gnome Female",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Gnome/F",
+					"id": "ee96f913-0f77-4658-90d0-0323bd348c58",
+					"name": "Stat Rolls",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/stats",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -2149,7 +2223,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0a0f33ae-168c-4e4f-a132-e0114ee8561b",
+								"id": "0486dd32-b30a-4fc0-b073-e4bbf035457b",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -2159,71 +2233,36 @@
 									"",
 									"var jsonData = pm.response.json();",
 									"",
-									"pm.test(\"Check that the height was in the correct range\", function() {",
-									"    pm.expect(jsonData[0]).to.be.gte(36).and.lte(42);",
+									"pm.test(\"Check that 6 rolls were made\", function () {",
+									"    pm.expect(jsonData.length).to.eql(6);",
 									"});",
 									"",
-									"pm.test(\"Check that the weight was in the correct range\", function() {",
-									"    pm.expect(jsonData[1]).to.be.gte(37).and.lte(43);",
+									"pm.test(\"Check that each roll had 3 dice in it\", function() {",
+									"    for(var i = 0; i < jsonData.length; i++)",
+									"        pm.expect(jsonData[i].length).to.eql(4);",
+									"});",
+									"",
+									"pm.test(\"Check that each roll was within expected bounds\", function() {",
+									"    for(var i = 0; i < jsonData.length; i++)",
+									"        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(4).and.lte(24);",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"folder": "9a389408-1b36-46ef-8969-7bb33e47d628",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(36).and.lte(42);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(37).and.lte(43);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that 6 rolls were made\", function () {\n    pm.expect(jsonData.length).to.eql(6);\n});\n\npm.test(\"Check that each roll had 3 dice in it\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].length).to.eql(4);\n});\n\npm.test(\"Check that each roll was within expected bounds\", function() {\n    for(var i = 0; i < jsonData.length; i++)\n        pm.expect(jsonData[i].reduce(function(acc, val) {return acc + val;})).to.be.gte(4).and.lte(24);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "e675f770-ffce-4a8c-a7bb-bfd1d40fcc2f",
-					"name": "Create Second",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "POST",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "a8390577-78f9-4969-8b63-1f3171de072d",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Post must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"rawModeData": "{\r\n  \"name\": \"Second{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "ebc03d2d-84d3-4b1a-9a6d-fed85da524bb",
-					"name": "Starting Height Weight - Half-Elf Male",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/hw/Half-Elf/M",
+					"id": "f1c74138-4c55-4abe-bf95-d6dc76e49645",
+					"name": "Stat Adjustments - Human",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/statadj/Human",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -2236,7 +2275,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a4de20a6-3cc1-41d3-8152-cdc26b62c417",
+								"id": "93343938-6e34-4310-9abb-38c33d0546ac",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Response must be valid and have a body\", function() {",
@@ -2244,42 +2283,32 @@
 									"    pm.response.to.be.json;",
 									"});",
 									"",
-									"var jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Check that the height was in the correct range\", function() {",
-									"    pm.expect(jsonData[0]).to.be.gte(57).and.lte(71);",
-									"});",
-									"",
-									"pm.test(\"Check that the weight was in the correct range\", function() {",
-									"    pm.expect(jsonData[1]).to.be.gte(104).and.lte(228);",
+									"pm.test(\"Check that no adjustments were returned\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData).length).to.eql(0);",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "a741d99f-7453-4bb8-bffd-cede79e69cf4",
+					"folder": "9a389408-1b36-46ef-8969-7bb33e47d628",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\nvar jsonData = pm.response.json();\n\npm.test(\"Check that the height was in the correct range\", function() {\n    pm.expect(jsonData[0]).to.be.gte(57).and.lte(71);\n});\n\npm.test(\"Check that the weight was in the correct range\", function() {\n    pm.expect(jsonData[1]).to.be.gte(104).and.lte(228);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that no adjustments were returned\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(Object.keys(jsonData).length).to.eql(0);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
 					"headers": "",
 					"pathVariables": {}
 				},
 				{
-					"id": "f93122f0-9d48-49b7-8c93-99c7a0ea2483",
-					"name": "Update Id 1",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character/1",
+					"id": "ff75903f-fb13-4f58-8720-18eec9267715",
+					"name": "Starting Age - Dwarf Fighter",
+					"url": "{{protocol}}://{{siteName}}/api/DD35Character/age/Dwarf/Fighter",
 					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "PUT",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
 					"pathVariableData": [],
 					"queryParams": [],
 					"auth": null,
@@ -2287,111 +2316,49 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e4156efe-29c0-461a-b68b-10be31e2affa",
+								"id": "73eaf788-71ba-4338-90e8-c9fe5af0f2e5",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Put must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
+									"pm.test(\"Response must be valid and have a body\", function() {",
+									"    pm.response.to.be.ok;",
+									"    pm.response.to.be.json;",
+									"});",
+									"",
+									"pm.test(\"Check that the age was in the expected bounds\", function() {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.gte(45).and.lte(70);",
 									"});"
 								]
 							}
 						}
 					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
+					"folder": "5ad78447-b0b7-4617-96b5-ab341b4ddd43",
 					"preRequestScript": null,
-					"tests": "pm.test(\"Put must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
+					"tests": "pm.test(\"Response must be valid and have a body\", function() {\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\npm.test(\"Check that the age was in the expected bounds\", function() {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.gte(45).and.lte(70);\n});",
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"rawModeData": "{\r\n  \"name\":\"updated{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "fd470575-5635-4098-a3de-b6cdb1e98665",
-					"name": "Create First",
-					"url": "{{protocol}}://{{siteName}}/api/DD35Character",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "POST",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "a8390577-78f9-4969-8b63-1f3171de072d",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Post must be successful\", function() {",
-									"    pm.expect(pm.response.to.be.success);",
-									"});"
-								]
-							}
-						}
-					],
-					"folder": "1b96b7df-aa03-4462-b0f5-17e60379b98c",
-					"preRequestScript": null,
-					"tests": "pm.test(\"Post must be successful\", function() {\n    pm.expect(pm.response.to.be.success);\n});",
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "f123eb40-e43a-4e9d-b3ad-b547d5d7ca53",
-					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
+					"collectionId": "58d943d2-c7a8-4769-8871-0b27d181792c",
+					"headers": "",
 					"pathVariables": {}
 				}
 			]
 		},
 		{
-			"id": "fbdbf723-0b8f-409e-b53f-c416030ab54c",
+			"id": "962602e7-b81c-4e44-9f6f-58d9ddd38fb7",
 			"name": "Adhoc",
 			"description": null,
 			"auth": null,
 			"events": null,
 			"variables": null,
 			"order": [
-				"8f612558-a7e1-493f-9064-4fa86002b945",
-				"cc751008-e301-4bf5-8d27-c76d7e3c6296"
+				"ffd40a08-0351-4ae8-ad81-ecb65cbed3ef",
+				"981ad805-6b50-4241-9942-e7ad0dbf2427"
 			],
 			"folders_order": [],
 			"folders": [],
 			"requests": [
 				{
-					"id": "8f612558-a7e1-493f-9064-4fa86002b945",
-					"name": "localget",
-					"url": "http://localhost:42000/api/ADD2Character",
-					"description": "",
-					"data": [],
-					"dataMode": "raw",
-					"headerData": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"method": "GET",
-					"pathVariableData": [],
-					"queryParams": [],
-					"auth": null,
-					"events": [],
-					"folder": null,
-					"currentHelper": null,
-					"helperAttributes": null,
-					"collectionId": "fbdbf723-0b8f-409e-b53f-c416030ab54c",
-					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
-					"headers": "Content-Type: application/json\n",
-					"pathVariables": {}
-				},
-				{
-					"id": "cc751008-e301-4bf5-8d27-c76d7e3c6296",
+					"id": "981ad805-6b50-4241-9942-e7ad0dbf2427",
 					"name": "localpost",
 					"url": "http://localhost:42000/api/ADD2Character/new",
 					"description": "",
@@ -2411,8 +2378,34 @@
 					"folder": null,
 					"currentHelper": null,
 					"helperAttributes": null,
-					"collectionId": "fbdbf723-0b8f-409e-b53f-c416030ab54c",
+					"collectionId": "962602e7-b81c-4e44-9f6f-58d9ddd38fb7",
 					"rawModeData": "{\r\n  \"name\": \"Test1\",\r\n  \"playedBy\": \"Test1\"\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "ffd40a08-0351-4ae8-ad81-ecb65cbed3ef",
+					"name": "localget",
+					"url": "http://localhost:42000/api/ADD2Character",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "962602e7-b81c-4e44-9f6f-58d9ddd38fb7",
+					"rawModeData": "{\r\n  \"name\": \"NewTest{{envName}}\",\r\n  \"playedBy\": \"AnotherNewTest{{envName}}\"\r\n}",
 					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				}
@@ -2421,12 +2414,108 @@
 	],
 	"environments": [
 		{
-			"id": "1e0ed8f6-b80e-4a8f-8565-ae36624bd10b",
-			"name": "ADD2_local",
+			"id": "049f43e4-76f0-4d3b-a6d5-6518d9171e99",
+			"name": "DD35_prod",
 			"values": [
 				{
 					"key": "siteName",
-					"value": "localhost:42000",
+					"value": "dd35.azurewebsites.net",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "envName",
+					"value": "",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"enabled": true,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "05c1e1e7-21b8-49f7-b07a-22a7fd6b85c3",
+			"name": "ADD2_prod",
+			"values": [
+				{
+					"key": "siteName",
+					"value": "add20.azurewebsites.net",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "envName",
+					"value": "",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"enabled": true,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "0f48ec17-3738-4c82-8210-07e03739ae95",
+			"name": "ADD2_dev",
+			"values": [
+				{
+					"key": "siteName",
+					"value": "add20-dev.azurewebsites.net",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "envName",
+					"value": "dev",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"enabled": true,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "50f8c258-5d0e-4eff-b095-82ed9668d9fc",
+			"name": "DD35_dev",
+			"values": [
+				{
+					"key": "siteName",
+					"value": "dd35-dev.azurewebsites.net",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "envName",
+					"value": "dev",
+					"enabled": true,
+					"type": "text"
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"enabled": true,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "535092df-f7c3-43f0-8bd2-27db1c7844a1",
+			"name": "DD35_local",
+			"values": [
+				{
+					"key": "siteName",
+					"value": "localhost:42001",
 					"enabled": true,
 					"type": "text"
 				},
@@ -2445,7 +2534,7 @@
 			]
 		},
 		{
-			"id": "52a34968-6a3b-445c-97d5-f6ce2cc07470",
+			"id": "56e35639-2132-4fa2-85ab-6c4e1a474cb1",
 			"name": "ADD2_stage",
 			"values": [
 				{
@@ -2470,84 +2559,12 @@
 			]
 		},
 		{
-			"id": "584b6b20-fb17-4baa-9ed8-ff1140589f2b",
-			"name": "ADD2_prod",
+			"id": "825a8efa-e0f0-4244-9406-7edbf9a41e8f",
+			"name": "ADD2_local",
 			"values": [
 				{
 					"key": "siteName",
-					"value": "add20.azurewebsites.net",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "envName",
-					"value": "",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "protocol",
-					"value": "https",
-					"enabled": true,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"id": "60784150-23e7-47d7-a4fa-1fd18de0b2d4",
-			"name": "DD35_prod",
-			"values": [
-				{
-					"key": "siteName",
-					"value": "dd35.azurewebsites.net",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "envName",
-					"value": "",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "protocol",
-					"value": "https",
-					"enabled": true,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"id": "8b1e1b3b-0336-4191-bddd-580f3c3570c6",
-			"name": "DD35_dev",
-			"values": [
-				{
-					"key": "siteName",
-					"value": "dd35-dev.azurewebsites.net",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "envName",
-					"value": "dev",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "protocol",
-					"value": "https",
-					"enabled": true,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"id": "afd07c8a-06ae-4c83-8bc7-257458e11a84",
-			"name": "DD35_local",
-			"values": [
-				{
-					"key": "siteName",
-					"value": "localhost:42001",
+					"value": "localhost:42000",
 					"enabled": true,
 					"type": "text"
 				},
@@ -2566,31 +2583,7 @@
 			]
 		},
 		{
-			"id": "dd861e23-8018-472d-a38a-93569bc1f8cf",
-			"name": "ADD2_dev",
-			"values": [
-				{
-					"key": "siteName",
-					"value": "add20-dev.azurewebsites.net",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "envName",
-					"value": "dev",
-					"enabled": true,
-					"type": "text"
-				},
-				{
-					"key": "protocol",
-					"value": "https",
-					"enabled": true,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"id": "f1a4d947-b874-4731-8b3f-85c7a2aa1c2b",
+			"id": "f3a3bf21-c43a-4bb8-8a7e-3703b8b59c0c",
 			"name": "DD35_stage",
 			"values": [
 				{
