@@ -39,11 +39,6 @@ namespace CharGen.Storyteller.Fixtures
             return _character.Name;
         }
 
-        public string GetRetrievedPlayedBy()
-        {
-            return _character.PlayedBy;
-        }
-
         public void GetRetrievedStats(out int str, out int dex, out int con, out int @int, out int wis, out int chr)
         {
             str = _character.Str;
@@ -112,14 +107,14 @@ namespace CharGen.Storyteller.Fixtures
                 throw new StorytellerAssertionException($"Initial funds {_character.Funds} is above {highBound}");
         }
 
-        public void AddCharacter(string name, string playedBy)
+        public void AddCharacter(string name)
         {
-            _controller.Post(new HttpCharacterModel { Name = name, PlayedBy = playedBy });
+            _controller.Post(new HttpCharacterModel { Name = name });
         }
 
-        public void UpdateCharacter(int id, string name, string playedBy)
+        public void UpdateCharacter(int id, string name)
         {
-            _controller.Put(id, new HttpCharacterModel { Name = name, PlayedBy = playedBy });
+            _controller.Put(id, new HttpCharacterModel { Name = name });
         }
 
         public void UpdateStats(int id, int str, int dex, int con, int @int, int wis, int chr)
@@ -129,7 +124,6 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
-                PlayedBy = character.PlayedBy,
                 Str = str,
                 Dex = dex,
                 Con = con,
@@ -146,7 +140,6 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
-                PlayedBy = character.PlayedBy,
                 Str = character.Str,
                 Dex = character.Dex,
                 Con = character.Con,
@@ -164,7 +157,6 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
-                PlayedBy = character.PlayedBy,
                 Str = character.Str,
                 Dex = character.Dex,
                 Con = character.Con,
@@ -183,7 +175,6 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
-                PlayedBy = character.PlayedBy,
                 Str = character.Str,
                 Dex = character.Dex,
                 Con = character.Con,
@@ -205,7 +196,6 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
-                PlayedBy = character.PlayedBy,
                 Str = character.Str,
                 Dex = character.Dex,
                 Con = character.Con,
@@ -228,7 +218,6 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
-                PlayedBy = character.PlayedBy,
                 Str = character.Str,
                 Dex = character.Dex,
                 Con = character.Con,
@@ -253,7 +242,6 @@ namespace CharGen.Storyteller.Fixtures
             _controller.FinalUpdate(id, new HttpCharacterModel
             {
                 Name = character.Name,
-                PlayedBy = character.PlayedBy,
                 Str = character.Str,
                 Dex = character.Dex,
                 Con = character.Con,

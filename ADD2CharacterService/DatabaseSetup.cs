@@ -52,7 +52,6 @@ namespace ADD2CharacterService
             return "CREATE TABLE IF NOT EXISTS ADD2 (" +
                    "Id INTEGER PRIMARY KEY NOT NULL, " +
                    "Name VARCHAR(32) NOT NULL, " +
-                   "PlayedBy VARCHAR(32) DEFAULT 'none' NULL, " +
                    "Str INTEGER DEFAULT 0, " +
                    "Dex INTEGER DEFAULT 0, " +
                    "Con INTEGER DEFAULT 0, " +
@@ -75,19 +74,19 @@ namespace ADD2CharacterService
                    "MoveRate INTEGER DEFAULT 0, " +
                    "Funds INTEGER DEFAULT 0, " +
                    "CompletionStep INTEGER DEFAULT 1, " +
-                   "Unique(Name, PlayedBy) )";
+                   "Unique(Name) )";
         }
 
         private static string SeedDataSql()
         {
-            return "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
-                   + "SELECT 'Test1', 'Test1', 0, 0, 0, 0, 0, 0, 1 "
+            return "INSERT INTO ADD2 (Name, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
+                   + "SELECT 'Test1', 0, 0, 0, 0, 0, 0, 1 "
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Test1'); "
-                   + "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
-                   + "SELECT 'Someone', 'Somebody', 0, 0, 0, 0, 0, 0, 2 "
+                   + "INSERT INTO ADD2 (Name, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
+                   + "SELECT 'Someone', 0, 0, 0, 0, 0, 0, 2 "
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Someone'); "
-                   + "INSERT INTO ADD2 (Name, PlayedBy) "
-                   + "SELECT 'Person', 'A Person' "
+                   + "INSERT INTO ADD2 (Name) "
+                   + "SELECT 'Person'"
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Person');";
         }
     }

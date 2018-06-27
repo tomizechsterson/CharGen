@@ -4,7 +4,6 @@
     {
         int Id();
         string Name();
-        string PlayedBy();
         int Str();
         int Dex();
         int Con();

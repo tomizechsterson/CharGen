@@ -30,11 +30,6 @@ namespace ADD2CharacterService.Datastore
             return GetColumnString("Name");
         }
 
-        public string PlayedBy()
-        {
-            return GetColumnString("PlayedBy");
-        }
-
         public int Str()
         {
             return GetColumnInt("Str");
@@ -151,7 +146,6 @@ namespace ADD2CharacterService.Datastore
             {
                 Id = _id,
                 Name = Name(),
-                PlayedBy = PlayedBy(),
                 Str = Str(),
                 Dex = Dex(),
                 Con = Con(),
