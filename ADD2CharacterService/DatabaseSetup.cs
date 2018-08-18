@@ -52,7 +52,6 @@ namespace ADD2CharacterService
             return "CREATE TABLE IF NOT EXISTS ADD2 (" +
                    "Id INTEGER PRIMARY KEY NOT NULL, " +
                    "Name VARCHAR(32) NOT NULL, " +
-                   "PlayedBy VARCHAR(32) NOT NULL, " +
                    "Str INTEGER DEFAULT 0, " +
                    "Dex INTEGER DEFAULT 0, " +
                    "Con INTEGER DEFAULT 0, " +
@@ -75,19 +74,19 @@ namespace ADD2CharacterService
                    "MoveRate INTEGER DEFAULT 0, " +
                    "Funds INTEGER DEFAULT 0, " +
                    "CompletionStep INTEGER DEFAULT 1, " +
-                   "Unique(Name, PlayedBy) )";
+                   "Unique(Name) )";
         }
 
         private static string SeedDataSql()
         {
-            return "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
-                   + "SELECT 'Test1', 'Test1', 0, 0, 0, 0, 0, 0, 1 "
+            return "INSERT INTO ADD2 (Name, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
+                   + "SELECT 'Test1', 0, 0, 0, 0, 0, 0, 1 "
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Test1'); "
-                   + "INSERT INTO ADD2 (Name, PlayedBy, Str, Dex, Con, Int, Wis, Chr, CompletionStep) "
-                   + "SELECT 'Someone', 'Somebody', 0, 0, 0, 0, 0, 0, 2 "
+                   + "INSERT INTO ADD2 (Name, Str, Dex, Con, Int, Wis, Chr, Race, Class, Gender, Height, Weight, Age, Alignment, HP, Paralyze, Rod, Petrification, Breath, Spell, MoveRate, Funds, CompletionStep) "
+                   + "SELECT 'Someone', 8, 11, 10, 18, 9, 14, 'Human', 'Mage', 'M', 64, 115, 20, 'Neutral Good', 4, 14, 11, 13, 15, 12, 12, 50, 2 "
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Someone'); "
-                   + "INSERT INTO ADD2 (Name, PlayedBy) "
-                   + "SELECT 'Person', 'A Person' "
+                   + "INSERT INTO ADD2 (Name) "
+                   + "SELECT 'Person'"
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Person');";
         }
     }

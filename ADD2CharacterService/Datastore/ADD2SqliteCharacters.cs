@@ -102,10 +102,9 @@ namespace ADD2CharacterService.Datastore
         {
             var command = connection.CreateCommand();
             command.CommandText =
-                "INSERT INTO add2 (Name, PlayedBy) " +
-                "VALUES ($name, $playedby)";
+                "INSERT INTO add2 (Name) " +
+                "VALUES ($name)";
             command.Parameters.AddWithValue("$name", model.Name);
-            command.Parameters.AddWithValue("$playedby", model.PlayedBy);
             connection.Open();
             command.ExecuteNonQuery();
         }
@@ -114,7 +113,6 @@ namespace ADD2CharacterService.Datastore
         {
             var command = connection.CreateCommand();
             command.CommandText = "UPDATE add2 SET Name = $name, " +
-                                  "PlayedBy = $playedby, " +
                                   "Str = $str, " +
                                   "Dex = $dex, " +
                                   "Con = $con, " +
@@ -140,7 +138,6 @@ namespace ADD2CharacterService.Datastore
                                   "WHERE Id = $id";
             command.Parameters.AddWithValue("$id", id);
             command.Parameters.AddWithValue("$name", model.Name);
-            command.Parameters.AddWithValue("$playedby", model.PlayedBy);
             command.Parameters.AddWithValue("$str", model.Str);
             command.Parameters.AddWithValue("$dex", model.Dex);
             command.Parameters.AddWithValue("$con", model.Con);

@@ -12,9 +12,6 @@
 ## GetRetrievedName
 ### The name of the retrieved character should be {returnValue}
 
-## GetRetrievedPlayedBy
-### The person who plays the retrieved character should be {returnValue}
-
 ## GetRetrievedStats
 ### The stats of the retrieved character should be str: {str} dex: {dex} con: {con} int: {int} wis: {wis} chr: {chr}
 
@@ -46,10 +43,10 @@
 ### The initial funds of the retrieved character should be between {lowBound} and {highBound}
 
 ## AddCharacter
-### Add a new character with name {name} and is played by {playedBy}
+### Add a new character with name {name}
 
 ## UpdateCharacter
-### Update the character with id {id} to name {name} and played by {playedBy}
+### Update the character with id {id} to name {name}
 
 ## UpdateStats
 ### Update stats for character id {id} to str: {str} dex: {dex} con: {con} int: {int} wis: {wis} chr: {chr}

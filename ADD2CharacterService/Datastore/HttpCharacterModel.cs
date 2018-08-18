@@ -4,7 +4,6 @@ namespace ADD2CharacterService.Datastore
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string PlayedBy { get; set; }
 
         public int Str { get; set; }
         public int Dex { get; set; }
