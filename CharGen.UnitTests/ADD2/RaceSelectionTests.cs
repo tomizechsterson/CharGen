@@ -39,7 +39,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Halfling", "dex", 1, "str", -1)]
         public void RacialStatAdjustments(string selectedRace, string stat1, int adj1, string stat2, int adj2)
         {
-            var results = new RacialStatAdjust(selectedRace).Adjustmets();
+            var results = new RacialStatAdjust(selectedRace).Adjustments();
 
             Assert.Equal(2, results.Count);
             Assert.True(results.ContainsKey(stat1));
@@ -53,7 +53,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Half-Elf")]
         public void RacialStatAdjustments_HumanAndHalfElf(string selectedRace)
         {
-            var results = new RacialStatAdjust(selectedRace).Adjustmets();
+            var results = new RacialStatAdjust(selectedRace).Adjustments();
 
             Assert.Empty(results);
         }

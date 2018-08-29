@@ -107,7 +107,7 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("statadjust/{selectedRace}")]
         public Dictionary<string, int> GetStatAdjustments(string selectedRace)
         {
-            return new RacialStatAdjust(selectedRace).Adjustmets();
+            return new RacialStatAdjust(selectedRace).Adjustments();
         }
 
         [EnableCors("AnyOrigin")]

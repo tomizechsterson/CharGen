@@ -13,12 +13,12 @@ namespace ADD2CharacterService.App.Race
             _racialStatAdjustments = InitializeStatAdjustments();
         }
 
-        public Dictionary<string, int> Adjustmets()
+        public Dictionary<string, int> Adjustments()
         {
             return _racialStatAdjustments[_selectedRace.ToLower()];
         }
 
-        private Dictionary<string, Dictionary<string, int>> InitializeStatAdjustments()
+        private static Dictionary<string, Dictionary<string, int>> InitializeStatAdjustments()
         {
             return new Dictionary<string, Dictionary<string, int>>
             {
