@@ -63,7 +63,7 @@ namespace ADD2CharacterService.App.CharacterClass
             return new[] { "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human" };
         }
 
-        private Dictionary<string, string[]> InitializeAvailableMultiClasses()
+        private static Dictionary<string, string[]> InitializeAvailableMultiClasses()
         {
             var result = new Dictionary<string, string[]>
             {

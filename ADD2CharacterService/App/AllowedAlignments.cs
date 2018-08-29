@@ -18,7 +18,7 @@ namespace ADD2CharacterService.App
             return _allowedAlignments[_className];
         }
 
-        private Dictionary<string, string[]> InitializeAlignments()
+        private static Dictionary<string, string[]> InitializeAlignments()
         {
             return new Dictionary<string, string[]>
             {
@@ -33,7 +33,7 @@ namespace ADD2CharacterService.App
             };
         }
 
-        private string[] AllAlignments()
+        private static string[] AllAlignments()
         {
             return new[]
             {
