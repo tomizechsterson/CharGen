@@ -2,7 +2,7 @@
  
 [![Build status](https://ci.appveyor.com/api/projects/status/ny4n8ywn72b17fyy?svg=true&passingText=Build%20and%20tests%20OK&pendingText=Building%20and%20running%20tests&failingText=Build%20and%2For%20tests%20not%20OK)](https://ci.appveyor.com/project/tomizechsterson/chargen)
 
-These services are the backend for this project, and are meant to be called from the [chargen-ui](https://github.com/tomizechsterson/chargen-ui) ReactJS project, and need to be running for all its features to work. This is also a toy project that was meant to get me some exposure to:
+These services are the backend for the [chargen-ui](https://github.com/tomizechsterson/chargen-ui) ReactJS project, and need to be running for all of that project's features to work. Similarly to the ui project, this is also a toy project that was meant to give me some exposure to:
 - Microservices
 - DDD
 
@@ -37,7 +37,7 @@ To spin up the server so the UI can talk to it, navigate to the root of the proj
 
 ## Running the Tests
 
-This project uses [xunit](https://xunit.github.io/) for unit tests. You can run `dotnet test CharGen.UnitTests` to run the test project from the command line, or use the test runner built into your IDE of choice. Just make sure you have xUnit enabled for them to get picked up
+This project uses [xUnit](https://xunit.github.io/) for unit tests. You can run `dotnet test CharGen.UnitTests` to run the test project from the command line, or use the test runner built into your chosen IDE. Just make sure you have xUnit enabled for them to get picked up.
 
 ## Contributing
 
