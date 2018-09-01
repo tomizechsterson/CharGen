@@ -24,7 +24,7 @@ Be sure to have the latest versions of these installed:
 
 - Make a folder for the code and run `git clone https://github.com/tomizechsterson/CharGen`
   - This will pull down the latest version of the code and copy it into the `CharGen` folder
-- Navigate into this folder with your Git terminal of choice
+- Navigate into this folder with your terminal of choice
 - Run `dotnet restore` at the root of the project
 
 At this point, the project should be ready to build and run in your IDE of choice. If not, feel free to open an issue and I'll see what I can do.
