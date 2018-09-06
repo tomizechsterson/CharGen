@@ -6,6 +6,10 @@ branches:
     
 image: Visual Studio 2017
 
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: xSBmCtrGxxcXGKHbsHZp405e+uUajre5pNH/esifQvEzLpLmcHuH2vMIkAURqWyY
+
 matrix:
   fast_finish: true
   
@@ -21,10 +25,10 @@ build:
   verbosity: minimal
   
 test_script:
-  - cmd: cd CharGen.UnitTests & dotnet test -c Release -v q --no-build
+  - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build
       
 after_test:
-- cmd: cd .. & cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
+- cmd: cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
 - cmd: cd .. & dotnet publish ADD2CharacterService -c Release -o ./add2publish
 - cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
       
