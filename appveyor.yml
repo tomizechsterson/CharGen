@@ -37,5 +37,5 @@ artifacts:
   name: add2publish
 - path: DD35CharacterService/dd35publish
   name: dd35publish
-- path: CharGen.Storyteller/stresults.htm
+- path: stresults.htm
   name: StorytellerResults.htm
