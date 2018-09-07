@@ -7,6 +7,7 @@ branches:
 image: Visual Studio 2017
 
 environment:
+  COVERALLS_SERVICE_NAME: appveyor
   COVERALLS_REPO_TOKEN:
     secure: xSBmCtrGxxcXGKHbsHZp405e+uUajre5pNH/esifQvEzLpLmcHuH2vMIkAURqWyY
 
