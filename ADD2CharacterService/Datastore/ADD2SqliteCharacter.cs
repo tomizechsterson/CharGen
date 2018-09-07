@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.Datastore
 {
@@ -8,6 +9,7 @@ namespace ADD2CharacterService.Datastore
         private readonly int _id;
         private readonly SqliteConnection _testConnection;
 
+        [ExcludeFromCodeCoverage]
         public ADD2SqliteCharacter(string connectionString, int id)
         {
             _connectionString = connectionString;
@@ -171,6 +173,7 @@ namespace ADD2CharacterService.Datastore
             };
         }
 
+        [ExcludeFromCodeCoverage]
         private string GetColumnString(string columnName)
         {
             if (_testConnection != null)
@@ -180,6 +183,7 @@ namespace ADD2CharacterService.Datastore
                 return GetColumnString(columnName, conn);
         }
 
+        [ExcludeFromCodeCoverage]
         private int GetColumnInt(string columnName)
         {
             if (_testConnection != null)

@@ -30,6 +30,7 @@ namespace CharGen.UnitTests.ADD2
         {
             var result = _db.Get(1);
 
+            Assert.Equal(1, result.Id());
             Assert.Equal("Test1", result.Name());
         }
 
@@ -40,7 +41,16 @@ namespace CharGen.UnitTests.ADD2
 
             var result = _db.Get(4);
 
+            Assert.Equal(4, result.Id());
             Assert.Equal("test", result.Name());
+        }
+
+        [Fact]
+        public void AddDuplicate()
+        {
+            void Act() => _db.Add(new HttpCharacterModel {Name = "Test1"});
+
+            Assert.Throws<SqliteException>((System.Action) Act);
         }
 
         [Fact]
