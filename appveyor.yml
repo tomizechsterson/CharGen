@@ -33,9 +33,9 @@ after_test:
   - cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
       
 artifacts:
-- path: ADD2CharacterService/add2publish
-  name: add2publish
-- path: DD35CharacterService/dd35publish
-  name: dd35publish
-- path: stresults.htm
-  name: StorytellerResults.htm
+  - path: ADD2CharacterService/add2publish
+    name: add2publish
+  - path: DD35CharacterService/dd35publish
+    name: dd35publish
+  - path: stresults.htm
+    name: StorytellerResults.htm
