@@ -10,10 +10,8 @@ namespace ADD2CharacterService
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseUrls("http://localhost:42000/")
-                .UseApplicationInsights()
                 .Build();
 
             host.Run();
