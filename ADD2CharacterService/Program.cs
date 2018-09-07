@@ -7,6 +7,7 @@ namespace ADD2CharacterService
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
+                .UseKestrel()
                 .UseStartup<Startup>()
                 .UseUrls("http://localhost:42000/")
                 .Build();
