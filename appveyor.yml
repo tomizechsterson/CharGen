@@ -26,7 +26,7 @@ build:
   verbosity: minimal
   
 test_script:
-  - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"[*]*.Program,[*]*.Startup,[*]*.*Controller\"
+  - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"[*]*.Program,[*]*.Startup,[*]*.*Controller,[*]*.*Model\"
   - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
