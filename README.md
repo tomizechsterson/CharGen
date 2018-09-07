@@ -1,6 +1,7 @@
 # CharGen
  
 [![Build status](https://ci.appveyor.com/api/projects/status/ny4n8ywn72b17fyy?svg=true&passingText=Build%20and%20tests%20OK&pendingText=Building%20and%20running%20tests&failingText=Build%20and%2For%20tests%20not%20OK)](https://ci.appveyor.com/project/tomizechsterson/chargen)
+[![Coverage Status](https://coveralls.io/repos/github/tomizechsterson/CharGen/badge.svg?branch=master)](https://coveralls.io/github/tomizechsterson/CharGen?branch=master)
 
 These services are the backend for the [chargen-ui](https://github.com/tomizechsterson/chargen-ui) ReactJS project, and need to be running for all of that project's features to work. Similarly to the ui project, this is also a toy project that was meant to give me some exposure to:
 - Microservices
