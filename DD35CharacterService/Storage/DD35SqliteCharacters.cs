@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using DD35CharacterService.ExceptionHandling;
 using Microsoft.Data.Sqlite;
 
@@ -9,6 +10,7 @@ namespace DD35CharacterService.Storage
         private readonly string _connectionString;
         private readonly SqliteConnection _testConnection;
 
+        [ExcludeFromCodeCoverage]
         public DD35SqliteCharacters(string connectionString)
         {
             _connectionString = connectionString;
@@ -19,6 +21,7 @@ namespace DD35CharacterService.Storage
             _testConnection = testConnection;
         }
 
+        [ExcludeFromCodeCoverage]
         public CharacterTransferModel[] Get()
         {
             if (_testConnection != null)
@@ -28,6 +31,7 @@ namespace DD35CharacterService.Storage
                 return Get(conn);
         }
 
+        [ExcludeFromCodeCoverage]
         public CharacterTransferModel Get(long id)
         {
             if (_testConnection != null)
@@ -37,6 +41,7 @@ namespace DD35CharacterService.Storage
                 return Get(id, conn);
         }
 
+        [ExcludeFromCodeCoverage]
         public long Add(CharacterTransferModel model)
         {
             if (_testConnection != null)
@@ -46,6 +51,7 @@ namespace DD35CharacterService.Storage
                 return Add(model, conn);
         }
 
+        [ExcludeFromCodeCoverage]
         public void Update(long id, CharacterTransferModel model)
         {
             if (_testConnection != null)
@@ -57,6 +63,7 @@ namespace DD35CharacterService.Storage
             }
         }
 
+        [ExcludeFromCodeCoverage]
         public void Delete(long id)
         {
             if (_testConnection != null)
