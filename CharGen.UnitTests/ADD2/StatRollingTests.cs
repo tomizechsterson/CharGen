@@ -26,7 +26,7 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void InvalidStatRollRule_ThrowsArgumentOutOfRangeException()
+        public void InvalidStatRollRule_ThrowsStatRollRuleInvalidException()
         {
             Assert.Throws<StatRollRuleInvalidException>(() => new StatRoll("INVALID").RollStats());
         }
