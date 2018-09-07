@@ -15,7 +15,7 @@ matrix:
   
 install:
   - cmd: dotnet tool install -g coveralls.net --version 1.0.0
-  - cmd: dotnet tool install -g dotnet-reportgenerator-globaltool
+  - cmd: dotnet tool install -g dotnet-reportgenerator-globaltool --version 4.0.0-rc4
   - cmd: dotnet restore
   
 configuration: Release
