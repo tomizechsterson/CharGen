@@ -7,14 +7,13 @@ namespace CharGen.UnitTests.DD35
 {
     public class SqliteStorageTests
     {
-        private readonly SqliteConnection _testConnection;
         private readonly DD35SqliteCharacters _db;
 
         public SqliteStorageTests()
         {
-            _testConnection = new SqliteConnection("DataSource=:memory:");
-            new SqliteDBSetup(_testConnection).CreateTables();
-            _db = new DD35SqliteCharacters(_testConnection);
+            var testConnection = new SqliteConnection("DataSource=:memory:");
+            new SqliteDBSetup(testConnection).CreateTables();
+            _db = new DD35SqliteCharacters(testConnection);
         }
 
         [Fact]
