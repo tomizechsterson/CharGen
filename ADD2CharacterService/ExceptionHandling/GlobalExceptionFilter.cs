@@ -21,7 +21,7 @@ namespace ADD2CharacterService.ExceptionHandling
             else if (exceptionType == typeof(SqliteException) &&
                      context.Exception.Message.Contains("UNIQUE constraint failed"))
             {
-                message = "Cannot insert duplicate characters played by the same person";
+                message = "Cannot insert duplicate characters";
                 status = HttpStatusCode.BadRequest;
             }
             else
