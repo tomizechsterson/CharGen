@@ -28,8 +28,8 @@ test_script:
   - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build
       
 after_test:
-- cmd: cd CharGen.Storyteller & dotnet run -- run --tracing appveyor
-- cmd: cd .. & dotnet publish ADD2CharacterService -c Release -o ./add2publish
+- cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
+- cmd: dotnet publish ADD2CharacterService -c Release -o ./add2publish
 - cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
       
 artifacts:
