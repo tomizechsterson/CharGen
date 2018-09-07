@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ADD2CharacterService
 {
-    public class Program
+    public static class Program
     {
         public static void Main()
         {
