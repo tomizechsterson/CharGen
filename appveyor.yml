@@ -26,11 +26,11 @@ build:
   
 test_script:
   - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build
+  - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
-- cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
-- cmd: dotnet publish ADD2CharacterService -c Release -o ./add2publish
-- cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
+  - cmd: dotnet publish ADD2CharacterService -c Release -o ./add2publish
+  - cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
       
 artifacts:
 - path: ADD2CharacterService/add2publish
