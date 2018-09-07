@@ -28,7 +28,7 @@ build:
   
 test_script:
   - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-  - cmd: reportgenerator -reports:coverage.opencover.xml -reporttypes:Xml -targetdir:coveragereport -filefilters:-Program.cs
+  - cmd: reportgenerator -reports:CharGen.UnitTests/coverage.opencover.xml -reporttypes:Xml -targetdir:coveragereport -filefilters:-Program.cs
   - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
