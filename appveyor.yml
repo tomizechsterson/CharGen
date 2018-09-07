@@ -15,6 +15,7 @@ matrix:
   
 install:
   - cmd: dotnet tool install -g coveralls.net --version 1.0.0
+  - cmd: dotnet tool install -g dotnet-reportgenerator-globaltool
   - cmd: dotnet restore
   
 configuration: Release
@@ -27,7 +28,7 @@ build:
   
 test_script:
   - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-  - cmd: dotnet reportgenerator -reports:coverage.opencover.xml -reporttypes:Xml -targetdir:coveragereport -filefilters:-Program.cs
+  - cmd: reportgenerator -reports:coverage.opencover.xml -reporttypes:Xml -targetdir:coveragereport -filefilters:-Program.cs
   - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
