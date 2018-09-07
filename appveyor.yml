@@ -32,7 +32,7 @@ test_script:
   - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
-  - cmd: csmacnz.Coveralls.exe --reportgenerator -i CharGen.UnitTests/coveragereport --useRelativePaths
+  - cmd: csmacnz.Coveralls.exe --reportgenerator -i coveragereport --useRelativePaths
   - cmd: dotnet publish ADD2CharacterService -c Release -o ./add2publish
   - cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
       
