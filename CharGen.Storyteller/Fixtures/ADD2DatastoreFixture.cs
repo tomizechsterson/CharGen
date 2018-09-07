@@ -15,13 +15,13 @@ namespace CharGen.Storyteller.Fixtures
 
         public override void SetUp()
         {
-            new DatabaseSetup(_testConnection).Setup();
+            new DBSetup(_testConnection).Setup();
             _controller = new ADD2CharacterController(new ADD2SqliteCharacters(_testConnection));
         }
 
         public void Initialize()
         {
-            new DatabaseSetup(_testConnection).Setup();
+            new DBSetup(_testConnection).Setup();
         }
 
         public int GetAll()

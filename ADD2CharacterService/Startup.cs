@@ -46,7 +46,7 @@ namespace ADD2CharacterService
 
             app.UseMvc();
 
-            new DatabaseSetup("characters").Setup();
+            new DBSetup("characters").Setup();
         }
     }
 }

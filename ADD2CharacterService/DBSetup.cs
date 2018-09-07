@@ -2,19 +2,19 @@
 
 namespace ADD2CharacterService
 {
-    public class DatabaseSetup
+    public class DBSetup
     {
         private readonly string _dbName;
         private readonly SqliteConnection _testConnection;
 
-        public DatabaseSetup() : this("default") {}
+        public DBSetup() : this("default") {}
 
-        public DatabaseSetup(string dbName)
+        public DBSetup(string dbName)
         {
             _dbName = dbName;
         }
 
-        public DatabaseSetup(SqliteConnection connection)
+        public DBSetup(SqliteConnection connection)
         {
             _testConnection = connection;
         }
