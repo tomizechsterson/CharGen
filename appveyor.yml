@@ -15,7 +15,6 @@ matrix:
   
 install:
   - cmd: dotnet tool install -g coveralls.net --version 1.0.0
-  - cmd: dotnet tool install -g dotnet-reportgenerator-globaltool --version 4.0.0-rc4
   - cmd: dotnet restore
   
 configuration: Release
@@ -28,11 +27,10 @@ build:
   
 test_script:
   - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-  - cmd: reportgenerator -reports:CharGen.UnitTests/coverage.opencover.xml -reporttypes:Xml -targetdir:coveragereport -filefilters:-Program.cs
   - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
-  - cmd: csmacnz.Coveralls.exe --reportgenerator -i coveragereport --useRelativePaths
+  - cmd: csmacnz.Coveralls.exe --opencover -i CharGen.UnitTests/coverage.opencover.xml --useRelativePaths
   - cmd: dotnet publish ADD2CharacterService -c Release -o ./add2publish
   - cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
       
