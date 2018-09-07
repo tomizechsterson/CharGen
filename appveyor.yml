@@ -27,10 +27,11 @@ build:
   
 test_script:
   - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+  - cmd: dotnet reportgenerator -reports:coverage.opencover.xml -reporttypes:Xml -targetdir:coveragereport -filefilters:-Program.cs
   - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
-  - cmd: csmacnz.Coveralls.exe --opencover -i CharGen.UnitTests/coverage.opencover.xml --useRelativePaths
+  - cmd: csmacnz.Coveralls.exe --reportgenerator -i CharGen.UnitTests/coveragereport --useRelativePaths
   - cmd: dotnet publish ADD2CharacterService -c Release -o ./add2publish
   - cmd: dotnet publish DD35CharacterService -c Release -o ./dd35publish
       
