@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.Datastore
@@ -8,6 +9,7 @@ namespace ADD2CharacterService.Datastore
         private readonly string _connectionString;
         private readonly SqliteConnection _testConnection;
 
+        [ExcludeFromCodeCoverage]
         public ADD2SqliteCharacters(string connectionString)
         {
             _connectionString = connectionString;
@@ -18,6 +20,7 @@ namespace ADD2CharacterService.Datastore
             _testConnection = testConnection;
         }
 
+        [ExcludeFromCodeCoverage]
         public IEnumerable<ADD2Character> Iterate()
         {
             List<ADD2Character> characters;
@@ -33,6 +36,7 @@ namespace ADD2CharacterService.Datastore
             return characters;
         }
 
+        [ExcludeFromCodeCoverage]
         public ADD2Character Get(int id)
         {
             return _testConnection != null
@@ -40,6 +44,7 @@ namespace ADD2CharacterService.Datastore
                 : new ADD2SqliteCharacter(_connectionString, id);
         }
 
+        [ExcludeFromCodeCoverage]
         public void Add(HttpCharacterModel model)
         {
             if (_testConnection != null)
@@ -51,6 +56,7 @@ namespace ADD2CharacterService.Datastore
             }
         }
 
+        [ExcludeFromCodeCoverage]
         public void Update(int id, HttpCharacterModel model)
         {
             if (string.IsNullOrEmpty(Get(id).Name()))
@@ -67,6 +73,7 @@ namespace ADD2CharacterService.Datastore
             }
         }
 
+        [ExcludeFromCodeCoverage]
         public void Delete(int id)
         {
             if (_testConnection != null)
