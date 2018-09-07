@@ -8,21 +8,22 @@ namespace CharGen.UnitTests.DD35
     public class SqliteStorageTests
     {
         private readonly SqliteConnection _testConnection;
+        private readonly DD35SqliteCharacters _db;
 
         public SqliteStorageTests()
         {
             _testConnection = new SqliteConnection("DataSource=:memory:");
             new SqliteDBSetup(_testConnection).CreateTables();
+            _db = new DD35SqliteCharacters(_testConnection);
         }
 
         [Fact]
         public void GetAll()
         {
-            var db = new DD35SqliteCharacters(_testConnection);
-            db.Add(new CharacterTransferModel { Name = "first" });
-            db.Add(new CharacterTransferModel { Name = "second" });
+            _db.Add(new CharacterTransferModel { Name = "first" });
+            _db.Add(new CharacterTransferModel { Name = "second" });
 
-            var results = db.Get();
+            var results = _db.Get();
 
             Assert.Equal(2, results.Length);
         }
@@ -30,20 +31,17 @@ namespace CharGen.UnitTests.DD35
         [Fact]
         public void Insert()
         {
-            var db = new DD35SqliteCharacters(_testConnection);
+            long addedId = _db.Add(new CharacterTransferModel { Name = "test" });
 
-            long addedId = db.Add(new CharacterTransferModel { Name = "test" });
-
-            Assert.Equal("test", db.Get(addedId).Name);
+            Assert.Equal("test", _db.Get(addedId).Name);
         }
 
         [Fact]
         public void InsertDuplicate()
         {
-            var db = new DD35SqliteCharacters(_testConnection);
-            db.Add(new CharacterTransferModel { Name = "duplicate" });
+            _db.Add(new CharacterTransferModel { Name = "duplicate" });
 
-            void Act() => db.Add(new CharacterTransferModel { Name = "duplicate" });
+            void Act() => _db.Add(new CharacterTransferModel { Name = "duplicate" });
 
             Assert.Throws<DuplicateAddException>((System.Action)Act);
         }
@@ -51,25 +49,23 @@ namespace CharGen.UnitTests.DD35
         [Fact]
         public void Update()
         {
-            var db = new DD35SqliteCharacters(_testConnection);
-            long addedId = db.Add(new CharacterTransferModel { Name = "test" });
-            Assert.Equal("test", db.Get(addedId).Name);
+            long addedId = _db.Add(new CharacterTransferModel { Name = "test" });
+            Assert.Equal("test", _db.Get(addedId).Name);
 
-            db.Update(addedId, new CharacterTransferModel { Name = "updated" });
+            _db.Update(addedId, new CharacterTransferModel { Name = "updated" });
 
-            Assert.Equal("updated", db.Get(addedId).Name);
+            Assert.Equal("updated", _db.Get(addedId).Name);
         }
 
         [Fact]
         public void Delete()
         {
-            var db = new DD35SqliteCharacters(_testConnection);
-            long addedId = db.Add(new CharacterTransferModel { Name = "delete" });
-            Assert.Equal("delete", db.Get(addedId).Name);
+            long addedId = _db.Add(new CharacterTransferModel { Name = "delete" });
+            Assert.Equal("delete", _db.Get(addedId).Name);
 
-            db.Delete(addedId);
+            _db.Delete(addedId);
 
-            var character = db.Get(addedId);
+            var character = _db.Get(addedId);
             Assert.Equal(0, character.Id);
             Assert.Equal("none", character.Name);
         }
