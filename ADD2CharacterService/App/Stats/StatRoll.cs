@@ -37,8 +37,6 @@ namespace ADD2CharacterService.App.Stats
                         return FourSixSidedDieRoll(6);
                     case StatRollingRule.AddSevenDice:
                         return OneSixSidedDieRoll(7);
-                    default:
-                        return new List<int[]>();
                 }
             }
 
