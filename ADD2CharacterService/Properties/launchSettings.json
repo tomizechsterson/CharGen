@@ -1,12 +1,4 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:64127/",
-      "sslPort": 0
-    }
-  },
   "profiles": {
     "ADD2CharacterService": {
       "commandName": "Project",
