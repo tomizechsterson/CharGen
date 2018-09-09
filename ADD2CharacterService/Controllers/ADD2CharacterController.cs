@@ -6,7 +6,6 @@ using ADD2CharacterService.App.Race;
 using ADD2CharacterService.App.Stats;
 using ADD2CharacterService.Datastore;
 using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADD2CharacterService.Controllers
@@ -15,19 +14,10 @@ namespace ADD2CharacterService.Controllers
     public class ADD2CharacterController : Controller
     {
         private readonly ADD2Characters _database;
-        private readonly IHostingEnvironment _env;
 
-        public ADD2CharacterController(ADD2Characters database = null, IHostingEnvironment env = null)
+        public ADD2CharacterController(ADD2Characters database = null)
         {
             _database = database ?? new ADD2SqliteCharacters("Data Source=characters");
-            _env = env;
-        }
-
-        [EnableCors("AnyOrigin")]
-        [HttpGet("env")]
-        public string GetEnv()
-        {
-            return _env.EnvironmentName;
         }
 
         #region Datastore Crud Ops
