@@ -43,13 +43,13 @@ namespace DD35CharacterService.Storage
         }
 
         [ExcludeFromCodeCoverage]
-        public long Add(CharacterTransferModel model)
+        public async Task<long> Add(CharacterTransferModel model)
         {
             if (_testConnection != null)
-                return Add(model, _testConnection);
+                return await Add(model, _testConnection);
             
             using (var conn = new SqliteConnection(_connectionString))
-                return Add(model, conn);
+                return await Add(model, conn);
         }
 
         [ExcludeFromCodeCoverage]
@@ -119,7 +119,7 @@ namespace DD35CharacterService.Storage
             return result;
         }
 
-        private static long Add(CharacterTransferModel model, SqliteConnection connection)
+        private static async Task<long> Add(CharacterTransferModel model, SqliteConnection connection)
         {
             try
             {
@@ -127,13 +127,13 @@ namespace DD35CharacterService.Storage
                 command.CommandText = "INSERT INTO dd35 (Name) " +
                                       "VALUES ($name)";
                 command.Parameters.AddWithValue("$name", model.Name);
-                connection.Open();
-                command.ExecuteNonQuery();
+                await connection.OpenAsync();
+                await command.ExecuteNonQueryAsync();
 
                 command = connection.CreateCommand();
                 command.CommandText = "SELECT last_insert_rowid()";
-                connection.Open();
-                return (long)command.ExecuteScalar();
+                await connection.OpenAsync();
+                return (long) await command.ExecuteScalarAsync();
             }
             catch (SqliteException e)
             {

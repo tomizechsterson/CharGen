@@ -40,9 +40,9 @@ namespace DD35CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpPost]
-        public void Insert([FromBody] CharacterTransferModel model)
+        public async Task Insert([FromBody] CharacterTransferModel model)
         {
-            _storage.Add(model);
+            await _storage.Add(model);
         }
 
         [EnableCors("AnyOrigin")]

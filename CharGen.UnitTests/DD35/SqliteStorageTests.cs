@@ -18,10 +18,10 @@ namespace CharGen.UnitTests.DD35
         }
 
         [Fact]
-        public void GetAll()
+        public async Task GetAll()
         {
-            _db.Add(new CharacterTransferModel { Name = "first" });
-            _db.Add(new CharacterTransferModel { Name = "second" });
+            await _db.Add(new CharacterTransferModel { Name = "first" });
+            await _db.Add(new CharacterTransferModel { Name = "second" });
 
             var results = _db.Get();
 
@@ -29,27 +29,25 @@ namespace CharGen.UnitTests.DD35
         }
 
         [Fact]
-        public void Insert()
+        public async Task Insert()
         {
-            long addedId = _db.Add(new CharacterTransferModel { Name = "test" });
+            long addedId = await _db.Add(new CharacterTransferModel { Name = "test" });
 
             Assert.Equal("test", _db.Get(addedId).Name);
         }
 
         [Fact]
-        public void InsertDuplicate()
+        public async Task InsertDuplicate()
         {
-            _db.Add(new CharacterTransferModel { Name = "duplicate" });
+            await _db.Add(new CharacterTransferModel { Name = "duplicate" });
 
-            void Act() => _db.Add(new CharacterTransferModel { Name = "duplicate" });
-
-            Assert.Throws<DuplicateAddException>((System.Action)Act);
+            await Assert.ThrowsAsync<DuplicateAddException>(() => _db.Add(new CharacterTransferModel { Name = "duplicate" }));
         }
 
         [Fact]
         public async Task Update()
         {
-            long addedId = _db.Add(new CharacterTransferModel { Name = "test" });
+            long addedId = await _db.Add(new CharacterTransferModel { Name = "test" });
             Assert.Equal("test", _db.Get(addedId).Name);
 
             await _db.Update(addedId, new CharacterTransferModel { Name = "updated" });
@@ -60,7 +58,7 @@ namespace CharGen.UnitTests.DD35
         [Fact]
         public async Task Delete()
         {
-            long addedId = _db.Add(new CharacterTransferModel { Name = "delete" });
+            long addedId = await _db.Add(new CharacterTransferModel { Name = "delete" });
             Assert.Equal("delete", _db.Get(addedId).Name);
 
             await _db.Delete(addedId);

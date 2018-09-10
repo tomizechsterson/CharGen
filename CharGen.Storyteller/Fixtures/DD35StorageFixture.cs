@@ -29,16 +29,16 @@ namespace CharGen.Storyteller.Fixtures
             return _controller.Get().Length;
         }
 
-        public void Create(string name)
+        public async Task Create(string name)
         {
-            _controller.Insert(new CharacterTransferModel { Name = name });
+            await _controller.Insert(new CharacterTransferModel { Name = name });
         }
 
-        public void CreateDup(string name)
+        public async Task CreateDup(string name)
         {
             try
             {
-                _controller.Insert(new CharacterTransferModel { Name = name });
+                await _controller.Insert(new CharacterTransferModel { Name = name });
             }
             catch (DuplicateAddException) {}
         }
