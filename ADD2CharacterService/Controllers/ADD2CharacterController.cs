@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using ADD2CharacterService.App;
 using ADD2CharacterService.App.CharacterClass;
 using ADD2CharacterService.App.Race;
@@ -24,9 +25,9 @@ namespace ADD2CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpGet]
-        public IEnumerable<HttpCharacterModel> Get()
+        public async Task<IEnumerable<HttpCharacterModel>> Get()
         {
-            return _database.Iterate().Select(a => a.ToModel());
+            return (await _database.Iterate()).Select(a => a.ToModel());
         }
 
         [EnableCors("AnyOrigin")]
@@ -74,9 +75,9 @@ namespace ADD2CharacterService.Controllers
             _database.Delete(id);
         }
 
-        public void Delete()
+        public async Task Delete()
         {
-            var characters = _database.Iterate();
+            var characters = await _database.Iterate();
             foreach (var c in characters)
                 _database.Delete(c.Id());
         }

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using ADD2CharacterService;
 using ADD2CharacterService.Controllers;
 using ADD2CharacterService.Datastore;
@@ -24,9 +25,9 @@ namespace CharGen.Storyteller.Fixtures
             new DBSetup(_testConnection).Setup();
         }
 
-        public int GetAll()
+        public async Task<int> GetAll()
         {
-            return _controller.Get().Count();
+            return (await _controller.Get()).Count();
         }
 
         public void RetrieveCharacter(int id)

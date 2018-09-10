@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.Datastore
@@ -21,16 +22,16 @@ namespace ADD2CharacterService.Datastore
         }
 
         [ExcludeFromCodeCoverage]
-        public IEnumerable<ADD2Character> Iterate()
+        public async Task<IEnumerable<ADD2Character>> Iterate()
         {
             List<ADD2Character> characters;
 
             if (_testConnection != null)
-                characters = Iterate(_testConnection);
+                characters = await Iterate(_testConnection);
             else
             {
                 using (var conn = new SqliteConnection(_connectionString))
-                    characters = Iterate(conn);
+                    characters = await Iterate(conn);
             }
 
             return characters;
@@ -85,19 +86,19 @@ namespace ADD2CharacterService.Datastore
             }
         }
 
-        private static List<ADD2Character> Iterate(SqliteConnection connection)
+        private static async Task<List<ADD2Character>> Iterate(SqliteConnection connection)
         {
             var characters = new List<ADD2Character>();
             
             var command = connection.CreateCommand();
             command.CommandText = "SELECT * FROM ADD2";
-            connection.Open();
-            using (var reader = command.ExecuteReader())
+            await connection.OpenAsync();
+            using (var reader = await command.ExecuteReaderAsync())
             {
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     characters.Add(connection.ConnectionString.Contains(":memory:")
-                        ? new ADD2SqliteCharacter(connection, reader.GetInt32(0))
+                        ? new ADD2SqliteCharacter(connection, await reader.GetFieldValueAsync<int>(0))
                         : new ADD2SqliteCharacter(connection.ConnectionString, reader.GetInt32(0)));
                 }
             }

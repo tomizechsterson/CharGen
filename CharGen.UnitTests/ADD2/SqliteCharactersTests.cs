@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using ADD2CharacterService;
 using ADD2CharacterService.Datastore;
 using Microsoft.Data.Sqlite;
@@ -18,9 +19,9 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void GetAll()
+        public async Task GetAll()
         {
-            var results = _db.Iterate();
+            var results = await _db.Iterate();
 
             Assert.Equal(3, results.Count());
         }

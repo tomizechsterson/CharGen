@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ADD2CharacterService.Datastore
 {
     public interface ADD2Characters
     {
-        IEnumerable<ADD2Character> Iterate();
+        Task<IEnumerable<ADD2Character>> Iterate();
         ADD2Character Get(int id);
         void Add(HttpCharacterModel model);
         void Update(int id, HttpCharacterModel model);
