@@ -108,21 +108,21 @@ namespace CharGen.Storyteller.Fixtures
                 throw new StorytellerAssertionException($"Initial funds {_character.Funds} is above {highBound}");
         }
 
-        public void AddCharacter(string name)
+        public async Task AddCharacter(string name)
         {
-            _controller.Post(new HttpCharacterModel { Name = name });
+            await _controller.Post(new HttpCharacterModel { Name = name });
         }
 
-        public void UpdateCharacter(int id, string name)
+        public async Task UpdateCharacter(int id, string name)
         {
-            _controller.Put(id, new HttpCharacterModel { Name = name });
+            await _controller.Put(id, new HttpCharacterModel { Name = name });
         }
 
-        public void UpdateStats(int id, int str, int dex, int con, int @int, int wis, int chr)
+        public async Task UpdateStats(int id, int str, int dex, int con, int @int, int wis, int chr)
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id, new HttpCharacterModel
+            await _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 Str = str,
@@ -134,11 +134,11 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void UpdateRace(int id, string race)
+        public async Task UpdateRace(int id, string race)
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id, new HttpCharacterModel
+            await _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 Str = character.Str,
@@ -151,11 +151,11 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void UpdateGender(int id, string gender)
+        public async Task UpdateGender(int id, string gender)
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id, new HttpCharacterModel
+            await _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 Str = character.Str,
@@ -169,11 +169,11 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void UpdateHeightWeightAge(int id, int height, int weight, int age)
+        public async Task UpdateHeightWeightAge(int id, int height, int weight, int age)
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id, new HttpCharacterModel
+            await _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 Str = character.Str,
@@ -190,11 +190,11 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void UpdateClass(int id, string className)
+        public async Task UpdateClass(int id, string className)
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id, new HttpCharacterModel
+            await _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 Str = character.Str,
@@ -212,11 +212,11 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void UpdateAlignment(int id, string alignment)
+        public async Task UpdateAlignment(int id, string alignment)
         {
             var character = _controller.Get(id);
 
-            _controller.Put(id, new HttpCharacterModel
+            await _controller.Put(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 Str = character.Str,
@@ -235,12 +235,12 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void FinalUpdate(int id, int hp, int paralyze, int rod, int petrification, int breath,
+        public async Task FinalUpdate(int id, int hp, int paralyze, int rod, int petrification, int breath,
             int spell, int moveRate, int funds)
         {
             var character = _controller.Get(id);
 
-            _controller.FinalUpdate(id, new HttpCharacterModel
+            await _controller.FinalUpdate(id, new HttpCharacterModel
             {
                 Name = character.Name,
                 Str = character.Str,
@@ -272,9 +272,9 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Delete(id);
         }
 
-        public void EmptyDatabase()
+        public async Task EmptyDatabase()
         {
-            _controller.Delete();
+            await _controller.Delete();
         }
     }
 }

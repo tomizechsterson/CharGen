@@ -40,21 +40,21 @@ namespace ADD2CharacterService.Controllers
         [EnableCors("AnyOrigin")]
         [Route("new")]
         [HttpPost]
-        public void Post([FromBody] HttpCharacterModel characterModel)
+        public async Task Post([FromBody] HttpCharacterModel characterModel)
         {
-            _database.Add(characterModel);
+            await _database.Add(characterModel);
         }
 
         [EnableCors("AnyOrigin")]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] HttpCharacterModel characterModel)
+        public async Task Put(int id, [FromBody] HttpCharacterModel characterModel)
         {
-            _database.Update(id, characterModel);
+            await _database.Update(id, characterModel);
         }
 
         [EnableCors("AnyOrigin")]
         [HttpPut("{id}/final")]
-        public void FinalUpdate(int id, [FromBody] HttpCharacterModel characterModel)
+        public async Task FinalUpdate(int id, [FromBody] HttpCharacterModel characterModel)
         {
             characterModel.HP = new HP(characterModel.ClassName).Get();
             var savingThrows = new SavingThrows(characterModel.ClassName).Get();
@@ -65,7 +65,7 @@ namespace ADD2CharacterService.Controllers
             characterModel.Spell = savingThrows[4];
             characterModel.MoveRate = new MovementRate(characterModel.Race).Get();
             characterModel.Funds = new Funds(characterModel.ClassName).Get();
-            _database.Update(id, characterModel);
+            await _database.Update(id, characterModel);
         }
 
         [EnableCors("AnyOrigin")]

@@ -36,9 +36,9 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void Add()
+        public async Task Add()
         {
-            _db.Add(new HttpCharacterModel {Name = "test"});
+            await _db.Add(new HttpCharacterModel {Name = "test"});
 
             var result = _db.Get(4);
 
@@ -47,22 +47,20 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void AddDuplicate()
+        public async Task AddDuplicate()
         {
-            void Act() => _db.Add(new HttpCharacterModel {Name = "Test1"});
-
-            Assert.Throws<SqliteException>((System.Action) Act);
+            await Assert.ThrowsAsync<SqliteException>(() => _db.Add(new HttpCharacterModel { Name = "Test1" }));
         }
 
         [Fact]
-        public void Update()
+        public async Task Update()
         {
             var character = _db.Get(1);
             Assert.Equal("Test1", character.Name());
             var model = character.ToModel();
             model.Name = "updated";
 
-            _db.Update(1, model);
+            await _db.Update(1, model);
             var updated = _db.Get(1);
 
             Assert.Equal("updated", updated.Name());
