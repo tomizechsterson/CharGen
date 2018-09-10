@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using DD35CharacterService.App;
 using DD35CharacterService.App.HeightWeight;
 using DD35CharacterService.App.Stats;
@@ -46,9 +47,9 @@ namespace DD35CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _storage.Delete(id);
+            await _storage.Delete(id);
         }
 
         [EnableCors("AnyOrigin")]

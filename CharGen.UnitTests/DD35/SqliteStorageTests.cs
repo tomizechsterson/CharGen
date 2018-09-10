@@ -1,4 +1,5 @@
-﻿using DD35CharacterService.ExceptionHandling;
+﻿using System.Threading.Tasks;
+using DD35CharacterService.ExceptionHandling;
 using DD35CharacterService.Storage;
 using Microsoft.Data.Sqlite;
 using Xunit;
@@ -57,12 +58,12 @@ namespace CharGen.UnitTests.DD35
         }
 
         [Fact]
-        public void Delete()
+        public async Task Delete()
         {
             long addedId = _db.Add(new CharacterTransferModel { Name = "delete" });
             Assert.Equal("delete", _db.Get(addedId).Name);
 
-            _db.Delete(addedId);
+            await _db.Delete(addedId);
 
             var character = _db.Get(addedId);
             Assert.Equal(0, character.Id);

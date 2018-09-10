@@ -1,4 +1,5 @@
-﻿using DD35CharacterService.Controllers;
+﻿using System.Threading.Tasks;
+using DD35CharacterService.Controllers;
 using DD35CharacterService.ExceptionHandling;
 using DD35CharacterService.Storage;
 using Microsoft.Data.Sqlite;
@@ -47,9 +48,9 @@ namespace CharGen.Storyteller.Fixtures
             _controller.Update(id, new CharacterTransferModel {Name = name});
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _controller.Delete(id);
+            await _controller.Delete(id);
         }
 
         public string CheckName()

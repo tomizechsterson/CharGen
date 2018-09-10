@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using DD35CharacterService.ExceptionHandling;
 using Microsoft.Data.Sqlite;
 
@@ -64,14 +65,14 @@ namespace DD35CharacterService.Storage
         }
 
         [ExcludeFromCodeCoverage]
-        public void Delete(long id)
+        public async Task Delete(long id)
         {
             if (_testConnection != null)
-                Delete(id, _testConnection);
+                await Delete(id, _testConnection);
             else
             {
                 using (var conn = new SqliteConnection(_connectionString))
-                    Delete(id, conn);
+                    await Delete(id, conn);
             }
         }
 
@@ -155,13 +156,13 @@ namespace DD35CharacterService.Storage
             command.ExecuteNonQuery();
         }
 
-        private static void Delete(long id, SqliteConnection connection)
+        private static async Task Delete(long id, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText = "DELETE FROM dd35 WHERE Id = $id";
             command.Parameters.AddWithValue("id", id.ToString());
-            connection.Open();
-            command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
         }
     }
 }
