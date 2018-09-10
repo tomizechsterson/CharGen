@@ -70,16 +70,16 @@ namespace ADD2CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _database.Delete(id);
+            await _database.Delete(id);
         }
 
         public async Task Delete()
         {
             var characters = await _database.Iterate();
             foreach (var c in characters)
-                _database.Delete(c.Id());
+                await _database.Delete(c.Id());
         }
 
         #endregion

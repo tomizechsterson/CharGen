@@ -9,6 +9,6 @@ namespace ADD2CharacterService.Datastore
         ADD2Character Get(int id);
         Task Add(HttpCharacterModel model);
         Task Update(int id, HttpCharacterModel model);
-        void Delete(int id);
+        Task Delete(int id);
     }
 }

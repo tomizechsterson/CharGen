@@ -75,14 +75,14 @@ namespace ADD2CharacterService.Datastore
         }
 
         [ExcludeFromCodeCoverage]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
             if (_testConnection != null)
-                Delete(id, _testConnection);
+                await Delete(id, _testConnection);
             else
             {
                 using (var conn = new SqliteConnection(_connectionString))
-                    Delete(id, conn);
+                    await Delete(id, conn);
             }
         }
 
@@ -172,13 +172,13 @@ namespace ADD2CharacterService.Datastore
             await command.ExecuteNonQueryAsync();
         }
 
-        private static void Delete(int id, SqliteConnection connection)
+        private static async Task Delete(int id, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText = "DELETE FROM add2 WHERE Id = $id";
             command.Parameters.AddWithValue("$id", id);
-            connection.Open();
-            command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
         }
     }
 }

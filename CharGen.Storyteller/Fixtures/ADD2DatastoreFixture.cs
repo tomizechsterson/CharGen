@@ -267,9 +267,9 @@ namespace CharGen.Storyteller.Fixtures
             });
         }
 
-        public void DeleteCharacter(int id)
+        public async Task DeleteCharacter(int id)
         {
-            _controller.Delete(id);
+            await _controller.Delete(id);
         }
 
         public async Task EmptyDatabase()

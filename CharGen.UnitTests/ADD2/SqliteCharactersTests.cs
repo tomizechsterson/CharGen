@@ -67,9 +67,9 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void Delete()
+        public async Task Delete()
         {
-            _db.Delete(1);
+            await _db.Delete(1);
 
             var result = _db.Get(1);
 
