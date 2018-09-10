@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using ADD2CharacterService.App;
 using ADD2CharacterService.App.CharacterClass;
 using ADD2CharacterService.App.Race;
@@ -24,36 +24,41 @@ namespace ADD2CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpGet]
-        public IEnumerable<HttpCharacterModel> Get()
+        public async Task<IEnumerable<HttpCharacterModel>> Get()
         {
-            return _database.Iterate().Select(a => a.ToModel());
+            var allChars = await _database.Iterate();
+            var models = new List<HttpCharacterModel>();
+            foreach (var add2Character in allChars)
+                models.Add(await add2Character.ToModel());
+
+            return models;
         }
 
         [EnableCors("AnyOrigin")]
         [HttpGet("{id}")]
-        public HttpCharacterModel Get(int id)
+        public async Task<HttpCharacterModel> Get(int id)
         {
-            return _database.Get(id).ToModel();
+            return await _database.Get(id).ToModel();
         }
 
         [EnableCors("AnyOrigin")]
         [Route("new")]
         [HttpPost]
-        public void Post([FromBody] HttpCharacterModel characterModel)
+        public async Task Post([FromBody] HttpCharacterModel characterModel)
         {
-            _database.Add(characterModel);
+            await _database.Add(characterModel);
         }
 
         [EnableCors("AnyOrigin")]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] HttpCharacterModel characterModel)
+        public async Task Put(int id, [FromBody] HttpCharacterModel characterModel)
         {
-            _database.Update(id, characterModel);
+            await _database.Update(id, characterModel);
         }
 
         [EnableCors("AnyOrigin")]
         [HttpPut("{id}/final")]
-        public void FinalUpdate(int id, [FromBody] HttpCharacterModel characterModel)
+        public async Task FinalUpdate(int id, [FromBody] HttpCharacterModel characterModel)
         {
             characterModel.HP = new HP(characterModel.ClassName).Get();
             var savingThrows = new SavingThrows(characterModel.ClassName).Get();
@@ -64,21 +69,21 @@ namespace ADD2CharacterService.Controllers
             characterModel.Spell = savingThrows[4];
             characterModel.MoveRate = new MovementRate(characterModel.Race).Get();
             characterModel.Funds = new Funds(characterModel.ClassName).Get();
-            _database.Update(id, characterModel);
+            await _database.Update(id, characterModel);
         }
 
         [EnableCors("AnyOrigin")]
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _database.Delete(id);
+            await _database.Delete(id);
         }
 
-        public void Delete()
+        public async Task Delete()
         {
-            var characters = _database.Iterate();
+            var characters = await _database.Iterate();
             foreach (var c in characters)
-                _database.Delete(c.Id());
+                await _database.Delete(c.Id());
         }
 
         #endregion

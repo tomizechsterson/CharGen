@@ -1,30 +1,32 @@
-﻿namespace ADD2CharacterService.Datastore
+﻿using System.Threading.Tasks;
+
+namespace ADD2CharacterService.Datastore
 {
     public interface ADD2Character
     {
         int Id();
-        string Name();
-        int Str();
-        int Dex();
-        int Con();
-        int Int();
-        int Wis();
-        int Chr();
-        string Race();
-        string Gender();
-        int Height();
-        int Weight();
-        int Age();
-        string ClassName();
-        string Alignment();
-        int HP();
-        int Paralyze();
-        int Rod();
-        int Petrification();
-        int Breath();
-        int Spell();
-        int MoveRate();
-        int Funds();
-        HttpCharacterModel ToModel();
+        Task<string> Name();
+        Task<int> Str();
+        Task<int> Dex();
+        Task<int> Con();
+        Task<int> Int();
+        Task<int> Wis();
+        Task<int> Chr();
+        Task<string> Race();
+        Task<string> Gender();
+        Task<int> Height();
+        Task<int> Weight();
+        Task<int> Age();
+        Task<string> ClassName();
+        Task<string> Alignment();
+        Task<int> HP();
+        Task<int> Paralyze();
+        Task<int> Rod();
+        Task<int> Petrification();
+        Task<int> Breath();
+        Task<int> Spell();
+        Task<int> MoveRate();
+        Task<int> Funds();
+        Task<HttpCharacterModel> ToModel();
     }
 }

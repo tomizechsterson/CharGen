@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using ADD2CharacterService;
 using ADD2CharacterService.Datastore;
 using Microsoft.Data.Sqlite;
@@ -18,64 +19,62 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void GetAll()
+        public async Task GetAll()
         {
-            var results = _db.Iterate();
+            var results = await _db.Iterate();
 
             Assert.Equal(3, results.Count());
         }
 
         [Fact]
-        public void Get()
+        public async Task Get()
         {
             var result = _db.Get(1);
 
             Assert.Equal(1, result.Id());
-            Assert.Equal("Test1", result.Name());
+            Assert.Equal("Test1", await result.Name());
         }
 
         [Fact]
-        public void Add()
+        public async Task Add()
         {
-            _db.Add(new HttpCharacterModel {Name = "test"});
+            await _db.Add(new HttpCharacterModel {Name = "test"});
 
             var result = _db.Get(4);
 
             Assert.Equal(4, result.Id());
-            Assert.Equal("test", result.Name());
+            Assert.Equal("test", await result.Name());
         }
 
         [Fact]
-        public void AddDuplicate()
+        public async Task AddDuplicate()
         {
-            void Act() => _db.Add(new HttpCharacterModel {Name = "Test1"});
-
-            Assert.Throws<SqliteException>((System.Action) Act);
+            await Assert.ThrowsAsync<SqliteException>(() => _db.Add(new HttpCharacterModel { Name = "Test1" }));
         }
 
         [Fact]
-        public void Update()
+        public async Task Update()
         {
             var character = _db.Get(1);
-            Assert.Equal("Test1", character.Name());
-            var model = character.ToModel();
+            Assert.Equal("Test1", await character.Name());
+            var model = await character.ToModel();
             model.Name = "updated";
 
-            _db.Update(1, model);
+            await _db.Update(1, model);
             var updated = _db.Get(1);
 
-            Assert.Equal("updated", updated.Name());
+            Assert.Equal("updated", await updated.Name());
         }
 
         [Fact]
-        public void Delete()
+        public async Task Delete()
         {
-            _db.Delete(1);
+            await _db.Delete(1);
 
             var result = _db.Get(1);
 
-            Assert.Equal("", result.Name());
-            Assert.Equal(0, result.Str());
+            Assert.Equal("", await result.Name());
+            Assert.Equal(0, await result.Str());
         }
     }
 }

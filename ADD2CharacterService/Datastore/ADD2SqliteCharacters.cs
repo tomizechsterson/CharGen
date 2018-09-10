@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.Datastore
@@ -21,16 +22,16 @@ namespace ADD2CharacterService.Datastore
         }
 
         [ExcludeFromCodeCoverage]
-        public IEnumerable<ADD2Character> Iterate()
+        public async Task<IEnumerable<ADD2Character>> Iterate()
         {
             List<ADD2Character> characters;
 
             if (_testConnection != null)
-                characters = Iterate(_testConnection);
+                characters = await Iterate(_testConnection);
             else
             {
                 using (var conn = new SqliteConnection(_connectionString))
-                    characters = Iterate(conn);
+                    characters = await Iterate(conn);
             }
 
             return characters;
@@ -45,59 +46,59 @@ namespace ADD2CharacterService.Datastore
         }
 
         [ExcludeFromCodeCoverage]
-        public void Add(HttpCharacterModel model)
+        public async Task Add(HttpCharacterModel model)
         {
             if (_testConnection != null)
-                Add(model, _testConnection);
+                await Add(model, _testConnection);
             else
             {
                 using (var conn = new SqliteConnection(_connectionString))
-                    Add(model, conn);
+                    await Add(model, conn);
             }
         }
 
         [ExcludeFromCodeCoverage]
-        public void Update(int id, HttpCharacterModel model)
+        public async Task Update(int id, HttpCharacterModel model)
         {
-            if (string.IsNullOrEmpty(Get(id).Name()))
-                Add(model);
+            if (string.IsNullOrEmpty(await Get(id).Name()))
+                await Add(model);
             else
             {
                 if (_testConnection != null)
-                    Update(id, model, _testConnection);
+                    await Update(id, model, _testConnection);
                 else
                 {
                     using (var conn = new SqliteConnection(_connectionString))
-                        Update(id, model, conn);
+                        await Update(id, model, conn);
                 }
             }
         }
 
         [ExcludeFromCodeCoverage]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
             if (_testConnection != null)
-                Delete(id, _testConnection);
+                await Delete(id, _testConnection);
             else
             {
                 using (var conn = new SqliteConnection(_connectionString))
-                    Delete(id, conn);
+                    await Delete(id, conn);
             }
         }
 
-        private static List<ADD2Character> Iterate(SqliteConnection connection)
+        private static async Task<List<ADD2Character>> Iterate(SqliteConnection connection)
         {
             var characters = new List<ADD2Character>();
             
             var command = connection.CreateCommand();
             command.CommandText = "SELECT * FROM ADD2";
-            connection.Open();
-            using (var reader = command.ExecuteReader())
+            await connection.OpenAsync();
+            using (var reader = await command.ExecuteReaderAsync())
             {
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     characters.Add(connection.ConnectionString.Contains(":memory:")
-                        ? new ADD2SqliteCharacter(connection, reader.GetInt32(0))
+                        ? new ADD2SqliteCharacter(connection, await reader.GetFieldValueAsync<int>(0))
                         : new ADD2SqliteCharacter(connection.ConnectionString, reader.GetInt32(0)));
                 }
             }
@@ -105,18 +106,18 @@ namespace ADD2CharacterService.Datastore
             return characters;
         }
 
-        private static void Add(HttpCharacterModel model, SqliteConnection connection)
+        private static async Task Add(HttpCharacterModel model, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText =
                 "INSERT INTO add2 (Name) " +
                 "VALUES ($name)";
             command.Parameters.AddWithValue("$name", model.Name);
-            connection.Open();
-            command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
         }
 
-        private static void Update(int id, HttpCharacterModel model, SqliteConnection connection)
+        private static async Task Update(int id, HttpCharacterModel model, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText = "UPDATE add2 SET Name = $name, " +
@@ -167,17 +168,17 @@ namespace ADD2CharacterService.Datastore
             command.Parameters.AddWithValue("$moveRate", model.MoveRate);
             command.Parameters.AddWithValue("$funds", model.Funds);
             command.Parameters.AddWithValue("$completionStep", model.CompletionStep);
-            connection.Open();
-            command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
         }
 
-        private static void Delete(int id, SqliteConnection connection)
+        private static async Task Delete(int id, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText = "DELETE FROM add2 WHERE Id = $id";
             command.Parameters.AddWithValue("$id", id);
-            connection.Open();
-            command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
         }
     }
 }
