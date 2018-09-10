@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
+using ADD2CharacterService.App.Race;
 using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.Datastore
@@ -60,6 +61,12 @@ namespace ADD2CharacterService.Datastore
         [ExcludeFromCodeCoverage]
         public async Task Update(int id, HttpCharacterModel model)
         {
+            if (model.CompletionStep == 2)
+            {
+                model.AvailableRaces =
+                    new AvailableRaces(model.Str, model.Dex, model.Con, model.Int, model.Wis, model.Chr).Select();
+            }
+
             if (string.IsNullOrEmpty(await Get(id).Name()))
                 await Add(model);
             else
@@ -128,6 +135,7 @@ namespace ADD2CharacterService.Datastore
                                   "Wis = $wis, " +
                                   "Chr = $chr, " +
                                   "Race = $race, " +
+                                  "AvailableRaces = $availableRaces, " +
                                   "Gender = $gender, " +
                                   "Height = $height, " +
                                   "Weight = $weight, " +
@@ -153,6 +161,7 @@ namespace ADD2CharacterService.Datastore
             command.Parameters.AddWithValue("$wis", model.Wis);
             command.Parameters.AddWithValue("$chr", model.Chr);
             command.Parameters.AddWithValue("$race", model.Race ?? "none");
+            command.Parameters.AddWithValue("$availableRaces", string.Join(",", model.AvailableRaces) ?? "none");
             command.Parameters.AddWithValue("$gender", model.Gender ?? "n");
             command.Parameters.AddWithValue("$height", model.Height);
             command.Parameters.AddWithValue("$weight", model.Weight);

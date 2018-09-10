@@ -13,6 +13,7 @@ namespace ADD2CharacterService.Datastore
         Task<int> Wis();
         Task<int> Chr();
         Task<string> Race();
+        Task<string> AvailableRaces();
         Task<string> Gender();
         Task<int> Height();
         Task<int> Weight();

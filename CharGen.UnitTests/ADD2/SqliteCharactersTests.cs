@@ -64,6 +64,21 @@ namespace CharGen.UnitTests.ADD2
             var updated = _db.Get(1);
 
             Assert.Equal("updated", await updated.Name());
+            Assert.Equal("none", await updated.AvailableRaces());
+        }
+
+        [Fact]
+        public async Task UpdateCompletionStep2()
+        {
+            var character = _db.Get(1);
+            var model = await character.ToModel();
+            model.Str = model.Dex = model.Con = model.Int = model.Wis = model.Chr = 9;
+            model.CompletionStep = 2;
+
+            await _db.Update(1, model);
+            var updated = _db.Get(1);
+
+            Assert.Equal("Elf,Gnome,Half-Elf,Human", await updated.AvailableRaces());
         }
 
         [Fact]

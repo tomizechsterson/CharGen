@@ -115,7 +115,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateCharacter(int id, string name)
         {
-            await _controller.Put(id, new HttpCharacterModel { Name = name });
+            await _controller.Put(id, new HttpCharacterModel { Name = name, AvailableRaces = new string[0]});
         }
 
         public async Task UpdateStats(int id, int str, int dex, int con, int @int, int wis, int chr)
@@ -130,7 +130,8 @@ namespace CharGen.Storyteller.Fixtures
                 Con = con,
                 Int = @int,
                 Wis = wis,
-                Chr = chr
+                Chr = chr,
+                AvailableRaces = new string[0]
             });
         }
 
@@ -147,7 +148,8 @@ namespace CharGen.Storyteller.Fixtures
                 Int = character.Int,
                 Wis = character.Wis,
                 Chr = character.Chr,
-                Race = race
+                Race = race,
+                AvailableRaces = new string[0]
             });
         }
 
@@ -165,6 +167,7 @@ namespace CharGen.Storyteller.Fixtures
                 Wis = character.Wis,
                 Chr = character.Chr,
                 Race = character.Race,
+                AvailableRaces = new string[0],
                 Gender = gender
             });
         }
@@ -183,10 +186,11 @@ namespace CharGen.Storyteller.Fixtures
                 Wis = character.Wis,
                 Chr = character.Chr,
                 Race = character.Race,
+                AvailableRaces = new string[0],
                 Gender = character.Gender,
                 Height = height,
                 Weight = weight,
-                Age = age
+                Age = age,
             });
         }
 
@@ -204,6 +208,7 @@ namespace CharGen.Storyteller.Fixtures
                 Wis = character.Wis,
                 Chr = character.Chr,
                 Race = character.Race,
+                AvailableRaces = new string[0],
                 Gender = character.Gender,
                 Height = character.Height,
                 Weight = character.Weight,
@@ -226,6 +231,7 @@ namespace CharGen.Storyteller.Fixtures
                 Wis = character.Wis,
                 Chr = character.Chr,
                 Race = character.Race,
+                AvailableRaces = new string[0],
                 Gender = character.Gender,
                 Height = character.Height,
                 Weight = character.Weight,
@@ -250,6 +256,7 @@ namespace CharGen.Storyteller.Fixtures
                 Wis = character.Wis,
                 Chr = character.Chr,
                 Race = character.Race,
+                AvailableRaces = new string[0],
                 Gender = character.Gender,
                 Height = character.Height,
                 Weight = character.Weight,

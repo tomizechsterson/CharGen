@@ -59,6 +59,7 @@ namespace ADD2CharacterService
                    "Wis INTEGER DEFAULT 0, " +
                    "Chr INTEGER DEFAULT 0, " +
                    "Race VARCHAR(8) DEFAULT 'none' NULL, " +
+                   "AvailableRaces VARCHAR(64) DEFAULT 'none' NULL, " +
                    "Gender VARCHAR(1) DEFAULT 'n' NULL, " +
                    "Height INTEGER DEFAULT 0, " +
                    "Weight INTEGER DEFAULT 0, " +

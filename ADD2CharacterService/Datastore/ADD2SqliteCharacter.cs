@@ -68,6 +68,11 @@ namespace ADD2CharacterService.Datastore
             return await GetColumnString("Race");
         }
 
+        public async Task<string> AvailableRaces()
+        {
+            return await GetColumnString("AvailableRaces");
+        }
+
         public async Task<string> Gender()
         {
             return await GetColumnString("Gender");
@@ -156,6 +161,7 @@ namespace ADD2CharacterService.Datastore
                 Wis = await Wis(),
                 Chr = await Chr(),
                 Race = await Race(),
+                AvailableRaces = (await AvailableRaces()).Split(','),
                 Gender = await Gender(),
                 Height = await Height(),
                 Weight = await Weight(),
