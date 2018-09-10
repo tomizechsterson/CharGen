@@ -1,11 +1,13 @@
-﻿namespace DD35CharacterService.Storage
+﻿using System.Threading.Tasks;
+
+namespace DD35CharacterService.Storage
 {
     public interface DD35Characters
     {
-        CharacterTransferModel[] Get();
-        CharacterTransferModel Get(long id);
-        long Add(CharacterTransferModel model);
-        void Update(long id, CharacterTransferModel model);
-        void Delete(long id);
+        Task<CharacterTransferModel[]> Get();
+        Task<CharacterTransferModel> Get(long id);
+        Task<long> Add(CharacterTransferModel model);
+        Task Update(long id, CharacterTransferModel model);
+        Task Delete(long id);
     }
 }

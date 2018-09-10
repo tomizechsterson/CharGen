@@ -1,4 +1,5 @@
-﻿using DD35CharacterService.Controllers;
+﻿using System.Threading.Tasks;
+using DD35CharacterService.Controllers;
 using DD35CharacterService.ExceptionHandling;
 using DD35CharacterService.Storage;
 using Microsoft.Data.Sqlite;
@@ -18,38 +19,38 @@ namespace CharGen.Storyteller.Fixtures
             _controller = new DD35CharacterController(new DD35SqliteCharacters(_testConnection));
         }
 
-        public void Get(int id)
+        public async Task Get(int id)
         {
-            _character = _controller.Get(id);
+            _character = await _controller.Get(id);
         }
 
-        public int GetAll()
+        public async Task<int> GetAll()
         {
-            return _controller.Get().Length;
+            return (await _controller.Get()).Length;
         }
 
-        public void Create(string name)
+        public async Task Create(string name)
         {
-            _controller.Insert(new CharacterTransferModel { Name = name });
+            await _controller.Insert(new CharacterTransferModel { Name = name });
         }
 
-        public void CreateDup(string name)
+        public async Task CreateDup(string name)
         {
             try
             {
-                _controller.Insert(new CharacterTransferModel { Name = name });
+                await _controller.Insert(new CharacterTransferModel { Name = name });
             }
             catch (DuplicateAddException) {}
         }
 
-        public void Update(int id, string name)
+        public async Task Update(int id, string name)
         {
-            _controller.Update(id, new CharacterTransferModel {Name = name});
+            await _controller.Update(id, new CharacterTransferModel {Name = name});
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _controller.Delete(id);
+            await _controller.Delete(id);
         }
 
         public string CheckName()
