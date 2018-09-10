@@ -19,9 +19,9 @@ namespace DD35CharacterService.Controllers
             _storage = storage ?? new DD35SqliteCharacters("DataSource=characters");
         }
 
-        public CharacterTransferModel[] Get()
+        public async Task<CharacterTransferModel[]> Get()
         {
-            return _storage.Get();
+            return await _storage.Get();
         }
 
         [EnableCors("AnyOrigin")]

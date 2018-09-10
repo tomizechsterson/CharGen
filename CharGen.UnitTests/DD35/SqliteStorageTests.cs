@@ -23,7 +23,7 @@ namespace CharGen.UnitTests.DD35
             await _db.Add(new CharacterTransferModel { Name = "first" });
             await _db.Add(new CharacterTransferModel { Name = "second" });
 
-            var results = _db.Get();
+            var results = await _db.Get();
 
             Assert.Equal(2, results.Length);
         }

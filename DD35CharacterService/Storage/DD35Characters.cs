@@ -4,7 +4,7 @@ namespace DD35CharacterService.Storage
 {
     public interface DD35Characters
     {
-        CharacterTransferModel[] Get();
+        Task<CharacterTransferModel[]> Get();
         Task<CharacterTransferModel> Get(long id);
         Task<long> Add(CharacterTransferModel model);
         Task Update(long id, CharacterTransferModel model);

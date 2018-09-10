@@ -24,9 +24,9 @@ namespace CharGen.Storyteller.Fixtures
             _character = await _controller.Get(id);
         }
 
-        public int GetAll()
+        public async Task<int> GetAll()
         {
-            return _controller.Get().Length;
+            return (await _controller.Get()).Length;
         }
 
         public async Task Create(string name)
