@@ -33,7 +33,7 @@ namespace CharGen.UnitTests.DD35
         {
             long addedId = await _db.Add(new CharacterTransferModel { Name = "test" });
 
-            Assert.Equal("test", _db.Get(addedId).Name);
+            Assert.Equal("test", (await _db.Get(addedId)).Name);
         }
 
         [Fact]
@@ -48,22 +48,22 @@ namespace CharGen.UnitTests.DD35
         public async Task Update()
         {
             long addedId = await _db.Add(new CharacterTransferModel { Name = "test" });
-            Assert.Equal("test", _db.Get(addedId).Name);
+            Assert.Equal("test", (await _db.Get(addedId)).Name);
 
             await _db.Update(addedId, new CharacterTransferModel { Name = "updated" });
 
-            Assert.Equal("updated", _db.Get(addedId).Name);
+            Assert.Equal("updated", (await _db.Get(addedId)).Name);
         }
 
         [Fact]
         public async Task Delete()
         {
             long addedId = await _db.Add(new CharacterTransferModel { Name = "delete" });
-            Assert.Equal("delete", _db.Get(addedId).Name);
+            Assert.Equal("delete", (await _db.Get(addedId)).Name);
 
             await _db.Delete(addedId);
 
-            var character = _db.Get(addedId);
+            var character = await _db.Get(addedId);
             Assert.Equal(0, character.Id);
             Assert.Equal("none", character.Name);
         }

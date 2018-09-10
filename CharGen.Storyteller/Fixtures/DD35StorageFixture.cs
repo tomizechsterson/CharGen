@@ -19,9 +19,9 @@ namespace CharGen.Storyteller.Fixtures
             _controller = new DD35CharacterController(new DD35SqliteCharacters(_testConnection));
         }
 
-        public void Get(int id)
+        public async Task Get(int id)
         {
-            _character = _controller.Get(id);
+            _character = await _controller.Get(id);
         }
 
         public int GetAll()

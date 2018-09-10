@@ -33,13 +33,13 @@ namespace DD35CharacterService.Storage
         }
 
         [ExcludeFromCodeCoverage]
-        public CharacterTransferModel Get(long id)
+        public async Task<CharacterTransferModel> Get(long id)
         {
             if (_testConnection != null)
-                return Get(id, _testConnection);
+                return await Get(id, _testConnection);
             
             using (var conn = new SqliteConnection(_connectionString))
-                return Get(id, conn);
+                return await Get(id, conn);
         }
 
         [ExcludeFromCodeCoverage]
@@ -98,21 +98,21 @@ namespace DD35CharacterService.Storage
             return results.ToArray();
         }
 
-        private static CharacterTransferModel Get(long id, SqliteConnection connection)
+        private static async Task<CharacterTransferModel> Get(long id, SqliteConnection connection)
         {
             var result = new CharacterTransferModel { Name = "none" };
             var command = connection.CreateCommand();
             command.CommandText = "SELECT * FROM dd35 " +
                                   "WHERE Id = $id";
             command.Parameters.AddWithValue("$id", id.ToString());
-            connection.Open();
+            await connection.OpenAsync();
 
-            using (var reader = command.ExecuteReader())
+            using (var reader = await command.ExecuteReaderAsync())
             {
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
-                    result.Id = reader.GetInt32(0);
-                    result.Name = reader.GetString(1);
+                    result.Id = await reader.GetFieldValueAsync<int>(0);
+                    result.Name = await reader.GetFieldValueAsync<string>(1);
                 }
             }
 

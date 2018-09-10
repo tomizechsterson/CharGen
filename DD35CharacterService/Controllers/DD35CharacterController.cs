@@ -26,9 +26,9 @@ namespace DD35CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpGet("{id}")]
-        public CharacterTransferModel Get(int id)
+        public async Task<CharacterTransferModel> Get(int id)
         {
-            return _storage.Get(id);
+            return await _storage.Get(id);
         }
 
         [EnableCors("AnyOrigin")]
