@@ -4,6 +4,7 @@ using DD35CharacterService.App.HeightWeight;
 using DD35CharacterService.App.Stats;
 using DD35CharacterService.Storage;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DD35CharacterService.Controllers
@@ -11,11 +12,20 @@ namespace DD35CharacterService.Controllers
     [Route("api/[controller]")]
     public class DD35CharacterController : Controller
     {
+        private readonly IHostingEnvironment _env;
         private readonly DD35Characters _storage;
 
-        public DD35CharacterController(DD35Characters storage = null)
+        public DD35CharacterController(DD35Characters storage = null, IHostingEnvironment env = null)
         {
+            _env = env;
             _storage = storage ?? new DD35SqliteCharacters("DataSource=characters");
+        }
+
+        [EnableCors("AnyOrigin")]
+        [HttpGet("env")]
+        public string GetEnv()
+        {
+            return _env.EnvironmentName;
         }
 
         public CharacterTransferModel[] Get()
