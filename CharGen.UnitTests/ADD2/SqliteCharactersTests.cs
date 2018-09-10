@@ -27,12 +27,12 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void Get()
+        public async Task Get()
         {
             var result = _db.Get(1);
 
             Assert.Equal(1, result.Id());
-            Assert.Equal("Test1", result.Name());
+            Assert.Equal("Test1", await result.Name());
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace CharGen.UnitTests.ADD2
             var result = _db.Get(4);
 
             Assert.Equal(4, result.Id());
-            Assert.Equal("test", result.Name());
+            Assert.Equal("test", await result.Name());
         }
 
         [Fact]
@@ -56,14 +56,14 @@ namespace CharGen.UnitTests.ADD2
         public async Task Update()
         {
             var character = _db.Get(1);
-            Assert.Equal("Test1", character.Name());
-            var model = character.ToModel();
+            Assert.Equal("Test1", await character.Name());
+            var model = await character.ToModel();
             model.Name = "updated";
 
             await _db.Update(1, model);
             var updated = _db.Get(1);
 
-            Assert.Equal("updated", updated.Name());
+            Assert.Equal("updated", await updated.Name());
         }
 
         [Fact]
@@ -73,8 +73,8 @@ namespace CharGen.UnitTests.ADD2
 
             var result = _db.Get(1);
 
-            Assert.Equal("", result.Name());
-            Assert.Equal(0, result.Str());
+            Assert.Equal("", await result.Name());
+            Assert.Equal(0, await result.Str());
         }
     }
 }

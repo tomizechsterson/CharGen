@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using ADD2CharacterService.App;
 using ADD2CharacterService.App.CharacterClass;
@@ -27,14 +26,19 @@ namespace ADD2CharacterService.Controllers
         [HttpGet]
         public async Task<IEnumerable<HttpCharacterModel>> Get()
         {
-            return (await _database.Iterate()).Select(a => a.ToModel());
+            var allChars = await _database.Iterate();
+            var models = new List<HttpCharacterModel>();
+            foreach (var add2Character in allChars)
+                models.Add(await add2Character.ToModel());
+
+            return models;
         }
 
         [EnableCors("AnyOrigin")]
         [HttpGet("{id}")]
-        public HttpCharacterModel Get(int id)
+        public async Task<HttpCharacterModel> Get(int id)
         {
-            return _database.Get(id).ToModel();
+            return await _database.Get(id).ToModel();
         }
 
         [EnableCors("AnyOrigin")]

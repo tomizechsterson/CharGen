@@ -30,9 +30,9 @@ namespace CharGen.Storyteller.Fixtures
             return (await _controller.Get()).Count();
         }
 
-        public void RetrieveCharacter(int id)
+        public async Task RetrieveCharacter(int id)
         {
-            _character = _controller.Get(id);
+            _character = await _controller.Get(id);
         }
 
         public string GetRetrievedName()
@@ -120,7 +120,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateStats(int id, int str, int dex, int con, int @int, int wis, int chr)
         {
-            var character = _controller.Get(id);
+            var character = await _controller.Get(id);
 
             await _controller.Put(id, new HttpCharacterModel
             {
@@ -136,7 +136,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateRace(int id, string race)
         {
-            var character = _controller.Get(id);
+            var character = await _controller.Get(id);
 
             await _controller.Put(id, new HttpCharacterModel
             {
@@ -153,7 +153,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateGender(int id, string gender)
         {
-            var character = _controller.Get(id);
+            var character = await _controller.Get(id);
 
             await _controller.Put(id, new HttpCharacterModel
             {
@@ -171,7 +171,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateHeightWeightAge(int id, int height, int weight, int age)
         {
-            var character = _controller.Get(id);
+            var character = await _controller.Get(id);
 
             await _controller.Put(id, new HttpCharacterModel
             {
@@ -192,7 +192,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateClass(int id, string className)
         {
-            var character = _controller.Get(id);
+            var character = await _controller.Get(id);
 
             await _controller.Put(id, new HttpCharacterModel
             {
@@ -214,7 +214,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateAlignment(int id, string alignment)
         {
-            var character = _controller.Get(id);
+            var character = await _controller.Get(id);
 
             await _controller.Put(id, new HttpCharacterModel
             {
@@ -238,7 +238,7 @@ namespace CharGen.Storyteller.Fixtures
         public async Task FinalUpdate(int id, int hp, int paralyze, int rod, int petrification, int breath,
             int spell, int moveRate, int funds)
         {
-            var character = _controller.Get(id);
+            var character = await _controller.Get(id);
 
             await _controller.FinalUpdate(id, new HttpCharacterModel
             {

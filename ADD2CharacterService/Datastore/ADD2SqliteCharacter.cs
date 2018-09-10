@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.Datastore
@@ -27,190 +28,190 @@ namespace ADD2CharacterService.Datastore
             return _id;
         }
 
-        public string Name()
+        public async Task<string> Name()
         {
-            return GetColumnString("Name");
+            return await GetColumnString("Name");
         }
 
-        public int Str()
+        public async Task<int> Str()
         {
-            return GetColumnInt("Str");
+            return await GetColumnInt("Str");
         }
 
-        public int Dex()
+        public async Task<int> Dex()
         {
-            return GetColumnInt("Dex");
+            return await GetColumnInt("Dex");
         }
 
-        public int Con()
+        public async Task<int> Con()
         {
-            return GetColumnInt("Con");
+            return await GetColumnInt("Con");
         }
 
-        public int Int()
+        public async Task<int> Int()
         {
-            return GetColumnInt("Int");
+            return await GetColumnInt("Int");
         }
 
-        public int Wis()
+        public async Task<int> Wis()
         {
-            return GetColumnInt("Wis");
+            return await GetColumnInt("Wis");
         }
 
-        public int Chr()
+        public async Task<int> Chr()
         {
-            return GetColumnInt("Chr");
+            return await GetColumnInt("Chr");
         }
 
-        public string Race()
+        public async Task<string> Race()
         {
-            return GetColumnString("Race");
+            return await GetColumnString("Race");
         }
 
-        public string Gender()
+        public async Task<string> Gender()
         {
-            return GetColumnString("Gender");
+            return await GetColumnString("Gender");
         }
 
-        public int Height()
+        public async Task<int> Height()
         {
-            return GetColumnInt("Height");
+            return await GetColumnInt("Height");
         }
 
-        public int Weight()
+        public async Task<int> Weight()
         {
-            return GetColumnInt("Weight");
+            return await GetColumnInt("Weight");
         }
 
-        public int Age()
+        public async Task<int> Age()
         {
-            return GetColumnInt("Age");
+            return await GetColumnInt("Age");
         }
 
-        public string ClassName()
+        public async Task<string> ClassName()
         {
-            return GetColumnString("Class");
+            return await GetColumnString("Class");
         }
 
-        public string Alignment()
+        public async Task<string> Alignment()
         {
-            return GetColumnString("Alignment");
+            return await GetColumnString("Alignment");
         }
 
-        public int HP()
+        public async Task<int> HP()
         {
-            return GetColumnInt("HP");
+            return await GetColumnInt("HP");
         }
 
-        public int Paralyze()
+        public async Task<int> Paralyze()
         {
-            return GetColumnInt("Paralyze");
+            return await GetColumnInt("Paralyze");
         }
 
-        public int Rod()
+        public async Task<int> Rod()
         {
-            return GetColumnInt("Rod");
+            return await GetColumnInt("Rod");
         }
 
-        public int Petrification()
+        public async Task<int> Petrification()
         {
-            return GetColumnInt("Petrification");
+            return await GetColumnInt("Petrification");
         }
 
-        public int Breath()
+        public async Task<int> Breath()
         {
-            return GetColumnInt("Breath");
+            return await GetColumnInt("Breath");
         }
 
-        public int Spell()
+        public async Task<int> Spell()
         {
-            return GetColumnInt("Spell");
+            return await GetColumnInt("Spell");
         }
 
-        public int MoveRate()
+        public async Task<int> MoveRate()
         {
-            return GetColumnInt("MoveRate");
+            return await GetColumnInt("MoveRate");
         }
 
-        public int Funds()
+        public async Task<int> Funds()
         {
-            return GetColumnInt("Funds");
+            return await GetColumnInt("Funds");
         }
 
-        private int CompletionStep()
+        private async Task<int> CompletionStep()
         {
-            return GetColumnInt("CompletionStep");
+            return await GetColumnInt("CompletionStep");
         }
 
-        public HttpCharacterModel ToModel()
+        public async Task<HttpCharacterModel> ToModel()
         {
             return new HttpCharacterModel
             {
                 Id = _id,
-                Name = Name(),
-                Str = Str(),
-                Dex = Dex(),
-                Con = Con(),
-                Int = Int(),
-                Wis = Wis(),
-                Chr = Chr(),
-                Race = Race(),
-                Gender = Gender(),
-                Height = Height(),
-                Weight = Weight(),
-                Age = Age(),
-                ClassName = ClassName(),
-                Alignment = Alignment(),
-                HP = HP(),
-                Paralyze = Paralyze(),
-                Rod = Rod(),
-                Petrification = Petrification(),
-                Breath = Breath(),
-                Spell = Spell(),
-                MoveRate = MoveRate(),
-                Funds = Funds(),
-                CompletionStep = CompletionStep()
+                Name = await Name(),
+                Str = await Str(),
+                Dex = await Dex(),
+                Con = await Con(),
+                Int = await Int(),
+                Wis = await Wis(),
+                Chr = await Chr(),
+                Race = await Race(),
+                Gender = await Gender(),
+                Height = await Height(),
+                Weight = await Weight(),
+                Age = await Age(),
+                ClassName = await ClassName(),
+                Alignment = await Alignment(),
+                HP = await HP(),
+                Paralyze = await Paralyze(),
+                Rod = await Rod(),
+                Petrification = await Petrification(),
+                Breath = await Breath(),
+                Spell = await Spell(),
+                MoveRate = await MoveRate(),
+                Funds = await Funds(),
+                CompletionStep = await CompletionStep()
             };
         }
 
         [ExcludeFromCodeCoverage]
-        private string GetColumnString(string columnName)
+        private async Task<string> GetColumnString(string columnName)
         {
             if (_testConnection != null)
-                return GetColumnString(columnName, _testConnection);
+                return await GetColumnString(columnName, _testConnection);
 
             using (var conn = new SqliteConnection(_connectionString))
-                return GetColumnString(columnName, conn);
+                return await GetColumnString(columnName, conn);
         }
 
         [ExcludeFromCodeCoverage]
-        private int GetColumnInt(string columnName)
+        private async Task<int> GetColumnInt(string columnName)
         {
             if (_testConnection != null)
-                return GetColumnInt(columnName, _testConnection);
+                return await GetColumnInt(columnName, _testConnection);
 
             using (var conn = new SqliteConnection(_connectionString))
-                return GetColumnInt(columnName, conn);
+                return await GetColumnInt(columnName, conn);
         }
 
-        private int GetColumnInt(string columnName, SqliteConnection connection)
+        private async Task<int> GetColumnInt(string columnName, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText = "SELECT " + columnName + " FROM ADD2 WHERE Id = $id";
             command.Parameters.AddWithValue("$id", _id);
-            connection.Open();
-            using (var reader = command.ExecuteReader())
-                return reader.Read() ? reader.GetInt32(0) : 0;
+            await connection.OpenAsync();
+            using (var reader = await command.ExecuteReaderAsync())
+                return await reader.ReadAsync() ? await reader.GetFieldValueAsync<int>(0) : 0;
         }
 
-        private string GetColumnString(string columnName, SqliteConnection connection)
+        private async Task<string> GetColumnString(string columnName, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText = "SELECT " + columnName + " FROM ADD2 WHERE Id = $id";
             command.Parameters.AddWithValue("$id", _id);
-            connection.Open();
+            await connection.OpenAsync();
             using (var reader = command.ExecuteReader())
-                return reader.Read() ? reader.GetString(0) : "";
+                return await reader.ReadAsync() ? await reader.GetFieldValueAsync<string>(0) : "";
         }
     }
 }

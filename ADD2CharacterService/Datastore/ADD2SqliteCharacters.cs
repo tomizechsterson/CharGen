@@ -60,7 +60,7 @@ namespace ADD2CharacterService.Datastore
         [ExcludeFromCodeCoverage]
         public async Task Update(int id, HttpCharacterModel model)
         {
-            if (string.IsNullOrEmpty(Get(id).Name()))
+            if (string.IsNullOrEmpty(await Get(id).Name()))
                 await Add(model);
             else
             {
