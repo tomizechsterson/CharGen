@@ -33,9 +33,9 @@ namespace DD35CharacterService.Controllers
 
         [EnableCors("AnyOrigin")]
         [HttpPut("{id}")]
-        public void Update(int id, [FromBody] CharacterTransferModel model)
+        public async Task Update(int id, [FromBody] CharacterTransferModel model)
         {
-            _storage.Update(id, model);
+            await _storage.Update(id, model);
         }
 
         [EnableCors("AnyOrigin")]

@@ -43,9 +43,9 @@ namespace CharGen.Storyteller.Fixtures
             catch (DuplicateAddException) {}
         }
 
-        public void Update(int id, string name)
+        public async Task Update(int id, string name)
         {
-            _controller.Update(id, new CharacterTransferModel {Name = name});
+            await _controller.Update(id, new CharacterTransferModel {Name = name});
         }
 
         public async Task Delete(int id)

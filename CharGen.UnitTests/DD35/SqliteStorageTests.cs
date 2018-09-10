@@ -47,12 +47,12 @@ namespace CharGen.UnitTests.DD35
         }
 
         [Fact]
-        public void Update()
+        public async Task Update()
         {
             long addedId = _db.Add(new CharacterTransferModel { Name = "test" });
             Assert.Equal("test", _db.Get(addedId).Name);
 
-            _db.Update(addedId, new CharacterTransferModel { Name = "updated" });
+            await _db.Update(addedId, new CharacterTransferModel { Name = "updated" });
 
             Assert.Equal("updated", _db.Get(addedId).Name);
         }

@@ -7,7 +7,7 @@ namespace DD35CharacterService.Storage
         CharacterTransferModel[] Get();
         CharacterTransferModel Get(long id);
         long Add(CharacterTransferModel model);
-        void Update(long id, CharacterTransferModel model);
+        Task Update(long id, CharacterTransferModel model);
         Task Delete(long id);
     }
 }

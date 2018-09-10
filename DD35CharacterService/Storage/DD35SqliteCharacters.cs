@@ -53,14 +53,14 @@ namespace DD35CharacterService.Storage
         }
 
         [ExcludeFromCodeCoverage]
-        public void Update(long id, CharacterTransferModel model)
+        public async Task Update(long id, CharacterTransferModel model)
         {
             if (_testConnection != null)
-                Update(id, model, _testConnection);
+                await Update(id, model, _testConnection);
             else
             {
                 using (var conn = new SqliteConnection(_connectionString))
-                    Update(id, model, conn);
+                    await Update(id, model, conn);
             }
         }
 
@@ -145,15 +145,15 @@ namespace DD35CharacterService.Storage
             }
         }
 
-        private static void Update(long id, CharacterTransferModel model, SqliteConnection connection)
+        private static async Task Update(long id, CharacterTransferModel model, SqliteConnection connection)
         {
             var command = connection.CreateCommand();
             command.CommandText = "UPDATE dd35 SET Name = $name " +
                                   "WHERE Id = $id";
             command.Parameters.AddWithValue("$name", model.Name);
             command.Parameters.AddWithValue("$id", id.ToString());
-            connection.Open();
-            command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
         }
 
         private static async Task Delete(long id, SqliteConnection connection)
