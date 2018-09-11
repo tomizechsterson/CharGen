@@ -169,13 +169,19 @@ namespace ADD2CharacterService.Datastore
             command.Parameters.AddWithValue("$wis", model.Wis);
             command.Parameters.AddWithValue("$chr", model.Chr);
             command.Parameters.AddWithValue("$race", model.Race ?? "none");
-            command.Parameters.AddWithValue("$availableRaces", string.Join(",", model.AvailableRaces) ?? "none");
+            if(model.AvailableRaces == null)
+                command.Parameters.AddWithValue("$availableRaces", "none");
+            else
+                command.Parameters.AddWithValue("$availableRaces", string.Join(",", model.AvailableRaces) ?? "none");
             command.Parameters.AddWithValue("$gender", model.Gender ?? "n");
             command.Parameters.AddWithValue("$height", model.Height);
             command.Parameters.AddWithValue("$weight", model.Weight);
             command.Parameters.AddWithValue("$age", model.Age);
             command.Parameters.AddWithValue("$className", model.ClassName ?? "none");
-            command.Parameters.AddWithValue("$availableClasses", string.Join(",", model.AvailableClasses) ?? "none");
+            if(model.AvailableClasses == null)
+                command.Parameters.AddWithValue("$availableClasses", "none");
+            else
+                command.Parameters.AddWithValue("$availableClasses", string.Join(",", model.AvailableClasses) ?? "none");
             command.Parameters.AddWithValue("$alignment", model.Alignment ?? "none");
             command.Parameters.AddWithValue("$hp", model.HP);
             command.Parameters.AddWithValue("$paralyze", model.Paralyze);
