@@ -106,5 +106,31 @@ namespace CharGen.UnitTests.ADD2
             Assert.Equal("", await result.Name());
             Assert.Equal(0, await result.Str());
         }
+
+        [Fact]
+        public async Task ToModel_AvailableRaces()
+        {
+            var character = _db.Get(1);
+            var model = await character.ToModel();
+            model.AvailableRaces = new[] {"Test1", "Test2"};
+            await _db.Update(1, model);
+
+            var updatedModel = await _db.Get(1).ToModel();
+
+            Assert.Equal(new[] {"Test1", "Test2"}, updatedModel.AvailableRaces);
+        }
+        
+        [Fact]
+        public async Task ToModel_AvailableClasses()
+        {
+            var character = _db.Get(1);
+            var model = await character.ToModel();
+            model.AvailableClasses = new[] {"Test1", "Test2"};
+            await _db.Update(1, model);
+
+            var updatedModel = await _db.Get(1).ToModel();
+
+            Assert.Equal(new[] {"Test1", "Test2"}, updatedModel.AvailableClasses);
+        }
     }
 }
