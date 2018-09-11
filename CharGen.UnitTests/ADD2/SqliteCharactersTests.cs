@@ -97,6 +97,17 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
+        public async Task Upsert()
+        {
+            var model = new HttpCharacterModel {Name = "nonexistent"};
+            await _db.Update(4, model);
+
+            var inserted = _db.Get(4);
+
+            Assert.Equal("nonexistent", await inserted.Name());
+        }
+
+        [Fact]
         public async Task Delete()
         {
             await _db.Delete(1);
