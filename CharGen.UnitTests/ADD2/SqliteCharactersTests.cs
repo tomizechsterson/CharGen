@@ -64,11 +64,10 @@ namespace CharGen.UnitTests.ADD2
             var updated = _db.Get(1);
 
             Assert.Equal("updated", await updated.Name());
-            Assert.Equal("", await updated.AvailableRaces());
         }
 
         [Fact]
-        public async Task UpdateCompletionStep2()
+        public async Task Update_CompletionStep2_ShouldPopulateAvailableRaces()
         {
             var character = _db.Get(1);
             var model = await character.ToModel();
@@ -82,7 +81,7 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public async Task UpdateCompletionStep3()
+        public async Task Update_CompletionStep3_ShouldPopulateAvailableClasses()
         {
             var character = _db.Get(1);
             var model = await character.ToModel();
@@ -97,10 +96,35 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
+        public async Task Update_NullAvailableRaces_PopulatesDbWithNone()
+        {
+            var character = _db.Get(1);
+            var model = await character.ToModel();
+            model.AvailableRaces = null;
+
+            await _db.Update(1, model);
+            var updated = _db.Get(1);
+
+            Assert.Equal("none", await updated.AvailableRaces());
+        }
+        
+        [Fact]
+        public async Task Update_NullAvailableClasses_PopulatesDbWithNone()
+        {
+            var character = _db.Get(1);
+            var model = await character.ToModel();
+            model.AvailableClasses = null;
+
+            await _db.Update(1, model);
+            var updated = _db.Get(1);
+
+            Assert.Equal("none", await updated.AvailableClasses());
+        }
+
+        [Fact]
         public async Task Upsert()
         {
-            var model = new HttpCharacterModel {Name = "nonexistent"};
-            await _db.Update(4, model);
+            await _db.Update(4, new HttpCharacterModel {Name = "nonexistent"});
 
             var inserted = _db.Get(4);
 
