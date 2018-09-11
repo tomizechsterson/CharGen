@@ -19,6 +19,7 @@ namespace ADD2CharacterService.Datastore
         Task<int> Weight();
         Task<int> Age();
         Task<string> ClassName();
+        Task<string> AvailableClasses();
         Task<string> Alignment();
         Task<int> HP();
         Task<int> Paralyze();

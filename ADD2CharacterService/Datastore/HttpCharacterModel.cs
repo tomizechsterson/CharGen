@@ -18,6 +18,7 @@ namespace ADD2CharacterService.Datastore
         public int Weight { get; set; }
         public int Age { get; set; }
         public string ClassName { get; set; }
+        public string[] AvailableClasses { get; set; }
         public string Alignment { get; set; }
         public int HP { get; set; }
         public int Paralyze { get; set; }

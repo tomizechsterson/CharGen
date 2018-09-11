@@ -64,7 +64,8 @@ namespace ADD2CharacterService
                    "Height INTEGER DEFAULT 0, " +
                    "Weight INTEGER DEFAULT 0, " +
                    "Age INTEGER DEFAULT 0, " +
-                   "Class VARCHAR(8) DEFAULT 'none' NULL, " +
+                   "Class VARCHAR(32) DEFAULT 'none' NULL, " +
+                   "AvailableClasses VARCHAR(64) DEFAULT 'none' NULL, " +
                    "Alignment VARCHAR(16) DEFAULT 'none' NULL, " +
                    "HP INTEGER DEFAULT 0, " +
                    "Paralyze INTEGER DEFAULT 0, " +

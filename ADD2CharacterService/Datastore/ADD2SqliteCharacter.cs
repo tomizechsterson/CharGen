@@ -98,6 +98,11 @@ namespace ADD2CharacterService.Datastore
             return await GetColumnString("Class");
         }
 
+        public async Task<string> AvailableClasses()
+        {
+            return await GetColumnString("AvailableClasses");
+        }
+
         public async Task<string> Alignment()
         {
             return await GetColumnString("Alignment");
@@ -167,6 +172,7 @@ namespace ADD2CharacterService.Datastore
                 Weight = await Weight(),
                 Age = await Age(),
                 ClassName = await ClassName(),
+                AvailableClasses = (await AvailableClasses()).Split(','),
                 Alignment = await Alignment(),
                 HP = await HP(),
                 Paralyze = await Paralyze(),

@@ -115,7 +115,7 @@ namespace CharGen.Storyteller.Fixtures
 
         public async Task UpdateCharacter(int id, string name)
         {
-            await _controller.Put(id, new HttpCharacterModel { Name = name, AvailableRaces = new string[0]});
+            await _controller.Put(id, new HttpCharacterModel { Name = name, AvailableRaces = new string[0], AvailableClasses = new string[0] });
         }
 
         public async Task UpdateStats(int id, int str, int dex, int con, int @int, int wis, int chr)
@@ -131,7 +131,8 @@ namespace CharGen.Storyteller.Fixtures
                 Int = @int,
                 Wis = wis,
                 Chr = chr,
-                AvailableRaces = new string[0]
+                AvailableRaces = new string[0],
+                AvailableClasses = new string[0]
             });
         }
 
@@ -149,7 +150,8 @@ namespace CharGen.Storyteller.Fixtures
                 Wis = character.Wis,
                 Chr = character.Chr,
                 Race = race,
-                AvailableRaces = new string[0]
+                AvailableRaces = new string[0],
+                AvailableClasses = new string[0]
             });
         }
 
@@ -168,7 +170,8 @@ namespace CharGen.Storyteller.Fixtures
                 Chr = character.Chr,
                 Race = character.Race,
                 AvailableRaces = new string[0],
-                Gender = gender
+                Gender = gender,
+                AvailableClasses = new string[0]
             });
         }
 
@@ -191,6 +194,7 @@ namespace CharGen.Storyteller.Fixtures
                 Height = height,
                 Weight = weight,
                 Age = age,
+                AvailableClasses = new string[0]
             });
         }
 
@@ -213,7 +217,8 @@ namespace CharGen.Storyteller.Fixtures
                 Height = character.Height,
                 Weight = character.Weight,
                 Age = character.Age,
-                ClassName = className
+                ClassName = className,
+                AvailableClasses = new string[0]
             });
         }
 
@@ -237,6 +242,7 @@ namespace CharGen.Storyteller.Fixtures
                 Weight = character.Weight,
                 Age = character.Age,
                 ClassName = character.ClassName,
+                AvailableClasses = new string[0],
                 Alignment = alignment
             });
         }
@@ -262,6 +268,7 @@ namespace CharGen.Storyteller.Fixtures
                 Weight = character.Weight,
                 Age = character.Age,
                 ClassName = character.ClassName,
+                AvailableClasses = new string[0],
                 Alignment = character.Alignment,
                 HP = hp,
                 Paralyze = paralyze,

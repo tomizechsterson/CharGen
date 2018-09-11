@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
+using ADD2CharacterService.App.CharacterClass;
 using ADD2CharacterService.App.Race;
 using Microsoft.Data.Sqlite;
 
@@ -65,6 +66,12 @@ namespace ADD2CharacterService.Datastore
             {
                 model.AvailableRaces =
                     new AvailableRaces(model.Str, model.Dex, model.Con, model.Int, model.Wis, model.Chr).Select();
+            }
+
+            if (model.CompletionStep == 3)
+            {
+                model.AvailableClasses =
+                    new AvailableClasses(model.Race, model.Str, model.Dex, model.Con, model.Int, model.Wis, model.Chr).Select();
             }
 
             if (string.IsNullOrEmpty(await Get(id).Name()))
@@ -141,6 +148,7 @@ namespace ADD2CharacterService.Datastore
                                   "Weight = $weight, " +
                                   "Age = $age, " +
                                   "Class = $className, " +
+                                  "AvailableClasses = $availableClasses, " +
                                   "Alignment = $alignment, " +
                                   "HP = $hp, " +
                                   "Paralyze = $paralyze, " +
@@ -167,6 +175,7 @@ namespace ADD2CharacterService.Datastore
             command.Parameters.AddWithValue("$weight", model.Weight);
             command.Parameters.AddWithValue("$age", model.Age);
             command.Parameters.AddWithValue("$className", model.ClassName ?? "none");
+            command.Parameters.AddWithValue("$availableClasses", string.Join(",", model.AvailableClasses) ?? "none");
             command.Parameters.AddWithValue("$alignment", model.Alignment ?? "none");
             command.Parameters.AddWithValue("$hp", model.HP);
             command.Parameters.AddWithValue("$paralyze", model.Paralyze);
