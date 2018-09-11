@@ -155,6 +155,13 @@ namespace ADD2CharacterService.Datastore
 
         public async Task<HttpCharacterModel> ToModel()
         {
+            var availableRaces = new string[0];
+            var availableClasses = new string[0];
+            if (await AvailableRaces() != "none")
+                availableRaces = (await AvailableRaces()).Split(',');
+            if (await AvailableClasses() != "none")
+                availableClasses = (await AvailableClasses()).Split(',');
+
             return new HttpCharacterModel
             {
                 Id = _id,
@@ -166,13 +173,13 @@ namespace ADD2CharacterService.Datastore
                 Wis = await Wis(),
                 Chr = await Chr(),
                 Race = await Race(),
-                AvailableRaces = (await AvailableRaces()).Split(','),
+                AvailableRaces = availableRaces,
                 Gender = await Gender(),
                 Height = await Height(),
                 Weight = await Weight(),
                 Age = await Age(),
                 ClassName = await ClassName(),
-                AvailableClasses = (await AvailableClasses()).Split(','),
+                AvailableClasses = availableClasses,
                 Alignment = await Alignment(),
                 HP = await HP(),
                 Paralyze = await Paralyze(),

@@ -64,7 +64,7 @@ namespace CharGen.UnitTests.ADD2
             var updated = _db.Get(1);
 
             Assert.Equal("updated", await updated.Name());
-            Assert.Equal("none", await updated.AvailableRaces());
+            Assert.Equal("", await updated.AvailableRaces());
         }
 
         [Fact]
