@@ -108,6 +108,11 @@ namespace ADD2CharacterService.Datastore
             return await GetColumnString("Alignment");
         }
 
+        public async Task<string> AvailableAlignments()
+        {
+            return await GetColumnString("AvailableAlignments");
+        }
+
         public async Task<int> HP()
         {
             return await GetColumnInt("HP");
@@ -157,10 +162,13 @@ namespace ADD2CharacterService.Datastore
         {
             var availableRaces = new string[0];
             var availableClasses = new string[0];
+            var availableAlignments = new string[0];
             if (await AvailableRaces() != "none")
                 availableRaces = (await AvailableRaces()).Split(',');
             if (await AvailableClasses() != "none")
                 availableClasses = (await AvailableClasses()).Split(',');
+            if (await AvailableAlignments() != "none")
+                availableAlignments = (await AvailableAlignments()).Split(',');
 
             return new HttpCharacterModel
             {
@@ -181,6 +189,7 @@ namespace ADD2CharacterService.Datastore
                 ClassName = await ClassName(),
                 AvailableClasses = availableClasses,
                 Alignment = await Alignment(),
+                AvailableAlignments = availableAlignments,
                 HP = await HP(),
                 Paralyze = await Paralyze(),
                 Rod = await Rod(),

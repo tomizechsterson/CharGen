@@ -93,6 +93,19 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
+        public async Task Update_NullAvailableAlignments_PopulatesDbWithNone()
+        {
+            var character = _db.Get(1);
+            var model = await character.ToModel();
+            model.AvailableAlignments = null;
+
+            await _db.Update(1, model);
+            var updated = _db.Get(1);
+
+            Assert.Equal("none", await updated.AvailableAlignments());
+        }
+
+        [Fact]
         public async Task Upsert()
         {
             await _db.Update(4, new HttpCharacterModel {Name = "nonexistent"});
@@ -137,6 +150,19 @@ namespace CharGen.UnitTests.ADD2
             var updatedModel = await _db.Get(1).ToModel();
 
             Assert.Equal(new[] {"Test1", "Test2"}, updatedModel.AvailableClasses);
+        }
+
+        [Fact]
+        public async Task ToModel_AvailableAlignments()
+        {
+            var character = _db.Get(1);
+            var model = await character.ToModel();
+            model.AvailableAlignments = new[] {"Test1", "Test2"};
+            await _db.Update(1, model);
+
+            var updatedModel = await _db.Get(1).ToModel();
+
+            Assert.Equal(new[] {"Test1", "Test2"}, updatedModel.AvailableAlignments);
         }
     }
 }

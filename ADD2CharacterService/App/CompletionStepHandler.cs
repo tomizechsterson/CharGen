@@ -8,8 +8,7 @@ namespace ADD2CharacterService.App
     {
         private enum CompletionSteps
         {
-            RaceSelection = 2,
-            ClassSelection = 3
+            RaceSelection = 2, ClassSelection = 3, AlignmentSelection = 4
         }
         private readonly HttpCharacterModel _model;
 
@@ -26,7 +25,8 @@ namespace ADD2CharacterService.App
             else if (_model.CompletionStep == (int)CompletionSteps.ClassSelection)
                 _model.AvailableClasses =
                     new AvailableClasses(_model.Race, _model.Str, _model.Dex, _model.Con, _model.Int, _model.Wis, _model.Chr).Select();
-
+            else if (_model.CompletionStep == (int) CompletionSteps.AlignmentSelection)
+                _model.AvailableAlignments = new AllowedAlignments(_model.ClassName).Get();
             return _model;
         }
     }

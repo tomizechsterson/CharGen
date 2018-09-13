@@ -67,6 +67,7 @@ namespace ADD2CharacterService
                    "Class VARCHAR(32) DEFAULT 'none' NULL, " +
                    "AvailableClasses VARCHAR(64) DEFAULT 'none' NULL, " +
                    "Alignment VARCHAR(16) DEFAULT 'none' NULL, " +
+                   "AvailableAlignments VARCHAR(256) DEFAULT 'none' NULL, " +
                    "HP INTEGER DEFAULT 0, " +
                    "Paralyze INTEGER DEFAULT 0, " +
                    "Rod INTEGER DEFAULT 0, " +

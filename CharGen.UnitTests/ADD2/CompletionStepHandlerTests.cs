@@ -29,7 +29,18 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public void CompletionStep1_DoesNotModifyAvailableRacesOrClasses()
+        public void CompletionStep4_PopulateAvailableAlignments()
+        {
+            var model = new HttpCharacterModel {CompletionStep = 4, ClassName = "Ranger"};
+            var handler = new CompletionStepHandler(model);
+
+            var result = handler.Handle();
+
+            Assert.Equal(new[] {"Lawful Good", "Neutral Good", "Chaotic Good"}, result.AvailableAlignments);
+        }
+
+        [Fact]
+        public void CompletionStep1_DoesNotModifyAvailableThings()
         {
             var model = new HttpCharacterModel {CompletionStep = 1};
             var handler = new CompletionStepHandler(model);
@@ -38,15 +49,18 @@ namespace CharGen.UnitTests.ADD2
 
             Assert.Null(result.AvailableRaces);
             Assert.Null(result.AvailableClasses);
+            Assert.Null(result.AvailableAlignments);
         }
 
         [Fact]
-        public void CompletionStepAbove3_DoesNotModifyAvailableRacesOrClasses()
+        public void CompletionStepAbove4_DoesNotModifyAvailableThings()
         {
             var model = new HttpCharacterModel
             {
-                CompletionStep = 4, AvailableRaces = new[] {"race1", "race2"},
-                AvailableClasses = new[] {"class1", "class2"}
+                CompletionStep = 5,
+                AvailableRaces = new[] {"race1", "race2"},
+                AvailableClasses = new[] {"class1", "class2"},
+                AvailableAlignments = new[] {"alignment1", "alignment2"}
             };
             var handler = new CompletionStepHandler(model);
 
@@ -54,6 +68,7 @@ namespace CharGen.UnitTests.ADD2
 
             Assert.Equal(new[] {"race1", "race2"}, result.AvailableRaces);
             Assert.Equal(new[] {"class1", "class2"}, result.AvailableClasses);
+            Assert.Equal(new[] {"alignment1", "alignment2"}, result.AvailableAlignments);
         }
     }
 }

@@ -20,6 +20,7 @@ namespace ADD2CharacterService.Datastore
         public string ClassName { get; set; }
         public string[] AvailableClasses { get; set; }
         public string Alignment { get; set; }
+        public string[] AvailableAlignments { get; set; }
         public int HP { get; set; }
         public int Paralyze { get; set; }
         public int Rod { get; set; }

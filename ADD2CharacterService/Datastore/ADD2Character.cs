@@ -21,6 +21,7 @@ namespace ADD2CharacterService.Datastore
         Task<string> ClassName();
         Task<string> AvailableClasses();
         Task<string> Alignment();
+        Task<string> AvailableAlignments();
         Task<int> HP();
         Task<int> Paralyze();
         Task<int> Rod();
