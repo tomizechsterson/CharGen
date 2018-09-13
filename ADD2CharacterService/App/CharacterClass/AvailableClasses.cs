@@ -33,7 +33,7 @@ namespace ADD2CharacterService.App.CharacterClass
             var results = new List<string>();
             results.AddRange(_classesAvailable.Where(c => c.IsAvailable(_race, _str, _dex, _con, _int, _wis, _chr))
                 .Select(c => c.Name()));
-            
+
             foreach(var multiclass in _multiClassesAvailable[_race])
             {
                 string[] classes = multiclass.Split('/');
