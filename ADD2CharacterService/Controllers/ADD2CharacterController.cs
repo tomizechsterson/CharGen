@@ -138,6 +138,13 @@ namespace ADD2CharacterService.Controllers
             return new AvailableClasses(race, str, dex, con, @int, wis, chr).Select();
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("hpgp/{className}")]
+        public int[] GetInitialHPGP(string className)
+        {
+            return new[] {new HP(className).Get(), new Funds(className).Get()};
+        }
+
         #endregion
 
         #region Alignment
