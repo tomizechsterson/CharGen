@@ -85,7 +85,7 @@ namespace ADD2CharacterService
                    + "SELECT 'Test1', 0, 0, 0, 0, 0, 0, 1 "
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Test1'); "
                    + "INSERT INTO ADD2 (Name, Str, Dex, Con, Int, Wis, Chr, Race, Class, Gender, Height, Weight, Age, Alignment, HP, Paralyze, Rod, Petrification, Breath, Spell, MoveRate, Funds, CompletionStep) "
-                   + "SELECT 'Someone', 8, 11, 10, 18, 9, 14, 'Human', 'Mage', 'M', 64, 115, 20, 'Neutral Good', 4, 14, 11, 13, 15, 12, 12, 50, 4 "
+                   + "SELECT 'Someone', 8, 11, 10, 18, 9, 14, 'Human', 'Mage', 'M', 64, 115, 20, 'Neutral Good', 4, 14, 11, 13, 15, 12, 12, 50, 5 "
                    + "WHERE NOT EXISTS (SELECT 1 FROM ADD2 WHERE Name = 'Someone'); "
                    + "INSERT INTO ADD2 (Name) "
                    + "SELECT 'Person'"
