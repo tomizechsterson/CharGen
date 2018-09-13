@@ -40,6 +40,8 @@ To spin up the server so the UI can talk to it, navigate to the root of the proj
 
 This project uses [xUnit](https://xunit.github.io/) for unit tests. You can run `dotnet test CharGen.UnitTests` to run the test project from the command line, or use the test runner built into your chosen IDE. Just make sure you have xUnit enabled for them to get picked up.
 
+If you want to see the current coverage, you'll want to run `dotnet test CharGen.UnitTests -c Release -v q /p:CollectCoverage=true /p:Exclude=\"[*]*.Program,[*]*.Startup,[*]*.*Controller,[*]*.*Model,[*]*.*DBSetup,[*]*.GlobalExceptionFilter\"`. This closely mirrors what the CI pipeline does to calculate coverage and report it to Coveralls, but also outputs the results to the console.
+
 ## Contributing
 
 If you'd like to contribute, feel free to open a PR with the changes you'd like to make, and I'll be happy to review it. I'll try to get to it promptly, but I make no promises :)
