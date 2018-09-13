@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using ADD2CharacterService.App.CharacterClass;
-using ADD2CharacterService.App.Race;
 using Microsoft.Data.Sqlite;
 
 namespace ADD2CharacterService.Datastore
