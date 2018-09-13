@@ -67,35 +67,6 @@ namespace CharGen.UnitTests.ADD2
         }
 
         [Fact]
-        public async Task Update_CompletionStep2_ShouldPopulateAvailableRaces()
-        {
-            var character = _db.Get(1);
-            var model = await character.ToModel();
-            model.Str = model.Dex = model.Con = model.Int = model.Wis = model.Chr = 9;
-            model.CompletionStep = 2;
-
-            await _db.Update(1, model);
-            var updated = _db.Get(1);
-
-            Assert.Equal("Elf,Gnome,Half-Elf,Human", await updated.AvailableRaces());
-        }
-
-        [Fact]
-        public async Task Update_CompletionStep3_ShouldPopulateAvailableClasses()
-        {
-            var character = _db.Get(1);
-            var model = await character.ToModel();
-            model.Str = model.Dex = model.Con = model.Int = model.Wis = model.Chr = 9;
-            model.Race = "Human";
-            model.CompletionStep = 3;
-
-            await _db.Update(1, model);
-            var updated = _db.Get(1);
-
-            Assert.Equal("Fighter,Mage,Cleric,Thief", await updated.AvailableClasses());
-        }
-
-        [Fact]
         public async Task Update_NullAvailableRaces_PopulatesDbWithNone()
         {
             var character = _db.Get(1);

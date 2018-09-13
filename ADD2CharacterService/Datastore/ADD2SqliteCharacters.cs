@@ -62,18 +62,6 @@ namespace ADD2CharacterService.Datastore
         [ExcludeFromCodeCoverage]
         public async Task Update(int id, HttpCharacterModel model)
         {
-            if (model.CompletionStep == 2)
-            {
-                model.AvailableRaces =
-                    new AvailableRaces(model.Str, model.Dex, model.Con, model.Int, model.Wis, model.Chr).Select();
-            }
-
-            if (model.CompletionStep == 3)
-            {
-                model.AvailableClasses =
-                    new AvailableClasses(model.Race, model.Str, model.Dex, model.Con, model.Int, model.Wis, model.Chr).Select();
-            }
-
             if (string.IsNullOrEmpty(await Get(id).Name()))
                 await Add(model);
             else

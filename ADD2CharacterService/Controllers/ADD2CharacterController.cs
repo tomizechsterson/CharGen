@@ -53,7 +53,7 @@ namespace ADD2CharacterService.Controllers
         [HttpPut("{id}")]
         public async Task Put(int id, [FromBody] HttpCharacterModel characterModel)
         {
-            await _database.Update(id, characterModel);
+            await _database.Update(id, new CompletionStepHandler(characterModel).Handle());
         }
 
         [EnableCors("AnyOrigin")]
