@@ -100,6 +100,15 @@ namespace ADD2CharacterService.Controllers
             return new StatRoll(statRollingRule, _random).RollStats();
         }
 
+        [EnableCors("AnyOrigin")]
+        [HttpGet("final/{race}/{className}")]
+        public int[] GetFinalAttributes(string race, string className)
+        {
+            var result = new List<int> {new MovementRate(race).Get()};
+            result.AddRange(new SavingThrows(className).Get());
+            return result.ToArray();
+        }
+
         #endregion
 
         #region Race Stuff
