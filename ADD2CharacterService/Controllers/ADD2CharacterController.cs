@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ADD2CharacterService.App;
 using ADD2CharacterService.App.CharacterClass;
@@ -14,10 +15,12 @@ namespace ADD2CharacterService.Controllers
     public class ADD2CharacterController : Controller
     {
         private readonly ADD2Characters _database;
+        private readonly Random _random;
 
         public ADD2CharacterController(ADD2Characters database = null)
         {
             _database = database ?? new ADD2SqliteCharacters("Data Source=characters");
+            _random = new Random(Environment.TickCount);
         }
 
         #region Datastore Crud Ops
@@ -60,7 +63,7 @@ namespace ADD2CharacterService.Controllers
         [HttpPut("{id}/final")]
         public async Task FinalUpdate(int id, [FromBody] HttpCharacterModel characterModel)
         {
-            characterModel.HP = new HP(characterModel.ClassName).Get();
+            characterModel.HP = new HP(characterModel.ClassName, _random).Get();
             var savingThrows = new SavingThrows(characterModel.ClassName).Get();
             characterModel.Paralyze = savingThrows[0];
             characterModel.Rod = savingThrows[1];
@@ -68,7 +71,7 @@ namespace ADD2CharacterService.Controllers
             characterModel.Breath = savingThrows[3];
             characterModel.Spell = savingThrows[4];
             characterModel.MoveRate = new MovementRate(characterModel.Race).Get();
-            characterModel.Funds = new Funds(characterModel.ClassName).Get();
+            characterModel.Funds = new Funds(characterModel.ClassName, _random).Get();
             await _database.Update(id, characterModel);
         }
 
@@ -94,7 +97,7 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("rollstats/{statRollingRule}")]
         public List<int[]> RollStats(string statRollingRule)
         {
-            return new StatRoll(statRollingRule).RollStats();
+            return new StatRoll(statRollingRule, _random).RollStats();
         }
 
         #endregion
@@ -121,9 +124,9 @@ namespace ADD2CharacterService.Controllers
         {
             return new[]
             {
-                new HeightWeightAge(race, gender).Height(),
-                new HeightWeightAge(race, gender).Weight(),
-                new HeightWeightAge(race, gender).Age()
+                new HeightWeightAge(race, gender, _random).Height(),
+                new HeightWeightAge(race, gender, _random).Weight(),
+                new HeightWeightAge(race, gender, _random).Age()
             };
         }
 
@@ -142,7 +145,7 @@ namespace ADD2CharacterService.Controllers
         [HttpGet("hpgp/{className}")]
         public int[] GetInitialHPGP(string className)
         {
-            return new[] {new HP(className).Get(), new Funds(className).Get()};
+            return new[] {new HP(className, _random).Get(), new Funds(className, _random).Get()};
         }
 
         #endregion

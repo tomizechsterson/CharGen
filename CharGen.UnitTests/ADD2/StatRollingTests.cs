@@ -20,7 +20,7 @@ namespace CharGen.UnitTests.ADD2
         public void DiceRollingRules(string rule, int numRollsExpected, int numDiceUsedPerRoll,
             int lowBoundForRollTotal, int highBoundForRollTotal)
         {
-            var results = new StatRoll(rule).RollStats();
+            var results = new StatRoll(rule, new System.Random()).RollStats();
 
             AssertRolls(results, numRollsExpected, numDiceUsedPerRoll, lowBoundForRollTotal, highBoundForRollTotal);
         }
@@ -28,7 +28,7 @@ namespace CharGen.UnitTests.ADD2
         [Fact]
         public void InvalidStatRollRule_ThrowsStatRollRuleInvalidException()
         {
-            Assert.Throws<StatRollRuleInvalidException>(() => new StatRoll("INVALID").RollStats());
+            Assert.Throws<StatRollRuleInvalidException>(() => new StatRoll("INVALID", new System.Random()).RollStats());
         }
 
         private static void AssertRolls(List<int[]> results, int numRolls, int numDicePerRoll, int rollLowerBound,

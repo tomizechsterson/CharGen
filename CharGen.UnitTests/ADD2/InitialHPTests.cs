@@ -16,7 +16,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Mage", 1, 4)]
         public void InitialHP(string className, int low, int high)
         {
-            int hp = new HP(className).Get();
+            int hp = new HP(className, new System.Random()).Get();
 
             Assert.True(hp >= low);
             Assert.True(hp <= high);

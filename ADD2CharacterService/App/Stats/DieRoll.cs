@@ -9,11 +9,11 @@ namespace ADD2CharacterService.App.Stats
         private readonly int _times;
         private readonly Random _random;
 
-        public DieRoll(int sides, int times)
+        public DieRoll(int sides, int times, Random random)
         {
             _sides = sides;
             _times = times;
-            _random = new Random(Environment.TickCount);
+            _random = random;
         }
 
         public int[] Roll()

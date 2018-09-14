@@ -11,12 +11,12 @@ namespace ADD2CharacterService.App.Stats
         private readonly DieRoll _fourSixSidedDice;
         private readonly DieRoll _oneSixSidedDie;
 
-        public StatRoll(string rule)
+        public StatRoll(string rule, Random random)
         {
             _rule = rule;
-            _threeSixSidedDice = new DieRoll(6, 3);
-            _fourSixSidedDice = new DieRoll(6, 4);
-            _oneSixSidedDie = new DieRoll(6, 1);
+            _threeSixSidedDice = new DieRoll(6, 3, random);
+            _fourSixSidedDice = new DieRoll(6, 4, random);
+            _oneSixSidedDie = new DieRoll(6, 1, random);
         }
 
         public List<int[]> RollStats()

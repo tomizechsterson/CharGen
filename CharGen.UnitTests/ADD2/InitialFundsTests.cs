@@ -16,7 +16,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Druid", 30, 180)]
         public void InitialFundsForClass(string className, int lowBound, int highBound)
         {
-            int funds = new Funds(className).Get();
+            int funds = new Funds(className, new System.Random()).Get();
 
             Assert.True(funds >= lowBound && funds <= highBound);
         }

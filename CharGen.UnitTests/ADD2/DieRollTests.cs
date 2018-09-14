@@ -14,7 +14,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData(6, 4)]
         public void RollingDiceAreWithinBounds(int numberOfSides, int numberOfTimesToRoll)
         {
-            var dieRoll = new DieRoll(numberOfSides, numberOfTimesToRoll);
+            var dieRoll = new DieRoll(numberOfSides, numberOfTimesToRoll, new System.Random());
 
             var results = dieRoll.Roll();
 

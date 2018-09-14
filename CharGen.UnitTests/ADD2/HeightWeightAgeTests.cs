@@ -1,4 +1,5 @@
-﻿using ADD2CharacterService.App.Race;
+﻿using System;
+using ADD2CharacterService.App.Race;
 using Xunit;
 
 namespace CharGen.UnitTests.ADD2
@@ -14,7 +15,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Human", 16, 19)]
         public void AgeBounds(string race, int lowBound, int highBound)
         {
-            int age = new HeightWeightAge(race, "m").Age();
+            int age = new HeightWeightAge(race, "m", new Random()).Age();
 
             Assert.True(age >= lowBound && age <= highBound);
         }
@@ -34,7 +35,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("HUMAN", "f", 61, 79)]
         public void HeightBounds(string race, string gender, int lowBound, int highBound)
         {
-            int height = new HeightWeightAge(race, gender).Height();
+            int height = new HeightWeightAge(race, gender, new Random()).Height();
 
             Assert.True(height >= lowBound && height <= highBound);
         }
@@ -54,7 +55,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("human", "f", 106, 160)]
         public void WeightBounds(string race, string gender, int lowBound, int highBound)
         {
-            int weight = new HeightWeightAge(race, gender).Weight();
+            int weight = new HeightWeightAge(race, gender, new Random()).Weight();
 
             Assert.True(weight >= lowBound && weight <= highBound);
         }
