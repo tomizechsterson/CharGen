@@ -7,6 +7,7 @@ namespace CharGen.UnitTests.ADD2
     {
         [Theory]
         [InlineData("Paladin", new [] {"Lawful Good"})]
+        [InlineData("Druid", new[] {"True Neutral"})]
         [InlineData("Ranger", new[] {"Lawful Good", "Neutral Good", "Chaotic Good"})]
         [InlineData("Bard", new[] {"Lawful Neutral", "Neutral Good", "True Neutral", "Neutral Evil", "Chaotic Neutral"})]
         [InlineData("Fighter", new[] {"Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral",

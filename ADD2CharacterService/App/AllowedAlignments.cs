@@ -23,13 +23,13 @@ namespace ADD2CharacterService.App
             return new Dictionary<string, string[]>
             {
                 { "Paladin", new[] { "Lawful Good" } },
+                { "Druid", new[] {"True Neutral"} },
                 { "Ranger", new[] { "Lawful Good", "Neutral Good", "Chaotic Good" } },
                 { "Bard", new[] { "Lawful Neutral", "Neutral Good", "True Neutral", "Neutral Evil", "Chaotic Neutral" } },
                 { "Fighter", AllAlignments() },
                 { "Mage", AllAlignments() },
                 { "Cleric", AllAlignments() },
-                { "Thief", AllAlignments() },
-                { "Druid", AllAlignments() }
+                { "Thief", AllAlignments() }
             };
         }
 
