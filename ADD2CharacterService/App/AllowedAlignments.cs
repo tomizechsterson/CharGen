@@ -15,7 +15,7 @@ namespace ADD2CharacterService.App
 
         public string[] Get()
         {
-            return _allowedAlignments[_className];
+            return _className.Contains("/") ? AllAlignments() : _allowedAlignments[_className];
         }
 
         private static Dictionary<string, string[]> InitializeAlignments()
