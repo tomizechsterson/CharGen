@@ -16,10 +16,9 @@ namespace ADD2CharacterService.App
 
         public int[] Get()
         {
-            if(!_className.Contains("/"))
-                return _savingThrows[_className];
-
-            return SavingThrowsForMulticlass();
+            return _className.Contains("/")
+                ? SavingThrowsForMulticlass()
+                : _savingThrows[_className];
         }
 
         private int[] SavingThrowsForMulticlass()
@@ -28,10 +27,10 @@ namespace ADD2CharacterService.App
                 return _savingThrows["Mage"];
             if (_className.Split("/").Contains("Cleric"))
                 return _savingThrows["Cleric"];
-            if (_className.Split("/").Contains("Thief"))
-                return _savingThrows["Thief"];
 
-            return _savingThrows["Fighter"];
+            return _className.Split("/").Contains("Thief")
+                ? _savingThrows["Thief"]
+                : _savingThrows["Fighter"];
         }
 
         private static Dictionary<string, int[]> InitializeSavingThrows()

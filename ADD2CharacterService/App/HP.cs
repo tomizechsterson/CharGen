@@ -18,6 +18,19 @@ namespace ADD2CharacterService.App
             _initialHpRolls = InitializeStartingHPRolls();
         }
 
+        public int Get()
+        {
+            return _className.Contains("/")
+                ? AverageHPForMultiClass(_className.Split("/"))
+                : _initialHpRolls[_className].Roll().Sum();
+        }
+
+        private int AverageHPForMultiClass(IReadOnlyCollection<string> classes)
+        {
+            int total = classes.Sum(c => _initialHpRolls[c].Roll().Sum());
+            return total / classes.Count;
+        }
+
         private Dictionary<string, DieRoll> InitializeStartingHPRolls()
         {
             return new Dictionary<string, DieRoll>
@@ -31,20 +44,6 @@ namespace ADD2CharacterService.App
                 { "Bard", new DieRoll(6, 1, _random) },
                 { "Mage", new DieRoll(4, 1, _random) }
             };
-        }
-
-        public int Get()
-        {
-            if (!_className.Contains("/"))
-                return _initialHpRolls[_className].Roll().Sum();
-
-            return AverageHPForMultiClass(_className.Split("/"));
-        }
-
-        private int AverageHPForMultiClass(IReadOnlyCollection<string> classes)
-        {
-            int total = classes.Sum(c => _initialHpRolls[c].Roll().Sum());
-            return total / classes.Count;
         }
     }
 }

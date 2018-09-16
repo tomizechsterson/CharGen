@@ -31,10 +31,9 @@ namespace ADD2CharacterService.App
 
         private int InitialFundsForMulticlass()
         {
-            var classes = _className.Split(("/"));
-            if (classes.Contains("Fighter"))
+            if (_className.Split("/").Contains("Fighter"))
                 return _initialFundRolls["Fighter"].Roll().Sum() * 10;
-            if (classes.Contains("Cleric"))
+            if (_className.Split("/").Contains("Cleric"))
                 return _initialFundRolls["Cleric"].Roll().Sum() * 10;
             
             return _initialFundRolls["Thief"].Roll().Sum() * 10;
