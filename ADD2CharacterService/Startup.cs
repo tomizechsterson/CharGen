@@ -43,6 +43,7 @@ namespace ADD2CharacterService
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
 
+            app.UseCors("AnyOrigin");
             app.UseMvc();
 
             new DBSetup("characters").Setup();
