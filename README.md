@@ -9,6 +9,9 @@ These services are the backend for the [chargen-ui](https://github.com/tomizechs
 
 This means that not all the features required to fully create a character for these games will be implemented. However, you're welcome to submit a PR for something that I've left out, if you're so inclined.
 
+## Update (9/15/2018)
+At this point, all the features I wanted for this service are implemented and work locally, so I'm calling this good. I likely won't address any created issues, but I should still be able to review any PR's that people create
+
 ## Getting Started
 
 I've been developing this on Windows, but using non-Microsoft tools, so this should build and run on all OS's without too much trouble.
