@@ -13,7 +13,7 @@ namespace ADD2CharacterService.App
         
         public HP(string className, Random random)
         {
-            _className = className;
+            _className = className.Replace("%2F", "/");
             _random = random;
             _initialHpRolls = InitializeStartingHPRolls();
         }
@@ -35,7 +35,16 @@ namespace ADD2CharacterService.App
 
         public int Get()
         {
-            return _initialHpRolls[_className].Roll().Sum();
+            if (!_className.Contains("/"))
+                return _initialHpRolls[_className].Roll().Sum();
+
+            return AverageHPForMultiClass(_className.Split("/"));
+        }
+
+        private int AverageHPForMultiClass(IReadOnlyCollection<string> classes)
+        {
+            int total = classes.Sum(c => _initialHpRolls[c].Roll().Sum());
+            return total / classes.Count;
         }
     }
 }

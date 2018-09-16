@@ -14,6 +14,9 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Thief", 1, 6)]
         [InlineData("Bard", 1, 6)]
         [InlineData("Mage", 1, 4)]
+        [InlineData("Fighter/Mage/Cleric", 1, 7)]
+        [InlineData("Fighter/Cleric", 1, 9)]
+        [InlineData("Fighter/Thief", 1, 8)]
         public void InitialHP(string className, int low, int high)
         {
             int hp = new HP(className, new System.Random()).Get();
