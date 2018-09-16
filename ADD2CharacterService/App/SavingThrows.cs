@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ADD2CharacterService.App
 {
@@ -9,13 +10,28 @@ namespace ADD2CharacterService.App
 
         public SavingThrows(string className)
         {
-            _className = className;
+            _className = className.Replace("%2F", "/");
             _savingThrows = InitializeSavingThrows();
         }
 
         public int[] Get()
         {
-            return _savingThrows[_className];
+            if(!_className.Contains("/"))
+                return _savingThrows[_className];
+
+            return SavingThrowsForMulticlass();
+        }
+
+        private int[] SavingThrowsForMulticlass()
+        {
+            if (_className.Split("/").Contains("Mage"))
+                return _savingThrows["Mage"];
+            if (_className.Split("/").Contains("Cleric"))
+                return _savingThrows["Cleric"];
+            if (_className.Split("/").Contains("Thief"))
+                return _savingThrows["Thief"];
+
+            return _savingThrows["Fighter"];
         }
 
         private static Dictionary<string, int[]> InitializeSavingThrows()

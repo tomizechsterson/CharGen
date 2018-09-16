@@ -14,6 +14,9 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Ranger", 14, 16, 15, 17, 17)]
         [InlineData("Paladin", 14, 16, 15, 17, 17)]
         [InlineData("Mage", 14, 11, 13, 15, 12)]
+        [InlineData("Fighter/Mage", 14, 11, 13, 15, 12)]
+        [InlineData("Fighter/Cleric", 10, 14, 13, 16, 15)]
+        [InlineData("Fighter/Thief", 13, 14, 12, 16, 15)]
         public void SavingThrows(string className, int paralyze, int rod, int petrification, int breath, int spell)
         {
             var results = new SavingThrows(className).Get();
