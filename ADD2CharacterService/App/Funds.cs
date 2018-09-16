@@ -13,17 +13,31 @@ namespace ADD2CharacterService.App
 
         public Funds(string className, Random random)
         {
-            _className = className;
+            _className = className.Replace("%2F", "/");
             _random = random;
             _initialFundRolls = InitializeFundRolls();
         }
 
         public int Get()
         {
+            if (_className.Contains("/"))
+                return InitialFundsForMulticlass();
+
             if (_className == "Mage")
                 return (_initialFundRolls[_className].Roll().Sum() + 1) * 10;
 
             return _initialFundRolls[_className].Roll().Sum() * 10;
+        }
+
+        private int InitialFundsForMulticlass()
+        {
+            var classes = _className.Split(("/"));
+            if (classes.Contains("Fighter"))
+                return _initialFundRolls["Fighter"].Roll().Sum() * 10;
+            if (classes.Contains("Cleric"))
+                return _initialFundRolls["Cleric"].Roll().Sum() * 10;
+            
+            return _initialFundRolls["Thief"].Roll().Sum() * 10;
         }
 
         private Dictionary<string, DieRoll> InitializeFundRolls()
