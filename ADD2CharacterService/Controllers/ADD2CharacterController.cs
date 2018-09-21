@@ -45,7 +45,6 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
-        [Route("new")]
         [HttpPost]
         public async Task Post([FromBody] HttpCharacterModel characterModel)
         {
