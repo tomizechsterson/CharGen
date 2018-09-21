@@ -12,6 +12,10 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Bard", new[] {"Lawful Neutral", "Neutral Good", "True Neutral", "Neutral Evil", "Chaotic Neutral"})]
         [InlineData("Fighter", new[] {"Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral",
             "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"})]
+        [InlineData("Fighter/Mage", new[] {"Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral",
+            "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"})]
+        [InlineData("Fighter/Mage/Thief", new[] {"Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral",
+            "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"})]
         public void AllowedAlignmentsForClass(string className, string[] expectedAlignments)
         {
             var alignments = new AllowedAlignments(className).Get();
