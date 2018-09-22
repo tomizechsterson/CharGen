@@ -26,11 +26,7 @@ namespace CharGen.UnitTests.ADD2
             var alignments = new AllowedAlignments("Fighter", "Mage").Get();
 
             Assert.Equal(9, alignments.Length);
-            Assert.Equal(new[]
-            {
-                "Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral",
-                "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"
-            }, alignments);
+            Assert.Equal(AllAlignments(), alignments);
         }
 
         [Fact]
@@ -39,11 +35,16 @@ namespace CharGen.UnitTests.ADD2
             var alignments = new AllowedAlignments("Fighter", "Mage", "Thief").Get();
 
             Assert.Equal(9, alignments.Length);
-            Assert.Equal(new[]
+            Assert.Equal(AllAlignments(), alignments);
+        }
+
+        private static string[] AllAlignments()
+        {
+            return new[]
             {
                 "Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral",
                 "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"
-            }, alignments);
+            };
         }
     }
 }
