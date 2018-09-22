@@ -70,7 +70,9 @@ namespace ADD2CharacterService.App.CharacterClass
                 { "Dwarf", new[] { "Fighter/Cleric", "Fighter/Thief" } },
                 { "Elf", new[] { "Fighter/Mage", "Fighter/Thief", "Mage/Thief", "Fighter/Mage/Thief" } },
                 { "Gnome", new[] { "Fighter/Cleric", "Fighter/Thief", "Cleric/Thief" } },
-                { "Half-Elf", new[] { "Fighter/Cleric", "Fighter/Thief", "Fighter/Druid", "Fighter/Mage", "Cleric/Ranger", "Cleric/Mage", "Thief/Mage", "Fighter/Mage/Cleric", "Fighter/Mage/Thief" } },
+                { "Half-Elf", new[] { "Fighter/Cleric", "Fighter/Thief", "Fighter/Druid", "Fighter/Mage",
+                    "Cleric/Ranger", "Druid/Ranger", "Cleric/Mage", "Druid/Mage", "Thief/Mage", "Fighter/Mage/Cleric",
+                    "Fighter/Mage/Druid", "Fighter/Mage/Thief" } },
                 { "Halfling", new[] { "Fighter/Thief" } },
                 { "Human", new string[0] }
             };

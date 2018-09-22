@@ -24,7 +24,7 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Dwarf", 13, 13, 14, 13, 14, 17, "Fighter", "Cleric", "Thief", "Fighter/Thief", "Fighter/Cleric")]
         [InlineData("Elf", 13, 13, 14, 13, 14, 17, "Fighter", "Ranger", "Mage", "Cleric", "Thief", "Fighter/Mage", "Fighter/Thief", "Mage/Thief", "Fighter/Mage/Thief")]
         [InlineData("Gnome", 13, 13, 14, 13, 14, 17, "Fighter", "Cleric", "Thief", "Fighter/Cleric", "Fighter/Thief", "Cleric/Thief")]
-        [InlineData("Half-Elf", 13, 13, 14, 13, 14, 17, "Fighter", "Ranger", "Mage", "Cleric", "Druid", "Thief", "Bard", "Fighter/Cleric", "Fighter/Thief", "Fighter/Druid", "Fighter/Mage", "Cleric/Ranger", "Cleric/Mage", "Thief/Mage", "Fighter/Mage/Cleric", "Fighter/Mage/Thief")]
+        [InlineData("Half-Elf", 13, 13, 14, 13, 14, 17, "Fighter", "Ranger", "Mage", "Cleric", "Druid", "Thief", "Bard", "Fighter/Cleric", "Fighter/Thief", "Fighter/Druid", "Fighter/Mage", "Cleric/Ranger", "Druid/Ranger", "Cleric/Mage", "Druid/Mage", "Thief/Mage", "Fighter/Mage/Cleric", "Fighter/Mage/Druid", "Fighter/Mage/Thief")]
         [InlineData("Halfling", 13, 13, 14, 13, 14, 17, "Fighter", "Cleric", "Thief", "Fighter/Thief")]
         [InlineData("Human", 13, 13, 14, 13, 14, 17, "Fighter", "Paladin", "Ranger", "Mage", "Cleric", "Druid", "Thief", "Bard")]
         public void ClassesAvailableByRace(string race, int str, int dex, int con, int @int, int wis, int chr,
