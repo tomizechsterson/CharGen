@@ -5,23 +5,31 @@ namespace CharGen.UnitTests.ADD2
 {
     public class InitialFundsTests
     {
-        [Theory]
-        [InlineData("Fighter", 50, 200)]
-        [InlineData("Ranger", 50, 200)]
-        [InlineData("Paladin", 50, 200)]
-        [InlineData("Mage", 20, 50)]
-        [InlineData("Thief", 20, 120)]
-        [InlineData("Bard", 20, 120)]
-        [InlineData("Cleric", 30, 180)]
-        [InlineData("Druid", 30, 180)]
-        [InlineData("Fighter/Mage", 50, 200)]
-        [InlineData("Mage/Thief", 20, 120)]
-        [InlineData("Mage/Cleric", 30, 180)]
-        public void InitialFundsForClass(string className, int lowBound, int highBound)
-        {
-            int funds = new Funds(className, new System.Random()).Get();
+        private const int Repeat = 20;
 
-            Assert.True(funds >= lowBound && funds <= highBound);
+        [Theory]
+        [InlineData(50, 200, "Fighter")]
+        [InlineData(50, 200, "Ranger")]
+        [InlineData(50, 200, "Paladin")]
+        [InlineData(20, 50, "Mage")]
+        [InlineData(20, 120, "Thief")]
+        [InlineData(20, 120, "Bard")]
+        [InlineData(30, 180, "Cleric")]
+        [InlineData(30, 180, "Druid")]
+        [InlineData(50, 200, "Fighter", "Mage")]
+        [InlineData(20, 120, "Mage", "Thief")]
+        [InlineData(30, 180, "Mage", "Cleric")]
+        [InlineData(50, 200, "Druid", "Ranger")]
+        [InlineData(30, 180, "Druid", "Mage")]
+        public void InitialFundsForClass(int lowBound, int highBound, params string[] classNames)
+        {
+            var random = new System.Random(System.Environment.TickCount);
+
+            for (int i = 0; i < Repeat; i++)
+            {
+                int funds = new Funds(random, classNames).Get();
+                Assert.True(funds >= lowBound && funds <= highBound, $"Repeat# {i.ToString()}");
+            }
         }
     }
 }

@@ -13,10 +13,12 @@ namespace ADD2CharacterService.App
 
         public Funds(string className, Random random)
         {
-            _className = className.Replace("%2F", "/");
+            _className = className;
             _random = random;
             _initialFundRolls = InitializeFundRolls();
         }
+        
+        public Funds(Random random, params string[] classes) : this(string.Join('/', classes).TrimEnd('/'), random) {}
 
         public int Get()
         {
@@ -33,8 +35,12 @@ namespace ADD2CharacterService.App
         {
             if (_className.Split("/").Contains("Fighter"))
                 return _initialFundRolls["Fighter"].Roll().Sum() * 10;
+            if (_className.Split("/").Contains("Ranger"))
+                return _initialFundRolls["Ranger"].Roll().Sum() * 10;
             if (_className.Split("/").Contains("Cleric"))
                 return _initialFundRolls["Cleric"].Roll().Sum() * 10;
+            if (_className.Split("/").Contains("Druid"))
+                return _initialFundRolls["Druid"].Roll().Sum() * 10;
             
             return _initialFundRolls["Thief"].Roll().Sum() * 10;
         }

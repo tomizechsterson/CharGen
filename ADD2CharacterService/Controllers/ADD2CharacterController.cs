@@ -150,10 +150,14 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
-        [HttpGet("hpgp/{className}")]
-        public int[] GetInitialHPGP(string className)
+        [HttpGet("hpgp/{className}/{classTwo?}/{classThree?}")]
+        public int[] GetInitialHPGP(string className, string classTwo = null, string classThree = null)
         {
-            return new[] {new HP(className, _random).Get(), new Funds(className, _random).Get()};
+            return new[]
+            {
+                new HP(className, _random).Get(),
+                new Funds(_random, className, classTwo, classThree).Get()
+            };
         }
 
         [EnableCors("AnyOrigin")]
