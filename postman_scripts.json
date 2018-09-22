@@ -1407,7 +1407,7 @@
 				{
 					"id": "3f52671b-1b39-4534-aef8-b5a70fe7aa37",
 					"name": "Attempt to Add Duplicate Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character",
 					"description": "",
 					"data": [],
 					"dataMode": "raw",
@@ -2317,7 +2317,7 @@
 				{
 					"id": "e5550d94-dd37-47dd-9092-695ec3724a33",
 					"name": "Add New Character",
-					"url": "{{protocol}}://{{siteName}}/api/ADD2Character/new",
+					"url": "{{protocol}}://{{siteName}}/api/ADD2Character",
 					"description": "",
 					"data": [],
 					"dataMode": "raw",
