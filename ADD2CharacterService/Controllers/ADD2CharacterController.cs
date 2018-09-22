@@ -100,11 +100,11 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
-        [HttpGet("final/{race}/{className}")]
-        public int[] GetFinalAttributes(string race, string className)
+        [HttpGet("final/{race}/{className}/{classTwo?}/{classThree?}")]
+        public int[] GetFinalAttributes(string race, string className, string classTwo = null, string classThree = null)
         {
             var result = new List<int> {new MovementRate(race).Get()};
-            result.AddRange(new SavingThrows(className).Get());
+            result.AddRange(new SavingThrows(className, classTwo, classThree).Get());
             return result.ToArray();
         }
 

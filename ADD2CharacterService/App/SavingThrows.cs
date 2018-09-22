@@ -10,9 +10,11 @@ namespace ADD2CharacterService.App
 
         public SavingThrows(string className)
         {
-            _className = className.Replace("%2F", "/");
+            _className = className;
             _savingThrows = InitializeSavingThrows();
         }
+        
+        public SavingThrows(params string[] classNames) : this(string.Join('/', classNames).TrimEnd('/')) {}
 
         public int[] Get()
         {
@@ -27,6 +29,8 @@ namespace ADD2CharacterService.App
                 return _savingThrows["Mage"];
             if (_className.Split("/").Contains("Cleric"))
                 return _savingThrows["Cleric"];
+            if (_className.Split("/").Contains("Druid"))
+                return _savingThrows["Druid"];
 
             return _className.Split("/").Contains("Thief")
                 ? _savingThrows["Thief"]
