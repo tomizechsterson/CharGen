@@ -9,9 +9,11 @@ namespace ADD2CharacterService.App
 
         public AllowedAlignments(string className)
         {
-            _className = className.Replace("%2F", "/");
+            _className = className;
             _allowedAlignments = InitializeAlignments();
         }
+
+        public AllowedAlignments(params string[] classes) : this(string.Join('/', classes).TrimEnd('/')) {}
 
         public string[] Get()
         {
