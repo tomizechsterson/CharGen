@@ -3,7 +3,7 @@
 -> id = 36bf4342-a0c7-4d32-ace1-47e10b87c536
 -> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-05-05T05:56:47.0311781Z
+-> last-updated = 2018-09-22T02:56:55.2133084Z
 -> tags = 
 
 [ADD2Class]
@@ -51,7 +51,7 @@ Fighter, Cleric, Thief, Fighter/Cleric, Fighter/Thief, Cleric/Thief
 
 |> AvailableClassesForRace race=Half-Elf
 ``` returnValue
-Fighter, Ranger, Mage, Cleric, Druid, Thief, Bard, Fighter/Cleric, Fighter/Thief, Fighter/Druid, Fighter/Mage, Cleric/Ranger, Cleric/Mage, Thief/Mage, Fighter/Mage/Cleric, Fighter/Mage/Thief
+Fighter, Ranger, Mage, Cleric, Druid, Thief, Bard, Fighter/Cleric, Fighter/Thief, Fighter/Druid, Fighter/Mage, Cleric/Ranger, Druid/Ranger, Cleric/Mage, Druid/Mage, Thief/Mage, Fighter/Mage/Cleric, Fighter/Mage/Druid, Fighter/Mage/Thief
 ```
 
 |> AvailableClassesForRace race=Halfling
