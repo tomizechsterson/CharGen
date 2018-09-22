@@ -155,7 +155,7 @@ namespace ADD2CharacterService.Controllers
         {
             return new[]
             {
-                new HP(className, _random).Get(),
+                new HP(_random, className, classTwo, classThree).Get(),
                 new Funds(_random, className, classTwo, classThree).Get()
             };
         }

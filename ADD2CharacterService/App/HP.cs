@@ -13,10 +13,12 @@ namespace ADD2CharacterService.App
         
         public HP(string className, Random random)
         {
-            _className = className.Replace("%2F", "/");
+            _className = className;
             _random = random;
             _initialHpRolls = InitializeStartingHPRolls();
         }
+        
+        public HP(Random random, params string[] classes) : this(string.Join('/', classes).TrimEnd('/'), random) {}
 
         public int Get()
         {
