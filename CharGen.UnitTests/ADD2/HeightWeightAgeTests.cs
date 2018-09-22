@@ -6,6 +6,8 @@ namespace CharGen.UnitTests.ADD2
 {
     public class HeightWeightAgeTests
     {
+        private const int Repeat = 20;
+
         [Theory]
         [InlineData("dwarf", 45, 70)]
         [InlineData("Elf", 105, 130)]
@@ -15,9 +17,13 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("Human", 16, 19)]
         public void AgeBounds(string race, int lowBound, int highBound)
         {
-            int age = new HeightWeightAge(race, "m", new Random()).Age();
+            var random = new Random(Environment.TickCount);
 
-            Assert.True(age >= lowBound && age <= highBound);
+            for (int i = 0; i < Repeat; i++)
+            {
+                int age = new HeightWeightAge(race, "m", random).Age();
+                Assert.True(age >= lowBound && age <= highBound, $"Repeat# {i.ToString()}");
+            }
         }
 
         [Theory]
@@ -35,9 +41,13 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("HUMAN", "f", 61, 79)]
         public void HeightBounds(string race, string gender, int lowBound, int highBound)
         {
-            int height = new HeightWeightAge(race, gender, new Random()).Height();
+            var random = new Random(Environment.TickCount);
 
-            Assert.True(height >= lowBound && height <= highBound);
+            for (int i = 0; i < Repeat; i++)
+            {
+                int height = new HeightWeightAge(race, gender, random).Height();
+                Assert.True(height >= lowBound && height <= highBound, $"Repeat# {i.ToString()}");
+            }
         }
 
         [Theory]
@@ -55,9 +65,13 @@ namespace CharGen.UnitTests.ADD2
         [InlineData("human", "f", 106, 160)]
         public void WeightBounds(string race, string gender, int lowBound, int highBound)
         {
-            int weight = new HeightWeightAge(race, gender, new Random()).Weight();
+            var random = new Random(Environment.TickCount);
 
-            Assert.True(weight >= lowBound && weight <= highBound);
+            for (int i = 0; i < Repeat; i++)
+            {
+                int weight = new HeightWeightAge(race, gender, random).Weight();
+                Assert.True(weight >= lowBound && weight <= highBound, $"Repeat# {i.ToString()}");
+            }
         }
     }
 }

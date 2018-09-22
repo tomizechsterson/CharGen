@@ -10,6 +10,8 @@ namespace CharGen.UnitTests.ADD2
 {
     public class StatRollingTests
     {
+        private const int Repeat = 20;
+
         [Theory]
         [InlineData("RollOnce", 6, 3, 2, 19)]
         [InlineData("RollTwice", 12, 3, 2, 19)]
@@ -20,9 +22,13 @@ namespace CharGen.UnitTests.ADD2
         public void DiceRollingRules(string rule, int numRollsExpected, int numDiceUsedPerRoll,
             int lowBoundForRollTotal, int highBoundForRollTotal)
         {
-            var results = new StatRoll(rule, new System.Random()).RollStats();
+            var random = new System.Random(System.Environment.TickCount);
 
-            AssertRolls(results, numRollsExpected, numDiceUsedPerRoll, lowBoundForRollTotal, highBoundForRollTotal);
+            for (int i = 0; i < Repeat; i++)
+            {
+                var results = new StatRoll(rule, random).RollStats();
+                AssertRolls(results, numRollsExpected, numDiceUsedPerRoll, lowBoundForRollTotal, highBoundForRollTotal);
+            }
         }
 
         [Fact]
