@@ -156,10 +156,6 @@ namespace ADD2CharacterService.Controllers
             return new[] {new HP(className, _random).Get(), new Funds(className, _random).Get()};
         }
 
-        #endregion
-
-        #region Alignment
-
         [EnableCors("AnyOrigin")]
         [HttpGet("alignment/{className}/{classTwo?}/{classThree?}")]
         public string[] Alignments(string className, string classTwo = null, string classThree = null)
