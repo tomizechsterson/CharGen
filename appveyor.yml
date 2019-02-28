@@ -22,7 +22,7 @@ build:
   verbosity: minimal
   
 test_script:
-  - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"[*]*.Program,[*]*.Startup,[*]*.*Controller,[*]*.*Model,[*]*.*DBSetup,[*]*.GlobalExceptionFilter\"
+  - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"[*]*.Program,[*]*.Startup,[*]*.*Controller,[*]*.*Model,[*]*.*DBSetup,[*]*.GlobalExceptionFilter,xunit.runner.*\"
   - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
