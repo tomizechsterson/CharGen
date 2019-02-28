@@ -1,9 +1,9 @@
 # StartingFundsAndHP
 
 -> id = 62286d7c-7cc1-4b2a-bbbb-322a6d4f4ade
--> lifecycle = Acceptance
+-> lifecycle = Regression
 -> max-retries = 0
--> last-updated = 2018-09-13T23:38:17.8586983Z
+-> last-updated = 2019-02-28T04:10:59.4701678Z
 -> tags = 
 
 [ADD2InitialFundsAndHP]
