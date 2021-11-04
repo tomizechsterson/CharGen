@@ -1,6 +1,6 @@
 version: 0.1.{build}
     
-image: Visual Studio 2017
+image: Visual Studio 2019
 
 environment:
   COVERALLS_REPO_TOKEN:
@@ -23,7 +23,6 @@ build:
   
 test_script:
   - cmd: dotnet test CharGen.UnitTests -c Release -v q --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"[*]*.Program,[*]*.Startup,[*]*.*Controller,[*]*.*Model,[*]*.*DBSetup,[*]*.GlobalExceptionFilter,[xunit.*]*\"
-  - cmd: dotnet run -p CharGen.Storyteller -- run --tracing appveyor
       
 after_test:
   - cmd: csmacnz.Coveralls.exe --opencover -i CharGen.UnitTests/coverage.opencover.xml --useRelativePaths
