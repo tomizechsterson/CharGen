@@ -1,20 +1,18 @@
-﻿using System.IO;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace ADD2CharacterService
 {
     public static class Program
     {
-        public static void Main()
+        public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .UseUrls("http://localhost:42000/")
-                .Build();
-
-            host.Run();
+            CreateHostBuilder(args).Build().Run();
         }
+
+        private static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(
+                    webBuilder => { webBuilder.UseStartup<Startup>(); });
     }
 }
