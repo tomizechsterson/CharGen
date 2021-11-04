@@ -44,13 +44,13 @@ namespace ADD2CharacterService
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors("AnyOrigin");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            app.UseCors("AnyOrigin");
 
             new DBSetup("characters").Setup();
         }
