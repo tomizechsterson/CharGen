@@ -1,4 +1,5 @@
-﻿using ADD2CharacterService.ExceptionHandling;
+﻿using System.Net;
+using ADD2CharacterService.ExceptionHandling;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,11 @@ namespace ADD2CharacterService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers(config => config.Filters.Add(typeof(GlobalExceptionFilter)));
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = (int)HttpStatusCode.TemporaryRedirect;
+                options.HttpsPort = 443;
+            });
             services.AddCors(o =>
             {
                 o.AddPolicy("SpecificOrigin", builder =>

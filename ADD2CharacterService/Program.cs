@@ -13,6 +13,6 @@ namespace ADD2CharacterService
         private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(
-                    webBuilder => { webBuilder.UseStartup<Startup>(); });
+                    webBuilder => { webBuilder.UseStartup<Startup>().UseSetting("https_port", "443"); });
     }
 }
