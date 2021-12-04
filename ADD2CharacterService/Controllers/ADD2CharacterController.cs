@@ -38,7 +38,7 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<HttpCharacterModel> Get(int id)
         {
             return await _database.Get(id).ToModel();
@@ -52,14 +52,14 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task Put(int id, [FromBody] HttpCharacterModel characterModel)
         {
             await _database.Update(id, new CompletionStepHandler(characterModel).Handle());
         }
 
         [EnableCors("AnyOrigin")]
-        [HttpPut("{id}/final")]
+        [HttpPut("{id:int}/final")]
         public async Task FinalUpdate(int id, [FromBody] HttpCharacterModel characterModel)
         {
             characterModel.HP = new HP(characterModel.ClassName, _random).Get();
@@ -75,7 +75,7 @@ namespace ADD2CharacterService.Controllers
         }
 
         [EnableCors("AnyOrigin")]
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task Delete(int id)
         {
             await _database.Delete(id);
@@ -113,7 +113,7 @@ namespace ADD2CharacterService.Controllers
         #region Race Stuff
 
         [EnableCors("AnyOrigin")]
-        [HttpGet("races/{str}/{dex}/{con}/{int}/{wis}/{chr}")]
+        [HttpGet("races/{str:int}/{dex:int}/{con:int}/{int:int}/{wis:int}/{chr:int}")]
         public string[] RacesAvailable(int str, int dex, int con, int @int, int wis, int chr)
         {
             return new AvailableRaces(str, dex, con, @int, wis, chr).Select();
@@ -143,7 +143,7 @@ namespace ADD2CharacterService.Controllers
         #region Class Stuff
 
         [EnableCors("AnyOrigin")]
-        [HttpGet("classes/{race}/{str}/{dex}/{con}/{int}/{wis}/{chr}")]
+        [HttpGet("classes/{race}/{str:int}/{dex:int}/{con:int}/{int:int}/{wis:int}/{chr:int}")]
         public string[] GetClasses(string race, int str, int dex, int con, int @int, int wis, int chr)
         {
             return new AvailableClasses(race, str, dex, con, @int, wis, chr).Select();

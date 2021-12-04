@@ -39,7 +39,9 @@ namespace ADD2CharacterService.App.Race
 
         public string[] Select()
         {
-            return _racesAvailable.Where(r => r.IsAvailable(_str, _dex, _con, _int, _wis, _chr)).Select(r => r.Name())
+            return _racesAvailable
+                .Where(r => r.IsAvailable(_str, _dex, _con, _int, _wis, _chr))
+                .Select(r => r.Name())
                 .ToArray();
         }
     }

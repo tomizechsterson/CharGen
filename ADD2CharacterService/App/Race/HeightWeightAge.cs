@@ -39,18 +39,18 @@ namespace ADD2CharacterService.App.Race
         {
             return new List<HeightWeightAgeRoll>
             {
-                new HeightWeightAgeRoll("dwarf", "m", 43, 130, 40, new DieRoll(10, 1, _random), new DieRoll(10, 4, _random), new DieRoll(6, 5, _random)),
-                new HeightWeightAgeRoll("dwarf", "f", 41, 105, 40, new DieRoll(10, 1, _random), new DieRoll(10, 4, _random), new DieRoll(6, 5, _random)),
-                new HeightWeightAgeRoll("elf", "m", 55, 90, 100, new DieRoll(10, 1, _random), new DieRoll(10, 3, _random), new DieRoll(6, 5, _random)),
-                new HeightWeightAgeRoll("elf", "f", 50, 70, 100, new DieRoll(10, 1, _random), new DieRoll(10, 3, _random), new DieRoll(6, 5, _random)),
-                new HeightWeightAgeRoll("gnome", "m", 38, 72, 60, new DieRoll(6, 1, _random), new DieRoll(4, 5, _random), new DieRoll(12, 3, _random)),
-                new HeightWeightAgeRoll("gnome", "f", 36, 68, 60, new DieRoll(6, 1, _random), new DieRoll(4, 5, _random), new DieRoll(12, 3, _random)),
-                new HeightWeightAgeRoll("half-elf", "m", 60, 110, 15, new DieRoll(6, 2, _random), new DieRoll(12, 3, _random), new DieRoll(6, 1, _random)),
-                new HeightWeightAgeRoll("half-elf", "f", 58, 85, 15, new DieRoll(6, 2, _random), new DieRoll(12, 3, _random), new DieRoll(6, 1, _random)),
-                new HeightWeightAgeRoll("halfling", "m", 32, 52, 20, new DieRoll(8, 2, _random), new DieRoll(4, 5, _random), new DieRoll(4, 3, _random)),
-                new HeightWeightAgeRoll("halfling", "f", 30, 48, 20, new DieRoll(8, 2, _random), new DieRoll(4, 5, _random), new DieRoll(4, 3, _random)),
-                new HeightWeightAgeRoll("human", "m", 60, 140, 15, new DieRoll(10, 2, _random), new DieRoll(10, 6, _random), new DieRoll(4, 1, _random)),
-                new HeightWeightAgeRoll("human", "f", 59, 100, 15, new DieRoll(10, 2, _random), new DieRoll(10, 6, _random), new DieRoll(4, 1, _random))
+                new("dwarf", "m", 43, 130, 40, new DieRoll(10, 1, _random), new DieRoll(10, 4, _random), new DieRoll(6, 5, _random)),
+                new("dwarf", "f", 41, 105, 40, new DieRoll(10, 1, _random), new DieRoll(10, 4, _random), new DieRoll(6, 5, _random)),
+                new("elf", "m", 55, 90, 100, new DieRoll(10, 1, _random), new DieRoll(10, 3, _random), new DieRoll(6, 5, _random)),
+                new("elf", "f", 50, 70, 100, new DieRoll(10, 1, _random), new DieRoll(10, 3, _random), new DieRoll(6, 5, _random)),
+                new("gnome", "m", 38, 72, 60, new DieRoll(6, 1, _random), new DieRoll(4, 5, _random), new DieRoll(12, 3, _random)),
+                new("gnome", "f", 36, 68, 60, new DieRoll(6, 1, _random), new DieRoll(4, 5, _random), new DieRoll(12, 3, _random)),
+                new("half-elf", "m", 60, 110, 15, new DieRoll(6, 2, _random), new DieRoll(12, 3, _random), new DieRoll(6, 1, _random)),
+                new("half-elf", "f", 58, 85, 15, new DieRoll(6, 2, _random), new DieRoll(12, 3, _random), new DieRoll(6, 1, _random)),
+                new("halfling", "m", 32, 52, 20, new DieRoll(8, 2, _random), new DieRoll(4, 5, _random), new DieRoll(4, 3, _random)),
+                new("halfling", "f", 30, 48, 20, new DieRoll(8, 2, _random), new DieRoll(4, 5, _random), new DieRoll(4, 3, _random)),
+                new("human", "m", 60, 140, 15, new DieRoll(10, 2, _random), new DieRoll(10, 6, _random), new DieRoll(4, 1, _random)),
+                new("human", "f", 59, 100, 15, new DieRoll(10, 2, _random), new DieRoll(10, 6, _random), new DieRoll(4, 1, _random))
             };
         }
     }

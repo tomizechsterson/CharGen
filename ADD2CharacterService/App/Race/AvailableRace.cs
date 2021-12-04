@@ -1,6 +1,6 @@
 ﻿namespace ADD2CharacterService.App.Race
 {
-    internal struct AvailableRace
+    internal readonly struct AvailableRace
     {
         private readonly string _name;
         private readonly int _minStr;
